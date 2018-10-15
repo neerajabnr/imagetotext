@@ -51,7 +51,7 @@ public class F24OCRService {
 				}
 			}
 			if(keycount<=2) {
-				return "{This is not a F24 Image, please provide a valid F24 image}";
+				return "{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}";
 			}
 			int spacecount = countSpace(data);
 			System.out.println(spacecount + "space");
