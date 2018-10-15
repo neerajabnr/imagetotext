@@ -38,10 +38,23 @@ public class F24OCRService {
 			List<DataDescription> list = new ArrayList<>();
 			ObjectMapper objectMapper = new ObjectMapper();
 
-//			Data data = objectMapper.readValue(jsondata, Data.class);
-//			String jsonString = new String(data);
+			// Data data = objectMapper.readValue(jsondata, Data.class);
+			// String jsonString = new String(data);
+			int keycount=0;
+			for (TextAnnotation txtAnn : data.getTextAnnotation()) {
+
+				if (txtAnn.getDescription().equalsIgnoreCase("FISCALE")
+						|| txtAnn.getDescription().equalsIgnoreCase("ANAGRAFICI")
+						|| txtAnn.getDescription().equalsIgnoreCase("IDENTIFICATIVO")
+						|| txtAnn.getDescription().equalsIgnoreCase("EURO")) {
+					keycount++;
+				}
+			}
+			if(keycount<=2) {
+				return "{This is not a F24 Image, please provide a valid F24 image}";
+			}
 			int spacecount = countSpace(data);
-			System.out.println(spacecount+"space");
+			System.out.println(spacecount + "space");
 			list = process(data);
 			Collections.sort(list);
 			boolean first = true;
@@ -91,18 +104,18 @@ public class F24OCRService {
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
 
-			 if(spacecount>60 & spacecount<180){
-			System.out.println("Without Space");
-			NameFinderMETest3 test = new NameFinderMETest3();
-			seconelist = test.f24_section1(sec1.trim());
-			sectwolist = test.f24_section2(sec2.trim());
+			if (spacecount > 60 & spacecount < 70) {
+				System.out.println("Without Space");
+				NameFinderMETest3 test = new NameFinderMETest3();
+				seconelist = test.f24_section1(sec1.trim());
+				sectwolist = test.f24_section2(sec2.trim());
 
-			 } else if(spacecount>70 && spacecount<85){
-			 System.out.println("With Space");
-			 NameFinderMETest4 test = new NameFinderMETest4();
-			 seconelist = test.f24_section1(sec1.trim());
-			 sectwolist = test.f24_section2(sec2.trim());
-			 }
+			} else if (spacecount > 70 && spacecount < 85) {
+				System.out.println("With Space");
+				NameFinderMETest4 test = new NameFinderMETest4();
+				seconelist = test.f24_section1(sec1.trim());
+				sectwolist = test.f24_section2(sec2.trim());
+			}
 
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
@@ -123,13 +136,15 @@ public class F24OCRService {
 		int spacecount = 0;
 
 		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
-			if (txtAnn.getLocale() != null) {
+
+			if (txtAnn.getLocale() != null && txtAnn.getLocale() != "") {
 				for (int i = txtAnn.getDescription().indexOf("UNIFICATO"); i < txtAnn.getDescription()
 						.indexOf("EURO"); i++) {
-					if(txtAnn.getDescription().charAt(i)==' ') {
+					if (txtAnn.getDescription().charAt(i) == ' ') {
 						spacecount++;
 					}
 				}
+				break;
 			}
 		}
 		return spacecount;

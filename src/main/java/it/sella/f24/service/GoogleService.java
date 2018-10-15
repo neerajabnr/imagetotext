@@ -128,7 +128,7 @@ public class GoogleService {
                   //  return responseToCache;
                 }
                 returnData.setTextAnnotation(textAnnotations);
-                System.out.println(returnData);
+                System.out.println("Data---"+returnData);
                 return returnData;
             } catch (Exception e) {
                 throw new RuntimeException("Error Google OCR: " + e.getMessage(), e);
@@ -331,7 +331,7 @@ public class GoogleService {
                     //System.out.println(responseToCache);
                     this.responseCache.put(hash, responseToCache);*/
                     returnData.setTextAnnotation(textAnnotations);
-                    System.out.println(returnData);
+                    System.out.println("Data-=-=-"+returnData);
                     return returnData;
                 }
             } catch (Exception e) {

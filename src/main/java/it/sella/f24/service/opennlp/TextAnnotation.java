@@ -70,9 +70,12 @@ public class TextAnnotation {
         this.additionalProperties.put(name, value);
     }
 
-    @Override
-    public String toString() {
-        return "";
-    }
+	@Override
+	public String toString() {
+		return "TextAnnotation [locale=" + locale + ", description=" + description + ", boundingPoly=" + boundingPoly
+				+ ", additionalProperties=" + additionalProperties + "]";
+	}
+
+    
 
 }
