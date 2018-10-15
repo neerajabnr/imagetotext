@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/dependency/F24OCR.war --port $PORT target/*.war
+web: java $JAVA_OPTS -jar target/F24OCR.war --port $PORT target/*.war
