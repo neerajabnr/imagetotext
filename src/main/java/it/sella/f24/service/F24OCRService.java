@@ -27,6 +27,8 @@ import opennlp.tools.namefind.NameFinderMETest4;
 public class F24OCRService {
 
 	public String processJson(Data data) throws Exception {
+		
+		System.out.println("Data in Service:"+data);
 		// read json file data to String
 		try {
 			// JSONParser parser = new JSONParser();
@@ -57,6 +59,7 @@ public class F24OCRService {
 			System.out.println(spacecount + "space");
 			list = process(data);
 			Collections.sort(list);
+			System.out.println("After sorting");
 			boolean first = true;
 			int prev = 0;
 			StringBuffer section1 = new StringBuffer();
@@ -104,7 +107,7 @@ public class F24OCRService {
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
 
-			if (spacecount > 60 & spacecount < 70) {
+			if (spacecount > 49 & spacecount < 70) {
 				System.out.println("Without Space");
 				NameFinderMETest3 test = new NameFinderMETest3();
 				seconelist = test.f24_section1(sec1.trim());
@@ -391,8 +394,8 @@ public class F24OCRService {
 					secTwo = txtAnn.getBoundingPoly().getVertices().get(3).getY() + 10;
 				}
 
-				if (txtAnn.getBoundingPoly().getVertices().get(0).getX() > start
-						&& txtAnn.getBoundingPoly().getVertices().get(1).getX() < end) {
+//				if (txtAnn.getBoundingPoly().getVertices().get(0).getX() > start
+//						&& txtAnn.getBoundingPoly().getVertices().get(1).getX() < end) {
 					String des = txtAnn.getDescription();
 					if (txtAnn.getDescription().equals("*")) {
 						des = "X";
@@ -407,7 +410,7 @@ public class F24OCRService {
 						d.setSection("two");
 					}
 					list.add(d);
-				}
+				
 			}
 		}
 		return list;

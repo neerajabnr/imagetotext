@@ -71,7 +71,7 @@ public class F24Controller {
 	@RequestMapping(value="/api/simplificato/ocr",method=RequestMethod.POST)
 	public String f24imageToText(@RequestParam("file") MultipartFile file) {
 		Data data = googleService.readText(file, "");	
-		System.out.println("processed ocr data : "+data);
+//		System.out.println("processed ocr data : "+data);
 		String f24Result ="{}";
 
 		try {

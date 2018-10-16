@@ -128,7 +128,7 @@ public class GoogleService {
                   //  return responseToCache;
                 }
                 returnData.setTextAnnotation(textAnnotations);
-                System.out.println("Data---"+returnData);
+//                System.out.println("Data---"+returnData);
                 return returnData;
             } catch (Exception e) {
                 throw new RuntimeException("Error Google OCR: " + e.getMessage(), e);
@@ -224,7 +224,7 @@ public class GoogleService {
                   //  return responseToCache;
                 }
                 returnData.setTextAnnotation(textAnnotations);
-                System.out.println(returnData);
+//                System.out.println(returnData);
                 return returnData;
             } catch (Exception e) {
                 throw new RuntimeException("Error Google OCR: " + e.getMessage(), e);
@@ -276,8 +276,8 @@ public class GoogleService {
 
             try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
                 BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
-                System.out.println("flag");
-                System.out.println(response.getInitializationErrorString());
+//                System.out.println("flag");
+//                System.out.println(response.getInitializationErrorString());
                 
                 List<AnnotateImageResponse> responses = response.getResponsesList();
                 client.close();
@@ -331,7 +331,7 @@ public class GoogleService {
                     //System.out.println(responseToCache);
                     this.responseCache.put(hash, responseToCache);*/
                     returnData.setTextAnnotation(textAnnotations);
-                    System.out.println("Data-=-=-"+returnData);
+//                    System.out.println("Data-=-=-"+returnData);
                     return returnData;
                 }
             } catch (Exception e) {
