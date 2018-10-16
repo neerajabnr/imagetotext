@@ -175,7 +175,7 @@ public class F24OCRService {
 				v3 = v3 + result.getValue();
 			}
 			if (result.getKey().contains("DOB")) {
-				// if (StringUtils.isNumeric(result.getValue()))
+				 if (StringUtils.isNumeric(result.getValue()) ||StringUtils.isAlpha(result.getValue()))
 				v4 = v4 + result.getValue();
 			}
 			if (result.getKey().contains("Sex")) {
