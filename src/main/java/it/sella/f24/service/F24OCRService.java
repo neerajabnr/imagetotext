@@ -248,6 +248,7 @@ public class F24OCRService {
 		System.out.println(e);
 		//Replacing * with , in the debit values
 		db=db.replace("*", ",");
+		e=e.replace("*", ",");
 		// replacing the values in Json
 		
 		if(v1.length()>16){
