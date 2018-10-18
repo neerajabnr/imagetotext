@@ -59,13 +59,13 @@
 
       "Payment":{  
 
-         "DataIncasso":"23/07/2018",
+         "DataIncasso":"",
 
-         "ContoOrdinante":"11O1641490340",
+         "ContoOrdinante":"",
 
-         "SaldoFinale":"6.66",
+         "SaldoFinale":"e1",
 
-         "Product":"0"
+         "Product":""
 
       }
 

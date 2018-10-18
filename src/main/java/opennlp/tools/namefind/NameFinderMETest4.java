@@ -247,7 +247,7 @@ public class NameFinderMETest4 {
 		Span[] names2 = nameFinder.find(sentence2);
 		Map<String, String> valMap = new HashMap<>();
 		List<Result> results=new ArrayList<>();
-		int k = 1;
+		int k = 1,index=0;
 		for (Span name : names2) {
 			// if(name.getType().equals("templateERARIO1")) {
 			// getVauesFromTemplate(sentence2, name.getType());
@@ -256,9 +256,10 @@ public class NameFinderMETest4 {
 
 			// System.out.println(name.toString() + " " +
 			// sentence2[name.getStart()]);
-			String cod="";
+			String cod="",dobito="";
+			StringBuffer buffer=new StringBuffer();
 			for (int i = name.getStart(); i < name.getEnd(); i++) {
-				if(name.getType().equals("codice")){
+				/*if(name.getType().equals("codice")){
 					cod=cod+sentence2[i];
 					if(cod.length()<4||cod.length()>4)
 					continue;
@@ -268,7 +269,9 @@ public class NameFinderMETest4 {
 					System.out.print(cod);
 					continue;
 				}
-				results.add(new Result(name.getType(), sentence2[i]));
+				*/
+				buffer.append(sentence2[i]);
+				
 				int c = 1;
 				System.out.print(sentence2[i] + " ");
 				if (valMap.get(name.getType() + 1) != null) {
@@ -282,7 +285,10 @@ public class NameFinderMETest4 {
 				} else {
 					valMap.put(name.getType(), sentence2[i]);
 				}
+				
+
 			}
+			results.add(new Result(name.getType(), buffer.toString()));
 			System.out.println();
 		}
 		return results;

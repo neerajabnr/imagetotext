@@ -28,7 +28,7 @@ public class F24OCRService {
 
 	public String processJson(Data data) throws Exception {
 		
-		System.out.println("Data in Service:"+data);
+//		System.out.println("Data in Service:"+data);
 		// read json file data to String
 		try {
 			// JSONParser parser = new JSONParser();
@@ -37,11 +37,10 @@ public class F24OCRService {
 
 			// jsonData =
 			// Files.readAllBytes(Paths.get("D:\\Neeraja\\ocr\\json\\testimagejson2.json"));
+//			ObjectMapper objectMapper = new ObjectMapper();
+//
+//			 Data data = objectMapper.readValue(jsondata, Data.class);
 			List<DataDescription> list = new ArrayList<>();
-			ObjectMapper objectMapper = new ObjectMapper();
-
-			// Data data = objectMapper.readValue(jsondata, Data.class);
-			// String jsonString = new String(data);
 			int keycount=0;
 			for (TextAnnotation txtAnn : data.getTextAnnotation()) {
 
@@ -58,8 +57,15 @@ public class F24OCRService {
 			int spacecount = countSpace(data);
 			System.out.println(spacecount + "space");
 			list = process(data);
-			Collections.sort(list);
-			System.out.println("After sorting");
+			
+			try{
+				Collections.sort(list);
+				}catch(IllegalArgumentException e){
+					e.printStackTrace();
+					System.out.println("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
+					return "{\"status\":\"Invalid input data, please try to capture one more time!!!\"}";
+				}
+			
 			boolean first = true;
 			int prev = 0;
 			StringBuffer section1 = new StringBuffer();
@@ -99,6 +105,12 @@ public class F24OCRService {
 			String sec2 = section2.toString();
 			sec2 = sec2.replace(" , ", "*");
 			sec2 = sec2.replace(" . ", " ");
+			sec2 = sec2.replace(" . ", " ");
+			sec1=sec1.replace(".", "");
+			sec1=sec1.replace(":", "");
+			sec2=sec2.replace(":", "");
+			sec1=sec1.replace("|", "");
+			sec2=sec2.replace("|", "");
 			sec2 = sec2.replace(" 00", "*00");
 
 			System.out.println("Section1:----\n" + sec1.trim());
@@ -107,18 +119,10 @@ public class F24OCRService {
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
 
-			if (spacecount > 49 & spacecount < 70) {
-				System.out.println("Without Space");
-				NameFinderMETest3 test = new NameFinderMETest3();
-				seconelist = test.f24_section1(sec1.trim());
-				sectwolist = test.f24_section2(sec2.trim());
-
-			} else if (spacecount > 70 && spacecount < 85) {
-				System.out.println("With Space");
+			
 				NameFinderMETest4 test = new NameFinderMETest4();
 				seconelist = test.f24_section1(sec1.trim());
 				sectwolist = test.f24_section2(sec2.trim());
-			}
 
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
@@ -161,7 +165,7 @@ public class F24OCRService {
 		String line, mydata = null;
 		int rowcount = 0;
 		String v1 = "", v2 = "", v3 = "", v4 = "", v5 = "", v6 = "", v7 = "", sz = "", t = "", c = "", m = "", a = "",
-				d = "", db = "", cr = "";
+				d = "", db = "", cr = "",e="";
 		// fecthing the data from the list
 		ListIterator<Result> iterator = (ListIterator<Result>) results.listIterator();
 		for (; iterator.hasNext();) {
@@ -178,15 +182,15 @@ public class F24OCRService {
 				v3 = v3 + result.getValue();
 			}
 			if (result.getKey().contains("DOB")) {
-				 if (StringUtils.isNumeric(result.getValue()) ||StringUtils.isAlpha(result.getValue()))
-				v4 = v4 + result.getValue();
+				if (StringUtils.isNumeric(result.getValue())||StringUtils.isAlpha(result.getValue()))
+					v4 = v4 + result.getValue();
 			}
 			if (result.getKey().contains("Sex")) {
 				if (StringUtils.isAlpha(result.getValue()))
 					v5 = v5 + result.getValue();
 			}
 			if (result.getKey().contains("City")) {
-				// if (StringUtils.isAlpha(result.getValue()))
+				 if (StringUtils.isAlpha(result.getValue()))
 				v6 = v6 + result.getValue();
 			}
 			if (result.getKey().contains("Prov")) {
@@ -198,13 +202,13 @@ public class F24OCRService {
 					sz = sz + result.getValue() + ";";
 			}
 			if (result.getKey().contains("tributo")) {
-				if (StringUtils.isNumeric(result.getValue()) && result.getValue().length() == 4) {
+				if (StringUtils.isNumeric(result.getValue())&&result.getValue().length()==4) {
 					t = t + result.getValue() + ";";
 					rowcount++;
 				}
 			}
 			if (result.getKey().contains("codice")) {
-				if (StringUtils.isAlphanumeric(result.getValue()) && result.getValue().length() == 4)
+				if (StringUtils.isAlphanumeric(result.getValue())&&result.getValue().length()==4)
 					c = c + result.getValue() + ";";
 			}
 			if (result.getKey().contains("mese")) {
@@ -226,11 +230,33 @@ public class F24OCRService {
 				cr = cr + result.getValue() + ";";
 			}
 
+			if (result.getKey().contains("euro")) {
+				e = e + result.getValue() ;
+			}
 		}
-		// Replacing * with , in the debit values
-		db = db.replace("*", ",");
+		
+		if(v2.contains("DATI"))
+			v2=StringUtils.remove(v2, "DATI");
+		
+		if(v3.contains("ANAGRAFICI"))
+			v3=StringUtils.remove(v3, "ANAGRAFICI");
+		
+		if(v6.contains("CODICE"))
+			v6=StringUtils.remove(v6, "CODICE");
+		
+		
+		System.out.println(e);
+		//Replacing * with , in the debit values
+		db=db.replace("*", ",");
 		// replacing the values in Json
-
+		
+		if(v1.length()>16){
+			String temp="";
+			for(int i=0;i<16;i++){
+				temp=temp+v1.charAt(i);
+			}
+			v1=temp;
+		}
 		buildf24(rowcount);
 		StringTokenizer sztokenizer = new StringTokenizer(sz, ";");
 		StringTokenizer ttokenizer = new StringTokenizer(t, ";");
@@ -292,6 +318,13 @@ public class F24OCRService {
 					mydata = mydata.replaceAll("x8", "");
 				} else if (mydata.contains("x8") && crtokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x8", crtokenizer.nextToken());
+				}
+				
+				if(e.isEmpty()){
+					mydata = mydata.replaceAll("e1", "");
+				}else{
+					
+					mydata=mydata.replace("e1", e);
 				}
 
 				buffer.append(mydata + "\n");
