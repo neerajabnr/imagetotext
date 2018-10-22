@@ -116,13 +116,27 @@ public class DataDescription implements Comparable<DataDescription> {
 		int result = o.yEnd - this.yEnd;
 		int xdiffval = 0;
 		int xdifference = this.xStart - o.xStart;
-		if (xdifference > 0 && difference != 0)
+		if (difference != 0)
 			xdiffval = xdifference / difference;
 		result = result + xdiffval;
-		int result1;
-		if (result <= 5 && result >= -5) {
-			result1 = Integer.compare(this.xStart, o.xStart);
-		} else {
+		int result1=0;
+		boolean ycomp = true;
+		for(int i=o.yStart+xdiffval;i<o.yEnd+xdiffval;i++){
+			for(int j=this.yStart;j<this.yEnd;j++) {
+				if(i == j){
+						result1 = Integer.compare(this.xStart, o.xStart);
+						ycomp= false;
+						break;
+				}
+			}
+		}
+		
+		
+//		if (result <= 5 && result >= -5) {
+//			result1 = Integer.compare(this.xStart, o.xStart);
+//		} else 
+		
+		if (ycomp){
 			result1 = Integer.compare(this.yEnd, o.yEnd);
 		}
 		return result1;
