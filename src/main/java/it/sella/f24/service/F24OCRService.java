@@ -85,7 +85,9 @@ public class F24OCRService {
 				if (s1 == 1) {
 					if (dat.getxStart() < xprev) {
 						section1.append(" \\n ");
-					} else {
+					} else if((dat.getxStart()-xprevEnd)>200){
+						section1.append(" ** ");
+					}else {
 						section1.append(" ");
 					}
 					section1.append(dat.getDescription());
@@ -99,6 +101,7 @@ public class F24OCRService {
 					section2.append(dat.getDescription());
 					xprev = dat.getxStart();
 				}
+				xprevEnd = dat.getxEnd();
 			}
 
 			String sec1 = section1.toString();
