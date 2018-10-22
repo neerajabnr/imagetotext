@@ -12,6 +12,8 @@ import java.util.ListIterator;
 import java.util.StringTokenizer;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,8 +27,16 @@ import opennlp.tools.namefind.NameFinderMETest4;
 
 @Service
 public class F24OCRService {
+	
+	private static Logger logger = null;
+	static {
+		logger=Logger.getLogger(F24OCRService.class);
+		PropertyConfigurator.configure("src/main/resources/log4j.properties");
+	}
 
 	public String processJson(Data data) throws Exception {
+		
+		
 		
 //		System.out.println("Data in Service:"+data);
 		// read json file data to String
@@ -52,10 +62,12 @@ public class F24OCRService {
 				}
 			}
 			if(keycount<=2) {
+				logger.info("{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}");
 				return "{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}";
 			}
 			int spacecount = countSpace(data);
 			System.out.println(spacecount + "space");
+			logger.info("Space count"+spacecount);
 			list = process(data);
 			
 			try{
@@ -63,6 +75,7 @@ public class F24OCRService {
 				}catch(IllegalArgumentException e){
 					e.printStackTrace();
 					System.out.println("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
+					logger.info("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
 					return "{\"status\":\"Invalid input data, please try to capture one more time!!!\"}";
 				}
 			
@@ -118,6 +131,10 @@ public class F24OCRService {
 
 			System.out.println("Section1:----\n" + sec1.trim());
 			System.out.println("Section2:----\n" + sec2.trim());
+			
+			logger.info("After the data conversion");
+			logger.info("Section1:----\n" + sec1.trim());
+			logger.info("Section2:----\n" + sec2.trim());
 
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
@@ -129,9 +146,14 @@ public class F24OCRService {
 
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
+			
+			logger.info("Result data");
+			logger.info("Section1:			\n" + seconelist);
+			logger.info("Section2:			\n" + sectwolist);
 
 			seconelist.addAll(sectwolist);
-			System.out.println(seconelist);
+//			System.out.println(seconelist);
+			logger.info("Sending the data to prepare Json");
 			return prepareJSON(seconelist);
 
 		} catch (IOException e1) {
@@ -248,7 +270,6 @@ public class F24OCRService {
 			v6=StringUtils.remove(v6, "CODICE");
 		
 		
-		System.out.println(e);
 		//Replacing * with , in the debit values
 		db=db.replace("*", ",");
 		e=e.replace("*", ",");
@@ -339,6 +360,7 @@ public class F24OCRService {
 			// writer.close();
 		}
 		System.out.println(buffer.toString());
+		logger.info("F24 JSON:\n"+buffer.toString());
 		return buffer.toString();
 
 	}

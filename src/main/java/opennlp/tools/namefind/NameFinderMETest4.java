@@ -12,9 +12,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
 import org.junit.Test;
 
+import it.sella.f24.service.F24OCRService;
 import it.sella.f24.testclasses.Result;
 import opennlp.tools.formats.ResourceAsStreamFactory;
 import opennlp.tools.ml.model.SequenceClassificationModel;
@@ -38,6 +41,11 @@ public class NameFinderMETest4 {
 
 	private static TokenNameFinderModel nameFinder1 = null;
 	private static TokenNameFinderModel nameFinder2 = null;
+	private static Logger logger = null;
+	static {
+		logger=Logger.getLogger(NameFinderMETest4.class);
+		PropertyConfigurator.configure("src/main/resources/log4j.properties");
+	}
 
 	@Test
 	public void testNameFinder() throws Exception {
@@ -113,10 +121,12 @@ public class NameFinderMETest4 {
 			// getVauesFromTemplate(sentence2, name.getType());
 			// }
 			System.out.print(name.getType() + " ");
+			logger.info(name.getType() + " ");
 			// System.out.println(name.toString() + " " +
 			// sentence2[name.getStart()]);
 			for (int i = name.getStart(); i < name.getEnd(); i++) {
 				System.out.print(sentence2[i] + " ");
+				logger.info(sentence2[i] + " ");
 			}
 			System.out.println();
 		}
@@ -135,8 +145,8 @@ public class NameFinderMETest4 {
 			// sentence2[name.getStart()]);
 			for (int i = name.getStart(); i < name.getEnd(); i++) {
 				System.out.print(sentence2[i] + " ");
+				logger.info(sentence2[i] + " ");
 			}
-			System.out.println();
 		}
 
 	}
@@ -158,12 +168,13 @@ public class NameFinderMETest4 {
 			// getVauesFromTemplate(sentence2, name.getType());
 			// }
 			System.out.print(name.getType() + " ");
+			logger.info(name.getType() + " ");
 			// System.out.println(name.toString() + " " +
 			// sentence2[name.getStart()]);
 			for (int i = name.getStart(); i < name.getEnd(); i++) {
 				System.out.print(sentence2[i] + " ");
+				logger.info(sentence2[i] + " ");
 			}
-			System.out.println();
 		}
 
 	}
@@ -185,10 +196,12 @@ public class NameFinderMETest4 {
 			// getVauesFromTemplate(sentence2, name.getType());
 			// }
 			System.out.print(name.getType() + " ");
+			logger.info(name.getType() + " ");
 			// System.out.println(name.toString() + " " +
 			// sentence2[name.getStart()]);
 			for (int i = name.getStart(); i < name.getEnd(); i++) {
 				System.out.print(sentence2[i] + " ");
+				logger.info(sentence2[i] + " ");
 			}
 			System.out.println();
 		}
@@ -212,12 +225,14 @@ public class NameFinderMETest4 {
 			// getVauesFromTemplate(sentence2, name.getType());
 			// }
 			System.out.print(name.getType() + " ");
+			logger.info(name.getType() + " ");
 			// System.out.println(name.toString() + " " +
 			// sentence2[name.getStart()]);
 			int c=1;
 			for (int i = name.getStart(); i < name.getEnd(); i++) {
 				results.add(new Result(name.getType(), sentence2[i]));
 				System.out.print(sentence2[i] + " ");
+				logger.info(sentence2[i] + " ");
 				
 				String temp = name.getType();
 				if (valMap.containsKey(temp)) {
@@ -253,6 +268,7 @@ public class NameFinderMETest4 {
 			// getVauesFromTemplate(sentence2, name.getType());
 			// }
 			System.out.print(name.getType() + " ");
+			logger.info(name.getType() + " ");
 
 			// System.out.println(name.toString() + " " +
 			// sentence2[name.getStart()]);
@@ -274,6 +290,7 @@ public class NameFinderMETest4 {
 				
 				int c = 1;
 				System.out.print(sentence2[i] + " ");
+				logger.info(name.getType() + " ");
 				if (valMap.get(name.getType() + 1) != null) {
 					k++;
 				}
