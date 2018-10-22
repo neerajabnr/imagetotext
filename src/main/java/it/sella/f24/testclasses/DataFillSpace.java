@@ -236,61 +236,102 @@ public class DataFillSpace {
 
 		Random rand1 = new Random();
 
-		String[] sArr = { "EL", "ER", "RG","E L","L","BL" };
+		String[] sArr = { "EL", "ER", "RG", "E L", "L", "BL", "E R" };
 		List<String> sList = Arrays.asList(sArr);
-		String[] abArr = { "1", "2"," ","C", " ","D", "5", "4", " ", "G", "H"," ", "9", "8", " " };
+
+		String[] codiceArr = { "H 5 5 3", "H553", "M0 98", "M0 9 8", "I 9 8 4", "L 219", "D600", "D 600", "D 6 1 2",
+				"D 6 12", "I 684", "H 3 60", "H 360", "H 3 6 0", "1 9 8 4", "I6", "84", "M0", "98", "H", "360", "D",
+				"600" };
+		
+//		"H 5 5 3", "H553", "M0 98", "M0 9 8", "I 9 8 4", "L 219", "D600", "D 600", "D 6 1 2",
+//		"D 6 12", "I 684", "H 3 60", "H 360", "H 3 6 0", "1 9 8 4", "I6", "84", "M0", "98", "H", "360", "D",
+//		"600", "L", "219" 
+		List<String> codiceList = Arrays.asList(codiceArr);
+
+		String[] abArr = { "1", "2", " ", "C", " ", "D", "5", "4", " ", "G", "H", " ", "9", "8", " " };
 		List<String> abList = Arrays.asList(abArr);
 		Collections.shuffle(abList);
-		String[] yearArr = { "0", "2", "1", "3", "4", "9", "8" };
-		List<String> yearList = Arrays.asList(yearArr);
-		
+		String[] tributoArr = { "0", "2", "1", "3", " ", "4", "9", "8", " " };
+		List<String> tributoList = Arrays.asList(tributoArr);
+
+		String[] dobitoArr = { "0", "2", "1", "3", "4", "9", "8" };
+		List<String> dobitoList = Arrays.asList(dobitoArr);
 
 		try (BufferedReader br = new BufferedReader(
 				new FileReader("D:\\Neeraja\\ocr\\training data\\section2trainingnewspace.txt"))) {
 			String line;
 			while ((line = br.readLine()) != null) {
 				data = line;
-				for (int i = 0; i < 2500; i++) {
-					//Combining v2 and v3
-					Collections.shuffle(abList);
-					data1 = data.replace("v2", String.valueOf(rand1.nextInt(9999)));
-//					 data1 = data1.replace("v3",
-//					 String.valueOf(rand1.nextInt(5000)));
+				for (int i = 0; i < 500; i++) {
+					// Combining v2 and v3
+					// Collections.shuffle(abList);
+					// data1 = data.replace("v2",
+					// String.valueOf(rand1.nextInt(9999)));
+					// data1 = data1.replace("v3",
+					// String.valueOf(rand1.nextInt(5000)));
 					// data1 = data1.replace("v4",
 					// String.valueOf(rand1.nextInt(9999)));
-					data1 = data1.replace("v5", String.valueOf(rand1.nextInt(20) + 2000));
-					// data1 = data1.replace("v5",
-					// String.valueOf(rand1.nextInt(999)));
-					 data1 = data1.replace("v6", "TESTDESC");
-					// data1 = data1.replace("v4",
-					// String.valueOf(rand1.nextInt(999)));
-//					data1 = data1.replace("v7", String.valueOf(rand1.nextInt(99)));
-					data1 = data1.replace("a1", String.valueOf(rand1.nextInt(9)));
-					data1 = data1.replace("a2", String.valueOf(rand1.nextInt(9)));
-					Collections.shuffle(yearList);
-					data1 = data1.replace("x1", yearList.get(0));
-					Collections.shuffle(abList);
-					data1 = data1.replace("y1", abList.get(0));
-					Collections.shuffle(abList);
-					data1 = data1.replace("y2", abList.get(0));
-					data1 = data1.replace("x2", String.valueOf(rand1.nextInt(9)));
-					data1 = data1.replace("x3", String.valueOf(rand1.nextInt(9)));
-					data1 = data1.replace("x4", String.valueOf(rand1.nextInt(9)));
-					data1 = data1.replace("x5", String.valueOf(rand1.nextInt(999)));
 
 					Collections.shuffle(sList);
-					data1 = data1.replace("v1", sList.get(0));
+					data1 = data.replace("v1", sList.get(0));
 
+					Collections.shuffle(tributoList);
+					data1 = data1.replace("v2", String.valueOf(rand1.nextInt(9999)));
+
+					Collections.shuffle(codiceList);
+					data1 = data1.replace("v3", codiceList.get(0));
+
+					data1 = data1.replace("v4", String.valueOf(rand1.nextInt(4000)));
+
+					data1 = data1.replace("v5", String.valueOf(rand1.nextInt(20) + 2000));
+
+					// mese and anno
+
+					data1 = data1.replace("v10",
+							String.valueOf(rand1.nextInt(4000)) + String.valueOf(rand1.nextInt(20) + 2000));
+
+					// data1 = data1.replace("v5",
+					// String.valueOf(rand1.nextInt(999)));
+					data1 = data1.replace("v6", "TESTDESC");
+					// data1 = data1.replace("v4",
+					// String.valueOf(rand1.nextInt(999)));
+					// data1 = data1.replace("v7",
+					// String.valueOf(rand1.nextInt(99)));
+					// data1 = data1.replace("a1",
+					// String.valueOf(rand1.nextInt(9)));
+					// data1 = data1.replace("a2",
+					// String.valueOf(rand1.nextInt(9)));
+					// Collections.shuffle(tributoList);
+					data1 = data1.replace("x1", String.valueOf(rand1.nextInt(9)));
+
+					// System.out.println("x1"+String.valueOf(rand1.nextInt(9)));
 					Collections.shuffle(abList);
-					data1 = data1.replace("v3", cString(abList.subList(0, rand1.nextInt(3) + 6)));
-					Collections.shuffle(yearList);
-					data1 = data1.replace("v4",
-							String.valueOf(rand1.nextInt(4000)));
-					
-					Collections.shuffle(yearList);
-					data1 = data1.replace("v7", cString(yearList.subList(0, rand1.nextInt(3) + 3))/*+"*00"*/);
-					
-					
+					// data1 = data1.replace("y1", abList.get(0));
+					// Collections.shuffle(abList);
+					// data1 = data1.replace("y2", abList.get(0));
+					// data1 = data1.replace("x2",
+					// String.valueOf(rand1.nextInt(9)));
+					// data1 = data1.replace("x3",
+					// String.valueOf(rand1.nextInt(9)));
+					// data1 = data1.replace("x4",
+					// String.valueOf(rand1.nextInt(9)));
+					// data1 = data1.replace("x5",
+					// String.valueOf(rand1.nextInt(999)));
+
+					Collections.shuffle(dobitoList);
+					data1 = data1.replace("v7",
+
+							/*
+							 * String.valueOf(rand1.nextInt(9)) + " " +
+							 */cString(dobitoList.subList(0, rand1.nextInt(3) + 3))/* +"*" */ /* "*00" */);
+
+					Collections.shuffle(dobitoList);
+					data1 = data1.replace("v9",
+
+							/*
+							 * String.valueOf(rand1.nextInt(9)) + " " +
+							 */ cString(dobitoList.subList(0, rand1.nextInt(3) + 3))/* +"*" *//* "*00" */);
+
 					data1 = data1.trim();
 					if (!data1.isEmpty()) {
 						writer.println(data1);
@@ -319,24 +360,27 @@ public class DataFillSpace {
 		Random rand1 = new Random();
 
 		String[] abArr = { "A", "B", "1", "C", "D", "E", "5", "F", " ", "G", "H", "I", "8", "J", "K", "L", " ", "M",
-				"N", "O", "9", " ", "P", "Q", "R", "S", "6", " ", "T", "U"," ","V", "W", " ", "X", "Y", "Z" };
+				"N", "O", "9", " ", "P", "Q", "R", "S", "6", " ", "T", "U", " ", "V", "W", " ", "X", "Y", "Z" };
 		List<String> abList = Arrays.asList(abArr);
-		
-		String[] AnaArr = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-				"N", "O", "P", "Q", "R", "S", "T", "U","V", "W", "X", "Y", "Z" };
+
+		String[] AnaArr = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+				"S", "T", "U", "V", "W", "X", "Y", "Z" };
 		List<String> AnaList = Arrays.asList(AnaArr);
-		
-		
-		String[] dobArr = { "2", "3", "O", "5", "O", "6", "8", "1", "7" };
+
+		String[] dobArr = { "2", "3", " ", "O", "5", "O", " ", "6", " ", "8", "1", " ", "7", " " };
 		List<String> dobList = Arrays.asList(dobArr);
+
+		String[] dobArr1 = { "2", "3", "O", "5", "O", "6", "8", "1", "7" };
+		List<String> dobList1 = Arrays.asList(dobArr1);
+
 		String[] mfArr = { "M", "F" };
 		List<String> mfList = Arrays.asList(mfArr);
-		
-		String[] provArr = { "G", " ","V",};
+
+		String[] provArr = { "G", " ", "V", };
 		List<String> provList = Arrays.asList(provArr);
-		
-		String[] cityArr = { "A", "B", "C", "D", "E", "F"," " ,"G", "H", "I", "J", "K", "'" ,"L", "M", "N", "O", "P", "Q", "R",
-				"S", "T", "U", "V", "W","'" , "X", "Y", "Z" };
+
+		String[] cityArr = { "A", "B", "C", "D", "E", "F", " ", "G", "H", "I", "J", "K", "'", "L", "M", "N", "O", "P",
+				"Q", "R", "S", "T", "U", "V", "W", "'", "X", "Y", "Z" };
 		List<String> cityList = Arrays.asList(cityArr);
 		Collections.shuffle(abList);
 		String dob = "12345OABC";
@@ -362,31 +406,39 @@ public class DataFillSpace {
 					Collections.shuffle(AnaList);
 					data1 = data1.replace("v2", cString(AnaList.subList(0, rand1.nextInt(3) + 6)));
 					Collections.shuffle(AnaList);
-					data1 = data1.replace("v3", cString(AnaList.subList(0, rand1.nextInt(3) + 5))/*+" "+cString(AnaList.subList(0, rand1.nextInt(3) + 5))*/);
+					data1 = data1.replace("v3", cString(AnaList.subList(0, rand1.nextInt(3)
+							+ 5)) 
+									  + " "+ cString(AnaList.subList(0,
+									  rand1.nextInt(3) + 5))
+									 );
 					// data1 = data1.replace("v4",cString(dobList.subList(0,
 					// rand1.nextInt(3)+9)));
-					String v4 = "";
-					for (int i1 = 0; i1 < 16; i1++) {
-						Collections.shuffle(dobList);
-						if (i1 % 2 == 0) {
-							v4 = v4 + cString(dobList.subList(0, 1));
-						} else {
-							v4 = v4 + " ";
-						}
 
-					}
-//					v4 = v4 + String.valueOf(rand1.nextInt(20) + 2000);
-					System.out.println(v4);
-					data1 = data1.replace("v4", v4);
+					/*
+					 * String v4 = ""; for (int i1 = 0; i1 < 8; i1++) {
+					 * Collections.shuffle(dobList1); if (i1 % 2 == 0) { v4 = v4
+					 * + cString(dobList1.subList(0, 1)); } else { v4 = v4 +
+					 * " "; }
+					 * 
+					 * } v4 = v4 + String.valueOf(rand1.nextInt(20) + 2000);
+					 * data1 = data1.replace("v4", v4);
+					 */
+
+					Collections.shuffle(dobList);
+					data1 = data1.replace("v4", cString(dobList.subList(0, rand1.nextInt(3) + 11)));
+					System.out.println(cString(dobList.subList(0, rand1.nextInt(3) + 10)));
+
 					Collections.shuffle(mfList);
-					 data1 = data1.replace("v5",cString(mfList.subList(0,
-					 1)));
+					data1 = data1.replace("v5", cString(mfList.subList(0, 1)));
 					Collections.shuffle(AnaList);
 					Collections.shuffle(cityList);
-					data1 = data1.replace("v6", cString(AnaList.subList(0, rand1.nextInt(3) + 4))/*+" "+cString(cityList.subList(0, rand1.nextInt(3) + 5))*/);
-//					Collections.shuffle(provList);
-					
-					
+					data1 = data1.replace("v6", cString(AnaList.subList(0, rand1.nextInt(3)
+							+ 4)) 
+									  + " "+ cString(cityList.subList(0,
+									  rand1.nextInt(3) + 5))
+									 );
+					// Collections.shuffle(provList);
+
 					String v7 = "";
 					for (int i1 = 0; i1 < 3; i1++) {
 						Collections.shuffle(AnaList);
