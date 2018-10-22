@@ -282,6 +282,8 @@ public class GoogleService {
                 List<AnnotateImageResponse> responses = response.getResponsesList();
                 client.close();
                 
+                
+                System.out.println(responses);
                 Data returnData = new Data();
                 
                 List<it.sella.f24.service.opennlp.TextAnnotation> textAnnotations = new ArrayList<>();
