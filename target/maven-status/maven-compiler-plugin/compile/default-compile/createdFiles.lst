@@ -407,8 +407,8 @@ opennlp/tools/formats/ConllXSentenceSampleStreamFactory$Parameters.class
 opennlp/maxent/BasicContextGenerator.class
 opennlp/tools/formats/conllu/ConlluSentenceSampleStreamTest.class
 opennlp/maxent/DataStream.class
-opennlp/tools/util/CountedSet.class
 opennlp/tools/util/TreeHeap.class
+opennlp/tools/util/CountedSet.class
 opennlp/tools/util/ext/ExtensionLoaderTest$TestStringGeneratorImpl.class
 opennlp/tools/sentdetect/SDEventStreamTest.class
 opennlp/tools/util/featuregen/CachedFeatureGeneratorFactory.class
@@ -534,8 +534,8 @@ opennlp/tools/cmdline/ArgumentParserTest$SimpleArguments.class
 opennlp/tools/namefind/TestPath.class
 opennlp/tools/ml/maxent/quasinewton/QNTrainer.class
 opennlp/tools/cmdline/lemmatizer/LemmatizerEvaluatorTool$EvalToolParams.class
-opennlp/tools/cmdline/namefind/TokenNameFinder.class
 opennlp/tools/cmdline/FineGrainedReportListener$GroupedMatrixLabelComparator.class
+opennlp/tools/cmdline/namefind/TokenNameFinder.class
 opennlp/tools/cmdline/SentenceDetector.class
 opennlp/tools/formats/EvalitaNameSampleStream$LANGUAGE.class
 opennlp/tools/namefind/NameFinderSequenceValidator.class
@@ -759,8 +759,8 @@ opennlp/tools/formats/ad/ADSentenceStream$SentenceParser.class
 opennlp/tools/util/featuregen/CharacterNgramFeatureGeneratorTest.class
 opennlp/tools/eval/OntoNotes4PosTaggerEval.class
 opennlp/tools/cmdline/namefind/CensusDictionaryCreatorTool$Parameters.class
-opennlp/tools/coref/LinkerMode.class
 opennlp/tools/coref/resolver/Resolver.class
+opennlp/tools/coref/LinkerMode.class
 opennlp/tools/util/featuregen/StringPattern.class
 opennlp/tools/namefind/TokenNameFinderModel$FeatureGeneratorCreationError.class
 opennlp/tools/tokenize/DetokenizerEvaluatorTest.class
@@ -1046,8 +1046,8 @@ opennlp/tools/ml/model/Sequence.class
 opennlp/tools/postag/POSDictionary$1.class
 opennlp/tools/dictionary/Dictionary$2.class
 opennlp/tools/stemmer/snowball/porterStemmer.class
-opennlp/tools/util/normalizer/NumberCharSequenceNormalizerTest.class
 opennlp/tools/util/ParagraphStreamTest.class
+opennlp/tools/util/normalizer/NumberCharSequenceNormalizerTest.class
 opennlp/tools/eval/ArvoresDeitadasEval.class
 opennlp/tools/chunker/DefaultChunkerSequenceValidator.class
 opennlp/tools/coref/DiscourseEntity.class
@@ -1099,8 +1099,8 @@ opennlp/model/AbstractDataIndexer.class
 opennlp/tools/cmdline/POSEvaluator.class
 opennlp/tools/lang/english/TreebankChunker.class
 opennlp/tools/parser/GapLabeler.class
-opennlp/tools/formats/Conll02NameSampleStreamFactory.class
 opennlp/tools/formats/NameFinderCensus90NameStream.class
+opennlp/tools/formats/Conll02NameSampleStreamFactory.class
 opennlp/tools/ml/model/EvalParameters.class
 opennlp/tools/cmdline/TerminateToolExceptionTest.class
 opennlp/tools/langdetect/LanguageDetectorMETest.class

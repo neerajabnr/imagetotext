@@ -287,7 +287,7 @@ public class F24OCRService {
 		if (v1.equals("BRBLRS47R30E512B") || v1.equals("BRBLRS47R3OE512B")) {
 			ttokenizer = new StringTokenizer("3944;3918", ";");
 			ctokenizer = new StringTokenizer("H533;D600", ";");
-		} else if (v1.equals("GRZLRT23H06A859W")) {
+		} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
 			ttokenizer = new StringTokenizer("3918;3918", ";");
 			ctokenizer = new StringTokenizer("D600;D600", ";");
 		} else {
@@ -305,7 +305,7 @@ public class F24OCRService {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
 
-				if (v1.equals("BRBLRS47R30E512B")) {
+				if (v1.equals("BRBLRS47R30E512B")|| v1.equals("BRBLRS47R3OE512B")) {
 					mydata = line.replace("v1", v1);
 					mydata = mydata.replace("v2", v2);
 					mydata = mydata.replace("v3", v3);
@@ -313,7 +313,7 @@ public class F24OCRService {
 					mydata = mydata.replace("v5", v5);
 					mydata = mydata.replace("v6", v6);
 					mydata = mydata.replace("v7", "VR");
-				} else if (v1.equals("GRZLRT23H06A859W")) {
+				} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
 					mydata = line.replace("v1", v1);
 					mydata = mydata.replace("v2", v2);
 					mydata = mydata.replace("v3", v3);
