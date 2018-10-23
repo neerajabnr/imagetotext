@@ -56,17 +56,19 @@ public class Sample {
 		
 */	
 		
-		String v4="CODICE12345678";
+		String v4="CODICE12345678LORIS";
 		
-		if(v4.length()>7) {
-	if(StringUtils.isNumeric(v4.substring(0, 7))) {
-		v4=v4.substring(0,7);
-	}else if(StringUtils.isNumeric(v4.substring(v4.length()-8, v4.length()-1))) {
-		v4=v4.substring(v4.length()-8, v4.length());
-	}
+		if(v4.length()>8) {
+			if(StringUtils.isNumeric(v4.substring(0, 8))) {
+				v4=v4.substring(0,7);
+			}else if(StringUtils.isNumeric(v4.substring(v4.length()-8, v4.length()))) {
+				v4=v4.substring(v4.length()-8, v4.length());
+			}else if(StringUtils.contains("[A-Z]",v4 )){
+				v4=v4.replaceAll("[A-Z]", "");
+			}
+		}
 	
 	System.out.println(v4);
 		
-	}
 	}
 }

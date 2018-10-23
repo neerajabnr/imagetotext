@@ -215,6 +215,8 @@ public class F24OCRService {
 					v4=v4.substring(0,7);
 				}else if(StringUtils.isNumeric(v4.substring(v4.length()-8, v4.length()))) {
 					v4=v4.substring(v4.length()-8, v4.length());
+				}else {
+					v4=v4.replaceAll("[A-Z]", "");
 				}
 			}
 			
