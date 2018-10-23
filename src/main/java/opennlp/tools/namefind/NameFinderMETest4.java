@@ -442,9 +442,14 @@ public class NameFinderMETest4 {
 		 if(r!=null){
 		 nameFinderModel = new TokenNameFinderModel(r);
 		 }else {
+//
+//		ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
+//					new MockInputStreamFactory(new File("section1trainingnewspace_result.txt")), encoding));
 
-		ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
-					new MockInputStreamFactory(new File("section1trainingnewspace_result.txt")), encoding));
+			 
+
+				ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
+							new MockInputStreamFactory(new File("section1.txt")), encoding));
 
 		TrainingParameters params = new TrainingParameters();
 		params.put(TrainingParameters.ITERATIONS_PARAM, 100);
