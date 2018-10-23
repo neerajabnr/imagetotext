@@ -354,7 +354,11 @@ public class F24OCRService {
 				if (sztokenizer.countTokens() == 0) {
 					mydata = mydata.replaceAll("x1", "");
 				} else if (mydata.contains("x1") && sztokenizer.hasMoreTokens()) {
-					mydata = mydata.replaceFirst("x1", sztokenizer.nextToken());
+					String stemp=sztokenizer.nextToken();
+					if(stemp.length()>2) {
+						stemp=stemp.substring(0, 1);
+					}
+					mydata = mydata.replaceFirst("x1", stemp);
 				}
 				if (ttokenizer.countTokens() == 0) {
 					mydata = mydata.replaceAll("x2", "");
