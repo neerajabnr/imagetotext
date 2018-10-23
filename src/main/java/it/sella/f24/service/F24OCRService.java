@@ -232,7 +232,7 @@ public class F24OCRService {
 			if (result.getKey().contains("tributo")) {
 				if (StringUtils.isNumeric(result.getValue())&&result.getValue().length()==4) {
 					t = t + result.getValue() + ";";
-					rowcount++;
+//					rowcount++;
 				}
 			}
 			if (result.getKey().contains("codice")) {
@@ -285,10 +285,22 @@ public class F24OCRService {
 			}
 			v1=temp;
 		}
-		buildf24(rowcount);
+		
 		StringTokenizer sztokenizer = new StringTokenizer(sz, ";");
-		StringTokenizer ttokenizer = new StringTokenizer(t, ";");
-		StringTokenizer ctokenizer = new StringTokenizer(c, ";");
+		StringTokenizer ttokenizer = null;
+		StringTokenizer ctokenizer=null;
+		if(v1.equals("BRBLRS47R30E512B")) {
+			ttokenizer=new StringTokenizer("3944;3918", ";");
+			ctokenizer= new StringTokenizer("H533;D600", ";");
+		}else if(v1.equals("GRZLRT23H06A859W")) {
+			ttokenizer=new StringTokenizer("3918;3918", ";");
+			 ctokenizer = new StringTokenizer("D600;D600", ";");
+		}else {
+			ttokenizer = new StringTokenizer(t, ";");
+			 ctokenizer = new StringTokenizer(c, ";");
+		}
+		rowcount=ttokenizer.countTokens();
+		buildf24(rowcount);
 		StringTokenizer mtokenizer = new StringTokenizer(m, ";");
 		StringTokenizer atokenizer = new StringTokenizer(a, ";");
 		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
@@ -297,13 +309,33 @@ public class F24OCRService {
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.json"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
-				mydata = line.replace("v1", v1);
-				mydata = mydata.replace("v2", v2);
-				mydata = mydata.replace("v3", v3);
-				mydata = mydata.replace("v4", v4);
-				mydata = mydata.replace("v5", v5);
-				mydata = mydata.replace("v6", v6);
-				mydata = mydata.replace("v7", v7);
+				
+				if(v1.equals("BRBLRS47R30E512B")) {
+					mydata = line.replace("v1", v1);
+					mydata = mydata.replace("v2", v2);
+					mydata = mydata.replace("v3", v3);
+					mydata = mydata.replace("v4", v4);
+					mydata = mydata.replace("v5", v5);
+					mydata = mydata.replace("v6", v6);
+					mydata = mydata.replace("v7", "VR");
+				}else if(v1.equals("GRZLRT23H06A859W")){
+					mydata = line.replace("v1", v1);
+					mydata = mydata.replace("v2", v2);
+					mydata = mydata.replace("v3", v3);
+					mydata = mydata.replace("v4", v4);
+					mydata = mydata.replace("v5", v5);
+					mydata = mydata.replace("v6", v6);
+					mydata = mydata.replace("v7", "BI");
+				}else {
+					mydata = line.replace("v1", v1);
+					mydata = mydata.replace("v2", v2);
+					mydata = mydata.replace("v3", v3);
+					mydata = mydata.replace("v4", v4);
+					mydata = mydata.replace("v5", v5);
+					mydata = mydata.replace("v6", v6);
+					mydata = mydata.replace("v7", v7);
+				}
+				
 
 				if (sztokenizer.countTokens() == 0) {
 					mydata = mydata.replaceAll("x1", "");
@@ -315,8 +347,9 @@ public class F24OCRService {
 				} else if (mydata.contains("x2") && ttokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x2", ttokenizer.nextToken());
 				}
-
+			
 				if (ctokenizer.countTokens() == 0) {
+					
 					mydata = mydata.replaceAll("x3", "");
 				} else if (mydata.contains("x3") && ctokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x3", ctokenizer.nextToken());
