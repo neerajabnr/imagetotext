@@ -209,6 +209,15 @@ public class F24OCRService {
 				if (StringUtils.isNumeric(result.getValue()) || StringUtils.isAlpha(result.getValue()))
 					v4 = v4 + result.getValue();
 			}
+			v4=v4.replaceAll("O", "0");
+			if(v4.length()>8) {
+				if(StringUtils.isNumeric(v4.substring(0, 8))) {
+					v4=v4.substring(0,7);
+				}else if(StringUtils.isNumeric(v4.substring(v4.length()-8, v4.length()))) {
+					v4=v4.substring(v4.length()-8, v4.length());
+				}
+			}
+			
 			if (result.getKey().contains("Sex")) {
 				if (StringUtils.isAlpha(result.getValue()))
 					v5 = v5 + result.getValue();
@@ -294,6 +303,17 @@ public class F24OCRService {
 			ttokenizer = new StringTokenizer(t, ";");
 			ctokenizer = new StringTokenizer(c, ";");
 		}
+		
+		v1=searchKeyword(v1);
+		v2=searchKeyword(v2);
+		v3=searchKeyword(v3);
+		v4=searchKeyword(v4);
+		v5=searchKeyword(v5);
+		v6=searchKeyword(v6);
+		v7=searchKeyword(v7);
+		
+		
+
 		rowcount = ttokenizer.countTokens();
 		buildf24(rowcount);
 		StringTokenizer mtokenizer = new StringTokenizer(m, ";");
@@ -395,6 +415,14 @@ public class F24OCRService {
 		logger.info("F24 JSON:\n" + buffer.toString());
 		return buffer.toString();
 
+	}
+
+	private String searchKeyword(String value) {
+		String[] keywords= {"CODICE","FISCALE","DATI","ANAGRAFICI"};
+		for (int i = 0; i < keywords.length; i++) {
+			value=value.replace(keywords[i], "");
+		}
+		return value;
 	}
 
 	private void buildf24(int rowcount) {
