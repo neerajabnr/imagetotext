@@ -383,8 +383,10 @@ public class F24OCRService {
 				
 				if(e.isEmpty()){
 					mydata = mydata.replaceAll("e1", "");
-				}else{
-					
+				}else {
+					if (e.startsWith("777")) {
+						e=e.replaceAll("7", "");
+					}
 					mydata=mydata.replace("e1", e);
 				}
 
