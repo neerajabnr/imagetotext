@@ -87,7 +87,9 @@ public class F24OCRService {
 			int xprev = 0, yprev = 0, ydiff = 0, xprevEnd = 0;
 			boolean pr = false;
 			for (DataDescription dat : list) {
-
+				if(dat.getDescription().startsWith("777")&&dat.getDescription().endsWith("7")) {
+					continue;
+				}
 				if (dat.getDescription().equals("CODICE")) {
 					s1 = 1;
 				} else if (dat.getSection().equals("two")) {
@@ -128,6 +130,8 @@ public class F24OCRService {
 			sec1 = sec1.replace("|", "");
 			sec2 = sec2.replace("|", "");
 			sec2 = sec2.replace(" 00", "*00");
+			
+			
 
 			System.out.println("Section1:----\n" + sec1.trim());
 			System.out.println("Section2:----\n" + sec2.trim());
@@ -524,9 +528,10 @@ public class F24OCRService {
 					des = "X";
 				}
 
-				if (txtAnn.getBoundingPoly().getVertices().get(0).getY() < secTwo) {
-					des = des.replaceAll("[a-z]", "");
-				}
+//				if (txtAnn.getBoundingPoly().getVertices().get(0).getY() < secTwo) {
+					des = des.replaceAll(".*[a-z].*", "");
+//				}
+					
 				DataDescription d = new DataDescription(des, txtAnn.getBoundingPoly().getVertices().get(0).getX(),
 						txtAnn.getBoundingPoly().getVertices().get(0).getY(),
 						txtAnn.getBoundingPoly().getVertices().get(1).getX(),
