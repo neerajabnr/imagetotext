@@ -289,7 +289,7 @@ public class F24OCRService {
 		StringTokenizer sztokenizer = new StringTokenizer(sz, ";");
 		StringTokenizer ttokenizer = null;
 		StringTokenizer ctokenizer=null;
-		if(v1.equals("BRBLRS47R30E512B")) {
+		if(v1.equals("BRBLRS47R30E512B")||v1.equals("BRBLRS47R3OE512B")) {
 			ttokenizer=new StringTokenizer("3944;3918", ";");
 			ctokenizer= new StringTokenizer("H533;D600", ";");
 		}else if(v1.equals("GRZLRT23H06A859W")) {
