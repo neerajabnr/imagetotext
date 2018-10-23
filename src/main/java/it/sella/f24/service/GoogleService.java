@@ -81,6 +81,7 @@ public class GoogleService {
                 List<AnnotateImageResponse> responses = response.getResponsesList();
                 client.close();
                 System.out.println("responsef24");
+                System.out.println("Response from Google OCR:\n"+responses);
                 logger.info("Response from Google OCR:\n"+responses);
                                 
                 Data returnData = new Data();
@@ -300,7 +301,7 @@ public class GoogleService {
                 client.close();
                 
                 logger.info("Response from google ocr:\n"+responses);
-                System.out.println(responses);
+                System.out.println("Response from google ocr:\n"+responses);
                 Data returnData = new Data();
                 
                 List<it.sella.f24.service.opennlp.TextAnnotation> textAnnotations = new ArrayList<>();
