@@ -849,6 +849,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/POSEvaluatorTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/FMeasureTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/EmptyLinePreprocessorStream.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/FetchData.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/TokenNameFinderEvaluationMonitor.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/eval/Mean.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/lang/spanish/TokenChunker.java

@@ -79,6 +79,9 @@ public class F24OCRService {
 					return "{\"status\":\"Invalid input data, please try to capture one more time!!!\"}";
 				}
 			
+			
+//			FetchData f = new FetchData();
+//			f.getData(list);
 			boolean first = true;
 			int prev = 0;
 			StringBuffer section1 = new StringBuffer();
