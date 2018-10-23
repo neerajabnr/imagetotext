@@ -271,15 +271,25 @@ public class F24OCRService {
 				e = e + result.getValue();
 			}
 		}
-
-		if (v2.contains("DATI"))
-			v2 = StringUtils.remove(v2, "DATI");
-
-		if (v3.contains("ANAGRAFICI"))
-			v3 = StringUtils.remove(v3, "ANAGRAFICI");
-
-		if (v6.contains("CODICE"))
-			v6 = StringUtils.remove(v6, "CODICE");
+		//Replacing the keywords with empty space in both the sections
+		v1=searchKeyword(v1);
+		v2=searchKeyword(v2);
+		v3=searchKeyword(v3);
+		v4=searchKeyword(v4);
+		v5=searchKeyword(v5);
+		v6=searchKeyword(v6);
+		v7=searchKeyword(v7);
+		
+		sz=searchKeyword(sz);
+		t=searchKeyword(t);
+		c=searchKeyword(c);
+		m=searchKeyword(m);
+		a=searchKeyword(a);
+		d=searchKeyword(d);
+		db=searchKeyword(db);
+		cr=searchKeyword(cr);
+		e=searchKeyword(e);
+		
 
 		// Replacing * with , in the debit values
 		db = db.replace("*", ",");
@@ -308,16 +318,6 @@ public class F24OCRService {
 			ctokenizer = new StringTokenizer(c, ";");
 		}
 		
-		v1=searchKeyword(v1);
-		v2=searchKeyword(v2);
-		v3=searchKeyword(v3);
-		v4=searchKeyword(v4);
-		v5=searchKeyword(v5);
-		v6=searchKeyword(v6);
-		v7=searchKeyword(v7);
-		
-		
-
 		rowcount = ttokenizer.countTokens();
 		buildf24(rowcount);
 		StringTokenizer mtokenizer = new StringTokenizer(m, ";");
@@ -426,7 +426,7 @@ public class F24OCRService {
 	}
 
 	private String searchKeyword(String value) {
-		String[] keywords= {"CODICE","FISCALE","DATI","ANAGRAFICI"};
+		String[] keywords= {"CODICE","FISCALE","DATI","ANAGRAFICI","COPIA","PER","IL","SOGGETTO","CHE","EFFETTUA","IL","VERSAMENTO"};
 		for (int i = 0; i < keywords.length; i++) {
 			value=value.replace(keywords[i], "");
 		}
