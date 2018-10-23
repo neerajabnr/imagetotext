@@ -449,7 +449,7 @@ public class NameFinderMETest4 {
 			 
 
 				ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
-							new MockInputStreamFactory(new File("section1.txt")), encoding));
+							new MockInputStreamFactory(new File("section1trainingnewspace_result.txt")), encoding));
 
 		TrainingParameters params = new TrainingParameters();
 		params.put(TrainingParameters.ITERATIONS_PARAM, 100);
