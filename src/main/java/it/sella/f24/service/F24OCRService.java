@@ -68,14 +68,14 @@ public class F24OCRService {
 			logger.info("Space count" + spacecount);
 			list = process(data);
 
-			try {
+			/*try {
 				Collections.sort(list);
 			} catch (IllegalArgumentException e) {
 				e.printStackTrace();
 				System.out.println("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
 				logger.info("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
 				return "{\"status\":\"Invalid input data, please try to capture one more time!!!\"}";
-			}
+			}*/
 
 			// FetchData f = new FetchData();
 			// f.getData(list);
@@ -87,7 +87,7 @@ public class F24OCRService {
 			int xprev = 0, yprev = 0, ydiff = 0, xprevEnd = 0;
 			boolean pr = false;
 			for (DataDescription dat : list) {
-				if(dat.getDescription().startsWith("777")&&dat.getDescription().endsWith("7")) {
+				if(dat.getDescription().startsWith("777")||dat.getDescription().startsWith("177")&&dat.getDescription().endsWith("7")) {
 					continue;
 				}
 				if (dat.getDescription().equals("CODICE")) {
@@ -545,6 +545,11 @@ public class F24OCRService {
 				list.add(d);
 
 			}
+		}
+		
+		System.out.println("After sorting");
+		for (DataDescription dataDescription : list) {
+			System.out.println(dataDescription.getDescription());
 		}
 		return list;
 	}
