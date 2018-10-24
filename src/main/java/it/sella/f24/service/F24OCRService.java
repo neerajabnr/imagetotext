@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.StringTokenizer;
@@ -16,13 +15,10 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import it.sella.f24.service.opennlp.Data;
 import it.sella.f24.service.opennlp.DataDescription;
 import it.sella.f24.service.opennlp.TextAnnotation;
 import it.sella.f24.testclasses.Result;
-import opennlp.tools.namefind.NameFinderMETest3;
 import opennlp.tools.namefind.NameFinderMETest4;
 
 @Service
@@ -132,7 +128,10 @@ public class F24OCRService {
 			sec2 = sec2.replace(" 00", "*00");
 			
 			
-
+			sec2=sec2.replace("E L", "EL");
+			sec2=sec2.replace("E R", "ER");
+			sec2=sec2.replace("ELR", "ER");
+			
 			System.out.println("Section1:----\n" + sec1.trim());
 			System.out.println("Section2:----\n" + sec2.trim());
 
@@ -543,13 +542,7 @@ public class F24OCRService {
 				}
 
 				list.add(d);
-
 			}
-		}
-		
-		System.out.println("After sorting");
-		for (DataDescription dataDescription : list) {
-			System.out.println(dataDescription.getDescription());
 		}
 		return list;
 	}
