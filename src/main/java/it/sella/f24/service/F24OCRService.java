@@ -121,6 +121,8 @@ public class F24OCRService {
 			sec2 = sec2.replace(" . ", " ");
 			sec2 = sec2.replace(" . ", " ");
 			sec1 = sec1.replace(".", "");
+			sec1 = sec1.replace("-", "");
+			
 			sec1 = sec1.replace(":", "");
 			sec2 = sec2.replace(":", "");
 			sec1 = sec1.replace("|", "");
@@ -224,7 +226,7 @@ public class F24OCRService {
 			v4=v4.replaceAll("O", "0");
 			if(v4.length()>8) {
 				if(StringUtils.isNumeric(v4.substring(0, 8))) {
-					v4=v4.substring(0,7);
+					v4=v4.substring(0,8);
 				}else if(StringUtils.isNumeric(v4.substring(v4.length()-8, v4.length()))) {
 					v4=v4.substring(v4.length()-8, v4.length());
 				}
@@ -434,7 +436,8 @@ public class F24OCRService {
 	}
 
 	private String searchKeyword(String value) {
-		String[] keywords= {"CODICE","FISCALE","DATI","ANAGRAFICI","COPIA","PER","IL","SOGGETTO","CHE","EFFETTUA","IL","VERSAMENTO"};
+		String[] keywords= {"CODICE","FISCALE","DATI","ANAGRAFICI","COPIA","PER","IL","SOGGETTO","CHE","EFFETTUA","IL","VERSAMENTO", 
+				"BANCA" ,"POSTE" ,"AGENTE","DELLA", "RISCOSSIONE","DATA","ESTREMI","DEL","DA","COMPILARE","CURA","DI"};
 		for (int i = 0; i < keywords.length; i++) {
 			value=value.replace(keywords[i], "");
 		}
