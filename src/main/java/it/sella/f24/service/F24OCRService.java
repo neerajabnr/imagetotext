@@ -131,6 +131,15 @@ public class F24OCRService {
 			sec2=sec2.replace("E L", "EL");
 			sec2=sec2.replace("E R", "ER");
 			sec2=sec2.replace("ELR", "ER");
+			sec2=sec2.replace("EL1", "EL ");
+			sec2=sec2.replace("ELI", "EL ");
+			sec2=sec2.replace("ER1", "ER ");
+			sec2=sec2.replace("ERI", "ER ");
+			sec2=sec2.replace("EIL", "EL ");
+			sec2=sec2.replace("E1L", "EL ");
+			sec2=sec2.replace("EIR", "ER ");
+			sec2=sec2.replace("E1R", "ER ");
+			
 			
 			System.out.println("Section1:----\n" + sec1.trim());
 			System.out.println("Section2:----\n" + sec2.trim());
