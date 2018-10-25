@@ -214,10 +214,12 @@ public class F24OCRService {
 			}
 			if (result.getKey().contains("Anagrafici")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v2 = v2 + result.getValue();
+					v2 = v2 + result.getValue()+" ";
 			}
+			
+					
 			if (result.getKey().contains("Name")) {
-				v3 = v3 + result.getValue();
+				v3 = v3 + result.getValue()+" ";
 			}
 			if (result.getKey().contains("DOB")) {
 				if (StringUtils.isNumeric(result.getValue()) || StringUtils.isAlpha(result.getValue()))
@@ -231,14 +233,14 @@ public class F24OCRService {
 					v4=v4.substring(v4.length()-8, v4.length());
 				}
 			}
-			v4=v4.replaceAll("[A-Z]", "");
+			
 			if (result.getKey().contains("Sex")) {
 				if (StringUtils.isAlpha(result.getValue()))
 					v5 = v5 + result.getValue();
 			}
 			if (result.getKey().contains("City")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v6 = v6 + result.getValue();
+					v6 = v6 + result.getValue()+" ";
 			}
 			if (result.getKey().contains("Prov")) {
 				if (StringUtils.isAlpha(result.getValue()))
@@ -281,6 +283,11 @@ public class F24OCRService {
 				e = e + result.getValue();
 			}
 		}
+		
+		v2=v2.trim();
+		v3=v3.trim();
+		v4=v4.replaceAll("[A-Z]", "");
+		v6=v6.trim();
 		//Replacing the keywords with empty space in both the sections
 		v1=searchKeyword(v1);
 		v2=searchKeyword(v2);
