@@ -766,6 +766,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/naivebayes/NaiveBayesModel.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/treeinsert/ParserTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/chunker/ChunkerCrossValidatorTool.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/FileReaderfromFolder.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/io/PlainTextGISModelWriter.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/AbstractBottomUpParser.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/eval/Evaluator.java

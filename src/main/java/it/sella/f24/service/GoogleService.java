@@ -44,7 +44,7 @@ public class GoogleService {
     public static void main(String[] args) throws IOException {
 		GoogleService service = new GoogleService();
 		
-		service.readText(new File("/home/bsindia/ocr/F24.jpg"), "");
+		service.readText(new File("/home/bsindia/Documents/images/20181024_190928.jpg"), "");
 	}
     
    
@@ -55,7 +55,7 @@ public class GoogleService {
             }
 
             System.out.println("Google OCR: processing file");
-            logger.info("Google OCR: processing file");
+            ////logger.info("Google OCR: processing file");
             PrintStream out = System.out;
             List<AnnotateImageRequest> requests = new ArrayList<>();
 
@@ -82,7 +82,7 @@ public class GoogleService {
                 client.close();
                 System.out.println("responsef24");
                 System.out.println("Response from Google OCR:\n"+responses);
-                logger.info("Response from Google OCR:\n"+responses);
+                ////logger.info("Response from Google OCR:\n"+responses);
                                 
                 Data returnData = new Data();
                 
@@ -91,7 +91,7 @@ public class GoogleService {
                 for (AnnotateImageResponse res : responses) {
                     if (res.hasError()) {
                         out.printf("Error: %s\n", res.getError().getMessage());
-                        logger.info("Error in processing the image with Google OCR: %s\n"+ res.getError().getMessage());
+                        ////logger.info("Error in processing the image with Google OCR: %s\n"+ res.getError().getMessage());
                         throw new RuntimeException("Error Google OCR");
                     }
                     
@@ -154,7 +154,7 @@ public class GoogleService {
             }
 
             System.out.println("Google OCR: processing file");
-            logger.info("Google OCR: processing file");
+            ////logger.info("Google OCR: processing file");
             PrintStream out = System.out;
             List<AnnotateImageRequest> requests = new ArrayList<>();
 
@@ -181,8 +181,8 @@ public class GoogleService {
                 List<AnnotateImageResponse> responses = response.getResponsesList();
                 client.close();
                 System.out.println("responsef24");
-                logger.info("Response data from google vision");
-                logger.info(responses);
+                ////logger.info("Response data from google vision");
+                ////logger.info(responses);
                                 
                 Data returnData = new Data();
                 
@@ -191,8 +191,8 @@ public class GoogleService {
                 for (AnnotateImageResponse res : responses) {
                     if (res.hasError()) {
                         out.printf("Error: %s\n", res.getError().getMessage());
-                        logger.info("Error: %s\n"+res.getError().getMessage());
-                        logger.info("Error in Google OCR");
+                        ////logger.info("Error: %s\n"+res.getError().getMessage());
+                        ////logger.info("Error in Google OCR");
                         throw new RuntimeException("Error Google OCR");
                     }
                     
@@ -266,7 +266,7 @@ public class GoogleService {
             }
 
             System.out.println("Google OCR: processing file");
-            logger.info("Google OCR: processing file");
+            ////logger.info("Google OCR: processing file");
             PrintStream out = System.out;
             List<AnnotateImageRequest> requests = new ArrayList<>();
 
@@ -300,7 +300,7 @@ public class GoogleService {
                 List<AnnotateImageResponse> responses = response.getResponsesList();
                 client.close();
                 
-                logger.info("Response from google ocr:\n"+responses);
+                ////logger.info("Response from google ocr:\n"+responses);
                 System.out.println("Response from google ocr:\n"+responses);
                 Data returnData = new Data();
                 
@@ -309,7 +309,7 @@ public class GoogleService {
                 for (AnnotateImageResponse res : responses) {
                     if (res.hasError()) {
                         out.printf("Error: %s\n", res.getError().getMessage());
-                        logger.info("Error: %s\n"+ res.getError().getMessage());
+                        ////logger.info("Error: %s\n"+ res.getError().getMessage());
                         throw new RuntimeException("Error Google OCR");
                     }
                     

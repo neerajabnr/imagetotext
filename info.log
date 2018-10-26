@@ -1,303 +1,66 @@
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Space count102
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - After the data conversion
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1:----
-CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I \n  ,     \n DATI ANAGRAFICI FORLANI ** MARIA GIULIANA \n    **         \n 1 1 0 3 1 9 4 0 F RO \n CODICE FISCALE   ,  , \n CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE \n DATA **
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2:----
-\n *    \n MOTIVO DEL PAGAMENTO    \n                       \n EL 3914 H 360 2016 45*00 \n EL 3918 H 3 60 2016 172*00 \n EL 3961 MO 9 8 2017 3*00 \n ER 3918 D600 2018 243*00 COPIA PER IL SOGGETTO CHE EFFETTUA IL VERSAMENTO \n SALDO \n FINALE EURO  ) 463*00 \n ESTREMI DEL VERSAMENTO DA COMPILARE A CURA DI BANCA / POSTE / AGENTE DELLA RISCOSSIONE )    \n AZIENDA CAS / SPORIELO   \n TTTTT  /    ABI  /  \n  /   \n  CAB
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Fiscale 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - FRL 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - MGL 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 4 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 0 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - C 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 5 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 1 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - H 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 3 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 6 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 0 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - I 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Anagrafici 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - FORLANI 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Name 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - MARIA 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - GIULIANA 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - DOB 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 1 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 1 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 0 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 3 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 1 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 9 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 4 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - 0 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sex 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - F 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - City 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - RO 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - tributo 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - tributo 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - codice 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - codice 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - mese 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - mese 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - anno 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - anno 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - dobito 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - dobito 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - tributo 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - tributo 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - codice 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - codice 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - num 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - num 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - mese 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - mese 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - anno 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - anno 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - dobito 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - dobito 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - tributo 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - tributo 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - codice 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - codice 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - num 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - num 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - mese 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - mese 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - anno 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - anno 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - dobito 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - dobito 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - tributo 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - tributo 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - codice 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - codice 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - anno 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - anno 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - dobito 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - dobito 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - euro 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - euro 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  opennlp.tools.namefind.NameFinderMETest4  - Sezione 
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Result data
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1:			
-[Result [key=Fiscale, value=FRL], Result [key=Fiscale, value=MGL], Result [key=Fiscale, value=4], Result [key=Fiscale, value=0], Result [key=Fiscale, value=C], Result [key=Fiscale, value=5], Result [key=Fiscale, value=1], Result [key=Fiscale, value=H], Result [key=Fiscale, value=3], Result [key=Fiscale, value=6], Result [key=Fiscale, value=0], Result [key=Fiscale, value=I], Result [key=Anagrafici, value=FORLANI], Result [key=Name, value=MARIA], Result [key=Name, value=GIULIANA], Result [key=DOB, value=1], Result [key=DOB, value=1], Result [key=DOB, value=0], Result [key=DOB, value=3], Result [key=DOB, value=1], Result [key=DOB, value=9], Result [key=DOB, value=4], Result [key=DOB, value=0], Result [key=Sex, value=F], Result [key=City, value=RO]]
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2:			
-[Result [key=Sezione, value=EL], Result [key=tributo, value=3914], Result [key=codice, value=H], Result [key=mese, value=360], Result [key=anno, value=2016], Result [key=dobito, value=45*00], Result [key=Sezione, value=EL], Result [key=tributo, value=3918], Result [key=codice, value=H], Result [key=num, value=3], Result [key=mese, value=60], Result [key=anno, value=2016], Result [key=dobito, value=172*00], Result [key=Sezione, value=EL], Result [key=tributo, value=3961], Result [key=codice, value=MO], Result [key=num, value=9], Result [key=mese, value=8], Result [key=anno, value=2017], Result [key=dobito, value=3*00], Result [key=Sezione, value=ER], Result [key=tributo, value=3918], Result [key=codice, value=D600], Result [key=anno, value=2018], Result [key=dobito, value=243*00], Result [key=euro, value=463*00], Result [key=Sezione, value=CAB]]
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sending the data to prepare Json
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - F24 JSON:
-{  
-
-   "F24Semplificato":{  
-
-      "Contribuente":{  
-
-         "CodiceFiscale":"FRLMGL40C51H360I",             
-
-         "DatiAnagrafici":{  
-
-            "Cognome":"FORLANI",
-
-            "Nome":"MARIA GIULIANA",
-
-            "RagioneSociale":"",
-
-            "DataDiNascita":"11031940",
-
-            "Sesso":"F",
-
-            "Comune":"RO",
-
-            "Prov":""
-
-         },
-
-         "DomicilioFiscale":{  
-
-            "Comune":"RO",
-
-            "Prov":"",
-
-            "ViaeNumeroCivico":""
-
-         },
-
-         "SecondoCodiceFiscale":"",
-
-         "CodiceIdentificativo":"",
-
-         "IdentificativoOperazione":""
-
-      },
-
-      "Taxes":{  
-
-         "CodiceUfficio":"",
-
-         "CodiceAtto":"",     
-
-         "Tax":[  
-
-            	{  
-
-               "Sezione":"EL",
-
-               "CodiceTributo":"3914",
-
-               "CodiceEnte":"D600",
-
-               "Ravv":"",
-
-               "ImmVar":"",
-
-               "Acc":"",
-
-               "Saldo":"",
-
-               "NumImm":"",
-
-               "MeseRif":"360",
-
-               "AnnoRif":"2016",
-
-               "Detrazione":"",
-
-               "DebitoImporto":"45,00",
-
-               "CrebitoImporto":""
-
-            }
-,
-	{  
-
-               "Sezione":"EL",
-
-               "CodiceTributo":"3918",
-
-               "CodiceEnte":"",
-
-               "Ravv":"",
-
-               "ImmVar":"",
-
-               "Acc":"",
-
-               "Saldo":"",
-
-               "NumImm":"",
-
-               "MeseRif":"60",
-
-               "AnnoRif":"2016",
-
-               "Detrazione":"",
-
-               "DebitoImporto":"172,00",
-
-               "CrebitoImporto":""
-
-            }
-,
-	{  
-
-               "Sezione":"EL",
-
-               "CodiceTributo":"3961",
-
-               "CodiceEnte":"",
-
-               "Ravv":"",
-
-               "ImmVar":"",
-
-               "Acc":"",
-
-               "Saldo":"",
-
-               "NumImm":"",
-
-               "MeseRif":"8",
-
-               "AnnoRif":"2017",
-
-               "Detrazione":"",
-
-               "DebitoImporto":"3,00",
-
-               "CrebitoImporto":""
-
-            }
-,
-	{  
-
-               "Sezione":"ER",
-
-               "CodiceTributo":"3918",
-
-               "CodiceEnte":"",
-
-               "Ravv":"",
-
-               "ImmVar":"",
-
-               "Acc":"",
-
-               "Saldo":"",
-
-               "NumImm":"",
-
-               "MeseRif":"",
-
-               "AnnoRif":"2018",
-
-               "Detrazione":"",
-
-               "DebitoImporto":"243,00",
-
-               "CrebitoImporto":""
-
-            }
-
-
-
-
-         ]
-
-      },
-
-      "Payment":{  
-
-         "DataIncasso":"",
-
-         "ContoOrdinante":"",
-
-         "SaldoFinale":"463,00",
-
-         "Product":""
-
-      }
-
-   },
-
-   "MessageContext":{  
-
-      "Sender":"InternetBanking",
-
-      "ABI":"03268",
-
-      "Auth-Token":"AQIC5wM2LY4SfcydkHI9T0kxBHbh74jK-Ij2gRVL58Mjloo.*AAJTSQACMDIAAlNLABQtMzI1Mjc2MzIxNTE1NDYzNzkxMwACUzEAAjA0*"
-
-   }
-
-}
-
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   )  (      <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE   ,  ,  ,
+** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B <END>    ,      DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>      <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  ,
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 3 O E 5 1 2 B <END> <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   F )       <START:DOB> 30 10 19 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE    ,     ,  , **
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   F )       **   <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  , **
+CODICE FISCALE <START:Fiscale> GRZLRT23H06A859W  ,    DATI **  ANAGRAFICI <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END> <START:DOB> FORLANI <END> **     )  <START:City> BIELLA <END> CODICE FISCALE    ,    ,   , **   DATA CODICE BANCA POSTEJAGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 30 10 19 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  , **
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    <START:DOB> 30 10 **   )       19 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  , **
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>      DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 30 10 19 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  ,
+** CODICE FISCALE BR B LR S 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   )       **   <START:DOB> 30 10 19 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END>  CODICE ,  FISCALE      ,  , **
+CODICE FISCALEG R Z LRT 2 3 H 0 6 A 8 5 9 W <END>  ,     **  DATI ANAGRAFICI <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END>    **         **  <START:DOB> 0 6 0 6 1 9 2 3 <END> <START:Sex> F <END> <START:City> BIELLA <END> ** BI CODICE  ,  FISCALE      ,  , **   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     **  DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>   )       <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE   ,  ,
+** CODICE <START:City> LEGNAGO <END> ** F 7 4 19 10 0 3    **    **   <START:Name> LORIS <END> ** <START:Anagrafici> BARBIERI <END> ** ANAGRAFICI ** DAN     **  <START:DOB> 30E512B ** R 7 4 ** BRBLRS ** FISCALE CODICE
+** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B <END>      ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 30 10 19 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE   ,  ,  ,
+** CODICE FISCALE BR BLR S 4 7 R 30 E 5 1 2 B <END>  ,      DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   )       <START:DOB> 30 10 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE  ,      ,  ,
+CODICE FISCALE <START:Fiscale> BRBLR S 4 7 R 3 O E 5 1 2 B <END> <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   )       **   <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> CODICE FISCALE    ,     ,  ,
+** CODICE FISCALE <START:Fiscale> BRBLR S 4 7 R 30 E 5 1 2 B <END>      ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   )       <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> CODICE FISCALE   ,  ,  ,     **
+** CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R <START:DOB> 3 0 E 5 1 2 B <END> <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   )       <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  , **
+** CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,    DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>       <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> CODICE FISCALE   ,  ,  ,
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 30 10 19 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END>  CODICE ,  FISCALE      ,  ,
+CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B <END>  ,     **  DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 3 0 1 0 1 9 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> V R <END> CODICE  ,  FISCALE    ,  ,
+** CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>         <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> CODICE ** <START:Prov> VR <END>  ,  FISCALE   ,  ,
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 30 10 19 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE   ,  ,  ,     **
+** CODICE FISCALE <START:Fiscale> BRBLR S 4 7 R 30 E 5 1 2 B <END>  ,     DAN ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>      <START:DOB> 30 10 19 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE , FISCALE        ,  ,
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>         <START:DOB> 3 0 1 0 1 9 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  , **
+CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END>  **   ** <START:Name> LORIS <END>   ** )       **   <START:DOB> 30 10 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE  ,  FISCALE      ,  , **
+** CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>      DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>   F )       <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE    ,     ,  , **
+** CODICE FISCALE <START:Fiscale> BRBIRS 4 TR 30E512B <END> DAN ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END> <START:DOB> 30 10 19 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE       ,
+** CODICE FISCALE <START:Fiscale> GR Z LRT 2 3 H 0 6 A 8 5 9 W <END>  ,     **  DATI ANAGRAFICI <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END>    **   F )       **   <START:DOB> 0 6 0 6 1 9 2 3 <END> <START:Sex> F <END> <START:City> BIELLA <END> CODICE FISCALE   ,  ,  ,     **   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>      ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **  M  )       <START:DOB> 30 10 1 9 47 <END> <START:Sex> F <END><START:City> LEGNAGO <END> CODICE FISCALE   ,  ,  ,     **
+** CODICE FISCALE <START:Fiscale> BRBLR S 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   (       **  , <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE  ,      ,  ,
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **  MOF )       <START:DOB> 30 10 19 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  ,
+CODICE FISCALE <START:Fiscale> BRB L R S 4 7 R 3 0 E 5 1 2 B <END> <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> CODICE  ,  FISCALE     ,  ,
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   )       **   <START:DOB> 30 10 19 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END>  CODICE ,  FISCALE      ,  , **
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END> G  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>   )      <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>   <START:City> LEGNAGO <END>  CODICE ,  FISCALE      ,  ,
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>   )       <START:DOB> 30 10 19 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> CODICE FISCALE  ,       ,  ,
+** CODICE FISCALE <START:Fiscale> BRB LR S 4 7 R 30 E 5 1 2 B <END>      DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 30 10 19 4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE FISCALE    ,    ,  ,
+** CODICE FISCALE <START:Fiscale> GRZLRI 2 3 H 0 6 A 8 5 9 W <END>  ,     DATI ANAGRAFICI <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END>    **         <START:DOB> 0 6 0 6 1 9 2 3 <END> <START:Sex> F <END>  <START:City> BIELLA <END> ** BI CODICE FISCALE   ,  ,  ,     DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> GRZLRT 2 3 H 0 6 A 8 5 9 W <END>  ,     DATI ANAGRAFICI <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END>    **          <START:DOB> 0 6 0 6 1 9 2 3 <END> <START:Sex> F <END>  <START:City> BIELLA <END> ** BI  CODICE ,  FISCALE      ,  , CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+** CODICE FISCALE <START:Fiscale> GRZLRT 2 3 H 0 6 A 8 5 9 W <END>  ,     **  DATI ANAGRAFICI <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END>    **         **   <START:DOB> 0 6 0 6 1 9 2 3 <END> <START:Sex> F <END>  <START:City> BIELLA <END> ** BI CODICE FISCALE   ,  ,  ,     DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> FRL MGL 4 0 C 5 1 H 3 6 0 I <END>  ,     DATI ANAGRAFICI <START:Anagrafici> FORLANI <END> ** <START:Name> MARIA GIULIANA <END>    **         <START:DOB> 1 1 0 3 1 9 4 0 <END> <START:Sex> F <END> <START:Prov> RO <END> CODICE FISCALE   ,  , DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> PPL SFN 69 A 4 6 D 6 4 3 J  ,     **  DATI ANAGRAFICI <START:Anagrafici> PIPOLI <END> ** STEFANIA    **         **   0 6011969 F <START:City> FOGGIAA <END> ** F G  CODICE ,  FISCALE      ,  , DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> FRLMGL 4 0 C 5 1 H 3 6 0 I <END>       ,     DATI ANAGRAFICI <START:Anagrafici> FORLANI <END> ** <START:Name> MARIA GIULIANA <END>    **   )       **    <START:DOB> 0 6 0 6 1 9 2 3 <END> <START:Sex> F <END> ** <START:Prov> FE <END> CODICE  ,  FISCALE      ,  , DATA ** CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> FRL MGL 4 0 C 5 1 H 3 6 0 I <END>  ,     **  DATI ANAGRAFICI <START:Anagrafici> FORLANI <END> ** <START:Name> MARIA GIULIANA <END>    **         **    <START:DOB> 0 6 0 6 1 9 2 3 <END> <START:Sex> F <END> ** <START:Prov> FE <END> CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> GRZLRT23H06A859W <END>  ,   <START:Anagrafici> GARIAZZO <END>   DATI ANAGRAFICI ** <START:Name> ALBERTO <END>   **  )  (    )   <START:City> BIELLA <END> CODICE FISCALE    ,  ,  ,
+CODICE FISCALE <START:Fiscale> FR LMGL 4 0 C 5 1 H 3 6 0 I <END>  ,     **  DATI ANAGRAFICI <START:Anagrafici> FORLANI <END> GIULIANA ** <START:Name> MARIA VITTORIA <END>    **  (         3 1 9 4 0 F ALBANO D ' IVERA ** <START:Prov> FE <END>  CODICE ,  FISCALE      ,  , DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>      ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **   (       <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> CODICE FISCALE   ,  ,  ,     CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE DATA **
+CODICE FISCALE <START:Fiscale> BRBLR S 4 7 R 30 E 5 1 2 B <END>      ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 3 0 1 0 1 9 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END> ** <START:Prov> V R <END> CODICE FISCALE   ,  ,  ,     **
+CODICE FISCALEG R ZLRT 2 3 H 0 6 A 8 5 9 W <END>  ,     **  DATI ANAGRAFICI <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END>    **    0 6 **    0 6 **   1 9 2 3 M  <START:City> BIELLA <END> ** BI CODICE FISCALE   ,      ,  , **   DATA CODICE BANCA / POSTE / AGENTE DELIA RISCOSSIONE
+CODICE FISCALE <START:Fiscale> FRL MGL 4 O C 5 1 H 3 6 O I <END>  ,     DATI ANAGRAFICI <START:Anagrafici> FORLANI <END> **     '   <START:DOB> 1 1 0 3 1 9 4 0 <END> <START:Sex> F <END> <START:Prov> RO <END> CODICE FISCALE   ,  ,  ,     CODICE CARCA , KOSTE ACEITE 152 05 11
+CODICE FISCALE <START:Fiscale> FRL MGL 4 0 C 5 1 H 360 I <END>      ,     DATI ANAGRAFICI <START:Anagrafici> FORLANI <END> ** <START:Name> MARIA GIULIANA <END>    **  (        **   <START:DOB> 1 1 0 3 1 9 4 0 <END> <START:Sex> F <END>  <START:Prov> RO <END ** F E CODICE FISCALE   ,  ,  ,     **   CODICE BANCA / POSTE / AGENTE DELLA RSCOSSIONE
+CODICE FISCALE V GL MV T 4 OD 4 5 A 1 5 7 M  ,     DATI ANAGRAFICI <START:Anagrafici> VOGLIAZZO <END> ** <START:Name> MARIA VITTORIA <END>    **  (        **   <START:DOB> 1 1 0 3 1 9 4 0 <END> <START:Sex> F <END> <START:City> ALBIANO D ' I <END> <START:Prov> VR <END>EA CODICE FISCALE   ,  ,  ,     **   CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE DATA
+CODICE FISCALE P PLS FN 69 A 4 6 D 6 4 3 )  ,     DATI ANAGRAFICI <START:Anagrafici> PIPOLI <END> ** STEFANIA  0   **  MOF }       **  ,  <START:DOB> 3 010 119  4  7 <END> Q0 <START:Sex> M <END>  <START:City> FOGGIAA <END> CODICE FISCALE  ,       ,  , **   DAA CODICE BANCA / POSTE / AGENTE DELA RISCOSSIONE
+CODICE FISCALE BR BLRS 4 7 R 30 E 51 2 B <END> <END>  ,     DAT ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         **   <START:DOB> 3 010 119  4  7 <END> <START:Sex> F <END> <START:City> LEGNAGO <END> ** <START:Prov> VR <END> CODICE  ,  FISCALE      ,  , **   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+**  CODICE FISCALE <START:Fiscale> GRZLRT 2 3 H 0 6 A 8 5  9 W <END> DATI ANAGRAFICI  ,     <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END>    **   0  6 **         0 6 1 9 2 3 M  <START:City> BIELLA <END> CODICE FISCALE   ,    ,      **   CODICE BANCA / POSTE / AGENTE DELLA RISCOSSONE
+CODICE FISCALE <START:Fiscale> BRBLRS 4 7 R 30 E 5 1 2 B <END>  ,     DATI ANAGRAFICI <START:Anagrafici> BARBIERI <END> ** <START:Name> LORIS <END>    **         <START:DOB> 30 10 19 4 7 <END> <START:Sex> M <END>  <START:City> LEGNAGO <END>  CODICE ,  FISCALE      ,  ,
+CODICE FISCALE <START:Fiscale> GRZLRT 2 3 H 0 6 A 8 5 9 W <END>  ,     DATI ANAGRAFICI <START:Anagrafici> GARIAZZO <END> ** <START:Name> ALBERTO <END>              0 6 0 6 1 9 2  3 M <START:City> BIELLA <END> ** BI CODICE FISCALE    ,  ,     , **   CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE AZENDA CAD / SHOWTELLO
+[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     **  DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **    10 3 119 4  0 F  RO ** FE CODICE FISCALE    ,  ** ,  **  ,   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE
+[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,

@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.StringTokenizer;
@@ -56,20 +57,21 @@ public class F24OCRService {
 				}
 			}
 			if (keycount <= 2) {
-				logger.info("{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}");
+				//logger.info("{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}");
 				return "{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}";
 			}
 			int spacecount = countSpace(data);
 			System.out.println(spacecount + "space");
-			logger.info("Space count" + spacecount);
+			//logger.info("Space count" + spacecount);
 			list = process(data);
 
+			
 			/*try {
 				Collections.sort(list);
 			} catch (IllegalArgumentException e) {
 				e.printStackTrace();
 				System.out.println("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
-				logger.info("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
+				//logger.info("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
 				return "{\"status\":\"Invalid input data, please try to capture one more time!!!\"}";
 			}*/
 
@@ -79,6 +81,10 @@ public class F24OCRService {
 			int prev = 0;
 			StringBuffer section1 = new StringBuffer();
 			StringBuffer section2 = new StringBuffer();
+			
+			List<DataDescription> sec1list=new ArrayList<>();
+			List<DataDescription> sec2list=new ArrayList<>();
+			
 			int s1 = 0, s2 = 0;
 			int xprev = 0, yprev = 0, ydiff = 0, xprevEnd = 0;
 			boolean pr = false;
@@ -102,6 +108,7 @@ public class F24OCRService {
 						section1.append(" ");
 					}
 					section1.append(dat.getDescription());
+					sec1list.add(dat);
 					xprev = dat.getxStart();
 				} else if (s2 == 1) {
 					if (dat.getxStart() < xprev) {
@@ -110,13 +117,39 @@ public class F24OCRService {
 						section2.append(" ");
 					}
 					section2.append(dat.getDescription());
+					sec2list.add(dat);
 					xprev = dat.getxStart();
 				}
 				xprevEnd = dat.getxEnd();
 			}
+			/*String sec1 = section1.toString();
+			String sec2 = section2.toString();*/
+			
+			String sec1 = "";
+			String sec2 = "";
 
-			String sec1 = section1.toString();
-			String sec2 = section2.toString();
+			Collections.sort(sec1list);
+			System.out.println(sec1list);
+			
+			xprevEnd=0;
+			xprev=0;
+			
+			for(int i=0;i<sec1list.size();i++) {
+				if((sec1list.get(i).getxStart() - xprevEnd) > 400) {
+					sec1=sec1+"**"+" ";
+				}
+				sec1=sec1+sec1list.get(i).getDescription()+" ";
+				xprevEnd = sec1list.get(i).getxEnd();
+				xprev = sec1list.get(i).getxStart();
+			}
+			
+			for(int i=0;i<sec2list.size();i++) {
+				sec2=sec2+ sec2list.get(i).getDescription()+" ";
+			}
+			
+			
+			
+			
 			sec2 = sec2.replace(" , ", "*");
 			sec2 = sec2.replace(" . ", " ");
 			sec2 = sec2.replace(" . ", " ");
@@ -146,9 +179,9 @@ public class F24OCRService {
 			System.out.println("Section1:----\n" + sec1.trim());
 			System.out.println("Section2:----\n" + sec2.trim());
 
-			logger.info("After the data conversion");
-			logger.info("Section1:----\n" + sec1.trim());
-			logger.info("Section2:----\n" + sec2.trim());
+			//logger.info("After the data conversion");
+			logger.info(/*"Section1:----\n" +*/ sec1.trim());
+			//logger.info("Section2:----\n" + sec2.trim());
 
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
@@ -160,13 +193,13 @@ public class F24OCRService {
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
 
-			logger.info("Result data");
-			logger.info("Section1:			\n" + seconelist);
-			logger.info("Section2:			\n" + sectwolist);
+			//logger.info("Result data");
+//			logger.info("Section1:			\n" + seconelist);
+			//logger.info("Section2:			\n" + sectwolist);
 
 			seconelist.addAll(sectwolist);
 			// System.out.println(seconelist);
-			logger.info("Sending the data to prepare Json");
+			//logger.info("Sending the data to prepare Json");
 			return prepareJSON(seconelist);
 
 		} catch (IOException e1) {
@@ -437,7 +470,7 @@ public class F24OCRService {
 			// writer.close();
 		}
 		System.out.println(buffer.toString());
-		logger.info("F24 JSON:\n" + buffer.toString());
+		//logger.info("F24 JSON:\n" + buffer.toString());
 		return buffer.toString();
 
 	}

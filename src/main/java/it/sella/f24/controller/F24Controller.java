@@ -1,5 +1,6 @@
 package it.sella.f24.controller;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,6 +71,22 @@ public class F24Controller {
 	
 	@RequestMapping(value="/api/simplificato/ocr",method=RequestMethod.POST)
 	public String f24imageToText(@RequestParam("file") MultipartFile file) {
+		Data data = googleService.readText(file, "");	
+//		System.out.println("processed ocr data : "+data);
+		String f24Result ="{}";
+
+		try {
+			f24Result = ocrService.processJson(data);
+		} catch (Exception e) {
+			return "{\"status\":\"Error\"}";
+		}
+		
+		return f24Result;
+	}	
+	
+	
+	@RequestMapping(value="/api/simplificato/ocr/hello",method=RequestMethod.POST)
+	public String f24imageToText(@RequestParam("file") File file) throws IOException {
 		Data data = googleService.readText(file, "");	
 //		System.out.println("processed ocr data : "+data);
 		String f24Result ="{}";
