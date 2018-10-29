@@ -2,6 +2,8 @@ package it.sella.f24.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -31,6 +33,14 @@ public class F24Controller {
 	@RequestMapping(value="/api/simplificato/form/ocr",method=RequestMethod.POST)
 	public String f24ImageToText(@RequestBody F24Form f24Form) {
 		System.out.println(f24Form);
+		
+		/*URL url = new URL("http://localhost:8080/RESTfulExample/json/product/post");
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		conn.setDoOutput(true);
+		conn.setRequestMethod("POST");
+		conn.setRequestProperty("Content-Type", "application/json");*/
+				
+				
 		byte[] decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage()); // TODO CHANGES REQUIRED
 		Data data = null;
 		String f24Result ="{}";
@@ -67,6 +77,16 @@ public class F24Controller {
 	public Data imageToText(@RequestParam("file") MultipartFile file) {
 		Data processJson = googleService.readText(file, "");	
 		return processJson;
+	}
+	
+	@RequestMapping(value="/api/googlevision/print",method=RequestMethod.POST)
+	public String printString(@RequestBody F24Form f24form) {
+		System.out.println(f24form.getEncodedImage());
+		
+		if(f24form.getEncodedImage().isEmpty()) {
+			return  "{\"status\":\"Empty form\"}";
+		}
+		return "Hello"+f24form.getEncodedImage();
 	}
 	
 	
