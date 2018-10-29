@@ -31,10 +31,11 @@ public class F24Controller {
 	@RequestMapping(value="/api/simplificato/form/ocr",method=RequestMethod.POST)
 	public String f24ImageToText(@RequestBody F24Form f24Form) {
 		System.out.println(f24Form);
-		byte[] decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
+		byte[] decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage()); // TODO CHANGES REQUIRED
 		Data data = null;
 		String f24Result ="{}";
 		try {
+			// TODO call skew image service
 			data = googleService.readText(decodeBase64,"");
 		    f24Result = ocrService.processJson(data);
 		} catch (IOException e) {
