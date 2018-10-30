@@ -6,3 +6,4 @@
 [http-nio-5000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
 [http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
 [http-nio-5000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
+[http-nio-5000-exec-4] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS    **   )  (      3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE   ,  ,  ,
