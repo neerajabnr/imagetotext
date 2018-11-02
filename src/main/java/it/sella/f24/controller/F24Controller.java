@@ -85,7 +85,7 @@ public class F24Controller {
 		/*Request format to Skew Service
 		 * 
 		 {
-			"encoded_img":"{{encoded_image}}"
+			"encodedImage":"{{encoded_image}}"
 			
 		}*/
 		HttpHeaders headers = new HttpHeaders();
@@ -93,13 +93,13 @@ public class F24Controller {
 		ObjectMapper mapper = new ObjectMapper();
 		F24JSON f24json=null;
 		HttpEntity<String> entity = new HttpEntity<>(f24Form.getEncodedImage(), headers);
-		System.out.println(f24Form.getEncodedImage());
 		String f24Result = "{}";
 		byte[] decodeBase64=null;
 		Data data = null;
 
 		try {
 		ResponseEntity<String> response = restTemplate.exchange("https://f24imageskew.herokuapp.com/f24/api/imageskew",
+				//
 				HttpMethod.POST, entity, String.class);
 		
 		f24json=mapper.readValue(response.getBody(), F24JSON.class);
