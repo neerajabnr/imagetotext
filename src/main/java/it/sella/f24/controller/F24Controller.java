@@ -7,10 +7,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
 import javax.imageio.ImageIO;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -88,6 +93,7 @@ public class F24Controller {
 		ObjectMapper mapper = new ObjectMapper();
 		F24JSON f24json=null;
 		HttpEntity<String> entity = new HttpEntity<>(f24Form.getEncodedImage(), headers);
+		System.out.println(f24Form.getEncodedImage());
 		String f24Result = "{}";
 		byte[] decodeBase64=null;
 		Data data = null;
@@ -98,9 +104,12 @@ public class F24Controller {
 		
 		f24json=mapper.readValue(response.getBody(), F24JSON.class);
 		decodeBase64= Base64.decodeBase64(f24json.getEncodedImage());
-
 		
+		System.out.println("Response from Skew Service:"+f24json.getEncodedImage());
+
+			System.out.println("Calling Google Service");
 			data = googleService.readText(decodeBase64, "");
+			System.out.println("Data from Google service"+data);
 			f24Result = ocrService.processJson(data);
 		} catch (IOException e) {
 			return "{\"status\":\"KO\"}";
@@ -170,21 +179,27 @@ public class F24Controller {
 	}
 
 	@RequestMapping(value = "/api/image/encode", method = RequestMethod.PUT)
-	public String f24Encode(@RequestParam("file") File file) {
+	public String f24Encode(@RequestParam("file") MultipartFile file) {
 		String encodeBase64String = "";
 		try {
 			
-			byte[] bytesArray = new byte[(int) file.length()]; 
-
-			  FileInputStream fis = new FileInputStream(file);
-			  fis.read(bytesArray); //read file into bytes[]
-			encodeBase64String = Base64.encodeBase64String(bytesArray);
-			fis.close();
+//			byte[] bytesArray = new byte[(int) file.length()]; 
+//
+//			  FileInputStream fis = new FileInputStream(file);
+//			  fis.read(bytesArray); //read file into bytes[]
+//			fis.close();
+			encodeBase64String = Base64.encodeBase64String(file.getBytes());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "{\"encoded_img\":\"" + encodeBase64String + "\"}";
+		F24Form f24Form=new F24Form();
+		f24Form.setEncodedImage("{\"encodedImage\":\""+encodeBase64String+"\"}");
+		f24Form.setTransactionId("123");
+		String f24ImageToText = f24ImageToText(f24Form);
+//		f24Form.set
+//		return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
+		return f24ImageToText;
 	}
 
 
@@ -290,6 +305,7 @@ public class F24Controller {
 	
 	@RequestMapping(value = "/api/simplificato/localtest", method = RequestMethod.POST)
 	public String f24ImageToTextTesting() {
+		return null;/*
 
 		// https://f24-img-skew.herokuapp.com/f24/api/imageskew
 		
@@ -342,7 +358,7 @@ public class F24Controller {
 		// "{\"F24Semplificato\":{\"Contribuente\":{\"CodiceFiscale\":\"VTINDR85S13D938T\",\"DatiAnagrafici\":{\"Cognome\":\"VITI\",\"Nome\":\"ANDREA\",\"RagioneSociale\":\"\",\"DataDiNascita\":\"13/11/1985\",\"Sesso\":\"M\",\"Comune\":\"GATTINARA\",\"Prov\":\"VC\"},\"DomicilioFiscale\":{\"Comune\":\"\",\"Prov\":\"\",\"ViaeNumeroCivico\":\"\"},\"SecondoCodiceFiscale\":\"\",\"CodiceIdentificativo\":\"\",\"IdentificativoOperazione\":\"\"},\"Taxes\":{\"CodiceUfficio\":\"\",\"CodiceAtto\":\"\",\"Tax\":[{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"1.11\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"ER\",\"CodiceTributo\":\"6099\",\"CodiceEnte\":\"\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"0\",\"MeseRif\":\"0101\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"2.22\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"3.33\",\"CrebitoImporto\":\"\"}]},\"Payment\":{\"DataIncasso\":\"23/07/2018\",\"ContoOrdinante\":\"11O1641490340\",\"SaldoFinale\":\"6.66\",\"Product\":\"0\"}}}";
 
 		return f24Result;
-	}
+	*/}
 	
 	
 	@RequestMapping(value = "/api/authcheck", method = RequestMethod.POST)
@@ -355,12 +371,16 @@ public class F24Controller {
 		
 		HttpEntity<String> entity=null;
 		ResponseEntity<String> response = null;
+		//https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session
+		//https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance
 
 		try {
 			System.out.println("Calling service");
 //			entity=new HttpEntity<>("GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0",headers);
-			response = restTemplate.exchange("https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session", HttpMethod.POST, entity,
+			response = restTemplate.exchange("www.google.com", HttpMethod.POST, entity,
 					String.class);
+			
+		
 			System.out.println(response);
 		}catch(Exception exception){
 			System.out.println("hello");
@@ -368,5 +388,70 @@ public class F24Controller {
 		}
 		return null;
 	}
+	
+	
+	
+	//calling google service
+	
+	@RequestMapping(value = "/api/callGoogle", method = RequestMethod.POST)
+	public String callGoogle() {
+		/*URL url;
+		try {
+			System.out.println("Calling Sandbox");
+			url = new URL("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance");
+			HttpsURLConnection connection= (HttpsURLConnection) url.openConnection();
+			connection.connect();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "hello Google";
+	}*/
+		
+		
+		TrustManager[] trustAllCerts = new TrustManager[]{
+			    new X509TrustManager() {
+			        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+			            return null;
+			        }
+			        public void checkClientTrusted(
+			            java.security.cert.X509Certificate[] certs, String authType) {
+			        }
+			        public void checkServerTrusted(
+			            java.security.cert.X509Certificate[] certs, String authType) {
+			        }
+			    }
+			};
+
+			// Install the all-trusting trust manager
+			try {
+			    SSLContext sc = SSLContext.getInstance("SSL");
+			    sc.init(null, trustAllCerts, new java.security.SecureRandom());
+			    HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+			} catch (Exception e) {
+			}
+
+			HttpHeaders headers = new HttpHeaders();
+			headers.setContentType(MediaType.APPLICATION_JSON);
+			headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+			headers.set("Auth-Schema", "S2S-AUTH");
+			
+			// Now you can access an https URL without having the certificate in the truststore
+			try {
+				System.out.println("Calling Service");
+			    URL url = new URL("https://sandbox.platfr.io");
+			    HttpsURLConnection connection= (HttpsURLConnection) url.openConnection();
+			    connection.connect();
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return "hello";
+	}	
 
 }
