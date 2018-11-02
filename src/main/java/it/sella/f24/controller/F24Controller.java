@@ -77,7 +77,7 @@ public class F24Controller {
 
 	@RequestMapping(value = "/api/simplificato/form/ocr", method = RequestMethod.POST)
 	public String f24ImageToText(@RequestBody F24Form f24Form) {
-		System.out.println(f24Form);
+//		System.out.println(f24Form);
 
 		// https://f24imageskew.herokuapp.com/f24/api/imageskew
 
@@ -88,11 +88,20 @@ public class F24Controller {
 			"encodedImage":"{{encoded_image}}"
 			
 		}*/
+		
+		ObjectMapper mapper = new ObjectMapper();
+		F24JSON ocrf24json=null;
+		try {
+			ocrf24json=mapper.readValue(f24Form.getEncodedImage(), F24JSON.class);
+		} catch (IOException e1) {
+			return "{\"status\":\"KO\"}";
+		}
+		
+		System.out.println(ocrf24json.toString());
+		F24JSON f24json=null;
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		ObjectMapper mapper = new ObjectMapper();
-		F24JSON f24json=null;
-		HttpEntity<String> entity = new HttpEntity<>(f24Form.getEncodedImage(), headers);
+		HttpEntity<String> entity = new HttpEntity<>(ocrf24json.toString(), headers);
 		String f24Result = "{}";
 		byte[] decodeBase64=null;
 		Data data = null;
