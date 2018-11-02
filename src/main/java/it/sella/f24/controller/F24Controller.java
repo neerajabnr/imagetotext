@@ -97,11 +97,11 @@ public class F24Controller {
 			return "{\"status\":\"KO\"}";
 		}
 		
-		System.out.println(ocrf24json.toString());
+		System.out.println(ocrf24json.getEncodedImage());
 		F24JSON f24json=null;
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		HttpEntity<String> entity = new HttpEntity<>(ocrf24json.toString(), headers);
+		HttpEntity<String> entity = new HttpEntity<>(ocrf24json.getEncodedImage(), headers);
 		String f24Result = "{}";
 		byte[] decodeBase64=null;
 		Data data = null;
