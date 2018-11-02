@@ -21,6 +21,8 @@ import org.json.JSONArray;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,6 +30,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.imageio.ImageIO;
+
 
 @Service
 public class GoogleService {
@@ -162,6 +167,17 @@ public class GoogleService {
             ByteString imgBytes = ByteString.copyFrom(decodeBase64);
 
             Image img = Image.newBuilder().setContent(imgBytes).build();
+            
+            //Saving the image
+            
+            ByteArrayInputStream input_stream= new ByteArrayInputStream(decodeBase64);
+            BufferedImage final_buffered_image = ImageIO.read(input_stream);
+//            ImageIO.write(final_buffered_image , "jpg", new File("D:\\Sample.jpg") );
+            System.out.println("Saved the image");
+            ImageIO.write(final_buffered_image , "jpg", new File("Sample.jpg") );
+
+            
+            
             Feature feat = Feature.newBuilder().setType(Feature.Type.DOCUMENT_TEXT_DETECTION).build();
             AnnotateImageRequest.Builder request = AnnotateImageRequest.newBuilder().addFeatures(feat).setImage(img);
 

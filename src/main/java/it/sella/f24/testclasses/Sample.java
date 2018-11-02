@@ -1,19 +1,14 @@
 package it.sella.f24.testclasses;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
 
-import org.apache.commons.lang3.StringUtils;
 import org.json.simple.parser.ParseException;
-import org.springframework.web.multipart.MultipartFile;
 
-import it.sella.f24.controller.F24Controller;
-import it.sella.f24.service.F24OCRService;
-import it.sella.f24.service.GoogleService;
-import it.sella.f24.service.opennlp.Data;
+import opennlp.tools.namefind.RegexNameFinder;
+import opennlp.tools.util.Span;
 
 public class Sample {
 	public static void main(String[] args) throws IOException, ParseException {
@@ -77,19 +72,20 @@ public class Sample {
 	System.out.println(v4);*/
 		
 		
-		F24OCRService f24ocrService=new F24OCRService();
-		GoogleService googleService = new GoogleService();
-		
-		
-		
-//		Data data = googleService.readText(file, "");	
-//		System.out.println("processed ocr data : "+data);
-		String f24Result ="{}";
+		Pattern testPattern = Pattern.compile("test");
 
-		try {
-//			f24Result = f24ocrService.processJson(data);
-		} catch (Exception e) {
-		}
+		Pattern[] patterns = new Pattern[]{testPattern};
+		Map<String, Pattern[]> regexMap = new HashMap<>();
+		String type = "testtype";
+
+		regexMap.put(type, patterns);
+
+		RegexNameFinder finder =
+		new RegexNameFinder(regexMap);
+
+//		Span[] result = finder.find(sentence);
+		
+//		System.out.println(result[0].getType());
 		
 		
 	}

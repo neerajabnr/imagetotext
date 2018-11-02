@@ -2,14 +2,13 @@ package it.sella.f24.view;
 
 public class F24Form {
 	
-	private String encodedImage;
+	private String encoded_string;
 	private String transactionId;
-	
-	public String getEncodedImage() {
-		return encodedImage;
+	public String getEncoded_string() {
+		return encoded_string;
 	}
-	public void setEncodedImage(String encodedImage) {
-		this.encodedImage = encodedImage;
+	public void setEncoded_string(String encoded_string) {
+		this.encoded_string = encoded_string;
 	}
 	public String getTransactionId() {
 		return transactionId;
@@ -19,7 +18,7 @@ public class F24Form {
 	}
 	@Override
 	public String toString() {
-		return "F24Form [encodedImage=" + encodedImage + ", transactionId=" + transactionId + "]";
+		return "F24Form [encoded_string=" + encoded_string + ", transactionId=" + transactionId + "]";
 	}
 	
 }

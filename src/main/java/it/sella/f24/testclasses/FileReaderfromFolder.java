@@ -7,15 +7,25 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
 
+import it.sella.f24.controller.F24Controller;
 import it.sella.f24.service.F24OCRService;
 import it.sella.f24.service.GoogleService;
 import it.sella.f24.service.opennlp.Data;
+import it.sella.f24.service.opennlp.F24JSON;
 
 
 
@@ -29,9 +39,10 @@ public class FileReaderfromFolder {
 	
 	private F24OCRService f24ocrService=new F24OCRService();
 	private GoogleService googleService = new GoogleService();
+	private F24Controller controller=new F24Controller();
 	
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 	      File folder = new File("//home//bsindia//Documents//images");
 	      FileReaderfromFolder listFiles = new FileReaderfromFolder();
 	      System.out.println("reading files before Java8 - Using listFiles() method");
@@ -40,18 +51,36 @@ public class FileReaderfromFolder {
 	      System.out.println("reading files Java8 - Using Files.walk() method");
 //	      listFiles.listAllFiles("//home//bsindia//Documents//images");
 
-	     }
+	     }*/
 	     // Uses listFiles method  
-	     public void listAllFiles(File folder){
+	
+	
+	public static void main(String[] args) {
+		FileReaderfromFolder fileReaderfromFolder=new FileReaderfromFolder();
+		fileReaderfromFolder.getFilesfromFolder();
+	}
+	
+		public List<String> getFilesfromFolder(){
+			File folder = new File("//home//bsindia//Documents//images");
+		      FileReaderfromFolder listFiles = new FileReaderfromFolder();
+		      System.out.println("reading files before Java8 - Using listFiles() method");
+		      return listFiles.listAllFiles(folder);
+			
+		}
+	     public List<String> listAllFiles(File folder){
+	    	 
 	         System.out.println("In listAllfiles(File) method");
 	         File[] fileNames = folder.listFiles();
+	         List<String> list =new ArrayList<String>();
+	         String filepath="";
 	         for(File file : fileNames){
 	             // if directory call the same method again
 	             if(file.isDirectory()){
 	                 listAllFiles(file);
 	             }else{
 	                 try {
-	                     readContent(file);
+	                     filepath=readContent(file);
+	                     list.add(filepath);
 	                 } catch (IOException e) {
 	                     // TODO Auto-generated catch block
 	                     e.printStackTrace();
@@ -59,6 +88,10 @@ public class FileReaderfromFolder {
 	        
 	             }
 	         }
+	         for (String string : list) {
+				System.out.println(string);
+			}
+	         return list;
 	     }
 	     // Uses Files.walk method   
 	     public void listAllFiles(String path){
@@ -81,22 +114,16 @@ public class FileReaderfromFolder {
 	         } 
 	     }
 	     
-	     public void readContent(File file) throws IOException{
-	         System.out.println("read file " + file.getCanonicalPath() );
+	     public String readContent(File file) throws IOException{
+//	         System.out.println("read file " + file.getCanonicalPath() );
 	         
 	         String temp=file.getCanonicalPath();
-	         System.out.println(temp);
+	         
+	        return temp;
+	         
+//	         System.out.println(temp);
 //	         logger.info("Image:" +file.getName());
-	         
-	         Data data = googleService.readText(new File(temp), "");	
-//	 		System.out.println("processed ocr data : "+data);
-	 		String f24Result ="{}";
-
-	 		try {
-	 			f24Result = f24ocrService.processJson(data);
-	 		} catch (Exception e) {
-	 		}
-	         
+//	         Data data = googleService.readText(new File(temp), "");	
 	         
 	         /*try(BufferedReader br  = new BufferedReader(new FileReader(file))){
 	               String strLine;

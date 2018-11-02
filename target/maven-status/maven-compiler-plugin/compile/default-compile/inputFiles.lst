@@ -306,6 +306,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/SequenceTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/DynamicEvalParameters.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/MarkableFileInputStreamFactory.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/F24JSON.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/stemmer/snowball/spanishStemmer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/naivebayes/NaiveBayesModelWriter.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/SDContextGenerator.java
@@ -585,6 +586,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/ad/ADSentenceSampleStreamFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/naivebayes/Probability.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/DetokenizationDictionary.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/RestClientDemo.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/package-info.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/doccat/DoccatFactoryTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/lang/Factory.java

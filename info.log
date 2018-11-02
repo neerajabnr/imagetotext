@@ -1,9 +1,2294 @@
-[main] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS    **   )  (      3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE   ,  ,  ,
-[main] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
-[http-nio-5000-exec-1] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
-[http-nio-5000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
-[http-nio-5000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
-[http-nio-5000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
-[http-nio-5000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
-[http-nio-5000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BR BLRS 4 7 R 30 E 5 1 2 B    ,      DATI ANAGRAFICI BARBIERI ** LORIS      3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  ,
-[http-nio-5000-exec-4] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS    **   )  (      3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE   ,  ,  ,
+[http-nio-6000-exec-2] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_181421.jpg
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Agenzia 0
+genzia
+Meri F24 Completo
+DELEGA PREVOCABLEA
+MODELLO DI PAGAMENTO UNIFICATO
+AGENZIA
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+cognome, dancing in regions wide
+DATI ANAGRAFICI BARBIERI
+LORIS
+Mof couns Scosched
+3 0 1 0 1 9 4 7 F LEGNAGO
+CODICE FISCALE del coobbligato, erede,
+genitore, flore o curatore fallimentare
+MOTIVO DEL PAGAMENTO
+EL3944 H 5 3 3
+ER 3918 D600
+0303 2018
+0202 2018
+43.00
+43,00
+7777777777777777
+$ IIIIIII
+SINAL
+EURO-
+86.00
+ 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Agenzia 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Meri 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Completo 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - PREVOCABLEA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - dancing 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - in 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - regions 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - wide 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mof 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - couns 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Scosched 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - flore 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EL3944 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - D600 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 7777777777777777 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - $ 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - IIIIIII 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - SINAL 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS    3 0 1 0 1 9 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	FORO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_181421.jpg
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Agenzia 0
+genzia
+Meri F24 Completo
+DELEGA PREVOCABLEA
+MODELLO DI PAGAMENTO UNIFICATO
+AGENZIA
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+cognome, dancing in regions wide
+DATI ANAGRAFICI BARBIERI
+LORIS
+Mof couns Scosched
+3 0 1 0 1 9 4 7 F LEGNAGO
+CODICE FISCALE del coobbligato, erede,
+genitore, flore o curatore fallimentare
+MOTIVO DEL PAGAMENTO
+EL3944 H 5 3 3
+ER 3918 D600
+0303 2018
+0202 2018
+43.00
+43,00
+7777777777777777
+$ IIIIIII
+SINAL
+EURO-
+86.00
+ 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Agenzia 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Meri 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Completo 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - PREVOCABLEA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - dancing 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - in 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - regions 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - wide 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mof 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - couns 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Scosched 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - flore 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EL3944 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - D600 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 7777777777777777 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - $ 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - IIIIIII 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - SINAL 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS    3 0 1 0 1 9 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_181421.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_181421.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia
+Mert F24 Completo
+.ntrate
+DELEGA PREVOCABLEA
+MODELLO DI PAGAMENTO UNIFICATO
+AGENZIA
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+cognome, dancing
+one woods
+DATI ANAGRAFICI BARBIERI
+LORIS
+seu Mof couro Sido de
+30 10 19 4 7 F LEGNAGO
+CODICE FISCALE del coobbligato, erede,
+genitore, viore o curatore fallimentare
+MOTIVO DEL PAGAMENTO
+Senore cod
+r
+adiante
+romeria
+EL3944 H 5 3 3
+0303 2018
+43.00
+ER 3918 D 6 0 0
+0202 2018
+43,00
+1777777777777777
+EURO-
+86.00
+BALDO
+FINALE
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mert 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Completo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ntrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PREVOCABLEA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - dancing 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - one 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - woods 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - seu 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mof 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - couro 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sido 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - de 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 10 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 19 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - viore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Senore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - r 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - adiante 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - romeria 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EL3944 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 6 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1777777777777777 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BALDO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FINALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,    DATI ANAGRAFICI BARBIERI ** LORIS      30 10 19 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_181825.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 0
+.ntrate
+MODELLO DI PAGAMENTO UNIFICATO
+DELCA
+VOCALEA
+CINTA
+CODICE FISCALE BRBLRS #7R0EIB
+DATI ANAGRAFICI BARBIERI
+LORIS
+30 10 1 947 F - LEONAGO
+COOKE RISCAL ale re
+Moreworker
+DIIVO DEL PAGAMENTO
+E L
+ER
+3944 H 3 3 3
+3918 D 60 0
+0303
+0202
+2018
+2018
+43.00
+43.00
+777777777777777777
+EURO
+86.00
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ntrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELCA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VOCALEA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CINTA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - # 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7R0EIB 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 10 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 947 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - - 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEONAGO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COOKE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - RISCAL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ale 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - re 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Moreworker 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DIIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3944 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 60 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 777777777777777777 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS # 7R0EIB DATI ANAGRAFICI BARBIERI ** LORIS 30 10 1 947 F  LEONAGO COOKE  RISCAL   DIIVO DEL PAGAMENTO E L 3944 H ** 0303 ER 3918 D 60 3 3 0 3 ** 2018 0202 2018 43  00 43  00 EURO 86  00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_181946.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PROV.
+genzia 0
+Mod F24 Semplificato
+ntrate
+DHEGA IRREVOCABILE A
+MODELLO DI PAGAMENTO UNIFICATO
+AGENZIA
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+codice Ulicio codice atto
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+cognome, derminazione regione sociale
+nome
+DATI ANAGRAFICI BARBIERI
+LORIS
+data di nascita
+sesso Mof) comune lo Stato estero di nascita
+3 0 1 0 1 9 4 7 F LEGNAGO
+VR
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+codice identificativo
+MOTIVO DEL PAGAMENTO
+Ideazione
+Sersone cod. but codice ente row
+Impora dobilovers import a credito compensa
+E L 3944 H 5 3 3
+0303 2018
+43,00
+ER 3918 D600
+0202 2018
+43,00
+anno d
+rimento
+7777777777777
+II II III 8
+SALDO
+FINALE
+EURO.
+86.00
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PROV 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Semplificato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ntrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DHEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IRREVOCABILE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Ulicio 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - atto 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - derminazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - regione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sociale 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - data 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sesso 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mof 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ) 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - comune 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - lo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Stato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - estero 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VR 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tutore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - identificativo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Ideazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sersone 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - but 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ente 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - row 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Impora 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - dobilovers 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - import 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - credito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - compensa 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3944 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D600 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - anno 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - d 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - rimento 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7777777777777 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - II 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - II 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - III 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 8 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SALDO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FINALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,    **  DATI ANAGRAFICI BARBIERI ** LORIS             3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  , **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_182340.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA IRREVOCABLEA
+PRO
+ntrate
+MODELLO DI PAGAMENTO UNIFICATO
+DIONIBUENTE
+AGENZIA
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+TECCO
+CODICE FISCALE
+GRZLRT23H06A859W
+cognome, denominazione regione social
+GARIAZZO
+DATI ANAGRAFICI
+nonte
+ALBERTO
+comune (o Stato estero) di nascita
+BIELLA
+SESSO MOF)
+codice identifica
+06 061523
+CODICE FISCALE del coobbligato, erede.
+genitore, tutore o curatore fallimentare
+OTVO DERRADAMENTO
+Sezione cod. tritato codice ente **
+EL 3918 600
+3918 0600
+were
+region
+se .
+O
+IDENTIFICATIVO OPERAZIONE
+ano di
+riferimento
+detrazione
+2018
+2018
+01/01
+01/01
+inport a dabito versall importi a credito con
+243,00
+243,00
+FL
+ZUCCHETT
+*** IIIIIII
+1
+CONFORME ALPeovy
+Mbulo fourt
+EURO
+243,00
+bilo QO5543716000
+BTREMI DEL VERSAMENTO RAPTOP
+MOLLUSTRADENOHIPOTON
+COOKCE BANCA POSTE AGENTE DELLA RISCOSSIONE
+DATA
+Pagamento effettuato con assegno
+bancario postale
+AZIENDA
+ADSPORTELLO
+n.ro
+clocotenangla postale
+tratto / emesso a
+cod. ABI
+te los 2013
+CAS
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IRREVOCABLEA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PRO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ntrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DIONIBUENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TECCO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - GRZLRT23H06A859W 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - denominazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - regione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - social 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - GARIAZZO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nonte 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALBERTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - comune 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ( 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Stato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - estero 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ) 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BIELLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SESSO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOF 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ) 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - identifica 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 06 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 061523 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tutore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - OTVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DERRADAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sezione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tritato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ente 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - * 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - * 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 600 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0600 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - were 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - region 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - se 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - O 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IDENTIFICATIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - OPERAZIONE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ano 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - riferimento 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - detrazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 01 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 01 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 01 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 01 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - inport 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - dabito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - versall 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - importi 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - credito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - con 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 243 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 243 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ZUCCHETT 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - * 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - * 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - * 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IIIIIII 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONFORME 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALPeovy 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mbulo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fourt 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 243 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - bilo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - QO5543716000 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BTREMI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VERSAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - RAPTOP 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOLLUSTRADENOHIPOTON 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COOKCE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BANCA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - POSTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - RISCOSSIONE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Pagamento 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - effettuato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - con 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - assegno 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - bancario 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - postale 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AZIENDA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ADSPORTELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - n 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ro 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - clocotenangla 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - postale 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tratto 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - emesso 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ABI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - te 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - los 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2013 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CAS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23H06A859W  ,    **  DATI ANAGRAFICI GARIAZZO ** ALBERTO 06 SESSO        061523 **  BIELLA CODICE FISCALE    ,     ,   **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_182602.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia
+Mod. F24 Semplificato
+entrate
+DELEGA IRREVOCABLE A:
+MODELLO DI PAGAMENTO UNIFICATO
+ACENZA
+PROV
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+codice ulico codice ato
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+cognome, dorminazione o ragione sociala
+nome
+DATI ANAGRAFICI BARBIERI
+LORIS
+data di nascita
+sesso Mof commune lo Stato esterol di nascita
+prov.
+3 0 1 0 1 9 4 7 F LEGNAGO
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+codice identificativo
+MOTIVO DEL PAGAMENTO
+Sezione cod buto dicenderaw
+derazione import a debito versal impont acredito compensat
+EL 3944 H 5 3 3
+0303 2018
+43,00
+ER 3918 D 60 0
+0202 2018
+43,00
+VR
+F
+iore
+Tese rit.
+anno di
+Imo
+ritenimento
+7777777777777777
+SALDO
+FINALE
+EURO)
+86.00
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Semplificato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - entrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IRREVOCABLE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - : 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACENZA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PROV 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ulico 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - dorminazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ragione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sociala 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - data 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sesso 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mof 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - commune 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - lo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Stato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - esterol 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - prov 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tutore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - identificativo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sezione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - buto 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - dicenderaw 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - derazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - import 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - debito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - versal 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - impont 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - acredito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - compensat 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3944 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 60 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VR 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - iore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Tese 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - rit 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - anno 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Imo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ritenimento 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7777777777777777 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SALDO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FINALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ) 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     **  DATI ANAGRAFICI BARBIERI ** LORIS            **   3 0 1 0 1 9 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_182810.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia
+intrate
+0
+Mod. F24 Semplice
+DELEGA PREVOCABILE A
+DO
+MODELLO DI PAGAMENTO UNIFICATO
+AGENZIA
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+de coco
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+cognome, denominazione o ragione socide
+DATI ANAGRAFICI BARBIERI
+LORIS
+dota di nascita
+Mol comune lo sito o d i
+3 0 1 0 1 9 4 7 F LEGNAGO
+VR
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+codice delivo
+KOTIVO DEL PAGAMENTO
+Senore cod
+codicente
+porta dei
+ponta do compen
+E L: 3944 H 5 3 3
+0303 2018
+43,00
+ER 3918 D6 0 0
+0202 2018
+43,00
+Onnod
+hormone
+2
+0
+7777777777777777
+SARE
+EUROI
+86.00
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - intrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Semplice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PREVOCABILE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - de 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coco 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - denominazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ragione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - socide 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - dota 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mol 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - comune 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - lo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - d 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - i 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VR 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tutore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - delivo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - KOTIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Senore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codicente 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - porta 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - dei 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ponta 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - do 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - compen 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - : 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3944 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D6 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Onnod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - hormone 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7777777777777777 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SARE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EUROI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS           3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE  ,  FISCALE      ,  , **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_183359.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - martin 2012
+nome
+genzia
+Mod. F24 Semplificato
+ntrate
+DELEGA IRREVOCABILE A
+MODELLO DI PAGAMENTO UNIFICATO
+AGENZIA
+PROV
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+codice utico codice ato
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+cognome denominazione o ragione sociale
+DATI ANAGRAFICI BARBIERI
+LORIS
+data di nascita
+yos Mon comune lo Stato esterol di nascita
+prox
+3 0 1 0 1 9 4 7 F - LEGNAGO
+VR
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+codice identificativo
+MOTIVO DEL PAGAMENTO
+Sezione cod. tibus codice enite W.
+mport a debito versati Impom a credio compensar
+EL 3944 H 3 3 3
+0303 2018
+43,00
+ER 3918 D 600
+2 0202 2018
+43,00
+talazione
+TASTE.
+anno di
+ierimento
+destrazione
+7777777777777777
+llllll
+LEEF
+SALDO
+FINALE
+EURO +
+86,00
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - martin 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2012 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Semplificato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ntrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IRREVOCABILE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PROV 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - utico 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - denominazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ragione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sociale 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - data 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - yos 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mon 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - comune 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - lo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Stato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - esterol 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - prox 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - - 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VR 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tutore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - identificativo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sezione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tibus 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - enite 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - W 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - mport 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - debito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - versati 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Impom 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - credio 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - compensar 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3944 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 600 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - talazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TASTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - anno 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ierimento 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - destrazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7777777777777777 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - llllll 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEEF 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SALDO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FINALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - + 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_183705.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - martin 2011
+genzia
+ntrate
+Mod. F24 Semplificato
+DELEGA IRREVOCABILE A
+nomne
+PION
+MODELLO DI PAGAMENTO UNIFICATO
+AGENZIA
+PROV.
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+codice ufficio codice co
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+cognome, denominazione o ragione sociale
+DATI ANAGRAFICI BARBIERI
+LORIS
+data di nascita
+sesso Mol comune lo Stato suro di nascita
+3 0 1 0 1 9 4 7 F LEGNAGO
+VR
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+codice identificativo
+MOTIVO DEL PAGAMENTO
+anno di
+Sozione cod. Wbudo codice ente w acc. saldo immob.
+deterono Import a debito versant import a credio compensat
+E L 3944 H 5 3 3
+1 0303 2018
+43,00
+ER 3918 D600
+2 0202 2018
+43,00
+num,
+recone
+esete
+trimonio
+III
+7777777777777777
+FINRO
+EURO-1
+86.00
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - martin 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2011 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ntrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Semplificato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IRREVOCABILE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nomne 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PION 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PROV 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ufficio 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - co 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - denominazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ragione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sociale 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - data 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sesso 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mol 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - comune 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - lo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Stato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - suro 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VR 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tutore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - identificativo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - anno 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sozione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Wbudo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ente 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - w 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - acc 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - saldo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - immob 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - deterono 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Import 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - debito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - versant 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - import 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - credio 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - compensat 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3944 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D600 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - num 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - recone 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - esete 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - trimonio 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - III 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7777777777777777 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FINRO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - - 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS            3 0 1 0 1 9 4 7 F LEGNAGO ** VR  CODICE ,  FISCALE      ,  , **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_183946.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - martin
+genzia
+Mod F24 Semplificato
+Contrate 02
+DELEGA IRREVOCABLE A
+MODELLO DI PAGAMENTO UNIFICATO
+ACENZA
+PROV
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTE
+codica utico codice ato
+CODICE FISCALE GRZ LRT 2 3 H 0 6 A 8 5 9 W
+cognome, denominazione regione sociale
+nome
+DATI ANAGRAFICI GARIAZZO
+ALBERTO
+data di nascita
+sesso Mo comune lo Stato esterol di nascho
+pro
+0 6 0 6 1 9 2 3 M : BIELLA
+BI
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+codice Identificativo
+MOTIVO DEL PAGAMENTO
+Sezione cod. bus codicente
+therimento drone
+Importa debo versati per a credito compensa
+EL: 3918 D6 0 0
+1 0101 2018
+243,00
+ER : 3918 D600
+0101 2018
+243,00
+num,
+saldo immob
+rotation
+mesent
+anno di
+R I SOGGETTO CHE EFFETTUA E VERSAMENTO
+LLLLLLLL
+IIIIIIII
+T
+SALDO
+FINALE
+EURO 1
+486.00
+ESTREMI DEL VERSAMENTO DA COMPILARE A CURA DI BANCA/POSTE/AGENTE DELLA
+CODICE BANCA/POSTE/AGENTE DELLA RISCOSSIONE
+Pagamento effettuato con assegno
+AZIENDA
+CAD/SHORIERO
+n.to
+- 1 e
+trao / omosso
+DATA
+boncato/postele
+circolare/vogla postale
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - martin 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Semplificato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Contrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 02 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IRREVOCABLE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACENZA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PROV 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codica 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - utico 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - GRZ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LRT 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 6 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 8 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - W 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cognome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - denominazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - regione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sociale 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nome 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - GARIAZZO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALBERTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - data 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - sesso 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - comune 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - lo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Stato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - esterol 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascho 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - pro 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 6 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 6 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - M 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - : 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BIELLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tutore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Identificativo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sezione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - bus 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codicente 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - therimento 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - drone 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Importa 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - debo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - versati 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - per 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - a 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - credito 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - compensa 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - : 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D6 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0101 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 243 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - : 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D600 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0101 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 243 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - num 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - saldo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - immob 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - rotation 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - mesent 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - anno 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - I 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SOGGETTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CHE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EFFETTUA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VERSAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LLLLLLLL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IIIIIIII 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - T 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SALDO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FINALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 486 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ESTREMI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VERSAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPILARE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CURA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BANCA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - POSTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BANCA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - POSTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - RISCOSSIONE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Pagamento 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - effettuato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - con 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - assegno 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AZIENDA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CAD 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SHORIERO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - n 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - to 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - - 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - e 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - trao 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - omosso 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - boncato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - postele 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - circolare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - / 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - vogla 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - postale 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZ LRT 2 3 H 0 6 A 8 5 9 W  ,    **  DATI ANAGRAFICI GARIAZZO ** ALBERTO            **  0 6 0 6 1 9 2 3 M  BIELLA ** BI CODICE FISCALE   ,  ,  ,     **   CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE AZIENDA CAD / SHORIERO
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_184640.jpg
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mod. F24 Scampifices
+PROV
+genzia
+entrate
+DELEGA IRREVOCABILE A
+MODELLO DI PAGAMENTO UNIFICATO
+AGENZIA
+PER L'ACCREDITO ALLA TESORERIA COMPETENTE
+CONTRIBUENTI
+codice fico codice to
+CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B
+Gorce, decinazione regione socide
+DATI ANAGRAFICI BARBIERI
+LORIS
+de dicho
+o Mof corne lo Stato estero di nascita
+3 0 1 0 1 9 4 7 F LEGNAGO
+CODICE FISCALE del coobbligato, erede,
+genitore, tvore o curatore fallimentare
+MOTIVO DEL PAGAMENTO
+cod
+w
+iele w
+E L 3944 H 5 3 3
+0303 2018
+ER : 3918 D 600
+0202 2018
+VR
+codice delicativo
+Ornod
+van
+words imdb
+imposa credo compense
+43,00
+43,00
+177777777777777
+IIIIII
+SD
+FINALE
+EURO 1
+86,00
+ 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - . 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F24 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Scampifices 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PROV 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genzia 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - entrate 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DELEGA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IRREVOCABILE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - A 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MODELLO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - UNIFICATO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - AGENZIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ' 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ACCREDITO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ALLA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - TESORERIA 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - COMPETENTE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CONTRIBUENTI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fico 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - to 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BRBLRS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - R 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 30 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - B 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Gorce 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - decinazione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - regione 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - socide 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DATI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ANAGRAFICI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - BARBIERI 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LORIS 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - de 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - dicho 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mof 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - corne 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - lo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Stato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - estero 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - di 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - nascita 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 9 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 4 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 7 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - F 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - LEGNAGO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FISCALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - del 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - coobbligato 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - erede 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - genitore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tvore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - o 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - curatore 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - fallimentare 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - MOTIVO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DEL 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - PAGAMENTO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - cod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - w 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - iele 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - w 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - E 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - L 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3944 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - H 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 5 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0303 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ER 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - : 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 3918 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - D 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 600 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 0202 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 2018 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - VR 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - codice 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - delicativo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Ornod 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - van 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - words 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - imdb 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - imposa 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - credo 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - compense 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 43 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 177777777777777 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - IIIIII 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - SD 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - FINALE 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 1 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 86 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - , 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 00 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,    DATI ANAGRAFICI BARBIERI ** LORIS  3          0 1 0 1 9 4 7 F LEGNAGO  CODICE ,  FISCALE      ,  ,
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL4OC51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	11031194
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
