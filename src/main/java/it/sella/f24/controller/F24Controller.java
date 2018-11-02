@@ -80,7 +80,7 @@ public class F24Controller {
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		ObjectMapper mapper = new ObjectMapper();
 		F24JSON f24json=null;
-		HttpEntity<String> entity = new HttpEntity<>(f24Form.getEncoded_string(), headers);
+		HttpEntity<String> entity = new HttpEntity<>(f24Form.getEncodedImage(), headers);
 		String f24Result = "{}";
 		byte[] decodeBase64=null;
 		Data data = null;
