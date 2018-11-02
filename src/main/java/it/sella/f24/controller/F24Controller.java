@@ -19,6 +19,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -57,6 +58,16 @@ public class F24Controller {
 
 	@Autowired
 	private GoogleService googleService;
+	
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@Bean
+	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+	   // Do any additional configuration here
+	   return builder.build();
+	}
+	
 
 
 	@RequestMapping(value = "/api/simplificato/form/ocr", method = RequestMethod.POST)
@@ -176,8 +187,6 @@ public class F24Controller {
 		return "{\"encoded_img\":\"" + encodeBase64String + "\"}";
 	}
 
-	@Autowired
-	private RestTemplate restTemplate;
 
 	@RequestMapping("/hello")
 	public ResponseEntity<String> callService() {
