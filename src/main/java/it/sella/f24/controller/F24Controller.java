@@ -58,10 +58,6 @@ public class F24Controller {
 	@Autowired
 	private GoogleService googleService;
 
-	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
 
 	@RequestMapping(value = "/api/simplificato/form/ocr", method = RequestMethod.POST)
 	public String f24ImageToText(@RequestBody F24Form f24Form) {
