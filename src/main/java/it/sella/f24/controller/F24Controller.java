@@ -104,50 +104,37 @@ public class F24Controller {
 		 * }
 		 */
 
-//		System.out.println("Welcome>>>>1");
-//		ObjectMapper mapper = new ObjectMapper();
-//		mapper.configure(Feature.ALLOW_COMMENTS, true);
-//		F24JSON ocrf24json = null;
-//		try {
-//			System.out.println("Encoded Img");
-//			ocrf24json = mapper.readValue(f24Form.getEncodedImage(), F24JSON.class);
-//			
-//			System.err.println(f24Form.getEncodedImage());
-//		} catch (IOException e1) {
-//			e1.printStackTrace();
-//			System.out.println("Welcome>>>>2");
-//			return "{\"status\":\"KO\"}";
-//		}
-//
-//		String reqJSON = "{\"encodedImage\":\"" + ocrf24json.getEncodedImage() + "\"}";
-//		System.out.println("Welcome>>>>3");
-//		System.out.println(reqJSON);
-//		F24JSON f24json = null;
-//		HttpHeaders headers = new HttpHeaders();
-//		headers.setContentType(MediaType.APPLICATION_JSON);
-//		HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
+		System.out.println("Preparing the Input to the Skew service");
+		ObjectMapper mapper = new ObjectMapper();
+		String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
+		F24JSON f24json = null;
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
+		
 		String f24Result = "{}";
 		byte[] decodeBase64 = null;
 		Data data = null;
 
 		try {
-			System.out.println("Welcome>>>>4");
-//			ResponseEntity<String> response = restTemplate.exchange(
-//					"https://f24imageskew.herokuapp.com/f24/api/imageskew", HttpMethod.POST, entity, String.class);
+			System.out.println("Calling Skew Service");
+			ResponseEntity<String> response = restTemplate.exchange(
+					"https://f24imageskew.herokuapp.com/f24/api/imageskew", HttpMethod.POST, entity, String.class);
 
-			System.out.println("Welcome>>>>5");
-//			f24json = mapper.readValue(response.getBody(), F24JSON.class);
-//			decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
+			System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
+			f24json = mapper.readValue(response.getBody(), F24JSON.class);
+			decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
 			
-			decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
+//			decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
+			
+			System.out.println("Decoded"+decodeBase64);
 
-//			System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
 
 			System.out.println("Calling Google Service");
 			data = googleService.readText(decodeBase64, "");
 			System.out.println("Data from Google service" + data);
 			f24Result = ocrService.processJson(data);
-			System.out.println("Welcome>>>>6");
+			System.out.println("Printing F24 Result");
 		} catch (IOException e) {
 			return "{\"status\":\"KO\"}";
 		} catch (Exception e) {
@@ -231,7 +218,8 @@ public class F24Controller {
 			e.printStackTrace();
 		}
 		F24Form f24Form = new F24Form();
-		f24Form.setEncodedImage("{\"encodedImage\":\"" + encodeBase64String + "\"}");
+//		f24Form.setEncodedImage("{\"encodedImage\":\"" + encodeBase64String + "\"}");
+		f24Form.setEncodedImage(encodeBase64String);
 		f24Form.setTransactionId("123");
 		String f24ImageToText = f24ImageToText(f24Form);
 		// f24Form.set
