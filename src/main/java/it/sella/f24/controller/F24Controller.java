@@ -400,7 +400,7 @@ public class F24Controller {
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+		headers.set("apikey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
 
 		 headers.set("auth.token",value);
 		headers.set("Auth-Schema", "S2S");
