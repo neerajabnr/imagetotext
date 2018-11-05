@@ -105,11 +105,11 @@ public class F24Controller {
 		 */
 
 	
-		Object encodeBase64String = Base64.encodeBase64String(f24Form.getEncodedImage().getBytes());
-		System.out.println("encodeBase64String"+encodeBase64String);
+//		Object encodeBase64String = Base64.encodeBase64String(f24Form.getEncodedImage().getBytes()	);
+//		System.out.println("encodeBase64String"+encodeBase64String);
 		
 		ObjectMapper mapper = new ObjectMapper();
-		String reqJSON = "{\"encodedImage\":\"" + encodeBase64String + "\"}";
+		String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
 		
 		System.out.println("Input JSON:"+reqJSON);
 		F24JSON f24json = null;
