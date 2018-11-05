@@ -82,8 +82,6 @@ public class F24Controller {
 		SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
 
 	    requestFactory.setProxy(Proxy.NO_PROXY);
-	    
-	    
 //	   return builder.build();
 	    return new RestTemplate(requestFactory); 
 	    
@@ -474,6 +472,9 @@ public class F24Controller {
 			    URL url = new URL("https://sandbox.platfr.io");
 			    HttpsURLConnection connection= (HttpsURLConnection) url.openConnection();
 			    connection.connect();
+			    System.out.println("Response code:"+connection.getResponseCode());
+			   
+			    
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
