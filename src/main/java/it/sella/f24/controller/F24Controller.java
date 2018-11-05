@@ -125,14 +125,16 @@ public class F24Controller {
 
 		try {
 			System.out.println("Welcome>>>>4");
-			ResponseEntity<String> response = restTemplate.exchange(
-					"https://f24imageskew.herokuapp.com/f24/api/imageskew", HttpMethod.POST, entity, String.class);
+//			ResponseEntity<String> response = restTemplate.exchange(
+//					"https://f24imageskew.herokuapp.com/f24/api/imageskew", HttpMethod.POST, entity, String.class);
 
 			System.out.println("Welcome>>>>5");
-			f24json = mapper.readValue(response.getBody(), F24JSON.class);
-			decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
+//			f24json = mapper.readValue(response.getBody(), F24JSON.class);
+//			decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
+			
+			decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
 
-			System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
+//			System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
 
 			System.out.println("Calling Google Service");
 			data = googleService.readText(decodeBase64, "");
