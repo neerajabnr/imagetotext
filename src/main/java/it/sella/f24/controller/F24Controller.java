@@ -107,6 +107,8 @@ public class F24Controller {
 		System.out.println("Preparing the Input to the Skew service");
 		ObjectMapper mapper = new ObjectMapper();
 		String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
+		
+		System.out.println("Input JSON:"+reqJSON);
 		F24JSON f24json = null;
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
