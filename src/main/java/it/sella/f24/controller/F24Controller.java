@@ -471,6 +471,8 @@ public class F24Controller {
 				System.out.println("Calling Service");
 			    URL url = new URL("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance");
 			    
+			    
+			    
 			    HttpsURLConnection connection= (HttpsURLConnection) url.openConnection();
 			    connection.connect();
 			    System.out.println("Response code:"+connection.getResponseCode());
@@ -485,7 +487,7 @@ public class F24Controller {
 			return "hello";
 	}	
 	
-	@RequestMapping(value = "/api/callSandbox", method = RequestMethod.POST)
+	@RequestMapping(value = "/api/callSandbox", method = RequestMethod.GET)
 	public String callExtService() {
 
 		try {
@@ -500,6 +502,10 @@ public class F24Controller {
 			URL url = new URL("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance");
 			HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
 			con.setRequestMethod("GET");
+			
+			con.setRequestProperty("Content-type", "application/json");
+			
+			on.setRequestProperty("content-type", "application/json");
 			con.setDoOutput(true);
 			PrintStream ps = new PrintStream(con.getOutputStream());
 			ps.println("f1=abc&f2=xyz");
