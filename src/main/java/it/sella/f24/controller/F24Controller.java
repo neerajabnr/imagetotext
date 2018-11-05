@@ -26,6 +26,7 @@ import javax.net.ssl.X509TrustManager;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.jose4j.json.internal.json_simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -50,6 +51,8 @@ import com.fasterxml.jackson.core.JsonParser.Feature;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.client.util.Base64;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.google.protobuf.ByteString;
 
 import it.sella.f24.service.F24OCRService;
@@ -111,11 +114,18 @@ public class F24Controller {
 		ObjectMapper mapper = new ObjectMapper();
 		String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
 		
-		System.out.println("Input JSON:"+reqJSON);
+		JSONObject jsonObject=new JSONObject();
+		jsonObject.put("encodedImage", f24Form.getEncodedImage());
+	
+		
+		
+		
+		
+		System.out.println("Input JSON:"+jsonObject);
 		F24JSON f24json = null;
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
+		HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
 		
 		String f24Result = "{}";
 		byte[] decodeBase64 = null;
@@ -126,8 +136,8 @@ public class F24Controller {
 			ResponseEntity<String> response = restTemplate.exchange(
 					"https://f24imageskew.herokuapp.com/f24/api/imageskew", HttpMethod.POST, entity, String.class);
 
-			System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
 			f24json = mapper.readValue(response.getBody(), F24JSON.class);
+			System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
 			decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
 			
 //			decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
