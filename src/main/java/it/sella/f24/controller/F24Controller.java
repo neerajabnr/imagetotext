@@ -10,7 +10,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
+import java.net.Proxy;
 import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -36,6 +38,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -73,9 +76,17 @@ public class F24Controller {
 	private RestTemplate restTemplate;
 	
 	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+	public RestTemplate restTemplate() {
 	   // Do any additional configuration here
-	   return builder.build();
+		
+		SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
+
+	    requestFactory.setProxy(Proxy.NO_PROXY);
+	    
+	    
+//	   return builder.build();
+	    return new RestTemplate(requestFactory); 
+	    
 	}
 	
 
