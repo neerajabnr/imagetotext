@@ -35,12 +35,12 @@ public class F24OCRService {
 
 //		 System.out.println("Data from Google Service:"+data);
 		 
-		 List<TextAnnotation> textAnnotation = data.getTextAnnotation();
+		 /*List<TextAnnotation> textAnnotation = data.getTextAnnotation();
 		 logger.info("Data from Google Service");
 		 for (TextAnnotation textAnnotation2 : textAnnotation) {
 			System.out.print(textAnnotation2.getDescription()+" ");
 			logger.info(textAnnotation2.getDescription()+" ");
-		}
+		}*/
 		// read json file data to String
 		try {
 			// JSONParser parser = new JSONParser();
@@ -204,8 +204,8 @@ public class F24OCRService {
 			//String sec1string="CODICE FISCALE BRBLRS 47R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS         3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE  ,       ,  , **";
 			String sec1string="CODICE FISCALE FRL MGL 4 O C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI FORLANI ** MARIA GIULIANA     M        **  1 1 0 3 11 9 4 0 F RO ** FE CODICE FISCALE   ,  ,  ,     **   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE AZIENDA CAS / SPORTELLO";
 			NameFinderMETest4 test = new NameFinderMETest4();
-//			seconelist = test.f24_section1(sec1.trim());
-			seconelist = test.f24_section1(sec1string.trim());
+			seconelist = test.f24_section1(sec1.trim());
+//			seconelist = test.f24_section1(sec1string.trim());
 			sectwolist = test.f24_section2(sec2.trim());
 
 			System.out.println("Section1:  " + seconelist);
