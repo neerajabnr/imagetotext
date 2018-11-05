@@ -505,7 +505,7 @@ public class F24Controller {
 			
 			con.setRequestProperty("Content-type", "application/json");
 			
-			on.setRequestProperty("content-type", "application/json");
+			con.setRequestProperty("content-type", "application/json");
 			con.setDoOutput(true);
 			PrintStream ps = new PrintStream(con.getOutputStream());
 			ps.println("f1=abc&f2=xyz");
