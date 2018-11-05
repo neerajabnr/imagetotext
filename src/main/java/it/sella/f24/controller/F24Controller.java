@@ -489,6 +489,8 @@ public class F24Controller {
 			ps.println("f1=abc&f2=xyz");
 			ps.close();
 			con.connect();
+			
+			System.out.println("Res code:"+con.getResponseCode());
 			if (con.getResponseCode() == HttpsURLConnection.HTTP_OK) {
 			BufferedReader br = new BufferedReader(new
 			InputStreamReader(con.getInputStream()));
