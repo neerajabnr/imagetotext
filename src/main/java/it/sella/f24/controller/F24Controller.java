@@ -54,6 +54,7 @@ import it.sella.f24.service.F24OCRService;
 import it.sella.f24.service.GoogleService;
 import it.sella.f24.service.opennlp.Data;
 import it.sella.f24.service.opennlp.F24JSON;
+import it.sella.f24.service.opennlp.ResBody;
 import it.sella.f24.testclasses.FileReaderfromFolder;
 import it.sella.f24.view.F24Form;
 
@@ -384,6 +385,10 @@ public class F24Controller {
 					HttpMethod.POST, entity, String.class);
 
 			System.out.println("Response Body:" + response.getBody());
+			
+			ResBody resBody = mapper.readValue(response.getBody(), ResBody.class);
+			
+			System.out.println(resBody.getPayload().getAccessToken());
 
 			System.out.println("Response codes:" + response.getStatusCodeValue() + " " + response.getStatusCode());
 		} catch (Exception exception) {
