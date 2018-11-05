@@ -104,28 +104,28 @@ public class F24Controller {
 		 * }
 		 */
 
-		System.out.println("Welcome>>>>1");
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.configure(Feature.ALLOW_COMMENTS, true);
-		F24JSON ocrf24json = null;
-		try {
-			System.out.println("Encoded Img");
-			ocrf24json = mapper.readValue(f24Form.getEncodedImage(), F24JSON.class);
-			
-			System.err.println(f24Form.getEncodedImage());
-		} catch (IOException e1) {
-			
-			System.out.println("Welcome>>>>2");
-			return "{\"status\":\"KO\"}";
-		}
-
-		String reqJSON = "{\"encodedImage\":\"" + ocrf24json.getEncodedImage() + "\"}";
-		System.out.println("Welcome>>>>3");
-		System.out.println(reqJSON);
-		F24JSON f24json = null;
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
-		HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
+//		System.out.println("Welcome>>>>1");
+//		ObjectMapper mapper = new ObjectMapper();
+//		mapper.configure(Feature.ALLOW_COMMENTS, true);
+//		F24JSON ocrf24json = null;
+//		try {
+//			System.out.println("Encoded Img");
+//			ocrf24json = mapper.readValue(f24Form.getEncodedImage(), F24JSON.class);
+//			
+//			System.err.println(f24Form.getEncodedImage());
+//		} catch (IOException e1) {
+//			e1.printStackTrace();
+//			System.out.println("Welcome>>>>2");
+//			return "{\"status\":\"KO\"}";
+//		}
+//
+//		String reqJSON = "{\"encodedImage\":\"" + ocrf24json.getEncodedImage() + "\"}";
+//		System.out.println("Welcome>>>>3");
+//		System.out.println(reqJSON);
+//		F24JSON f24json = null;
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.setContentType(MediaType.APPLICATION_JSON);
+//		HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
 		String f24Result = "{}";
 		byte[] decodeBase64 = null;
 		Data data = null;
