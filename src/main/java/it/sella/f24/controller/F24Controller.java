@@ -389,6 +389,9 @@ public class F24Controller {
 			ResBody resBody = mapper.readValue(response.getBody(), ResBody.class);
 			
 			System.out.println(resBody.getPayload().getAccessToken());
+			
+			accessCheck(resBody.getPayload().getAccessToken());
+			
 
 			System.out.println("Response codes:" + response.getStatusCodeValue() + " " + response.getStatusCode());
 		} catch (Exception exception) {
@@ -398,8 +401,9 @@ public class F24Controller {
 		return null;
 	}
 
-	@RequestMapping(value = "/api/accessheck", method = RequestMethod.POST)
-	public String authCheck2(@RequestParam("value") String value) {
+//	@RequestMapping(value = "/api/accessheck", method = RequestMethod.POST)
+	//@RequestParam("value") 
+	public String accessCheck(String value) {
 
 		System.setProperty("java.net.useSystemProxies", "false");
 
