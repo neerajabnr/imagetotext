@@ -469,7 +469,8 @@ public class F24Controller {
 			// Now you can access an https URL without having the certificate in the truststore
 			try {
 				System.out.println("Calling Service");
-			    URL url = new URL("https://sandbox.platfr.io");
+			    URL url = new URL("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance");
+			    
 			    HttpsURLConnection connection= (HttpsURLConnection) url.openConnection();
 			    connection.connect();
 			    System.out.println("Response code:"+connection.getResponseCode());
@@ -506,15 +507,17 @@ public class F24Controller {
 			con.connect();
 			
 			System.out.println("Res code:"+con.getResponseCode());
-			if (con.getResponseCode() == HttpsURLConnection.HTTP_OK) {
+			
+//			System.out.println("Res:"+con.getOutputStream());
+//			if (con.getResponseCode() == HttpsURLConnection.HTTP_OK) {
 			BufferedReader br = new BufferedReader(new
 			InputStreamReader(con.getInputStream()));
 			String line;
 			while((line = br.readLine()) != null) {
-			System.out.println(line);
+			System.out.println("line"+line);
 			}
 			br.close();
-			}
+//			}
 			con.disconnect();
 		} catch (KeyManagementException e) {
 			// TODO Auto-generated catch block
