@@ -379,6 +379,8 @@ public class F24Controller {
 	@RequestMapping(value = "/api/authcheck", method = RequestMethod.POST)
 	public String authCheck() {
 		
+		System.setProperty("java.net.useSystemProxies", "false");
+		
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
