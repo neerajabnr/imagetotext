@@ -106,8 +106,12 @@ public class F24Controller {
 		ObjectMapper mapper = new ObjectMapper();
 		F24JSON ocrf24json = null;
 		try {
+			System.out.println("Encoded Img");
 			ocrf24json = mapper.readValue(f24Form.getEncodedImage(), F24JSON.class);
+			
+			System.err.println(f24Form.getEncodedImage());
 		} catch (IOException e1) {
+			e1.printStackTrace();
 			System.out.println("Welcome>>>>2");
 			return "{\"status\":\"KO\"}";
 		}
