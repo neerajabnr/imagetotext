@@ -26,7 +26,6 @@ import javax.net.ssl.X509TrustManager;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -47,6 +46,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.core.JsonParser.Feature;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.client.util.Base64;
 import com.google.protobuf.ByteString;
 
@@ -104,6 +106,7 @@ public class F24Controller {
 
 		System.out.println("Welcome>>>>1");
 		ObjectMapper mapper = new ObjectMapper();
+		mapper.configure(Feature.ALLOW_COMMENTS, true);
 		F24JSON ocrf24json = null;
 		try {
 			System.out.println("Encoded Img");
@@ -111,7 +114,7 @@ public class F24Controller {
 			
 			System.err.println(f24Form.getEncodedImage());
 		} catch (IOException e1) {
-			e1.printStackTrace();
+			
 			System.out.println("Welcome>>>>2");
 			return "{\"status\":\"KO\"}";
 		}
