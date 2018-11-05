@@ -481,9 +481,9 @@ public class F24Controller {
 			HttpsURLConnection.setDefaultSSLSocketFactory(sslctx.getSocketFactory());
 			
 			System.out.println("Calling Service");
-			URL url = new URL("https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session");
+			URL url = new URL("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance");
 			HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
-			con.setRequestMethod("POST");
+			con.setRequestMethod("GET");
 			con.setDoOutput(true);
 			PrintStream ps = new PrintStream(con.getOutputStream());
 			ps.println("f1=abc&f2=xyz");
