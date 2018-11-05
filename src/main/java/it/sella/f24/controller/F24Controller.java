@@ -104,14 +104,9 @@ public class F24Controller {
 		 * }
 		 */
 
-		System.out.println("Preparing the Input to the Skew service");
-		
-		String value=f24Form.getEncodedImage();
-		
-		byte[] decodeBase642 = Base64.decodeBase64(value);
-		
-		System.out.println("Decoded Value"+decodeBase642);
-		
+	
+		Object encodeBase64String = Base64.encodeBase64String(f24Form.getEncodedImage().getBytes());
+		System.out.println("encodeBase64String"+encodeBase64String);
 		
 		ObjectMapper mapper = new ObjectMapper();
 		String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
