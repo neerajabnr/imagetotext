@@ -400,22 +400,27 @@ public class F24Controller {
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+		headers.set("apikey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
 
-		 headers.set("auth.token",value);
-		headers.set("Auth-Schema", "S2S-Auth");
+		 headers.set("Auth-Token",value);
+		headers.set("Auth-Schema", "S2S-AUTH");
 		ObjectMapper mapper = new ObjectMapper();
+		
+		//14537780
+		String reqJSON = "{\"accountNumber\":\"" + "1152923800661" + "\"}";
 
-		HttpEntity<String> entity = new HttpEntity<>(headers);
+		HttpEntity<String> entity = new HttpEntity<>(reqJSON,headers);
 		ResponseEntity<String> response = null;
 		// https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session
 		// https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance
 
+		
+		
 		try {
 			System.out.println("Calling service");
 			// entity=new HttpEntity<>("GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0",headers);
-			response = restTemplate.exchange("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance",
-					HttpMethod.GET, entity, String.class);
+			response = restTemplate.exchange("https://sandbox.platfr.io/api/gbs/banking/v2/balance/getbalance",
+					HttpMethod.POST, entity, String.class);
 
 			System.out.println("Response Body:" + response.getBody());
 
