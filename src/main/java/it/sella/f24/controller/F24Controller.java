@@ -403,7 +403,7 @@ public class F24Controller {
 		headers.set("apikey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
 
 		 headers.set("auth.token",value);
-		headers.set("Auth-Schema", "S2S");
+		headers.set("Auth-Schema", "S2S-Auth");
 		ObjectMapper mapper = new ObjectMapper();
 
 		HttpEntity<String> entity = new HttpEntity<>(headers);
