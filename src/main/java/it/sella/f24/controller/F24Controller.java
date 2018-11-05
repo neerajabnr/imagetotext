@@ -419,7 +419,7 @@ public class F24Controller {
 		try {
 			System.out.println("Calling service");
 			// entity=new HttpEntity<>("GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0",headers);
-			response = restTemplate.exchange("https://sandbox.platfr.io/api/gbs/banking/v2/balance/getbalance",
+			response = restTemplate.exchange("https://sandbox.platfr.io/api/gbs/banking/v1/balance/getbalance",
 					HttpMethod.POST, entity, String.class);
 
 			System.out.println("Response Body:" + response.getBody());
