@@ -102,16 +102,18 @@ public class F24Controller {
 		 * }
 		 */
 
+		System.out.println("Welcome>>>>1");
 		ObjectMapper mapper = new ObjectMapper();
 		F24JSON ocrf24json = null;
 		try {
 			ocrf24json = mapper.readValue(f24Form.getEncodedImage(), F24JSON.class);
 		} catch (IOException e1) {
+			System.out.println("Welcome>>>>2");
 			return "{\"status\":\"KO\"}";
 		}
 
 		String reqJSON = "{\"encodedImage\":\"" + ocrf24json.getEncodedImage() + "\"}";
-
+		System.out.println("Welcome>>>>3");
 		System.out.println(reqJSON);
 		F24JSON f24json = null;
 		HttpHeaders headers = new HttpHeaders();
@@ -122,9 +124,11 @@ public class F24Controller {
 		Data data = null;
 
 		try {
+			System.out.println("Welcome>>>>4");
 			ResponseEntity<String> response = restTemplate.exchange(
 					"https://f24imageskew.herokuapp.com/f24/api/imageskew", HttpMethod.POST, entity, String.class);
 
+			System.out.println("Welcome>>>>5");
 			f24json = mapper.readValue(response.getBody(), F24JSON.class);
 			decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
 
@@ -134,6 +138,7 @@ public class F24Controller {
 			data = googleService.readText(decodeBase64, "");
 			System.out.println("Data from Google service" + data);
 			f24Result = ocrService.processJson(data);
+			System.out.println("Welcome>>>>6");
 		} catch (IOException e) {
 			return "{\"status\":\"KO\"}";
 		} catch (Exception e) {
