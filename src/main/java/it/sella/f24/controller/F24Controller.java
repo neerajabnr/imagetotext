@@ -2,13 +2,18 @@ package it.sella.f24.controller;
 
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -110,7 +115,6 @@ public class F24Controller {
 
 		try {
 		ResponseEntity<String> response = restTemplate.exchange("https://f24imageskew.herokuapp.com/f24/api/imageskew",
-				//
 				HttpMethod.POST, entity, String.class);
 		
 		f24json=mapper.readValue(response.getBody(), F24JSON.class);
@@ -464,5 +468,49 @@ public class F24Controller {
 			}
 			return "hello";
 	}	
+	
+	@RequestMapping(value = "/api/callSandbox", method = RequestMethod.POST)
+	public String callExtService() {
+
+		try {
+			
+			System.setProperty("java.net.useSystemProxies", "false");
+			SSLContext sslctx = SSLContext.getInstance("SSL");
+			sslctx.init(null, new X509TrustManager[] { new it.sella.f24.testclasses.MyTrustManager()}, null);
+			
+			HttpsURLConnection.setDefaultSSLSocketFactory(sslctx.getSocketFactory());
+			
+			System.out.println("Calling Service");
+			URL url = new URL("https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session");
+			HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
+			con.setRequestMethod("POST");
+			con.setDoOutput(true);
+			PrintStream ps = new PrintStream(con.getOutputStream());
+			ps.println("f1=abc&f2=xyz");
+			ps.close();
+			con.connect();
+			if (con.getResponseCode() == HttpsURLConnection.HTTP_OK) {
+			BufferedReader br = new BufferedReader(new
+			InputStreamReader(con.getInputStream()));
+			String line;
+			while((line = br.readLine()) != null) {
+			System.out.println(line);
+			}
+			br.close();
+			}
+			con.disconnect();
+		} catch (KeyManagementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "Hello";
+	
+	}
 
 }
