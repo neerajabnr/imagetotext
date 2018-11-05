@@ -109,7 +109,7 @@ public class F24Controller {
 		System.out.println("encodeBase64String"+encodeBase64String);
 		
 		ObjectMapper mapper = new ObjectMapper();
-		String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
+		String reqJSON = "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 		
 		System.out.println("Input JSON:"+reqJSON);
 		F24JSON f24json = null;
