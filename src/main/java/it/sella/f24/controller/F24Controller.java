@@ -197,6 +197,9 @@ public class F24Controller {
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
+		
+		headers.set("Content-Type", "application/json");
+		
 		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
 
 		// headers.set("auth.token", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
