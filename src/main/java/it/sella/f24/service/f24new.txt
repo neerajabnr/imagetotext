@@ -1,0 +1,144 @@
+{  
+
+   "F24Semplificato":{  
+
+      "Contribuente":{  
+
+         "CodiceFiscale":"v1",             
+
+         "DatiAnagrafici":{  
+
+            "Cognome":"v2",
+
+            "Nome":"v3",
+
+            "RagioneSociale":"",
+
+            "DataDiNascita":"v4",
+
+            "Sesso":"v5",
+
+            "Comune":"v6",
+
+            "Prov":"v7"
+
+         },
+
+         "DomicilioFiscale":{  
+
+            "Comune":"v6",
+
+            "Prov":"v7",
+
+            "ViaeNumeroCivico":""
+
+         },
+
+         "SecondoCodiceFiscale":"",
+
+         "CodiceIdentificativo":"",
+
+         "IdentificativoOperazione":""
+
+      },
+
+      "Taxes":{  
+
+         "CodiceUfficio":"",
+
+         "CodiceAtto":"",     
+
+         "Tax":[  
+
+            	{  
+
+               "Sezione":"x1",
+
+               "CodiceTributo":"x2",
+
+               "CodiceEnte":"x3",
+
+               "Ravv":"",
+
+               "ImmVar":"",
+
+               "Acc":"",
+
+               "Saldo":"",
+
+               "NumImm":"",
+
+               "MeseRif":"x4",
+
+               "AnnoRif":"x5",
+
+               "Detrazione":x6,
+
+               "DebitoImporto":x7,
+
+               "CrebitoImporto":x8
+
+            }
+,
+	{  
+
+               "Sezione":"x1",
+
+               "CodiceTributo":"x2",
+
+               "CodiceEnte":"x3",
+
+               "Ravv":"",
+
+               "ImmVar":"",
+
+               "Acc":"",
+
+               "Saldo":"",
+
+               "NumImm":"",
+
+               "MeseRif":"x4",
+
+               "AnnoRif":"x5",
+
+               "Detrazione":x6,
+
+               "DebitoImporto":x7,
+
+               "CrebitoImporto":x8
+
+            }
+
+
+
+
+         ]
+
+      },
+
+      "Payment":{  
+
+         "DataIncasso":"",
+
+         "ContoOrdinante":"",
+
+         "SaldoFinale":e1,
+
+         "Product":""
+
+      }
+
+   },
+
+   "MessageContext":{  
+
+      "Sender":"InternetBanking",
+
+      "ABI":"03268",
+
+      "Auth-Token":"AQIC5wM2LY4SfcydkHI9T0kxBHbh74jK-Ij2gRVL58Mjloo.*AAJTSQACMDIAAlNLABQtMzI1Mjc2MzIxNTE1NDYzNzkxMwACUzEAAjA0*"
+
+   }
+
+}

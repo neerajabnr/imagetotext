@@ -72,11 +72,41 @@
 
                "AnnoRif":"x5",
 
-               "Detrazione":"x6",
+               "Detrazione":x6,
 
-               "DebitoImporto":"x7",
+               "DebitoImporto":x7,
 
-               "CrebitoImporto":"x8"
+               "CrebitoImporto":x8
+
+            }
+,
+	{  
+
+               "Sezione":"x1",
+
+               "CodiceTributo":"x2",
+
+               "CodiceEnte":"x3",
+
+               "Ravv":"",
+
+               "ImmVar":"",
+
+               "Acc":"",
+
+               "Saldo":"",
+
+               "NumImm":"",
+
+               "MeseRif":"x4",
+
+               "AnnoRif":"x5",
+
+               "Detrazione":x6,
+
+               "DebitoImporto":x7,
+
+               "CrebitoImporto":x8
 
             }
 
@@ -93,7 +123,7 @@
 
          "ContoOrdinante":"",
 
-         "SaldoFinale":"e1",
+         "SaldoFinale":e1,
 
          "Product":""
 

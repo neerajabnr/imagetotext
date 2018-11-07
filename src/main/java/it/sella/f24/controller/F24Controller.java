@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
@@ -107,28 +108,28 @@ public class F24Controller {
 		 * }
 		 */
 
-		//Calling Authentication Service
-		
+		// Calling Authentication Service
+
 		String accessToken = authCheck();
-		if(accessToken.isEmpty()) {
+		if (accessToken.isEmpty()) {
 			return "{\"status\":\"Access token is empty, please provide the correct details\"}";
-		}else {
+		} else {
+			//for local testing 
 			ObjectMapper mapper = new ObjectMapper();
-//			String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
+			String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
 			
-			JSONObject jsonObject=new JSONObject();
+			//testing in cloud
+
+			JSONObject jsonObject = new JSONObject();
 			jsonObject.put("encodedImage", f24Form.getEncodedImage());
-		
-			
-			
-			
-			
-			System.out.println("Input JSON:"+jsonObject);
+
+			System.out.println("Input JSON:" + jsonObject);
 			F24JSON f24json = null;
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(MediaType.APPLICATION_JSON);
-			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
-			
+			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(),headers);
+
+//			HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
 			String f24Result = "{}";
 			byte[] decodeBase64 = null;
 			Data data = null;
@@ -141,11 +142,10 @@ public class F24Controller {
 				f24json = mapper.readValue(response.getBody(), F24JSON.class);
 				System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
 				decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
-				
-//				decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
-				
-				System.out.println("Decoded"+decodeBase64);
 
+				// decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
+
+				System.out.println("Decoded" + decodeBase64);
 
 				System.out.println("Calling Google Service");
 				data = googleService.readText(decodeBase64, "");
@@ -160,7 +160,6 @@ public class F24Controller {
 			return f24Result;
 		}
 
-		
 		// String sampleResult =
 		// "{\"F24Semplificato\":{\"Contribuente\":{\"CodiceFiscale\":\"VTINDR85S13D938T\",\"DatiAnagrafici\":{\"Cognome\":\"VITI\",\"Nome\":\"ANDREA\",\"RagioneSociale\":\"\",\"DataDiNascita\":\"13/11/1985\",\"Sesso\":\"M\",\"Comune\":\"GATTINARA\",\"Prov\":\"VC\"},\"DomicilioFiscale\":{\"Comune\":\"\",\"Prov\":\"\",\"ViaeNumeroCivico\":\"\"},\"SecondoCodiceFiscale\":\"\",\"CodiceIdentificativo\":\"\",\"IdentificativoOperazione\":\"\"},\"Taxes\":{\"CodiceUfficio\":\"\",\"CodiceAtto\":\"\",\"Tax\":[{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"1.11\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"ER\",\"CodiceTributo\":\"6099\",\"CodiceEnte\":\"\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"0\",\"MeseRif\":\"0101\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"2.22\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"3.33\",\"CrebitoImporto\":\"\"}]},\"Payment\":{\"DataIncasso\":\"23/07/2018\",\"ContoOrdinante\":\"11O1641490340\",\"SaldoFinale\":\"6.66\",\"Product\":\"0\"}}}";
 
@@ -174,6 +173,52 @@ public class F24Controller {
 	 * System.out.println(processJson.trim().replaceAll("\n", "")); } catch
 	 * (Exception e) { return "{\"status\":\"Error\"}"; } return processJson; }
 	 */
+
+	@RequestMapping(value = "/api/callf24", method = RequestMethod.POST)
+	public String callF24(String f24JSON) {
+		StringBuffer buffer = new StringBuffer();
+		String line = null;
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testjson.json"))) {
+			while ((line = br.readLine()) != null) {
+				
+				
+				buffer.append(line);
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(buffer.toString());
+		
+		
+		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
+		System.setProperty("java.net.useSystemProxies", "false");
+
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+
+		// headers.set("auth.token", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+		headers.set("Auth-Schema", "S2S");
+		ObjectMapper mapper = new ObjectMapper();
+
+		HttpEntity<String> entity = new HttpEntity<>(buffer.toString(),headers);
+		ResponseEntity<String> response = null;
+
+		try {
+			System.out.println("Calling service");
+			response = restTemplate.exchange(
+					"https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders",
+					HttpMethod.POST, entity, String.class);
+
+			System.out.println("Response Body:" + response.getBody());
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "{\"status\":\"KO\"}";
+		}
+		return "hello";
+	}
 
 	@RequestMapping(value = "/api/googlevision/imagetotext", method = RequestMethod.POST)
 	public Data imageToText(@RequestParam("file") MultipartFile file) {
@@ -237,7 +282,7 @@ public class F24Controller {
 			e.printStackTrace();
 		}
 		F24Form f24Form = new F24Form();
-//		f24Form.setEncodedImage("{\"encodedImage\":\"" + encodeBase64String + "\"}");
+		// f24Form.setEncodedImage("{\"encodedImage\":\"" + encodeBase64String + "\"}");
 		f24Form.setEncodedImage(encodeBase64String);
 		f24Form.setTransactionId("123");
 		String f24ImageToText = f24ImageToText(f24Form);
@@ -406,13 +451,13 @@ public class F24Controller {
 					HttpMethod.POST, entity, String.class);
 
 			System.out.println("Response Body:" + response.getBody());
-			
+
 			ResBody resBody = mapper.readValue(response.getBody(), ResBody.class);
-			
+
 			System.out.println(resBody.getPayload().getAccessToken());
-			
-//			accessCheck(resBody.getPayload().getAccessToken());
-			
+
+			// accessCheck(resBody.getPayload().getAccessToken());
+
 			System.out.println("Response codes:" + response.getStatusCodeValue() + " " + response.getStatusCode());
 
 			return resBody.getPayload().getAccessToken();
@@ -423,8 +468,8 @@ public class F24Controller {
 		}
 	}
 
-//	@RequestMapping(value = "/api/accessheck", method = RequestMethod.POST)
-	//@RequestParam("value") 
+	// @RequestMapping(value = "/api/accessheck", method = RequestMethod.POST)
+	// @RequestParam("value")
 	public String accessCheck(String value) {
 
 		System.setProperty("java.net.useSystemProxies", "false");
@@ -432,14 +477,14 @@ public class F24Controller {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
-		
+
 		headers.set("apikey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
 
-		 headers.set("Auth-Token",value);
+		headers.set("Auth-Token", value);
 		headers.set("Auth-Schema", "S2S-AUTH");
 		ObjectMapper mapper = new ObjectMapper();
-		
-		//14537780
+
+		// 14537780
 		String reqJSON = "{\"accountNumber\":\"" + "1152923800661" + "\"}";
 
 		HttpEntity<String> entity = new HttpEntity<>(headers);
@@ -447,8 +492,6 @@ public class F24Controller {
 		// https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session
 		// https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance
 
-		
-		
 		try {
 			System.out.println("Calling service");
 			// entity=new HttpEntity<>("GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0",headers);

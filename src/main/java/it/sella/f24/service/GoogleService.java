@@ -170,11 +170,11 @@ public class GoogleService {
             
             //Saving the image
             
-            ByteArrayInputStream input_stream= new ByteArrayInputStream(decodeBase64);
-            BufferedImage final_buffered_image = ImageIO.read(input_stream);
+//            ByteArrayInputStream input_stream= new ByteArrayInputStream(decodeBase64);
+//            BufferedImage final_buffered_image = ImageIO.read(input_stream);
 //            ImageIO.write(final_buffered_image , "jpg", new File("D:\\Sample.jpg") );
-            System.out.println("Saved the image");
-            ImageIO.write(final_buffered_image , "jpg", new File("Sample.jpg") );
+//            System.out.println("Saved the image");
+//            ImageIO.write(final_buffered_image , "jpg", new File("Sample.jpg") );
 
             
             

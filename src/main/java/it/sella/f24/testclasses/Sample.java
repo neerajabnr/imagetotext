@@ -1,12 +1,18 @@
 package it.sella.f24.testclasses;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Pattern;
 
 import org.json.simple.parser.ParseException;
 
+import it.sella.f24.controller.F24Controller;
+import it.sella.f24.service.F24OCRService;
 import opennlp.tools.namefind.RegexNameFinder;
 import opennlp.tools.util.Span;
 
@@ -72,21 +78,54 @@ public class Sample {
 	System.out.println(v4);*/
 		
 		
-		Pattern testPattern = Pattern.compile("test");
-
-		Pattern[] patterns = new Pattern[]{testPattern};
-		Map<String, Pattern[]> regexMap = new HashMap<>();
-		String type = "testtype";
-
-		regexMap.put(type, patterns);
-
-		RegexNameFinder finder =
-		new RegexNameFinder(regexMap);
+//		Pattern testPattern = Pattern.compile("test");
+//
+//		Pattern[] patterns = new Pattern[]{testPattern};
+//		Map<String, Pattern[]> regexMap = new HashMap<>();
+//		String type = "testtype";
+//
+//		regexMap.put(type, patterns);
+//
+//		RegexNameFinder finder =
+//		new RegexNameFinder(regexMap);
 
 //		Span[] result = finder.find(sentence);
 		
 //		System.out.println(result[0].getType());
 		
+//		F24OCRService service=new F24OCRService();
+//		service.buildf24(4);
+//		LocalDate date=java.time.LocalDate.now();
+//		
+//		System.out.println(date);  y
 		
+//		String data="30101947";
+//		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");  
+//		java.util.Date date;
+//		try {
+//			date = new SimpleDateFormat("ddMMyyyy").parse(data);
+//			System.out.println(formatter.format(date));
+//		} catch (java.text.ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+	   /* Date date =  new Date(Long.parseLong(data));
+	    formatter.setLenient(false);
+	    
+	    
+	    System.out.println(Long.parseLong(data));
+	   System.out.println(formatter.format(date)); 
+	   
+	   try {
+		System.out.println(formatter.parse(data));
+	} catch (java.text.ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} */
+		
+		
+		F24Controller controller=new F24Controller();
+		controller.callF24(null);
 	}
 }

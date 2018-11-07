@@ -5,8 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.StringTokenizer;
@@ -348,6 +352,21 @@ public class F24OCRService {
 		v6=searchKeyword(v6);
 		v7=searchKeyword(v7);
 		
+		
+		SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd");
+		
+		Date date;
+		try {
+			date = new SimpleDateFormat("ddMMyyyy").parse(v4);
+			v4=format.format(date);
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
+		}
+		
+		System.out.println("Date"+v4);
+		
 		sz=searchKeyword(sz);
 		t=searchKeyword(t);
 		c=searchKeyword(c);
@@ -402,7 +421,7 @@ public class F24OCRService {
 		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
 		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
-		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.json"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
 
@@ -431,6 +450,11 @@ public class F24OCRService {
 					mydata = mydata.replace("v6", v6);
 					mydata = mydata.replace("v7", v7);
 				}
+				
+				//Calculating Sysdate
+				LocalDate currdate=java.time.LocalDate.now();
+				
+				mydata=mydata.replace("sysdate", String.valueOf(currdate));
 
 				if (sztokenizer.countTokens() == 0) {
 					mydata = mydata.replaceAll("x1", "");
@@ -465,23 +489,24 @@ public class F24OCRService {
 					mydata = mydata.replaceFirst("x5", atokenizer.nextToken());
 				}
 				if (dtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x6", "");
+					mydata = mydata.replaceAll("x6", "0");
 				} else if (mydata.contains("x6") && dtokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x6", dtokenizer.nextToken());
 				}
 				if (dbtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x7", "");
+					mydata = mydata.replaceAll("x7", "0");
 				} else if (mydata.contains("x7") && dbtokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x7", dbtokenizer.nextToken());
 				}
+			
 				if (crtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x8", "");
+					mydata = mydata.replaceAll("x8", "0");
 				} else if (mydata.contains("x8") && crtokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x8", crtokenizer.nextToken());
 				}
 
 				if (e.isEmpty()) {
-					mydata = mydata.replaceAll("e1", "");
+					mydata = mydata.replace("e1", "0");
 				} else {
 					if (e.startsWith("777")) {
 						e = e.replaceAll("7", "");
@@ -512,11 +537,11 @@ public class F24OCRService {
 		return value;
 	}
 
-	private void buildf24(int rowcount) {
+	public void buildf24(int rowcount) {
 		String data = "", section2row = "", section2rows = "";
 		StringBuffer buffer = new StringBuffer();
 		try (BufferedReader br = new BufferedReader(
-				new FileReader("src/main/java/it/sella/f24/service/section2row.json"))) {
+				new FileReader("src/main/java/it/sella/f24/service/section2row.txt"))) {
 			while ((data = br.readLine()) != null) {
 				section2row = section2row + data + "\n";
 			}
@@ -541,7 +566,7 @@ public class F24OCRService {
 				data = data.replace("section2rows", section2rows);
 				buffer.append(data + "\n");
 			}
-			FileWriter writer = new FileWriter("src/main/java/it/sella/f24/service/f24.json");
+			FileWriter writer = new FileWriter("src/main/java/it/sella/f24/service/f24.txt");
 			writer.append(buffer);
 			writer.close();
 		} catch (FileNotFoundException e) {

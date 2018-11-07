@@ -3778,3 +3778,190 @@ CAS
 
 [http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
 
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS            **  3 0 1 0 1 9 4 7 F  LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+

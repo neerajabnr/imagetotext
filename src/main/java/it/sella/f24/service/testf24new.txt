@@ -1,0 +1,64 @@
+{
+
+    "executionDate": "sysdate",
+
+    "documentAmount": e1,
+
+    "currency": "EUR",
+
+    "officeCode": "",
+
+    "deedCode": "",
+
+    "operationCode": "",
+
+    "payer": {
+
+        "name": "v3",
+
+        "surname": "v2",
+
+        "businessName": "",
+
+        "fiscalCode": "v1",
+
+        "birthDate": "v4",
+
+        "birthPlace": "v6",
+
+        "birthProvince": "v7",
+
+        "sex": "v5",
+
+        "address": {
+
+            "address": "",
+
+            "city": "",
+
+            "province": ""
+
+        }
+
+    },
+
+    "payerAgent": {
+
+        "type": {
+
+            "enumeration":"",
+
+            "value": ""
+
+        },
+
+        "fiscalCode": ""
+
+    },
+
+    "taxList": [
+
+       section2rows
+    ]
+
+}
