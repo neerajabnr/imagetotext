@@ -2,7 +2,7 @@
 
     "executionDate": "2018-11-07",
 
-    "documentAmount": 86,00,
+    "documentAmount": 86.00,
 
     "currency": "EUR",
 
@@ -82,7 +82,7 @@
 
             "deductionAmount": "",
 
-            "taxAmount": 43,00,
+            "taxAmount": 43.00,
 
             "compensationAmount": ""
 
@@ -111,7 +111,7 @@
 
             "deductionAmount": "",
 
-            "taxAmount": 43,00,
+            "taxAmount": 43.00,
 
             "compensationAmount": ""
         }

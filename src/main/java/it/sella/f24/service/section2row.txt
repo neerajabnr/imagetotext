@@ -20,10 +20,10 @@
 
                "AnnoRif":"x5",
 
-               "Detrazione":x6,
+               "Detrazione":"x6",
 
                "DebitoImporto":x7,
 
-               "CrebitoImporto":x8
+               "CrebitoImporto":"x8"
 
             }

@@ -20,11 +20,11 @@
 
             "referenceYear": "x5",
 
-            "deductionAmount": x6,
+            "deductionAmount": "x6",
 
             "taxAmount": x7,
 
-            "compensationAmount": x8
+            "compensationAmount": "x8"
 
         }
         
