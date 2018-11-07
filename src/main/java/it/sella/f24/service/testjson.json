@@ -80,11 +80,11 @@
 
             "referenceYear": "2018",
 
-            "deductionAmount": 0,
+            "deductionAmount": "",
 
             "taxAmount": 43,00,
 
-            "compensationAmount": 0
+            "compensationAmount": ""
 
         },
 {
@@ -109,12 +109,11 @@
 
             "referenceYear": "2018",
 
-            "deductionAmount": 0,
+            "deductionAmount": "",
 
             "taxAmount": 43,00,
 
-            "compensationAmount": 0
-
+            "compensationAmount": ""
         }
         
         
