@@ -557,7 +557,7 @@ public class F24OCRService {
 			if (i == rowcount - 1) {
 				section2rows = section2rows + section2row + "\n";
 			} else {
-				section2rows = section2rows + section2row + "," + "\n";
+				section2rows = section2rows + section2row + "," + "\n\t";
 			}
 		}
 

@@ -175,14 +175,14 @@ public class F24Controller {
 	 */
 
 	@RequestMapping(value = "/api/callf24", method = RequestMethod.POST)
-	public String callF24(String f24JSON) {
+	public String callF24() {
 		StringBuffer buffer = new StringBuffer();
 		String line = null;
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testjson.json"))) {
 			while ((line = br.readLine()) != null) {
 				
 				
-				buffer.append(line);
+				buffer.append(line+"\n");
 
 			}
 		} catch (Exception e) {
