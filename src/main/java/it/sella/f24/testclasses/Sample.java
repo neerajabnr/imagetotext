@@ -126,7 +126,7 @@ public class Sample {
 		
 		
 		F24Controller controller=new F24Controller();
-		controller.callF24();
+		controller.callF24(null);
 		
 		
 		
