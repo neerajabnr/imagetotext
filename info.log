@@ -4098,3 +4098,4 @@ CAS
 
 [http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
 
+[http-nio-6000-exec-3] INFO  it.sella.f24.controller.F24Controller  - Image path:  /home/bsindia/Documents/images/20181023_181421.jpg

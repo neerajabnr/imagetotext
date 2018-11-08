@@ -200,18 +200,18 @@ public class F24OCRService {
 
 			//logger.info("After the data conversion");
 			logger.info(/*"Section1:----\n" +*/ sec1.trim());
-			//logger.info("Section2:----\n" + sec2.trim());
+			logger.info(sec2.trim());
 
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
 
 			
 			//String sec1string="CODICE FISCALE BRBLRS 47R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS         3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE  ,       ,  , **";
-			String sec1string="CODICE FISCALE FRL MGL 4 O C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI FORLANI ** MARIA GIULIANA     M        **  1 1 0 3 11 9 4 0 F RO ** FE CODICE FISCALE   ,  ,  ,     **   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE AZIENDA CAS / SPORTELLO";
-			NameFinderMETest4 test = new NameFinderMETest4();
-			seconelist = test.f24_section1(sec1.trim());
-//			seconelist = test.f24_section1(sec1string.trim());
-			sectwolist = test.f24_section2(sec2.trim());
+//			String sec1string="CODICE FISCALE FRL MGL 4 O C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI FORLANI ** MARIA GIULIANA     M        **  1 1 0 3 11 9 4 0 F RO ** FE CODICE FISCALE   ,  ,  ,     **   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE AZIENDA CAS / SPORTELLO";
+//			NameFinderMETest4 test = new NameFinderMETest4();
+//			seconelist = test.f24_section1(sec1.trim());
+////			seconelist = test.f24_section1(sec1string.trim());
+//			sectwolist = test.f24_section2(sec2.trim());
 
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
@@ -382,14 +382,14 @@ public class F24OCRService {
 		cr=searchKeyword(cr);
 		e=searchKeyword(e);
 		
-		logger.info("Section1 Result data:\n");
-		logger.info("CodiceFiscale:	"+v1+"\n");
-		logger.info("Cognome:	"+v2+"\n");
-		logger.info("Nome:	"+v3+"\n");
-		logger.info("DataDiNascita:	"+v4+"\n");
-		logger.info("Sesso:	"+v5+"\n");
-		logger.info("Comune:	"+v6+"\n");
-		logger.info("Prov:	"+v7+"\n");
+//		logger.info("Section1 Result data:\n");
+//		logger.info("CodiceFiscale:	"+v1+"\n");
+//		logger.info("Cognome:	"+v2+"\n");
+//		logger.info("Nome:	"+v3+"\n");
+//		logger.info("DataDiNascita:	"+v4+"\n");
+//		logger.info("Sesso:	"+v5+"\n");
+//		logger.info("Comune:	"+v6+"\n");
+//		logger.info("Prov:	"+v7+"\n");
 		
 
 		// Replacing * with , in the debit values
@@ -405,27 +405,7 @@ public class F24OCRService {
 			v1 = temp;
 		}
 
-		if(!v1.equals("TRRLCU83A25A859C")) {
-			v1="TRRLCU83A25A859C";
-		}
-		if(!v2.equals("TERRIBILE")) {
-			v2="TERRIBILE";
-		}
-		if(!v3.equals("LUCA")) {
-			v3="LUCA";
-		}
-		if(!v4.equals("1985-11-13")) {
-			v4="1985-11-13";
-		}
-		if(!v5.equals("M")) {
-			v5="M";
-		}
-		if(!v6.equals("BIELLA")) {
-			v6="BIELLA";
-		}
-		if(!v7.equals("BI")) {
-			v7="BI";
-		}
+	
 		
 		
 		StringTokenizer sztokenizer =null;
@@ -737,27 +717,7 @@ public class F24OCRService {
 			v1 = temp;
 		}
 
-		if(!v1.equals("TRRLCU83A25A859C")) {
-			v1="TRRLCU83A25A859C";
-		}
-		if(!v2.equals("TERRIBILE")) {
-			v2="TERRIBILE";
-		}
-		if(!v3.equals("LUCA")) {
-			v3="LUCA";
-		}
-		if(!v4.equals("1985-11-13")) {
-			v4="1985-11-13";
-		}
-		if(!v5.equals("M")) {
-			v5="M";
-		}
-		if(!v6.equals("BIELLA")) {
-			v6="BIELLA";
-		}
-		if(!v7.equals("BI")) {
-			v7="BI";
-		}
+		
 		
 		
 		StringTokenizer sztokenizer =null;
@@ -768,20 +728,15 @@ public class F24OCRService {
 		}
 		StringTokenizer ttokenizer = null;
 		StringTokenizer ctokenizer = null;
-		if (v1.equals("BRBLRS47R30E512B") || v1.equals("BRBLRS47R3OE512B")) {
-			ttokenizer = new StringTokenizer("3944;3918", ";");
-			ctokenizer = new StringTokenizer("H533;D600", ";");
-		} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
-			ttokenizer = new StringTokenizer("3918;3918", ";");
-			ctokenizer = new StringTokenizer("D600;D600", ";");
-		}else if(v1.equals("TRRLCU83A25A859C")) {
-			ttokenizer = new StringTokenizer("3944", ";");
-			ctokenizer = new StringTokenizer("D933", ";");
-		}
-		else {
+		
+			
+		
+			
+		
+			
 			ttokenizer = new StringTokenizer(t, ";");
 			ctokenizer = new StringTokenizer(c, ";");
-		}
+		
 		
 		rowcount = ttokenizer.countTokens();
 		buildf24(rowcount);
@@ -816,23 +771,8 @@ public class F24OCRService {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
 
-				if (v1.equals("BRBLRS47R30E512B")|| v1.equals("BRBLRS47R3OE512B")) {
-					mydata = line.replace("v1", v1);
-					mydata = mydata.replace("v2", v2);
-					mydata = mydata.replace("v3", v3);
-					mydata = mydata.replace("v4", v4);
-					mydata = mydata.replace("v5", v5);
-					mydata = mydata.replace("v6", v6);
-					mydata = mydata.replace("v7", "VR");
-				} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
-					mydata = line.replace("v1", v1);
-					mydata = mydata.replace("v2", v2);
-					mydata = mydata.replace("v3", v3);
-					mydata = mydata.replace("v4", v4);
-					mydata = mydata.replace("v5", v5);
-					mydata = mydata.replace("v6", v6);
-					mydata = mydata.replace("v7", "BI");
-				} else {
+				
+				
 					mydata = line.replace("v1", v1);
 					mydata = mydata.replace("v2", v2);
 					mydata = mydata.replace("v3", v3);
@@ -840,7 +780,7 @@ public class F24OCRService {
 					mydata = mydata.replace("v5", v5);
 					mydata = mydata.replace("v6", v6);
 					mydata = mydata.replace("v7", v7);
-				}
+				
 				
 				//Calculating Sysdate
 				LocalDate currdate=java.time.LocalDate.now();
