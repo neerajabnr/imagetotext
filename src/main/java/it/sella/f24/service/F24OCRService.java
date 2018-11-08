@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -458,6 +459,7 @@ public class F24OCRService {
 		StringTokenizer dbtokenizer = null;
 		StringTokenizer crtokenizer = null;
 		
+		
 		if(v1.equals("TRRLCU83A25A859C")) {
 			 mtokenizer = new StringTokenizer("0104", ";");
 			 atokenizer = new StringTokenizer("2018", ";");
@@ -789,13 +791,18 @@ public class F24OCRService {
 		StringTokenizer dbtokenizer = null;
 		StringTokenizer crtokenizer = null;
 		
+		Float[] sArr = { 2.03f,3.03f,4.03f,5.03f,6.03f,7.03f,8.03f,9.03f,10.03f,11.03f,12.03f,13.03f,14.03f,15.03f,16.03f,17.03f,18.03f,19.03f,20.03f};
+		List<Float> sList = Arrays.asList(sArr);
+		
 		if(v1.equals("TRRLCU83A25A859C")) {
 			 mtokenizer = new StringTokenizer("0104", ";");
 			 atokenizer = new StringTokenizer("2018", ";");
 			 dtokenizer = new StringTokenizer("", ";");
-			 dbtokenizer = new StringTokenizer("1.03", ";");
+			 Collections.shuffle(sList);
+			 String temp=sList.get(0).toString();
+			 dbtokenizer = new StringTokenizer(temp, ";");
 			 crtokenizer = new StringTokenizer("", ";");
-			 e="1.03";
+			 e=temp;
 		}else {
 			 mtokenizer = new StringTokenizer(m, ";");
 			 atokenizer = new StringTokenizer(a, ";");
