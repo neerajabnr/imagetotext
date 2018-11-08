@@ -164,7 +164,7 @@ public class F24Controller {
 			
 			System.out.println("F24 JSON from the Service:\n"+format.getF24format1()+"\n"+format.getF24format2());
 			String input = format.getF24format2();
-//			callF24(input);
+			callF24(input);
 //			return f24Result;
 			return format.getF24format1();
 		}

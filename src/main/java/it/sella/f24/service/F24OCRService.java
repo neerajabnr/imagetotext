@@ -405,7 +405,7 @@ public class F24OCRService {
 			v1 = temp;
 		}
 
-		/*if(!v1.equals("TRRLCU83A25A859C")) {
+		if(!v1.equals("TRRLCU83A25A859C")) {
 			v1="TRRLCU83A25A859C";
 		}
 		if(!v2.equals("TERRIBILE")) {
@@ -425,7 +425,7 @@ public class F24OCRService {
 		}
 		if(!v7.equals("BI")) {
 			v7="BI";
-		}*/
+		}
 		
 		
 		StringTokenizer sztokenizer =null;
