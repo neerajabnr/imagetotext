@@ -494,7 +494,7 @@ public class F24OCRService {
 					mydata = mydata.replaceFirst("x6", dtokenizer.nextToken());
 				}
 				if (dbtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x7", "0");
+					mydata = mydata.replaceAll("x7", "");
 				} else if (mydata.contains("x7") && dbtokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x7", dbtokenizer.nextToken());
 				}
@@ -506,7 +506,7 @@ public class F24OCRService {
 				}
 
 				if (e.isEmpty()) {
-					mydata = mydata.replace("e1", "0");
+					mydata = mydata.replace("e1", "");
 				} else {
 					if (e.startsWith("777")) {
 						e = e.replaceAll("7", "");

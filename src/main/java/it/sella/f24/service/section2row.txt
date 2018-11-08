@@ -22,7 +22,7 @@
 
                "Detrazione":"x6",
 
-               "DebitoImporto":x7,
+               "DebitoImporto":"x7",
 
                "CrebitoImporto":"x8"
 
