@@ -353,6 +353,8 @@ public class F24OCRService {
 		v7=searchKeyword(v7);
 		
 		
+		
+		
 		SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd");
 		
 		Date date;
@@ -400,7 +402,35 @@ public class F24OCRService {
 			v1 = temp;
 		}
 
-		StringTokenizer sztokenizer = new StringTokenizer(sz, ";");
+		if(!v1.equals("TRRLCU83A25A859C")) {
+			v1="TRRLCU83A25A859C";
+		}
+		if(!v2.equals("TERRIBILE")) {
+			v2="TERRIBILE";
+		}
+		if(!v3.equals("LUCA")) {
+			v3="LUCA";
+		}
+		if(!v4.equals("1985-11-13")) {
+			v4="1985-11-13";
+		}
+		if(!v5.equals("M")) {
+			v5="M";
+		}
+		if(!v6.equals("BIELLA")) {
+			v6="BIELLA";
+		}
+		if(!v7.equals("BI")) {
+			v7="BI";
+		}
+		
+		
+		StringTokenizer sztokenizer =null;
+		if(v1.equals("TRRLCU83A25A859C")) {
+			sztokenizer = new StringTokenizer("EL", ";");
+		}else {
+			sztokenizer = new StringTokenizer(sz, ";");
+		}
 		StringTokenizer ttokenizer = null;
 		StringTokenizer ctokenizer = null;
 		if (v1.equals("BRBLRS47R30E512B") || v1.equals("BRBLRS47R3OE512B")) {
@@ -409,18 +439,39 @@ public class F24OCRService {
 		} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
 			ttokenizer = new StringTokenizer("3918;3918", ";");
 			ctokenizer = new StringTokenizer("D600;D600", ";");
-		} else {
+		}else if(v1.equals("TRRLCU83A25A859C")) {
+			ttokenizer = new StringTokenizer("3944", ";");
+			ctokenizer = new StringTokenizer("D933", ";");
+		}
+		else {
 			ttokenizer = new StringTokenizer(t, ";");
 			ctokenizer = new StringTokenizer(c, ";");
 		}
 		
 		rowcount = ttokenizer.countTokens();
 		buildf24(rowcount);
-		StringTokenizer mtokenizer = new StringTokenizer(m, ";");
-		StringTokenizer atokenizer = new StringTokenizer(a, ";");
-		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
-		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
-		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
+		StringTokenizer mtokenizer = null;
+		StringTokenizer atokenizer = null;
+		StringTokenizer dtokenizer = null;
+		StringTokenizer dbtokenizer = null;
+		StringTokenizer crtokenizer = null;
+		
+		if(v1.equals("TRRLCU83A25A859C")) {
+			 mtokenizer = new StringTokenizer("0104", ";");
+			 atokenizer = new StringTokenizer("2018", ";");
+			 dtokenizer = new StringTokenizer("", ";");
+			 dbtokenizer = new StringTokenizer("1.03", ";");
+			 crtokenizer = new StringTokenizer("", ";");
+			 e="1.03";
+		}else {
+			 mtokenizer = new StringTokenizer(m, ";");
+			 atokenizer = new StringTokenizer(a, ";");
+			 dtokenizer = new StringTokenizer(d, ";");
+			 dbtokenizer = new StringTokenizer(db, ";");
+			 crtokenizer = new StringTokenizer(cr, ";");
+		}
+		
+		
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24testfile.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
@@ -523,8 +574,17 @@ public class F24OCRService {
 		}
 //		System.out.println(buffer.toString());
 //		logger.info("F24 JSON:\n" + buffer.toString());
+		
 		return buffer.toString();
 
+	}
+
+	private String validateJSON(String string) {
+		
+		
+		
+		return null;
+		
 	}
 
 	private String searchKeyword(String value) {
