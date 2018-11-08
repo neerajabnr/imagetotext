@@ -157,6 +157,7 @@ public class F24Controller {
 			} catch (Exception e) {
 				return "{\"status\":\"KO\"}";
 			}
+			callF24(f24Result);
 			return f24Result;
 		}
 
@@ -175,8 +176,8 @@ public class F24Controller {
 	 */
 
 	@RequestMapping(value = "/api/callf24", method = RequestMethod.POST)
-	public String callF24() {
-		StringBuffer buffer = new StringBuffer();
+	public String callF24(String f24JSON) {
+		/*StringBuffer buffer = new StringBuffer();
 		String line = null;
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testjson.json"))) {
 			while ((line = br.readLine()) != null) {
@@ -189,7 +190,7 @@ public class F24Controller {
 			e.printStackTrace();
 		}
 		
-		System.out.println(buffer.toString());
+		System.out.println(buffer.toString());*/
 		
 		
 		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
@@ -206,7 +207,7 @@ public class F24Controller {
 		headers.set("Auth-Schema", "S2S");
 		ObjectMapper mapper = new ObjectMapper();
 
-		HttpEntity<String> entity = new HttpEntity<>(buffer.toString(),headers);
+		HttpEntity<String> entity = new HttpEntity<>(f24JSON,headers);
 		ResponseEntity<String> response = null;
 
 		try {

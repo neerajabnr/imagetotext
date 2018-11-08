@@ -421,7 +421,7 @@ public class F24OCRService {
 		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
 		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
-		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24new.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
 
@@ -494,7 +494,7 @@ public class F24OCRService {
 					mydata = mydata.replaceFirst("x6", dtokenizer.nextToken());
 				}
 				if (dbtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x7", "");
+					mydata = mydata.replaceAll("x7", "0");
 				} else if (mydata.contains("x7") && dbtokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x7", dbtokenizer.nextToken());
 				}
@@ -506,7 +506,7 @@ public class F24OCRService {
 				}
 
 				if (e.isEmpty()) {
-					mydata = mydata.replace("e1", "");
+					mydata = mydata.replace("e1", "0");
 				} else {
 					if (e.startsWith("777")) {
 						e = e.replaceAll("7", "");
@@ -541,7 +541,7 @@ public class F24OCRService {
 		String data = "", section2row = "", section2rows = "";
 		StringBuffer buffer = new StringBuffer();
 		try (BufferedReader br = new BufferedReader(
-				new FileReader("src/main/java/it/sella/f24/service/section2row.txt"))) {
+				new FileReader("src/main/java/it/sella/f24/service/section2rownew.txt"))) {
 			while ((data = br.readLine()) != null) {
 				section2row = section2row + data + "\n";
 			}
@@ -561,12 +561,12 @@ public class F24OCRService {
 			}
 		}
 
-		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testf24.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testf24new.txt"))) {
 			while ((data = br.readLine()) != null) {
 				data = data.replace("section2rows", section2rows);
 				buffer.append(data + "\n");
 			}
-			FileWriter writer = new FileWriter("src/main/java/it/sella/f24/service/f24.txt");
+			FileWriter writer = new FileWriter("src/main/java/it/sella/f24/service/f24new.txt");
 			writer.append(buffer);
 			writer.close();
 		} catch (FileNotFoundException e) {
