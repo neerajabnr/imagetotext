@@ -159,7 +159,8 @@ public class F24Controller {
 			}
 			
 			System.out.println("F24 JSON from the Service:\n"+f24Result);
-			//callF24(f24Result);
+			String input = f24Result;
+			callF24(input);
 			return f24Result;
 		}
 
