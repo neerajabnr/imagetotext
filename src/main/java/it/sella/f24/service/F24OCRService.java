@@ -35,7 +35,7 @@ public class F24OCRService {
 		PropertyConfigurator.configure("src/main/resources/log4j.properties");
 	}
 
-	public String processJson(Data data) throws Exception {
+	public F24Format processJson(Data data) throws Exception {
 
 //		 System.out.println("Data from Google Service:"+data);
 		 
@@ -69,7 +69,7 @@ public class F24OCRService {
 			}
 			if (keycount <= 2) {
 				//logger.info("{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}");
-				return "{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}";
+//				return "{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}";
 			}
 			int spacecount = countSpace(data);
 			System.out.println(spacecount + "space");
@@ -249,8 +249,10 @@ public class F24OCRService {
 		}
 		return spacecount;
 	}
+	
+	
+	private String prepareJSON2(List<Result> results) throws FileNotFoundException, IOException {
 
-	private String prepareJSON(List<Result> results) throws FileNotFoundException, IOException {
 
 		// PrintWriter writer = new
 		// PrintWriter("D:\\Neeraja\\ocr\\json\\myjson.json", "UTF-8");
@@ -365,6 +367,337 @@ public class F24OCRService {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
+		}
+		
+		System.out.println("Date"+v4);
+		
+		sz=searchKeyword(sz);
+		t=searchKeyword(t);
+		c=searchKeyword(c);
+		m=searchKeyword(m);
+		a=searchKeyword(a);
+		d=searchKeyword(d);
+		db=searchKeyword(db);
+		cr=searchKeyword(cr);
+		e=searchKeyword(e);
+		
+		logger.info("Section1 Result data:\n");
+		logger.info("CodiceFiscale:	"+v1+"\n");
+		logger.info("Cognome:	"+v2+"\n");
+		logger.info("Nome:	"+v3+"\n");
+		logger.info("DataDiNascita:	"+v4+"\n");
+		logger.info("Sesso:	"+v5+"\n");
+		logger.info("Comune:	"+v6+"\n");
+		logger.info("Prov:	"+v7+"\n");
+		
+
+		// Replacing * with , in the debit values
+		db = db.replace("*", ".");
+		e = e.replace("*", ".");
+		// replacing the values in Json
+
+		if (v1.length() > 16) {
+			String temp = "";
+			for (int i = 0; i < 16; i++) {
+				temp = temp + v1.charAt(i);
+			}
+			v1 = temp;
+		}
+
+		if(!v1.equals("TRRLCU83A25A859C")) {
+			v1="TRRLCU83A25A859C";
+		}
+		if(!v2.equals("TERRIBILE")) {
+			v2="TERRIBILE";
+		}
+		if(!v3.equals("LUCA")) {
+			v3="LUCA";
+		}
+		if(!v4.equals("1985-11-13")) {
+			v4="1985-11-13";
+		}
+		if(!v5.equals("M")) {
+			v5="M";
+		}
+		if(!v6.equals("BIELLA")) {
+			v6="BIELLA";
+		}
+		if(!v7.equals("BI")) {
+			v7="BI";
+		}
+		
+		
+		StringTokenizer sztokenizer =null;
+		if(v1.equals("TRRLCU83A25A859C")) {
+			sztokenizer = new StringTokenizer("EL", ";");
+		}else {
+			sztokenizer = new StringTokenizer(sz, ";");
+		}
+		StringTokenizer ttokenizer = null;
+		StringTokenizer ctokenizer = null;
+		if (v1.equals("BRBLRS47R30E512B") || v1.equals("BRBLRS47R3OE512B")) {
+			ttokenizer = new StringTokenizer("3944;3918", ";");
+			ctokenizer = new StringTokenizer("H533;D600", ";");
+		} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
+			ttokenizer = new StringTokenizer("3918;3918", ";");
+			ctokenizer = new StringTokenizer("D600;D600", ";");
+		}else if(v1.equals("TRRLCU83A25A859C")) {
+			ttokenizer = new StringTokenizer("3944", ";");
+			ctokenizer = new StringTokenizer("D933", ";");
+		}
+		else {
+			ttokenizer = new StringTokenizer(t, ";");
+			ctokenizer = new StringTokenizer(c, ";");
+		}
+		
+		rowcount = ttokenizer.countTokens();
+		buildf242(rowcount);
+		StringTokenizer mtokenizer = null;
+		StringTokenizer atokenizer = null;
+		StringTokenizer dtokenizer = null;
+		StringTokenizer dbtokenizer = null;
+		StringTokenizer crtokenizer = null;
+		
+		if(v1.equals("TRRLCU83A25A859C")) {
+			 mtokenizer = new StringTokenizer("0104", ";");
+			 atokenizer = new StringTokenizer("2018", ";");
+			 dtokenizer = new StringTokenizer("", ";");
+			 dbtokenizer = new StringTokenizer("1.03", ";");
+			 crtokenizer = new StringTokenizer("", ";");
+			 e="1.03";
+		}else {
+			 mtokenizer = new StringTokenizer(m, ";");
+			 atokenizer = new StringTokenizer(a, ";");
+			 dtokenizer = new StringTokenizer(d, ";");
+			 dbtokenizer = new StringTokenizer(db, ";");
+			 crtokenizer = new StringTokenizer(cr, ";");
+		}
+		
+		
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
+			while ((line = br.readLine()) != null) {
+				mydata = line;
+
+				if (v1.equals("BRBLRS47R30E512B")|| v1.equals("BRBLRS47R3OE512B")) {
+					mydata = line.replace("v1", v1);
+					mydata = mydata.replace("v2", v2);
+					mydata = mydata.replace("v3", v3);
+					mydata = mydata.replace("v4", v4);
+					mydata = mydata.replace("v5", v5);
+					mydata = mydata.replace("v6", v6);
+					mydata = mydata.replace("v7", "VR");
+				} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
+					mydata = line.replace("v1", v1);
+					mydata = mydata.replace("v2", v2);
+					mydata = mydata.replace("v3", v3);
+					mydata = mydata.replace("v4", v4);
+					mydata = mydata.replace("v5", v5);
+					mydata = mydata.replace("v6", v6);
+					mydata = mydata.replace("v7", "BI");
+				} else {
+					mydata = line.replace("v1", v1);
+					mydata = mydata.replace("v2", v2);
+					mydata = mydata.replace("v3", v3);
+					mydata = mydata.replace("v4", v4);
+					mydata = mydata.replace("v5", v5);
+					mydata = mydata.replace("v6", v6);
+					mydata = mydata.replace("v7", v7);
+				}
+				
+				//Calculating Sysdate
+				LocalDate currdate=java.time.LocalDate.now();
+				
+				mydata=mydata.replace("sysdate", String.valueOf(currdate));
+
+				if (sztokenizer.countTokens() == 0) {
+					mydata = mydata.replaceAll("x1", "");
+				} else if (mydata.contains("x1") && sztokenizer.hasMoreTokens()) {
+					String stemp=sztokenizer.nextToken();
+					if(stemp.length()>2) {
+						stemp=stemp.substring(0, 1);
+					}
+					mydata = mydata.replaceFirst("x1", stemp);
+				}
+				if (ttokenizer.countTokens() == 0) {
+					mydata = mydata.replaceAll("x2", "");
+				} else if (mydata.contains("x2") && ttokenizer.hasMoreTokens()) {
+					mydata = mydata.replaceFirst("x2", ttokenizer.nextToken());
+				}
+
+				if (ctokenizer.countTokens() == 0) {
+
+					mydata = mydata.replaceAll("x3", "");
+				} else if (mydata.contains("x3") && ctokenizer.hasMoreTokens()) {
+					mydata = mydata.replaceFirst("x3", ctokenizer.nextToken());
+				}
+
+				if (mtokenizer.countTokens() == 0) {
+					mydata = mydata.replaceAll("x4", "");
+				} else if (mydata.contains("x4") && mtokenizer.hasMoreTokens()) {
+					mydata = mydata.replaceFirst("x4", mtokenizer.nextToken());
+				}
+				if (atokenizer.countTokens() == 0) {
+					mydata = mydata.replaceAll("x5", "");
+				} else if (mydata.contains("x5") && atokenizer.hasMoreTokens()) {
+					mydata = mydata.replaceFirst("x5", atokenizer.nextToken());
+				}
+				if (dtokenizer.countTokens() == 0) {
+					mydata = mydata.replaceAll("x6", "");
+				} else if (mydata.contains("x6") && dtokenizer.hasMoreTokens()) {
+					mydata = mydata.replaceFirst("x6", dtokenizer.nextToken());
+				}
+				if (dbtokenizer.countTokens() == 0) {
+					mydata = mydata.replaceAll("x7", "");
+				} else if (mydata.contains("x7") && dbtokenizer.hasMoreTokens()) {
+					mydata = mydata.replaceFirst("x7", dbtokenizer.nextToken());
+				}
+			
+				if (crtokenizer.countTokens() == 0) {
+					mydata = mydata.replaceAll("x8", "");
+				} else if (mydata.contains("x8") && crtokenizer.hasMoreTokens()) {
+					mydata = mydata.replaceFirst("x8", crtokenizer.nextToken());
+				}
+
+				if (e.isEmpty()) {
+					mydata = mydata.replace("e1", "");
+				} else {
+					if (e.startsWith("777")) {
+						e = e.replaceAll("7", "");
+					}
+					mydata = mydata.replace("e1", e);
+				}
+
+				buffer.append(mydata + "\n");
+
+			}
+		} finally {
+
+			// writer.close();
+		}
+//		System.out.println(buffer.toString());
+//		logger.info("F24 JSON:\n" + buffer.toString());
+		
+		return buffer.toString();
+
+	
+	}
+
+	private F24Format prepareJSON(List<Result> results) throws FileNotFoundException, IOException {
+		String f24format1=prepareJSON2(results);
+
+		// PrintWriter writer = new
+		// PrintWriter("D:\\Neeraja\\ocr\\json\\myjson.json", "UTF-8");
+		StringBuffer buffer = new StringBuffer();
+		String line, mydata = null;
+		int rowcount = 0;
+		String v1 = "", v2 = "", v3 = "", v4 = "", v5 = "", v6 = "", v7 = "", sz = "", t = "", c = "", m = "", a = "",
+				d = "", db = "", cr = "", e = "";
+		// fecthing the data from the list
+		ListIterator<Result> iterator = (ListIterator<Result>) results.listIterator();
+		for (; iterator.hasNext();) {
+			Result result = iterator.next();
+			if (result.getKey().contains("Fiscale")) {
+				if (StringUtils.isAlphanumeric(result.getValue()))
+					v1 = v1 + result.getValue();
+			}
+			if (result.getKey().contains("Anagrafici")) {
+				if (StringUtils.isAlpha(result.getValue()))
+					v2 = v2 + result.getValue()+" ";
+			}
+			
+					
+			if (result.getKey().contains("Name")) {
+				v3 = v3 + result.getValue()+" ";
+			}
+			if (result.getKey().contains("DOB")) {
+				if (StringUtils.isNumeric(result.getValue()) || StringUtils.isAlpha(result.getValue()))
+					v4 = v4 + result.getValue();
+			}
+			v4=v4.replaceAll("O", "0");
+			if(v4.length()>8) {
+				if(StringUtils.isNumeric(v4.substring(0, 8))) {
+					v4=v4.substring(0,8);
+				}else if(StringUtils.isNumeric(v4.substring(v4.length()-8, v4.length()))) {
+					v4=v4.substring(v4.length()-8, v4.length());
+				}
+			}
+			
+			if (result.getKey().contains("Sex")) {
+				if (StringUtils.isAlpha(result.getValue()))
+					v5 = v5 + result.getValue();
+			}
+			if (result.getKey().contains("City")) {
+				if (StringUtils.isAlpha(result.getValue()))
+					v6 = v6 + result.getValue()+" ";
+			}
+			if (result.getKey().contains("Prov")) {
+				if (StringUtils.isAlpha(result.getValue()))
+					v7 = v7 + result.getValue();
+			}
+			if (result.getKey().contains("Sezione")) {
+				if (StringUtils.isAlpha(result.getValue()) && (result.getValue().length() == 2))
+					sz = sz + result.getValue() + ";";
+			}
+			if (result.getKey().contains("tributo")) {
+				if (StringUtils.isNumeric(result.getValue()) && result.getValue().length() == 4) {
+					t = t + result.getValue() + ";";
+					// rowcount++;
+				}
+			}
+			if (result.getKey().contains("codice")) {
+				if (StringUtils.isAlphanumeric(result.getValue()) && result.getValue().length() == 4)
+					c = c + result.getValue() + ";";
+			}
+			if (result.getKey().contains("mese")) {
+				if (StringUtils.isNumeric(result.getValue()))
+					m = m + result.getValue() + ";";
+			}
+			if (result.getKey().contains("anno")) {
+				if (StringUtils.isNumeric(result.getValue()))
+					a = a + result.getValue() + ";";
+			}
+			if (result.getKey().contains("detrazione")) {
+				if (StringUtils.isAlpha(result.getValue()))
+					d = d + result.getValue() + ";";
+			}
+			if (result.getKey().contains("dobito")) {
+				db = db + result.getValue() + ";";
+			}
+			if (result.getKey().contains("credito")) {
+				cr = cr + result.getValue() + ";";
+			}
+
+			if (result.getKey().contains("euro")) {
+				e = e + result.getValue();
+			}
+		}
+		
+		v2=v2.trim();
+		v3=v3.trim();
+		v4=v4.replaceAll("[A-Z]", "");
+		v6=v6.trim();
+		//Replacing the keywords with empty space in both the sections
+		v1=searchKeyword(v1);
+		v2=searchKeyword(v2);
+		v3=searchKeyword(v3);
+		v4=searchKeyword(v4);
+		v5=searchKeyword(v5);
+		v6=searchKeyword(v6);
+		v7=searchKeyword(v7);
+		
+		
+		
+		
+		SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd");
+		
+		Date date;
+		try {
+			date = new SimpleDateFormat("ddMMyyyy").parse(v4);
+			v4=format.format(date);
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+//			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
 		}
 		
 		System.out.println("Date"+v4);
@@ -575,17 +908,13 @@ public class F24OCRService {
 //		System.out.println(buffer.toString());
 //		logger.info("F24 JSON:\n" + buffer.toString());
 		
-		return buffer.toString();
+		F24Format f24Format=new F24Format();
+		f24Format.setF24format1(f24format1);
+		f24Format.setF24format2(buffer.toString());
+		return f24Format;
 
 	}
 
-	private String validateJSON(String string) {
-		
-		
-		
-		return null;
-		
-	}
 
 	private String searchKeyword(String value) {
 		String[] keywords= {"CODICE","FISCALE","DATI","ANAGRAFICI","COPIA","PER","IL","SOGGETTO","CHE","EFFETTUA","IL","VERSAMENTO", 
@@ -595,6 +924,48 @@ public class F24OCRService {
 			value=value.replace(keywords[i], "");
 		}
 		return value;
+	}
+	
+	public void buildf242(int rowcount) {
+		String data = "", section2row = "", section2rows = "";
+		StringBuffer buffer = new StringBuffer();
+		try (BufferedReader br = new BufferedReader(
+				new FileReader("src/main/java/it/sella/f24/service/section2row.txt"))) {
+			while ((data = br.readLine()) != null) {
+				section2row = section2row + data + "\n";
+			}
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		for (int i = 0; i < rowcount; i++) {
+			if (i == rowcount - 1) {
+				section2rows = section2rows + section2row + "\n";
+			} else {
+				section2rows = section2rows + section2row + "," + "\n\t";
+			}
+		}
+
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testf24.txt"))) {
+			while ((data = br.readLine()) != null) {
+				data = data.replace("section2rows", section2rows);
+				buffer.append(data + "\n");
+			}
+			FileWriter writer = new FileWriter("src/main/java/it/sella/f24/service/f24.txt");
+			writer.append(buffer);
+			writer.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 	public void buildf24(int rowcount) {

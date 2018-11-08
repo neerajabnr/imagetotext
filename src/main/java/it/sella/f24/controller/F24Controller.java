@@ -56,6 +56,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.protobuf.ByteString;
 
+import it.sella.f24.service.F24Format;
 import it.sella.f24.service.F24OCRService;
 import it.sella.f24.service.GoogleService;
 import it.sella.f24.service.opennlp.Data;
@@ -116,6 +117,7 @@ public class F24Controller {
 		} else {
 			//for local testing 
 			ObjectMapper mapper = new ObjectMapper();
+			F24Format format =null;
 			String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
 			
 			//testing in cloud
@@ -150,7 +152,9 @@ public class F24Controller {
 				System.out.println("Calling Google Service");
 				data = googleService.readText(decodeBase64, "");
 				System.out.println("Data from Google service" + data);
-				f24Result = ocrService.processJson(data);
+//				f24Result = ocrService.processJson(data);
+				
+				format = ocrService.processJson(data);
 				System.out.println("Printing F24 Result");
 			} catch (IOException e) {
 				return "{\"status\":\"KO\"}";
@@ -158,10 +162,11 @@ public class F24Controller {
 				return "{\"status\":\"KO\"}";
 			}
 			
-			System.out.println("F24 JSON from the Service:\n"+f24Result);
-			String input = f24Result;
+			System.out.println("F24 JSON from the Service:\n"+format.getF24format1()+"\n"+format.getF24format2());
+			String input = format.getF24format2();
 			callF24(input);
-			return f24Result;
+//			return f24Result;
+			return format.getF24format1();
 		}
 
 		// String sampleResult =
@@ -250,7 +255,7 @@ public class F24Controller {
 		String f24Result = "{}";
 
 		try {
-			f24Result = ocrService.processJson(data);
+//			f24Result = ocrService.processJson(data);
 		} catch (Exception e) {
 			return "{\"status\":\"Error\"}";
 		}
@@ -265,7 +270,7 @@ public class F24Controller {
 		String f24Result = "{}";
 
 		try {
-			f24Result = ocrService.processJson(data);
+//			f24Result = ocrService.processJson(data);
 		} catch (Exception e) {
 			return "{\"status\":\"Error\"}";
 		}
