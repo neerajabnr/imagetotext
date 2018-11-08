@@ -521,7 +521,7 @@ public class F24OCRService {
 
 			// writer.close();
 		}
-		System.out.println(buffer.toString());
+//		System.out.println(buffer.toString());
 //		logger.info("F24 JSON:\n" + buffer.toString());
 		return buffer.toString();
 
