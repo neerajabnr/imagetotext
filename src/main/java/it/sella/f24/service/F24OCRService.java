@@ -421,7 +421,7 @@ public class F24OCRService {
 		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
 		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
-		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24new.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24testfile.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
 
@@ -566,7 +566,7 @@ public class F24OCRService {
 				data = data.replace("section2rows", section2rows);
 				buffer.append(data + "\n");
 			}
-			FileWriter writer = new FileWriter("src/main/java/it/sella/f24/service/f24new.txt");
+			FileWriter writer = new FileWriter("src/main/java/it/sella/f24/service/f24testfile.txt");
 			writer.append(buffer);
 			writer.close();
 		} catch (FileNotFoundException e) {
