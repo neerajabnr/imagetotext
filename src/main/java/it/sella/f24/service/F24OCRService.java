@@ -206,12 +206,9 @@ public class F24OCRService {
 			List<Result> sectwolist = new ArrayList<>();
 
 			
-			//String sec1string="CODICE FISCALE BRBLRS 47R 30 E 5 1 2 B      DATI ANAGRAFICI BARBIERI ** LORIS         3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE  ,       ,  , **";
-//			String sec1string="CODICE FISCALE FRL MGL 4 O C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI FORLANI ** MARIA GIULIANA     M        **  1 1 0 3 11 9 4 0 F RO ** FE CODICE FISCALE   ,  ,  ,     **   DATA CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE AZIENDA CAS / SPORTELLO";
-//			NameFinderMETest4 test = new NameFinderMETest4();
-//			seconelist = test.f24_section1(sec1.trim());
-////			seconelist = test.f24_section1(sec1string.trim());
-//			sectwolist = test.f24_section2(sec2.trim());
+			NameFinderMETest4 test = new NameFinderMETest4();
+			seconelist = test.f24_section1(sec1.trim());
+			sectwolist = test.f24_section2(sec2.trim());
 
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
@@ -409,27 +406,13 @@ public class F24OCRService {
 		
 		
 		StringTokenizer sztokenizer =null;
-		if(v1.equals("TRRLCU83A25A859C")) {
 			sztokenizer = new StringTokenizer("EL", ";");
-		}else {
 			sztokenizer = new StringTokenizer(sz, ";");
-		}
 		StringTokenizer ttokenizer = null;
 		StringTokenizer ctokenizer = null;
-		if (v1.equals("BRBLRS47R30E512B") || v1.equals("BRBLRS47R3OE512B")) {
-			ttokenizer = new StringTokenizer("3944;3918", ";");
-			ctokenizer = new StringTokenizer("H533;D600", ";");
-		} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
-			ttokenizer = new StringTokenizer("3918;3918", ";");
-			ctokenizer = new StringTokenizer("D600;D600", ";");
-		}else if(v1.equals("TRRLCU83A25A859C")) {
-			ttokenizer = new StringTokenizer("3944", ";");
-			ctokenizer = new StringTokenizer("D933", ";");
-		}
-		else {
+		
 			ttokenizer = new StringTokenizer(t, ";");
 			ctokenizer = new StringTokenizer(c, ";");
-		}
 		
 		rowcount = ttokenizer.countTokens();
 		buildf242(rowcount);
@@ -440,43 +423,18 @@ public class F24OCRService {
 		StringTokenizer crtokenizer = null;
 		
 		
-		if(v1.equals("TRRLCU83A25A859C")) {
-			 mtokenizer = new StringTokenizer("0104", ";");
-			 atokenizer = new StringTokenizer("2018", ";");
-			 dtokenizer = new StringTokenizer("", ";");
-			 dbtokenizer = new StringTokenizer("1.03", ";");
-			 crtokenizer = new StringTokenizer("", ";");
-			 e="1.03";
-		}else {
 			 mtokenizer = new StringTokenizer(m, ";");
 			 atokenizer = new StringTokenizer(a, ";");
 			 dtokenizer = new StringTokenizer(d, ";");
 			 dbtokenizer = new StringTokenizer(db, ";");
 			 crtokenizer = new StringTokenizer(cr, ";");
-		}
 		
 		
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
 
-				if (v1.equals("BRBLRS47R30E512B")|| v1.equals("BRBLRS47R3OE512B")) {
-					mydata = line.replace("v1", v1);
-					mydata = mydata.replace("v2", v2);
-					mydata = mydata.replace("v3", v3);
-					mydata = mydata.replace("v4", v4);
-					mydata = mydata.replace("v5", v5);
-					mydata = mydata.replace("v6", v6);
-					mydata = mydata.replace("v7", "VR");
-				} else if (v1.equals("GRZLRT23H06A859W")||v1.equals("GRZLRT23HO6A859W")) {
-					mydata = line.replace("v1", v1);
-					mydata = mydata.replace("v2", v2);
-					mydata = mydata.replace("v3", v3);
-					mydata = mydata.replace("v4", v4);
-					mydata = mydata.replace("v5", v5);
-					mydata = mydata.replace("v6", v6);
-					mydata = mydata.replace("v7", "BI");
-				} else {
+				
 					mydata = line.replace("v1", v1);
 					mydata = mydata.replace("v2", v2);
 					mydata = mydata.replace("v3", v3);
@@ -484,7 +442,6 @@ public class F24OCRService {
 					mydata = mydata.replace("v5", v5);
 					mydata = mydata.replace("v6", v6);
 					mydata = mydata.replace("v7", v7);
-				}
 				
 				//Calculating Sysdate
 				LocalDate currdate=java.time.LocalDate.now();
@@ -721,11 +678,7 @@ public class F24OCRService {
 		
 		
 		StringTokenizer sztokenizer =null;
-		if(v1.equals("TRRLCU83A25A859C")) {
-			sztokenizer = new StringTokenizer("EL", ";");
-		}else {
 			sztokenizer = new StringTokenizer(sz, ";");
-		}
 		StringTokenizer ttokenizer = null;
 		StringTokenizer ctokenizer = null;
 		
@@ -749,23 +702,11 @@ public class F24OCRService {
 		Float[] sArr = { 2.03f,3.03f,4.03f,5.03f,6.03f,7.03f,8.03f,9.03f,10.03f,11.03f,12.03f,13.03f,14.03f,15.03f,16.03f,17.03f,18.03f,19.03f,20.03f};
 		List<Float> sList = Arrays.asList(sArr);
 		
-		if(v1.equals("TRRLCU83A25A859C")) {
-			 mtokenizer = new StringTokenizer("0104", ";");
-			 atokenizer = new StringTokenizer("2018", ";");
-			 dtokenizer = new StringTokenizer("", ";");
-			 Collections.shuffle(sList);
-			 String temp=sList.get(0).toString();
-			 dbtokenizer = new StringTokenizer(temp, ";");
-			 crtokenizer = new StringTokenizer("", ";");
-			 e=temp;
-		}else {
 			 mtokenizer = new StringTokenizer(m, ";");
 			 atokenizer = new StringTokenizer(a, ";");
 			 dtokenizer = new StringTokenizer(d, ";");
 			 dbtokenizer = new StringTokenizer(db, ";");
 			 crtokenizer = new StringTokenizer(cr, ";");
-		}
-		
 		
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24testfile.txt"))) {
 			while ((line = br.readLine()) != null) {
