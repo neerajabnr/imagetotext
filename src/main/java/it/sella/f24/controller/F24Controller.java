@@ -209,7 +209,7 @@ public class F24Controller {
 		// headers.set("auth.token", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
 		headers.set("Auth-Schema", "S2S");
 		ObjectMapper mapper = new ObjectMapper();
-
+		System.out.println("Input JSON:\n"+f24JSON);
 		HttpEntity<String> entity = new HttpEntity<>(f24JSON,headers);
 		ResponseEntity<String> response = null;
 
