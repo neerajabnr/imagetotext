@@ -214,7 +214,7 @@ public class F24Controller {
 		  for (String filename : filesfromFolder) {
 		  
 		  sourceimage=new File(filename); 
-		  logger.info("Image path:  "+filename);
+//		  logger.info("Image path:  "+filename);
 		  
 		  encodedImage = f24Encode(sourceimage);
 		  String reqJSON = "{\"encodedImage\":\"" + encodedImage + "\"}";
@@ -233,7 +233,7 @@ public class F24Controller {
 			  f24Format =ocrService.processJson(data);
 			  
 			  
-		  Thread.sleep(3000);
+		  Thread.sleep(5000);
 		  }catch (IOException e) {
 			  e.printStackTrace(); 
 			  return "{\"status\":\"KO\"}"; 
