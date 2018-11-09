@@ -87,7 +87,7 @@ public class F24OCRService {
 			List<DataDescription> sec2list = new ArrayList<>();
 
 			int s1 = 0, s2 = 0;
-			int xprev = 0, yprev = 0, ydiff = 0, xprevEnd = 0;
+			int xprev = 0, yprev = 0, ydiff = 0, xprevEnd = 0,yprevEnd=0;
 			boolean pr = false;
 			for (DataDescription dat : list) {
 				if (dat.getDescription().startsWith("777")
@@ -132,10 +132,12 @@ public class F24OCRService {
 			String sec2 = "";
 
 			Collections.sort(sec1list);
-			System.out.println(sec1list);
+//			System.out.println(sec1list);
 
 			xprevEnd = 0;
 			xprev = 0;
+			
+			System.out.println("preparing Sec1 list");
 
 			for (int i = 0; i < sec1list.size(); i++) {
 				if ((sec1list.get(i).getxStart() - xprevEnd) > 200) {
@@ -146,9 +148,26 @@ public class F24OCRService {
 				xprev = sec1list.get(i).getxStart();
 			}
 
+			yprev=0;
+			yprevEnd=0;
+			System.out.println("Sorting sec2");
+			Collections.sort(sec2list);
+			
+			System.out.println("preparing Sec2 list");
+			
 			for (int i = 0; i < sec2list.size(); i++) {
+				if ((sec2list.get(i).getyStart() - yprev) > 15) {
+					sec2 = sec2 + "#######" + " ";
+				}
 				sec2 = sec2 + sec2list.get(i).getDescription() + " ";
+				yprev=sec2list.get(i).getyStart();
+				yprevEnd=sec2list.get(i).getyEnd();
+				
 			}
+			
+			
+			sec2=searchKeyword(sec2);
+			System.out.println("sec2 list done");
 
 			sec2 = sec2.replace(" , ", "*");
 			sec2 = sec2.replace(" . ", " ");
@@ -191,9 +210,12 @@ public class F24OCRService {
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
 
+			
+			String testsec2="EL  3944 H 5 3 3 0303 2018 43*00 ******* ER 3918 D 6 0 0 2 0202 2018 43*00       IIIIII SALDO FINAL EURO ) 86*00";
 			NameFinderMETest4 test = new NameFinderMETest4();
 			seconelist = test.f24_section1(sec1.trim());
-			sectwolist = test.f24_section2(sec2.trim());
+			sectwolist = test.f24_section2(testsec2);
+//			sectwolist = test.f24_section2(sec2.trim());
 
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
@@ -746,12 +768,13 @@ public class F24OCRService {
 	private String searchKeyword(String value) {
 		String[] keywords = { "CODICE", "FISCALE", "DATI", "ANAGRAFICI", "COPIA", "PER", "IL", "SOGGETTO", "CHE",
 				"EFFETTUA", "IL", "VERSAMENTO", "BANCA", "POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA", "ESTREMI",
-				"DEL", "DA", "COMPILARE", "CURA", "DI", "SPORTELLO", "CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" };
+				"DEL", "DA", "COMPILARE", "CURA", "DI", "SPORTELLO", "CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" ,"COMPILARE","CURA","DI"};
 		for (int i = 0; i < keywords.length; i++) {
 			value = value.replace(keywords[i], "");
 		}
 		return value;
 	}
+	
 
 	public void buildf242(int rowcount) {
 		String data = "", section2row = "", section2rows = "";

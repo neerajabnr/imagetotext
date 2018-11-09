@@ -125,7 +125,7 @@ public class F24Controller {
 
 				System.out.println("Calling Google Service");
 				data = googleService.readText(decodeBase64, "");
-				System.out.println("Data from Google service" + data);
+				System.out.println("Calling OCR Service");
 				// f24Result = ocrService.processJson(data);
 
 				format = ocrService.processJson(data);
