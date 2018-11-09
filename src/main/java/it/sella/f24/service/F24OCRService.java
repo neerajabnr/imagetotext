@@ -38,25 +38,11 @@ public class F24OCRService {
 
 	public F24Format processJson(Data data) throws Exception {
 
-//		 System.out.println("Data from Google Service:"+data);
-		 
-		 /*List<TextAnnotation> textAnnotation = data.getTextAnnotation();
-		 logger.info("Data from Google Service");
-		 for (TextAnnotation textAnnotation2 : textAnnotation) {
-			System.out.print(textAnnotation2.getDescription()+" ");
-			logger.info(textAnnotation2.getDescription()+" ");
-		}*/
-		// read json file data to String
 		try {
 			// JSONParser parser = new JSONParser();
 			// Object obj = parser.parse(new FileReader("D:\\Neeraja\\ocr\\json\\1.json"));
 			// JSONObject jsonObject = (JSONObject) obj;
 
-			// jsonData =
-			// Files.readAllBytes(Paths.get("D:\\Neeraja\\ocr\\json\\testimagejson2.json"));
-			// ObjectMapper objectMapper = new ObjectMapper();
-			//
-			// Data data = objectMapper.readValue(jsondata, Data.class);
 			List<DataDescription> list = new ArrayList<>();
 			int keycount = 0;
 			for (TextAnnotation txtAnn : data.getTextAnnotation()) {
@@ -69,23 +55,26 @@ public class F24OCRService {
 				}
 			}
 			if (keycount <= 2) {
-				//logger.info("{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}");
-//				return "{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}";
+				// logger.info("{\"status\":\"This is not a F24 Image, please provide a valid
+				// F24 image\"}");
+				// return "{\"status\":\"This is not a F24 Image, please provide a valid F24
+				// image\"}";
 			}
 			int spacecount = countSpace(data);
 			System.out.println(spacecount + "space");
-			//logger.info("Space count" + spacecount);
+			// logger.info("Space count" + spacecount);
 			list = process(data);
 
-			
-			/*try {
-				Collections.sort(list);
-			} catch (IllegalArgumentException e) {
-				e.printStackTrace();
-				System.out.println("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
-				//logger.info("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}");
-				return "{\"status\":\"Invalid input data, please try to capture one more time!!!\"}";
-			}*/
+			/*
+			 * try { Collections.sort(list); } catch (IllegalArgumentException e) {
+			 * e.printStackTrace(); System.out.
+			 * println("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}"
+			 * ); //logger.
+			 * info("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}"
+			 * ); return
+			 * "{\"status\":\"Invalid input data, please try to capture one more time!!!\"}"
+			 * ; }
+			 */
 
 			// FetchData f = new FetchData();
 			// f.getData(list);
@@ -93,15 +82,16 @@ public class F24OCRService {
 			int prev = 0;
 			StringBuffer section1 = new StringBuffer();
 			StringBuffer section2 = new StringBuffer();
-			
-			List<DataDescription> sec1list=new ArrayList<>();
-			List<DataDescription> sec2list=new ArrayList<>();
-			
+
+			List<DataDescription> sec1list = new ArrayList<>();
+			List<DataDescription> sec2list = new ArrayList<>();
+
 			int s1 = 0, s2 = 0;
 			int xprev = 0, yprev = 0, ydiff = 0, xprevEnd = 0;
 			boolean pr = false;
 			for (DataDescription dat : list) {
-				if(dat.getDescription().startsWith("777")||dat.getDescription().startsWith("177")&&dat.getDescription().endsWith("7")) {
+				if (dat.getDescription().startsWith("777")
+						|| dat.getDescription().startsWith("177") && dat.getDescription().endsWith("7")) {
 					continue;
 				}
 				if (dat.getDescription().equals("CODICE")) {
@@ -134,78 +124,73 @@ public class F24OCRService {
 				}
 				xprevEnd = dat.getxEnd();
 			}
-			/*String sec1 = section1.toString();
-			String sec2 = section2.toString();*/
-			
+			/*
+			 * String sec1 = section1.toString(); String sec2 = section2.toString();
+			 */
+
 			String sec1 = "";
 			String sec2 = "";
 
 			Collections.sort(sec1list);
 			System.out.println(sec1list);
-			
-			xprevEnd=0;
-			xprev=0;
-			
-			for(int i=0;i<sec1list.size();i++) {
-				if((sec1list.get(i).getxStart() - xprevEnd) > 200) {
-					sec1=sec1+"**"+" ";
+
+			xprevEnd = 0;
+			xprev = 0;
+
+			for (int i = 0; i < sec1list.size(); i++) {
+				if ((sec1list.get(i).getxStart() - xprevEnd) > 200) {
+					sec1 = sec1 + "**" + " ";
 				}
-				sec1=sec1+sec1list.get(i).getDescription()+" ";
+				sec1 = sec1 + sec1list.get(i).getDescription() + " ";
 				xprevEnd = sec1list.get(i).getxEnd();
 				xprev = sec1list.get(i).getxStart();
 			}
-			
-			for(int i=0;i<sec2list.size();i++) {
-				sec2=sec2+ sec2list.get(i).getDescription()+" ";
+
+			for (int i = 0; i < sec2list.size(); i++) {
+				sec2 = sec2 + sec2list.get(i).getDescription() + " ";
 			}
-			
-			
-			
-			
+
 			sec2 = sec2.replace(" , ", "*");
 			sec2 = sec2.replace(" . ", " ");
 			sec2 = sec2.replace(" . ", " ");
 			sec1 = sec1.replace(".", "");
 			sec1 = sec1.replace("-", "");
-			sec1=sec1.replace("(", "");
-			sec1=sec1.replace(")", "");
-			sec1=sec1.replace(" MF ","");
-			sec1=sec1.replace(" MOF ","");
-			sec1=sec1.replace(" FO"," F ");
-			
+			sec1 = sec1.replace("(", "");
+			sec1 = sec1.replace(")", "");
+			sec1 = sec1.replace(" MF ", "");
+			sec1 = sec1.replace(" MOF ", "");
+			sec1 = sec1.replace(" FO", " F ");
+
 			sec1 = sec1.replace(":", "");
 			sec2 = sec2.replace(":", "");
 			sec1 = sec1.replace("|", "");
 			sec2 = sec2.replace("|", "");
 			sec2 = sec2.replace(" 00", "*00");
-			
-			
-			sec2=sec2.replace("E L", "EL");
-			sec2=sec2.replace("E R", "ER");
-			sec2=sec2.replace("ELR", "ER");
-			sec2=sec2.replace("EL1", "EL ");
-			sec2=sec2.replace("ELI", "EL ");
-			sec2=sec2.replace("ER1", "ER ");
-			sec2=sec2.replace("ERI", "ER ");
-			sec2=sec2.replace("EIL", "EL ");
-			sec2=sec2.replace("E1L", "EL ");
-			sec2=sec2.replace("EIR", "ER ");
-			sec2=sec2.replace("E1R", "ER ");
-			//MOF Replace
-			//FO Replace
-			
-			
+
+			sec2 = sec2.replace("E L", "EL");
+			sec2 = sec2.replace("E R", "ER");
+			sec2 = sec2.replace("ELR", "ER");
+			sec2 = sec2.replace("EL1", "EL ");
+			sec2 = sec2.replace("ELI", "EL ");
+			sec2 = sec2.replace("ER1", "ER ");
+			sec2 = sec2.replace("ERI", "ER ");
+			sec2 = sec2.replace("EIL", "EL ");
+			sec2 = sec2.replace("E1L", "EL ");
+			sec2 = sec2.replace("EIR", "ER ");
+			sec2 = sec2.replace("E1R", "ER ");
+			// MOF Replace
+			// FO Replace
+
 			System.out.println("Section1:----\n" + sec1.trim());
 			System.out.println("Section2:----\n" + sec2.trim());
 
-			//logger.info("After the data conversion");
-			logger.info(/*"Section1:----\n" +*/ sec1.trim());
+			// logger.info("After the data conversion");
+//			logger.info(/* "Section1:----\n" + */ sec1.trim());
 			logger.info(sec2.trim());
 
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
 
-			
 			NameFinderMETest4 test = new NameFinderMETest4();
 			seconelist = test.f24_section1(sec1.trim());
 			sectwolist = test.f24_section2(sec2.trim());
@@ -213,13 +198,13 @@ public class F24OCRService {
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
 
-			//logger.info("Result data");
-//			logger.info("Section1:			\n" + seconelist);
-			//logger.info("Section2:			\n" + sectwolist);
+			// logger.info("Result data");
+			// logger.info("Section1: \n" + seconelist);
+			// logger.info("Section2: \n" + sectwolist);
 
 			seconelist.addAll(sectwolist);
 			// System.out.println(seconelist);
-			//logger.info("Sending the data to prepare Json");
+			// logger.info("Sending the data to prepare Json");
 			return prepareJSON(seconelist);
 
 		} catch (IOException e1) {
@@ -247,13 +232,9 @@ public class F24OCRService {
 		}
 		return spacecount;
 	}
-	
-	
+
 	private String prepareJSON2(List<Result> results) throws FileNotFoundException, IOException {
 
-
-		// PrintWriter writer = new
-		// PrintWriter("D:\\Neeraja\\ocr\\json\\myjson.json", "UTF-8");
 		StringBuffer buffer = new StringBuffer();
 		String line, mydata = null;
 		int rowcount = 0;
@@ -269,33 +250,32 @@ public class F24OCRService {
 			}
 			if (result.getKey().contains("Anagrafici")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v2 = v2 + result.getValue()+" ";
+					v2 = v2 + result.getValue() + " ";
 			}
-			
-					
+
 			if (result.getKey().contains("Name")) {
-				v3 = v3 + result.getValue()+" ";
+				v3 = v3 + result.getValue() + " ";
 			}
 			if (result.getKey().contains("DOB")) {
 				if (StringUtils.isNumeric(result.getValue()) || StringUtils.isAlpha(result.getValue()))
 					v4 = v4 + result.getValue();
 			}
-			v4=v4.replaceAll("O", "0");
-			if(v4.length()>8) {
-				if(StringUtils.isNumeric(v4.substring(0, 8))) {
-					v4=v4.substring(0,8);
-				}else if(StringUtils.isNumeric(v4.substring(v4.length()-8, v4.length()))) {
-					v4=v4.substring(v4.length()-8, v4.length());
+			v4 = v4.replaceAll("O", "0");
+			if (v4.length() > 8) {
+				if (StringUtils.isNumeric(v4.substring(0, 8))) {
+					v4 = v4.substring(0, 8);
+				} else if (StringUtils.isNumeric(v4.substring(v4.length() - 8, v4.length()))) {
+					v4 = v4.substring(v4.length() - 8, v4.length());
 				}
 			}
-			
+
 			if (result.getKey().contains("Sex")) {
 				if (StringUtils.isAlpha(result.getValue()))
 					v5 = v5 + result.getValue();
 			}
 			if (result.getKey().contains("City")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v6 = v6 + result.getValue()+" ";
+					v6 = v6 + result.getValue() + " ";
 			}
 			if (result.getKey().contains("Prov")) {
 				if (StringUtils.isAlpha(result.getValue()))
@@ -338,56 +318,52 @@ public class F24OCRService {
 				e = e + result.getValue();
 			}
 		}
-		
-		v2=v2.trim();
-		v3=v3.trim();
-		v4=v4.replaceAll("[A-Z]", "");
-		v6=v6.trim();
-		//Replacing the keywords with empty space in both the sections
-		v1=searchKeyword(v1);
-		v2=searchKeyword(v2);
-		v3=searchKeyword(v3);
-		v4=searchKeyword(v4);
-		v5=searchKeyword(v5);
-		v6=searchKeyword(v6);
-		v7=searchKeyword(v7);
-		
-		
-		
-		
-		SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd");
-		
+
+		v2 = v2.trim();
+		v3 = v3.trim();
+		v4 = v4.replaceAll("[A-Z]", "");
+		v6 = v6.trim();
+		// Replacing the keywords with empty space in both the sections
+		v1 = searchKeyword(v1);
+		v2 = searchKeyword(v2);
+		v3 = searchKeyword(v3);
+		v4 = searchKeyword(v4);
+		v5 = searchKeyword(v5);
+		v6 = searchKeyword(v6);
+		v7 = searchKeyword(v7);
+
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
 		Date date;
 		try {
 			date = new SimpleDateFormat("ddMMyyyy").parse(v4);
-			v4=format.format(date);
+			v4 = format.format(date);
 		} catch (ParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
 		}
-		
-		System.out.println("Date"+v4);
-		
-		sz=searchKeyword(sz);
-		t=searchKeyword(t);
-		c=searchKeyword(c);
-		m=searchKeyword(m);
-		a=searchKeyword(a);
-		d=searchKeyword(d);
-		db=searchKeyword(db);
-		cr=searchKeyword(cr);
-		e=searchKeyword(e);
-		
-//		logger.info("Section1 Result data:\n");
-//		logger.info("CodiceFiscale:	"+v1+"\n");
-//		logger.info("Cognome:	"+v2+"\n");
-//		logger.info("Nome:	"+v3+"\n");
-//		logger.info("DataDiNascita:	"+v4+"\n");
-//		logger.info("Sesso:	"+v5+"\n");
-//		logger.info("Comune:	"+v6+"\n");
-//		logger.info("Prov:	"+v7+"\n");
-		
+
+		System.out.println("Date" + v4);
+
+		sz = searchKeyword(sz);
+		t = searchKeyword(t);
+		c = searchKeyword(c);
+		m = searchKeyword(m);
+		a = searchKeyword(a);
+		d = searchKeyword(d);
+		db = searchKeyword(db);
+		cr = searchKeyword(cr);
+		e = searchKeyword(e);
+
+		// logger.info("Section1 Result data:\n");
+		// logger.info("CodiceFiscale: "+v1+"\n");
+		// logger.info("Cognome: "+v2+"\n");
+		// logger.info("Nome: "+v3+"\n");
+		// logger.info("DataDiNascita: "+v4+"\n");
+		// logger.info("Sesso: "+v5+"\n");
+		// logger.info("Comune: "+v6+"\n");
+		// logger.info("Prov: "+v7+"\n");
 
 		// Replacing * with , in the debit values
 		db = db.replace("*", ".");
@@ -402,58 +378,50 @@ public class F24OCRService {
 			v1 = temp;
 		}
 
-	
-		
-		
-		StringTokenizer sztokenizer =null;
-			sztokenizer = new StringTokenizer("EL", ";");
-			sztokenizer = new StringTokenizer(sz, ";");
-		StringTokenizer ttokenizer = null;
-		StringTokenizer ctokenizer = null;
-		
-			ttokenizer = new StringTokenizer(t, ";");
-			ctokenizer = new StringTokenizer(c, ";");
-		
+		StringTokenizer sztokenizer = new StringTokenizer(sz, ";");
+		StringTokenizer ttokenizer = new StringTokenizer(t, ";");
+		StringTokenizer ctokenizer = new StringTokenizer(c, ";");
 		rowcount = ttokenizer.countTokens();
 		buildf242(rowcount);
-		StringTokenizer mtokenizer = null;
-		StringTokenizer atokenizer = null;
-		StringTokenizer dtokenizer = null;
-		StringTokenizer dbtokenizer = null;
-		StringTokenizer crtokenizer = null;
+		StringTokenizer mtokenizer = new StringTokenizer(m, ";");
+		StringTokenizer atokenizer = new StringTokenizer(a, ";");
+		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
+		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
+		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
+
+		 logger.info("Section2 Result data:\n");
+		 logger.info("Seizone:\t"+sz+"\n");
+		 logger.info("tributo:\t"+t+"\n");
+		 logger.info("Codice:\t"+c+"\n");
+		 logger.info("Mese:\t"+m+"\n");
+		 logger.info("Anno:\t"+a+"\n");
+		 logger.info("Dobito:\t"+db+"\n");
+		 logger.info("Euro:\t"+e+"\n");
 		
-		
-			 mtokenizer = new StringTokenizer(m, ";");
-			 atokenizer = new StringTokenizer(a, ";");
-			 dtokenizer = new StringTokenizer(d, ";");
-			 dbtokenizer = new StringTokenizer(db, ";");
-			 crtokenizer = new StringTokenizer(cr, ";");
-		
-		
+
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
 
-				
-					mydata = line.replace("v1", v1);
-					mydata = mydata.replace("v2", v2);
-					mydata = mydata.replace("v3", v3);
-					mydata = mydata.replace("v4", v4);
-					mydata = mydata.replace("v5", v5);
-					mydata = mydata.replace("v6", v6);
-					mydata = mydata.replace("v7", v7);
-				
-				//Calculating Sysdate
-				LocalDate currdate=java.time.LocalDate.now();
-				
-				mydata=mydata.replace("sysdate", String.valueOf(currdate));
+				mydata = line.replace("v1", v1);
+				mydata = mydata.replace("v2", v2);
+				mydata = mydata.replace("v3", v3);
+				mydata = mydata.replace("v4", v4);
+				mydata = mydata.replace("v5", v5);
+				mydata = mydata.replace("v6", v6);
+				mydata = mydata.replace("v7", v7);
+
+				// Calculating Sysdate
+				LocalDate currdate = java.time.LocalDate.now();
+
+				mydata = mydata.replace("sysdate", String.valueOf(currdate));
 
 				if (sztokenizer.countTokens() == 0) {
 					mydata = mydata.replaceAll("x1", "");
 				} else if (mydata.contains("x1") && sztokenizer.hasMoreTokens()) {
-					String stemp=sztokenizer.nextToken();
-					if(stemp.length()>2) {
-						stemp=stemp.substring(0, 1);
+					String stemp = sztokenizer.nextToken();
+					if (stemp.length() > 2) {
+						stemp = stemp.substring(0, 1);
 					}
 					mydata = mydata.replaceFirst("x1", stemp);
 				}
@@ -490,7 +458,7 @@ public class F24OCRService {
 				} else if (mydata.contains("x7") && dbtokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x7", dbtokenizer.nextToken());
 				}
-			
+
 				if (crtokenizer.countTokens() == 0) {
 					mydata = mydata.replaceAll("x8", "");
 				} else if (mydata.contains("x8") && crtokenizer.hasMoreTokens()) {
@@ -513,16 +481,19 @@ public class F24OCRService {
 
 			// writer.close();
 		}
-//		System.out.println(buffer.toString());
-//		logger.info("F24 JSON:\n" + buffer.toString());
-		
+		// System.out.println(buffer.toString());
+		// logger.info("F24 JSON:\n" + buffer.toString());
+
 		return buffer.toString();
 
-	
 	}
 
 	private F24Format prepareJSON(List<Result> results) throws FileNotFoundException, IOException {
-		String f24format1=prepareJSON2(results);
+		
+		if(results.isEmpty()) {
+			return null;
+		}
+		String f24format1 = prepareJSON2(results);
 
 		// PrintWriter writer = new
 		// PrintWriter("D:\\Neeraja\\ocr\\json\\myjson.json", "UTF-8");
@@ -541,33 +512,32 @@ public class F24OCRService {
 			}
 			if (result.getKey().contains("Anagrafici")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v2 = v2 + result.getValue()+" ";
+					v2 = v2 + result.getValue() + " ";
 			}
-			
-					
+
 			if (result.getKey().contains("Name")) {
-				v3 = v3 + result.getValue()+" ";
+				v3 = v3 + result.getValue() + " ";
 			}
 			if (result.getKey().contains("DOB")) {
 				if (StringUtils.isNumeric(result.getValue()) || StringUtils.isAlpha(result.getValue()))
 					v4 = v4 + result.getValue();
 			}
-			v4=v4.replaceAll("O", "0");
-			if(v4.length()>8) {
-				if(StringUtils.isNumeric(v4.substring(0, 8))) {
-					v4=v4.substring(0,8);
-				}else if(StringUtils.isNumeric(v4.substring(v4.length()-8, v4.length()))) {
-					v4=v4.substring(v4.length()-8, v4.length());
+			v4 = v4.replaceAll("O", "0");
+			if (v4.length() > 8) {
+				if (StringUtils.isNumeric(v4.substring(0, 8))) {
+					v4 = v4.substring(0, 8);
+				} else if (StringUtils.isNumeric(v4.substring(v4.length() - 8, v4.length()))) {
+					v4 = v4.substring(v4.length() - 8, v4.length());
 				}
 			}
-			
+
 			if (result.getKey().contains("Sex")) {
 				if (StringUtils.isAlpha(result.getValue()))
 					v5 = v5 + result.getValue();
 			}
 			if (result.getKey().contains("City")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v6 = v6 + result.getValue()+" ";
+					v6 = v6 + result.getValue() + " ";
 			}
 			if (result.getKey().contains("Prov")) {
 				if (StringUtils.isAlpha(result.getValue()))
@@ -610,56 +580,52 @@ public class F24OCRService {
 				e = e + result.getValue();
 			}
 		}
-		
-		v2=v2.trim();
-		v3=v3.trim();
-		v4=v4.replaceAll("[A-Z]", "");
-		v6=v6.trim();
-		//Replacing the keywords with empty space in both the sections
-		v1=searchKeyword(v1);
-		v2=searchKeyword(v2);
-		v3=searchKeyword(v3);
-		v4=searchKeyword(v4);
-		v5=searchKeyword(v5);
-		v6=searchKeyword(v6);
-		v7=searchKeyword(v7);
-		
-		
-		
-		
-		SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd");
-		
-		Date date;
+
+		v2 = v2.trim();
+		v3 = v3.trim();
+		v4 = v4.replaceAll("[A-Z]", "");
+		v6 = v6.trim();
+		// Replacing the keywords with empty space in both the sections
+		v1 = searchKeyword(v1);
+		v2 = searchKeyword(v2);
+		v3 = searchKeyword(v3);
+		v4 = searchKeyword(v4);
+		v5 = searchKeyword(v5);
+		v6 = searchKeyword(v6);
+		v7 = searchKeyword(v7);
+
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+		Date date=null;
 		try {
 			date = new SimpleDateFormat("ddMMyyyy").parse(v4);
-			v4=format.format(date);
+			v4 = format.format(date);
 		} catch (ParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-//			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
+			// return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
 		}
-		
-		System.out.println("Date"+v4);
-		
-		sz=searchKeyword(sz);
-		t=searchKeyword(t);
-		c=searchKeyword(c);
-		m=searchKeyword(m);
-		a=searchKeyword(a);
-		d=searchKeyword(d);
-		db=searchKeyword(db);
-		cr=searchKeyword(cr);
-		e=searchKeyword(e);
-		
+
+		System.out.println("Date" + v4);
+
+		sz = searchKeyword(sz);
+		t = searchKeyword(t);
+		c = searchKeyword(c);
+		m = searchKeyword(m);
+		a = searchKeyword(a);
+		d = searchKeyword(d);
+		db = searchKeyword(db);
+		cr = searchKeyword(cr);
+		e = searchKeyword(e);
+
 		logger.info("Section1 Result data:\n");
-		logger.info("CodiceFiscale:	"+v1+"\n");
-		logger.info("Cognome:	"+v2+"\n");
-		logger.info("Nome:	"+v3+"\n");
-		logger.info("DataDiNascita:	"+v4+"\n");
-		logger.info("Sesso:	"+v5+"\n");
-		logger.info("Comune:	"+v6+"\n");
-		logger.info("Prov:	"+v7+"\n");
-		
+		logger.info("CodiceFiscale:	" + v1 + "\n");
+		logger.info("Cognome:	" + v2 + "\n");
+		logger.info("Nome:	" + v3 + "\n");
+		logger.info("DataDiNascita:	" + v4 + "\n");
+		logger.info("Sesso:	" + v5 + "\n");
+		logger.info("Comune:	" + v6 + "\n");
+		logger.info("Prov:	" + v7 + "\n");
 
 		// Replacing * with , in the debit values
 		db = db.replace("*", ".");
@@ -674,66 +640,40 @@ public class F24OCRService {
 			v1 = temp;
 		}
 
-		
-		
-		
-		StringTokenizer sztokenizer =null;
-			sztokenizer = new StringTokenizer(sz, ";");
-		StringTokenizer ttokenizer = null;
-		StringTokenizer ctokenizer = null;
-		
-			
-		
-			
-		
-			
-			ttokenizer = new StringTokenizer(t, ";");
-			ctokenizer = new StringTokenizer(c, ";");
-		
-		
+		StringTokenizer sztokenizer = new StringTokenizer(sz, ";");
+		StringTokenizer ttokenizer = new StringTokenizer(t, ";");
+		StringTokenizer ctokenizer = new StringTokenizer(c, ";");
 		rowcount = ttokenizer.countTokens();
 		buildf24(rowcount);
-		StringTokenizer mtokenizer = null;
-		StringTokenizer atokenizer = null;
-		StringTokenizer dtokenizer = null;
-		StringTokenizer dbtokenizer = null;
-		StringTokenizer crtokenizer = null;
-		
-		Float[] sArr = { 2.03f,3.03f,4.03f,5.03f,6.03f,7.03f,8.03f,9.03f,10.03f,11.03f,12.03f,13.03f,14.03f,15.03f,16.03f,17.03f,18.03f,19.03f,20.03f};
-		List<Float> sList = Arrays.asList(sArr);
-		
-			 mtokenizer = new StringTokenizer(m, ";");
-			 atokenizer = new StringTokenizer(a, ";");
-			 dtokenizer = new StringTokenizer(d, ";");
-			 dbtokenizer = new StringTokenizer(db, ";");
-			 crtokenizer = new StringTokenizer(cr, ";");
-		
-		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24testfile.txt"))) {
+		StringTokenizer mtokenizer = new StringTokenizer(m, ";");
+		StringTokenizer atokenizer = new StringTokenizer(a, ";");
+		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
+		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
+		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
+
+		try (BufferedReader br = new BufferedReader(
+				new FileReader("src/main/java/it/sella/f24/service/f24testfile.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
+				mydata = line.replace("v1", v1);
+				mydata = mydata.replace("v2", v2);
+				mydata = mydata.replace("v3", v3);
+				mydata = mydata.replace("v4", v4);
+				mydata = mydata.replace("v5", v5);
+				mydata = mydata.replace("v6", v6);
+				mydata = mydata.replace("v7", v7);
 
-				
-				
-					mydata = line.replace("v1", v1);
-					mydata = mydata.replace("v2", v2);
-					mydata = mydata.replace("v3", v3);
-					mydata = mydata.replace("v4", v4);
-					mydata = mydata.replace("v5", v5);
-					mydata = mydata.replace("v6", v6);
-					mydata = mydata.replace("v7", v7);
-				
-				
-				//Calculating Sysdate
-				LocalDate currdate=java.time.LocalDate.now();
-				
-				mydata=mydata.replace("sysdate", String.valueOf(currdate));
+				// Calculating Sysdate
+				LocalDate currdate = java.time.LocalDate.now();
+
+				mydata = mydata.replace("sysdate", String.valueOf(currdate));
 
 				if (sztokenizer.countTokens() == 0) {
 					mydata = mydata.replaceAll("x1", "");
 				} else if (mydata.contains("x1") && sztokenizer.hasMoreTokens()) {
-					String stemp=sztokenizer.nextToken();
-					if(stemp.length()>2) {
-						stemp=stemp.substring(0, 1);
+					String stemp = sztokenizer.nextToken();
+					if (stemp.length() > 2) {
+						stemp = stemp.substring(0, 1);
 					}
 					mydata = mydata.replaceFirst("x1", stemp);
 				}
@@ -770,7 +710,7 @@ public class F24OCRService {
 				} else if (mydata.contains("x7") && dbtokenizer.hasMoreTokens()) {
 					mydata = mydata.replaceFirst("x7", dbtokenizer.nextToken());
 				}
-			
+
 				if (crtokenizer.countTokens() == 0) {
 					mydata = mydata.replaceAll("x8", "");
 				} else if (mydata.contains("x8") && crtokenizer.hasMoreTokens()) {
@@ -793,27 +733,26 @@ public class F24OCRService {
 
 			// writer.close();
 		}
-//		System.out.println(buffer.toString());
-//		logger.info("F24 JSON:\n" + buffer.toString());
-		
-		F24Format f24Format=new F24Format();
+		// System.out.println(buffer.toString());
+		// logger.info("F24 JSON:\n" + buffer.toString());
+
+		F24Format f24Format = new F24Format();
 		f24Format.setF24format1(f24format1);
 		f24Format.setF24format2(buffer.toString());
 		return f24Format;
 
 	}
 
-
 	private String searchKeyword(String value) {
-		String[] keywords= {"CODICE","FISCALE","DATI","ANAGRAFICI","COPIA","PER","IL","SOGGETTO","CHE","EFFETTUA","IL","VERSAMENTO", 
-				"BANCA" ,"POSTE" ,"AGENTE","DELLA", "RISCOSSIONE","DATA","ESTREMI","DEL","DA","COMPILARE","CURA",
-				"DI","SPORTELLO","CAB","AZENDA","AZIEN","MOMOA","SPORO"};
+		String[] keywords = { "CODICE", "FISCALE", "DATI", "ANAGRAFICI", "COPIA", "PER", "IL", "SOGGETTO", "CHE",
+				"EFFETTUA", "IL", "VERSAMENTO", "BANCA", "POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA", "ESTREMI",
+				"DEL", "DA", "COMPILARE", "CURA", "DI", "SPORTELLO", "CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" };
 		for (int i = 0; i < keywords.length; i++) {
-			value=value.replace(keywords[i], "");
+			value = value.replace(keywords[i], "");
 		}
 		return value;
 	}
-	
+
 	public void buildf242(int rowcount) {
 		String data = "", section2row = "", section2rows = "";
 		StringBuffer buffer = new StringBuffer();
@@ -880,7 +819,8 @@ public class F24OCRService {
 			}
 		}
 
-		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testf24new.txt"))) {
+		try (BufferedReader br = new BufferedReader(
+				new FileReader("src/main/java/it/sella/f24/service/testf24new.txt"))) {
 			while ((data = br.readLine()) != null) {
 				data = data.replace("section2rows", section2rows);
 				buffer.append(data + "\n");
@@ -951,10 +891,10 @@ public class F24OCRService {
 					des = "X";
 				}
 
-//				if (txtAnn.getBoundingPoly().getVertices().get(0).getY() < secTwo) {
-					des = des.replaceAll(".*[a-z].*", "");
-//				}
-					
+				// if (txtAnn.getBoundingPoly().getVertices().get(0).getY() < secTwo) {
+				des = des.replaceAll(".*[a-z].*", "");
+				// }
+
 				DataDescription d = new DataDescription(des, txtAnn.getBoundingPoly().getVertices().get(0).getX(),
 						txtAnn.getBoundingPoly().getVertices().get(0).getY(),
 						txtAnn.getBoundingPoly().getVertices().get(1).getX(),

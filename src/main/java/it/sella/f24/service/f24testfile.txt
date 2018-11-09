@@ -89,6 +89,38 @@
         }
         
         
+,
+	{
+
+            "section": "x1",
+
+            "taxCode": "x2",
+
+            "receiverCode": "x3",
+
+            "isAmendment": "",
+
+            "isRealEstateVariation": "",
+
+            "isDeposit": "",
+
+            "isFinalPayment": "",
+
+            "realEstateCount": 1,
+
+            "referenceMonth": "x4",
+
+            "referenceYear": "x5",
+
+            "deductionAmount": "x6",
+
+            "taxAmount": x7,
+
+            "compensationAmount": "x8"
+
+        }
+        
+        
 
 
     ]

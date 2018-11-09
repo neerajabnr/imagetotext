@@ -1,38 +1,15 @@
 package it.sella.f24.controller;
 
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
-import java.net.MalformedURLException;
 import java.net.Proxy;
-import java.net.URL;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
-
-import javax.imageio.ImageIO;
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.jose4j.json.internal.json_simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -48,13 +25,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.fasterxml.jackson.core.JsonParser.Feature;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.client.util.Base64;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.protobuf.ByteString;
 
 import it.sella.f24.service.F24Format;
 import it.sella.f24.service.F24OCRService;
@@ -111,7 +83,9 @@ public class F24Controller {
 
 		// Calling Authentication Service
 
-		String accessToken = authCheck();
+//		String accessToken = authCheck();
+		
+		String accessToken = "123";
 		if (accessToken.isEmpty()) {
 			return "{\"status\":\"Access token is empty, please provide the correct details\"}";
 		} else {
@@ -129,9 +103,9 @@ public class F24Controller {
 			F24JSON f24json = null;
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(MediaType.APPLICATION_JSON);
-			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
+//			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
 
-			// HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
+			HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
 			String f24Result = "{}";
 			byte[] decodeBase64 = null;
 			Data data = null;
@@ -164,7 +138,7 @@ public class F24Controller {
 
 			System.out.println("F24 JSON from the Service:\n" + format.getF24format1() + "\n" + format.getF24format2());
 			String input = format.getF24format2();
-			callF24(input);
+//			callF24(input);
 			// return f24Result;
 			return format.getF24format1();
 		}
@@ -173,130 +147,24 @@ public class F24Controller {
 		// "{\"F24Semplificato\":{\"Contribuente\":{\"CodiceFiscale\":\"VTINDR85S13D938T\",\"DatiAnagrafici\":{\"Cognome\":\"VITI\",\"Nome\":\"ANDREA\",\"RagioneSociale\":\"\",\"DataDiNascita\":\"13/11/1985\",\"Sesso\":\"M\",\"Comune\":\"GATTINARA\",\"Prov\":\"VC\"},\"DomicilioFiscale\":{\"Comune\":\"\",\"Prov\":\"\",\"ViaeNumeroCivico\":\"\"},\"SecondoCodiceFiscale\":\"\",\"CodiceIdentificativo\":\"\",\"IdentificativoOperazione\":\"\"},\"Taxes\":{\"CodiceUfficio\":\"\",\"CodiceAtto\":\"\",\"Tax\":[{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"1.11\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"ER\",\"CodiceTributo\":\"6099\",\"CodiceEnte\":\"\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"0\",\"MeseRif\":\"0101\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"2.22\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"3.33\",\"CrebitoImporto\":\"\"}]},\"Payment\":{\"DataIncasso\":\"23/07/2018\",\"ContoOrdinante\":\"11O1641490340\",\"SaldoFinale\":\"6.66\",\"Product\":\"0\"}}}";
 
 	}
-	/*
-	 * @RequestMapping(value="/api/fileupload",method=RequestMethod.POST) public
-	 * String fileUpload(@RequestParam("file") MultipartFile file) { String
-	 * processJson ="{}"; try { processJson =
-	 * ocrService.processJson(file.getBytes()); System.out.println(processJson);
-	 * System.out.println("Response ----------------------");
-	 * System.out.println(processJson.trim().replaceAll("\n", "")); } catch
-	 * (Exception e) { return "{\"status\":\"Error\"}"; } return processJson; }
-	 */
 
-	@RequestMapping(value = "/api/callf24", method = RequestMethod.POST)
-	public String callF24(String f24JSON) {
-		/*
-		 * StringBuffer buffer = new StringBuffer(); String line = null; try
-		 * (BufferedReader br = new BufferedReader(new
-		 * FileReader("src/main/java/it/sella/f24/service/testjson.json"))) { while
-		 * ((line = br.readLine()) != null) {
-		 * 
-		 * 
-		 * buffer.append(line+"\n");
-		 * 
-		 * } } catch (Exception e) { e.printStackTrace(); }
-		 * 
-		 * System.out.println(buffer.toString());
-		 */
+	
 
-		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
-		System.setProperty("java.net.useSystemProxies", "false");
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
-
-		headers.set("Content-Type", "application/json");
-
-		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
-
-		// headers.set("auth.token", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
-		headers.set("Auth-Schema", "S2S");
-		ObjectMapper mapper = new ObjectMapper();
-		System.out.println("Input JSON:\n" + f24JSON);
-		HttpEntity<String> entity = new HttpEntity<>(f24JSON, headers);
-		ResponseEntity<String> response = null;
-
-		try {
-			System.out.println("Calling service");
-			response = restTemplate.exchange(
-					"https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders",
-					HttpMethod.POST, entity, String.class);
-
-			System.out.println("Response Body:" + response.getBody());
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "{\"status\":\"KO\"}";
-		}
-		return "hello";
-	}
-
-	@RequestMapping(value = "/api/googlevision/imagetotext", method = RequestMethod.POST)
-	public Data imageToText(@RequestParam("file") MultipartFile file) {
-		Data processJson = googleService.readText(file, "");
-		return processJson;
-	}
-
-	@RequestMapping(value = "/api/googlevision/print", method = RequestMethod.POST)
-	public String printString(@RequestBody String jsonString) {
-		System.out.println(jsonString);
-
-		if (jsonString.isEmpty()) {
-			return "{\"status\":\"Empty form\"}";
-		}
-		return "Hello" + jsonString;
-	}
-
-	@RequestMapping(value = "/api/simplificato/ocr", method = RequestMethod.POST)
-	public String f24imageToText(@RequestParam("file") MultipartFile file) {
-		Data data = googleService.readText(file, "");
-		// System.out.println("processed ocr data : "+data);
-		String f24Result = "{}";
-
-		try {
-			// f24Result = ocrService.processJson(data);
-		} catch (Exception e) {
-			return "{\"status\":\"Error\"}";
-		}
-
-		return f24Result;
-	}
-
-	@RequestMapping(value = "/api/simplificato/ocr/hello", method = RequestMethod.POST)
-	public String f24imageToText(@RequestParam("file") File file) throws IOException {
-		Data data = googleService.readText(file, "");
-		// System.out.println("processed ocr data : "+data);
-		String f24Result = "{}";
-
-		try {
-			// f24Result = ocrService.processJson(data);
-		} catch (Exception e) {
-			return "{\"status\":\"Error\"}";
-		}
-
-		return f24Result;
-	}
 
 	@RequestMapping(value = "/api/image/encode", method = RequestMethod.PUT)
 	public String f24Encode(@RequestParam("file") MultipartFile file) {
 		String encodeBase64String = "";
 		try {
 
-			// byte[] bytesArray = new byte[(int) file.length()];
-			//
-			// FileInputStream fis = new FileInputStream(file);
-			// fis.read(bytesArray); //read file into bytes[]
-			// fis.close();
 			encodeBase64String = Base64.encodeBase64String(file.getBytes());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		F24Form f24Form = new F24Form();
-		// f24Form.setEncodedImage("{\"encodedImage\":\"" + encodeBase64String + "\"}");
 		f24Form.setEncodedImage(encodeBase64String);
 		f24Form.setTransactionId("123");
 		String f24ImageToText = f24ImageToText(f24Form);
-		// f24Form.set
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 		return f24ImageToText;
 	}
@@ -316,52 +184,12 @@ public class F24Controller {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// F24Form f24Form = new F24Form();
-		// // f24Form.setEncodedImage("{\"encodedImage\":\"" + encodeBase64String +
-		// "\"}");
-		// f24Form.setEncodedImage(encodeBase64String);
-		// f24Form.setTransactionId("123");
-		// String f24ImageToText = f24ImageToText(f24Form);
-		// f24Form.set
-		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 		return encodeBase64String;
 	}
 
-	@RequestMapping("/hello")
-	public ResponseEntity<String> callService() {
-
-		// https://f24-img-skew.herokuapp.com/f24/api/imageskew
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
-
-		// HttpEntity<String> entity = new HttpEntity<String>(requestJson,headers);
-
-		ResponseEntity<String> response = restTemplate.exchange(
-				"https://f24imagetotext.herokuapp.com/f24/api/googlevision/print", HttpMethod.POST,
-				new HttpEntity<>(headers), String.class);
-
-		System.out.println(response);
-		return response;
-	}
-
-	@RequestMapping(value = "/api/check", method = RequestMethod.PUT)
-	public String cehck(@RequestParam("file") MultipartFile file) {
-
-		File sourceimage = new File("/home/bsindia/Documents/F24_V2/check.jpg");
-		try {
-			BufferedImage image = ImageIO.read(sourceimage);
-			ImageIO.write(image, "jpg", new File("/home/bsindia/Documents/F24_V2/result.jpg"));
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return null;
-	}
 
 	@RequestMapping(value = "/api/simplificato/localtest", method = RequestMethod.POST)
-	public String f24ImageToTextTesting() {
+	public String f24localtest() {
 		
 		  
 		  // https://f24-img-skew.herokuapp.com/f24/api/imageskew
@@ -385,9 +213,12 @@ public class F24Controller {
 		  
 		  for (String filename : filesfromFolder) {
 		  
-		  sourceimage=new File(filename); logger.info("Image path:  "+filename);
-		  encodedImage = f24Encode(sourceimage); entity = new
-		  HttpEntity<String>(encodedImage, headers);
+		  sourceimage=new File(filename); 
+		  logger.info("Image path:  "+filename);
+		  
+		  encodedImage = f24Encode(sourceimage);
+		  String reqJSON = "{\"encodedImage\":\"" + encodedImage + "\"}";
+		  entity = new HttpEntity<String>(reqJSON, headers);
 		  
 		  try {
 		  
@@ -400,7 +231,9 @@ public class F24Controller {
 			  data =googleService.readText(decodeBase64,"");
 			  System.out.println("Calling OCR Service"); 
 			  f24Format =ocrService.processJson(data);
-		  
+			  
+			  
+		  Thread.sleep(3000);
 		  }catch (IOException e) {
 			  e.printStackTrace(); 
 			  return "{\"status\":\"KO\"}"; 
@@ -415,195 +248,8 @@ public class F24Controller {
 		  return f24Result;
 		 }
 
-	@RequestMapping(value = "/api/authcheck", method = RequestMethod.POST)
-	public String authCheck() {
+	
 
-		System.setProperty("java.net.useSystemProxies", "false");
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
-
-		// headers.set("auth.token", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
-		headers.set("Auth-Schema", "S2S");
-		ObjectMapper mapper = new ObjectMapper();
-
-		HttpEntity<String> entity = new HttpEntity<>(headers);
-		ResponseEntity<String> response = null;
-		// https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session
-		// https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance
-
-		try {
-			System.out.println("Calling service");
-			// entity=new HttpEntity<>("GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0",headers);
-			response = restTemplate.exchange("https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session",
-					HttpMethod.POST, entity, String.class);
-
-			System.out.println("Response Body:" + response.getBody());
-
-			ResBody resBody = mapper.readValue(response.getBody(), ResBody.class);
-
-			System.out.println(resBody.getPayload().getAccessToken());
-
-			// accessCheck(resBody.getPayload().getAccessToken());
-
-			System.out.println("Response codes:" + response.getStatusCodeValue() + " " + response.getStatusCode());
-
-			return resBody.getPayload().getAccessToken();
-		} catch (Exception exception) {
-			System.out.println("hello");
-			exception.printStackTrace();
-			return "{\"status\":\"KO\"}";
-		}
-	}
-
-	// @RequestMapping(value = "/api/accessheck", method = RequestMethod.POST)
-	// @RequestParam("value")
-	public String accessCheck(String value) {
-
-		System.setProperty("java.net.useSystemProxies", "false");
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
-
-		headers.set("apikey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
-
-		headers.set("Auth-Token", value);
-		headers.set("Auth-Schema", "S2S-AUTH");
-		ObjectMapper mapper = new ObjectMapper();
-
-		// 14537780
-		String reqJSON = "{\"accountNumber\":\"" + "1152923800661" + "\"}";
-
-		HttpEntity<String> entity = new HttpEntity<>(headers);
-		ResponseEntity<String> response = null;
-		// https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session
-		// https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance
-
-		try {
-			System.out.println("Calling service");
-			// entity=new HttpEntity<>("GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0",headers);
-			response = restTemplate.exchange("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/14537780/balance",
-					HttpMethod.GET, entity, String.class);
-
-			System.out.println("Response Body:" + response.getBody());
-
-			System.out.println("Response codes:" + response.getStatusCodeValue() + " " + response.getStatusCode());
-		} catch (Exception exception) {
-			System.out.println("hello");
-			exception.printStackTrace();
-		}
-		return null;
-	}
-
-	// calling google service
-
-	@RequestMapping(value = "/api/callGoogle", method = RequestMethod.POST)
-	public String callGoogle() {
-		/*
-		 * URL url; try { System.out.println("Calling Sandbox"); url = new
-		 * URL("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance");
-		 * HttpsURLConnection connection= (HttpsURLConnection) url.openConnection();
-		 * connection.connect(); } catch (MalformedURLException e) { // TODO
-		 * Auto-generated catch block e.printStackTrace(); } catch (IOException e) { //
-		 * TODO Auto-generated catch block e.printStackTrace(); } return "hello Google";
-		 * }
-		 */
-
-		TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
-			public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-				return null;
-			}
-
-			public void checkClientTrusted(java.security.cert.X509Certificate[] certs, String authType) {
-			}
-
-			public void checkServerTrusted(java.security.cert.X509Certificate[] certs, String authType) {
-			}
-		} };
-
-		// Install the all-trusting trust manager
-		try {
-			SSLContext sc = SSLContext.getInstance("SSL");
-			sc.init(null, trustAllCerts, new java.security.SecureRandom());
-			HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-		} catch (Exception e) {
-		}
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
-		headers.set("Auth-Schema", "S2S-AUTH");
-
-		// Now you can access an https URL without having the certificate in the
-		// truststore
-		try {
-			System.out.println("Calling Service");
-			URL url = new URL("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance");
-
-			HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-			connection.connect();
-			System.out.println("Response code:" + connection.getResponseCode());
-
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return "hello";
-	}
-
-	@RequestMapping(value = "/api/callSandbox", method = RequestMethod.GET)
-	public String callExtService() {
-
-		try {
-
-			System.setProperty("java.net.useSystemProxies", "false");
-			SSLContext sslctx = SSLContext.getInstance("SSL");
-			sslctx.init(null, new X509TrustManager[] { new it.sella.f24.testclasses.MyTrustManager() }, null);
-
-			HttpsURLConnection.setDefaultSSLSocketFactory(sslctx.getSocketFactory());
-
-			System.out.println("Calling Service");
-			URL url = new URL("https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance");
-			HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
-			con.setRequestMethod("GET");
-
-			con.setRequestProperty("Content-type", "application/json");
-
-			con.setRequestProperty("content-type", "application/json");
-			con.setDoOutput(true);
-			PrintStream ps = new PrintStream(con.getOutputStream());
-			ps.println("f1=abc&f2=xyz");
-			ps.close();
-			con.connect();
-
-			System.out.println("Res code:" + con.getResponseCode());
-
-			// System.out.println("Res:"+con.getOutputStream());
-			// if (con.getResponseCode() == HttpsURLConnection.HTTP_OK) {
-			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			String line;
-			while ((line = br.readLine()) != null) {
-				System.out.println("line" + line);
-			}
-			br.close();
-			// }
-			con.disconnect();
-		} catch (KeyManagementException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return "Hello";
-
-	}
+	
 
 }
