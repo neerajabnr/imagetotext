@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
 import org.json.simple.parser.ParseException;
@@ -128,7 +129,21 @@ public class Sample {
 //		F24Controller controller=new F24Controller();
 //		controller.callF24(null);
 //		
+		String s="### MOTIVO  PAGAMENTO ####               EL 3914 H 360 2016 45*00 #### EL  3918 H 3 6 0 2016 172*00 #### EL 3961 MO 9 8 2017 3*00 #### ER 3918 D600 2018 243*00  ####      #### IIIIIII  8 ####      L  #### LLLLLL EURO - 1 463*00 #### FINALE ####    (  COMPARE A    /  /    #### 1 10 ####  /   ####  AB\r\n" ;
+		StringTokenizer tokens=new StringTokenizer(s, "####");
 		
-		
+		while (tokens.hasMoreElements()) {
+			String token=tokens.nextToken();
+			if(token.contains("EURO")) {
+				System.out.println(token);
+				
+				token =token.replaceAll("[^A-Z0-9]","");
+				token =token.replaceAll("[A-Z]","");
+				token =token.replaceAll("00",".00");
+
+				System.out.println(token);
+			}
+			
+		}
 	}
 }

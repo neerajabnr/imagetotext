@@ -103,9 +103,9 @@ public class F24Controller {
 			F24JSON f24json = null;
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(MediaType.APPLICATION_JSON);
-//			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
+			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
 
-			HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
+//			HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
 			String f24Result = "{}";
 			byte[] decodeBase64 = null;
 			Data data = null;
@@ -224,8 +224,8 @@ public class F24Controller {
 		  
 			  response = restTemplate.exchange("https://f24imageskew.herokuapp.com/f24/api/imageskew",HttpMethod.POST, entity, String.class);
 			  f24json=mapper.readValue(response.getBody(), F24JSON.class);
-			  resencodedImage=f24json.getEncodedImage(); decodeBase64=
-					  Base64.decodeBase64(resencodedImage);
+			  resencodedImage=f24json.getEncodedImage(); 
+			  decodeBase64=Base64.decodeBase64(resencodedImage);
 			  System.out.println("Response Encoded Image:"+resencodedImage);
 			  System.out.println("Calling Google Service"); 
 			  data =googleService.readText(decodeBase64,"");
@@ -233,7 +233,7 @@ public class F24Controller {
 			  f24Format =ocrService.processJson(data);
 			  
 			  
-		  Thread.sleep(5000);
+		  Thread.sleep(3000);
 		  }catch (IOException e) {
 			  e.printStackTrace(); 
 			  return "{\"status\":\"KO\"}"; 

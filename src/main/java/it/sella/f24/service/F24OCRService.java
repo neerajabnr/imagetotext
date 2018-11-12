@@ -156,7 +156,7 @@ public class F24OCRService {
 			System.out.println("preparing Sec2 list");
 			
 			for (int i = 0; i < sec2list.size(); i++) {
-				if ((sec2list.get(i).getyStart() - yprev) > 15) {
+				if ((sec2list.get(i).getyStart() - yprev) > 10) {
 					sec2 = sec2 + "####" + " ";
 				}
 				sec2 = sec2 + sec2list.get(i).getDescription() + " ";
@@ -197,8 +197,14 @@ public class F24OCRService {
 			sec2 = sec2.replace("E1L", "EL ");
 			sec2 = sec2.replace("EIR", "ER ");
 			sec2 = sec2.replace("E1R", "ER ");
-			// MOF Replace
-			// FO Replace
+			
+			if(sec2.contains("III")) {
+				sec2=sec2.replace("III", "");
+			}
+			
+			if(sec2.contains("LLL")) {
+				sec2=sec2.replace("LLL", "");
+			}
 
 			System.out.println("Section1:----\n" + sec1.trim());
 			System.out.println("Section2:----\n" + sec2.trim());
@@ -206,17 +212,54 @@ public class F24OCRService {
 			// logger.info("After the data conversion");
 //			logger.info(/* "Section1:----\n" + */ sec1.trim());
 			logger.info(sec2.trim());
-
+			
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
-
 			
-			String testsec2="EL  3944 H 5 3 3 0303 2018 43*00 ******* ER 3918 D 6 0 0 2 0202 2018 43*00       IIIIII SALDO FINAL EURO ) 86*00";
+			
 			NameFinderMETest4 test = new NameFinderMETest4();
 			seconelist = test.f24_section1(sec1.trim());
-			sectwolist = test.f24_section2(testsec2);
-			sectwolist = test.f24_section2(sec2.trim());
+			
+			StringTokenizer tokens=new StringTokenizer(sec2, "####");
+			String euro="";
+			while (tokens.hasMoreElements()) {
+				String token=tokens.nextToken();
+				if(token.contains("EL") ||token.contains("ER")||token.contains("RG")||token.contains("E L")||token.contains("E R")||token.contains("E R")||token.contains("R G")){
+					if(token.contains("EL")) {
+						token=token.replace("EL", "EL ");
+					}else if(token.contains("E L")) {
+						token=token.replace("E L", "E L ");
+					}else if(token.contains("ER")) {
+						token=token.replace("ER", "ER ");
+					}else if(token.contains("E R")) {
+						token=token.replace("E R", "E R ");
+					}else if(token.contains("RG")) {
+						token=token.replace("RG", "RG ");
+					}else if(token.contains("R G")) {
+						token=token.replace("R G", "R G ");
+					}
+					
+					logger.info("Row:"+token.trim());
+					sectwolist = test.f24_section2(token.trim());
+					seconelist.addAll(sectwolist);
+				}
+				
+				else if(token.contains("EURO")) {
+					System.out.println(token);
+					
+					token =token.replaceAll("[^A-Z0-9]","");
+					token =token.replaceAll("[A-Z]","");
+					euro =token.replaceAll("00",".00");
 
+					System.out.println(euro);
+					logger.info("EURO:"+euro);
+				}
+				
+			}
+
+			
+			Result euroval=new Result("euro", euro);
+			seconelist.add(euroval);
 			System.out.println("Section1:  " + seconelist);
 			System.out.println("Section2:  " + sectwolist);
 
@@ -224,7 +267,7 @@ public class F24OCRService {
 			// logger.info("Section1: \n" + seconelist);
 			// logger.info("Section2: \n" + sectwolist);
 
-			seconelist.addAll(sectwolist);
+			
 			// System.out.println(seconelist);
 			// logger.info("Sending the data to prepare Json");
 			return prepareJSON(seconelist);
@@ -768,7 +811,7 @@ public class F24OCRService {
 	private String searchKeyword(String value) {
 		String[] keywords = { "CODICE", "FISCALE", "DATI", "ANAGRAFICI", "COPIA", "PER", "IL", "SOGGETTO", "CHE",
 				"EFFETTUA", "IL", "VERSAMENTO", "BANCA", "POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA", "ESTREMI",
-				"DEL", "DA", "COMPILARE", "CURA", "DI", "SPORTELLO", "CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" ,"COMPILARE","CURA","DI","W TASTE"};
+				"DEL", "DA", "COMPILARE","CANER","POTERSSON", "CURA", "DI", "SPORTELLO", "PON","CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" ,"COMPILARE","CURA","DI","W TASTE","COMPARE A","FINALE","SALDO"};
 		for (int i = 0; i < keywords.length; i++) {
 			value = value.replace(keywords[i], "");
 		}
