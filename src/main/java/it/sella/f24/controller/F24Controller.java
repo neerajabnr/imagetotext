@@ -103,9 +103,9 @@ public class F24Controller {
 			F24JSON f24json = null;
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(MediaType.APPLICATION_JSON);
-//			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
+			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
 
-			HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
+//			HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
 			String f24Result = "{}";
 			byte[] decodeBase64 = null;
 			Data data = null;
