@@ -197,6 +197,9 @@ public class F24OCRService {
 			sec2 = sec2.replace("E1L", "EL ");
 			sec2 = sec2.replace("EIR", "ER ");
 			sec2 = sec2.replace("E1R", "ER ");
+			sec2=sec2.replace("/", "");
+			sec2=sec2.replace("(", "");
+			sec2=sec2.replace(")","");
 			
 			if(sec2.contains("III")) {
 				sec2=sec2.replace("III", "");
@@ -239,6 +242,10 @@ public class F24OCRService {
 						token=token.replace("R G", "R G ");
 					}
 					
+					
+					if(token.charAt(0)=='*') {
+						token.replaceFirst("*", "");
+					}
 					logger.info("Row:"+token.trim());
 					sectwolist = test.f24_section2(token.trim());
 					seconelist.addAll(sectwolist);
@@ -454,14 +461,14 @@ public class F24OCRService {
 		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
 
-//		 logger.info("Section2 Result data:\n");
-//		 logger.info("Seizone:\t"+sz+"\n");
-//		 logger.info("tributo:\t"+t+"\n");
-//		 logger.info("Codice:\t"+c+"\n");
-//		 logger.info("Mese:\t"+m+"\n");
-//		 logger.info("Anno:\t"+a+"\n");
-//		 logger.info("Dobito:\t"+db+"\n");
-//		 logger.info("Euro:\t"+e+"\n");
+		 logger.info("Section2 Result data:\n");
+		 logger.info("Seizone:\t"+sz+"\n");
+		 logger.info("tributo:\t"+t+"\n");
+		 logger.info("Codice:\t"+c+"\n");
+		 logger.info("Mese:\t"+m+"\n");
+		 logger.info("Anno:\t"+a+"\n");
+		 logger.info("Dobito:\t"+db+"\n");
+		 logger.info("Euro:\t"+e+"\n");
 		
 
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
@@ -619,8 +626,10 @@ public class F24OCRService {
 				}
 			}
 			if (result.getKey().contains("codice")) {
-				if (StringUtils.isAlphanumeric(result.getValue()) && result.getValue().length() == 4)
-					c = c + result.getValue() + ";";
+				if (StringUtils.isAlphanumeric(result.getValue()))
+					
+					if(result.getValue().length()>4)
+					c = c + result.getValue().substring(0, 4) + ";";
 			}
 			if (result.getKey().contains("mese")) {
 				if (StringUtils.isNumeric(result.getValue()))

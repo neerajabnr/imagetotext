@@ -120,9 +120,24 @@ public class F24Controller {
 				decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
 
 				// decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
-
+				
 				System.out.println("Decoded" + decodeBase64);
+				for (int i = 0; i < decodeBase64.length/4; i++) {
+					System.out.print(decodeBase64[i]);
+				}
+				
+				System.out.println("nextline");
 
+				for (int i = (decodeBase64.length/4)+1; i < decodeBase64.length/2; i++) {
+					System.out.print(decodeBase64[i]);
+				}
+
+				System.out.println("nextline");
+
+				for (int i = (decodeBase64.length/2)+1; i < decodeBase64.length; i++) {
+					System.out.print(decodeBase64[i]);
+				}
+				
 				System.out.println("Calling Google Service");
 				data = googleService.readText(decodeBase64, "");
 				System.out.println("Calling OCR Service");
