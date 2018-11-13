@@ -225,13 +225,13 @@ public class F24OCRService {
 			seconelist = test.f24_section1(sec1.trim());
 			
 			//testing 
-			seconelist = test.f24_section1("CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI F RLANI ** MARIA GIULIANA     M        1 1 0 3 1 9 4 O F RO ** F E  CODICE ,  FISCALE      ,  , **   CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE      /  AZIENDA CAB / SPORTELO **  /\r\n");
+//			seconelist = test.f24_section1("CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI F RLANI ** MARIA GIULIANA     M        1 1 0 3 1 9 4 O F RO ** F E  CODICE ,  FISCALE      ,  , **   CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE      /  AZIENDA CAB / SPORTELO **  /\r\n");
 //			sectwolist = test.f24_section2("EL   3914 H 3 60 2016 45*00");
 //			seconelist.addAll(sectwolist);
 			
-			String testdata="#### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI\r\n" ;
+//			String testdata="#### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI\r\n" ;
 			
-			StringTokenizer tokens=new StringTokenizer(testdata, "####");
+			StringTokenizer tokens=new StringTokenizer(sec2, "####");
 			String euro="";
 			while (tokens.hasMoreElements()) {
 				String token=tokens.nextToken();
