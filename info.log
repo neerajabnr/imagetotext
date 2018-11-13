@@ -438,3 +438,444 @@
 
 [http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL - 3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  - 3914 H 3 60 2016 45*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;2016;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	3.00;243.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                  EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 684 2013 264*00 PION ####       ####         ####  #### FINAL EURO 2 231*00 ####            ####     ####  ABI    ####     ####
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 684 2013 264*00 PION
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Codice:	D612;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mese:	2013;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL - 3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  - 3914 H 3 60 2016 45*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;2016;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	3.00;243.00;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL - 3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  - 3914 H 3 60 2016 45*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;2016;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	3.00;243.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3914 H 3 60 2016 45*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;2016;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	3.00;243.00;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3914 H 3 60 2016 45*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3914 H 3 60 2016 45*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;2016;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	3.00;243.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                  EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 684 2013 264*00 PION ####       ####         ####  #### FINAL EURO 2 231*00 ####            ####     ####  ABI    ####     ####
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 684 2013 264*00 PION
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Codice:	D612;I684;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Mese:	2013;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - #### AOTIVO  PAGAMENTO ####             #### EL 3918 D 612 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       ####         #### LL  ####  EURO  1 2 231*00 ####                ####      ####  ABI    ####     ####
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 612 2013 1 967*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 8 4 2013 264*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - EURO:12231.00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	D612;I684;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	12231.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                #### EL 3918 D 6 12 2013 1 967*00 #### EL  3918 I 6 84 2013 264*00  #### NUT       ####   L   L  #### EURO  2 231*00 ####  ####  ####               ####        ####     ####  AB
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 12 2013 1 967*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3918 I 6 84 2013 264*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	D612;I6;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	2013;84;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - #### KOTIVO  PAGAMENTO ####      TOW           EL  3918 D600 0101 2018 243*00 #### ER 3918 D600 2 0101 2018 243*00 PION #### *     ####   L   L  #### LL EURO  486*00 ####              ####  10 ####     #### *AB    ####     ####   ####
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:TOW           EL   3918 D600 0101 2018 243*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2 0101 2018 243*00 PION
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - EURO:486.00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	ER;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	D600;D600;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	0101;0101;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;243.00;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	486.00
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                #### EL 3914 H 36 0 2016 45*00 #### EL  3918 H 3 60 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00       #### CCPIA        #### EURO 1 463*00  ####  ####                ####  10 ####        ####     ####  ####  ABI
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3914 H 36 0 2016 45*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3918 H 3 60 2016 172*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;2016;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Dobito:	3.00;243.00;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                        #### EL 3918 D 600 0101 2018 243*00 #### ER 3918 D600 0101 2018 243*00  #### BI #### *  ####         ####  ####  EURO  486*00 ####          POST   #### 1 10 ####        ####     ####  AB
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 600 0101 2018 243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 0101 2018 243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:486.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	D600;D600;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	0101;0101;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;243.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	486.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3914 H 3 60 2016 45*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;D600;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;2017;2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	172.00;3.00;243.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                        #### EL 3918 D 600 0101 2018 243*00 #### ER 3918 D600 0101 2018 243*00  #### BI #### *  ####         ####  ####  EURO  486*00 ####          POST   #### 1 10 ####        ####     ####  AB
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 600 0101 2018 243*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 0101 2018 243*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - EURO:486.00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	D600;D600;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	0101;0101;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;243.00;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	486.00
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####    EL  3944 H 533 #### ER  3918 D600 J   #### 0303 #### 0202 2018 #### 2018   #### 43*00 #### 43*00 ####   #### EURO 86*00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3944 H 533
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:ER   3918 D600 J
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - EURO:86.00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Codice:	H533;D600;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####       #### EL  3944 H 3 3 3 0303 2018 43*00 #### ER  3918 D600 0202 2018 43*00 VR ####  #### EURO S ####  86*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3944 H 3 3 3 0303 2018 43*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:ER   3918 D600 0202 2018 43*00 VR
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	H333;D600;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	0303;0202;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	43.00;43.00;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3914 H 3 60 2016 45*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;D600;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;2017;2018;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Dobito:	172.00;3.00;243.00;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3914 H 3 60 2016 45*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;D600;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	2016;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;2017;2018;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	172.00;3.00;243.00;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[main] INFO  it.sella.f24.service.F24OCRService  - 
+[main] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Seizone:	ER;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Codice:	D600;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[main] INFO  it.sella.f24.service.F24OCRService  - 
+[main] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Dobito:	45.00;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[main] INFO  it.sella.f24.service.F24OCRService  - 
+[main] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3914 H 3 60 2016 45*00
+[main] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 36 0 2016 172*00
+[main] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[main] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2018 243*00
+[main] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[main] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;D600;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;2016;2017;2018;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Dobito:	45.00;172.00;3.00;243.00;
+
+[main] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+

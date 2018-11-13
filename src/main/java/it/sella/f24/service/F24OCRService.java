@@ -200,6 +200,7 @@ public class F24OCRService {
 			sec2=sec2.replace("/", "");
 			sec2=sec2.replace("(", "");
 			sec2=sec2.replace(")","");
+			sec2=sec2.replace("-","");
 			
 			if(sec2.contains("III")) {
 				sec2=sec2.replace("III", "");
@@ -223,7 +224,14 @@ public class F24OCRService {
 			NameFinderMETest4 test = new NameFinderMETest4();
 			seconelist = test.f24_section1(sec1.trim());
 			
-			StringTokenizer tokens=new StringTokenizer(sec2, "####");
+			//testing 
+			seconelist = test.f24_section1("CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI F RLANI ** MARIA GIULIANA     M        1 1 0 3 1 9 4 O F RO ** F E  CODICE ,  FISCALE      ,  , **   CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE      /  AZIENDA CAB / SPORTELO **  /\r\n");
+//			sectwolist = test.f24_section2("EL   3914 H 3 60 2016 45*00");
+//			seconelist.addAll(sectwolist);
+			
+			String testdata="#### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI\r\n" ;
+			
+			StringTokenizer tokens=new StringTokenizer(testdata, "####");
 			String euro="";
 			while (tokens.hasMoreElements()) {
 				String token=tokens.nextToken();
@@ -248,6 +256,7 @@ public class F24OCRService {
 					}
 					logger.info("Row:"+token.trim());
 					sectwolist = test.f24_section2(token.trim());
+					System.out.println("Row:"+token.trim());
 					seconelist.addAll(sectwolist);
 				}
 				
@@ -264,7 +273,6 @@ public class F24OCRService {
 				
 			}
 
-			
 			Result euroval=new Result("euro", euro);
 			seconelist.add(euroval);
 			System.out.println("Section1:  " + seconelist);
@@ -364,8 +372,14 @@ public class F24OCRService {
 				}
 			}
 			if (result.getKey().contains("codice")) {
-				if (StringUtils.isAlphanumeric(result.getValue()) && result.getValue().length() == 4)
-					c = c + result.getValue() + ";";
+				if (StringUtils.isAlphanumeric(result.getValue())) {
+					if(result.getValue().length()>4) {
+						c = c + result.getValue().substring(0, 4) + ";";
+					}else {
+						c = c + result.getValue() + ";";
+					}
+				}
+					
 			}
 			if (result.getKey().contains("mese")) {
 				if (StringUtils.isNumeric(result.getValue()))
@@ -460,8 +474,8 @@ public class F24OCRService {
 		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
 		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
-
-		 logger.info("Section2 Result data:\n");
+		
+		logger.info("Section2 Result data:\n");
 		 logger.info("Seizone:\t"+sz+"\n");
 		 logger.info("tributo:\t"+t+"\n");
 		 logger.info("Codice:\t"+c+"\n");
@@ -469,6 +483,8 @@ public class F24OCRService {
 		 logger.info("Anno:\t"+a+"\n");
 		 logger.info("Dobito:\t"+db+"\n");
 		 logger.info("Euro:\t"+e+"\n");
+
+		 
 		
 
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
@@ -626,10 +642,14 @@ public class F24OCRService {
 				}
 			}
 			if (result.getKey().contains("codice")) {
-				if (StringUtils.isAlphanumeric(result.getValue()))
+				if (StringUtils.isAlphanumeric(result.getValue())) {
+					if(result.getValue().length()>4) {
+						c = c + result.getValue().substring(0, 4) + ";";
+					}else {
+						c = c + result.getValue() + ";";
+					}
+				}
 					
-					if(result.getValue().length()>4)
-					c = c + result.getValue().substring(0, 4) + ";";
 			}
 			if (result.getKey().contains("mese")) {
 				if (StringUtils.isNumeric(result.getValue()))
@@ -818,9 +838,9 @@ public class F24OCRService {
 	}
 
 	private String searchKeyword(String value) {
-		String[] keywords = { "CODICE", "FISCALE", "DATI", "ANAGRAFICI", "COPIA", "PER", "IL", "SOGGETTO", "CHE",
+		String[] keywords = { "CODICE", "FISCALE", "DATI", "ANAGRAFICI", "COPIA", "PER", "IL", "SOGGETTO", "CHE","SHORELO",
 				"EFFETTUA", "IL", "VERSAMENTO", "BANCA", "POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA", "ESTREMI",
-				"DEL", "DA", "COMPILARE","CANER","POTERSSON", "CURA", "DI", "SPORTELLO", "PON","CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" ,"COMPILARE","CURA","DI","W TASTE","COMPARE A","FINALE","SALDO"};
+				"DEL", "DA", "COMPILARE","CANER","POTERSSON", "CURA", "DI", "SPORTELO","SPORTELLO", "PON","CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" ,"COMPILARE","CURA","DI","W TASTE","COMPARE A","FINALE","SALDO","TOW"};
 		for (int i = 0; i < keywords.length; i++) {
 			value = value.replace(keywords[i], "");
 		}

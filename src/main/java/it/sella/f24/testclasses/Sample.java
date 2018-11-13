@@ -4,16 +4,21 @@ import java.io.IOException;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
 import org.json.simple.parser.ParseException;
 
 import it.sella.f24.controller.F24Controller;
 import it.sella.f24.service.F24OCRService;
+import it.sella.f24.service.opennlp.Data;
+import it.sella.f24.service.opennlp.TextAnnotation;
 import opennlp.tools.namefind.RegexNameFinder;
 import opennlp.tools.util.Span;
 
@@ -129,7 +134,7 @@ public class Sample {
 //		F24Controller controller=new F24Controller();
 //		controller.callF24(null);
 //		
-		String s="### MOTIVO  PAGAMENTO ####               EL 3914 H 360 2016 45*00 #### EL  3918 H 3 6 0 2016 172*00 #### EL 3961 MO 9 8 2017 3*00 #### ER 3918 D600 2018 243*00  ####      #### IIIIIII  8 ####      L  #### LLLLLL EURO - 1 463*00 #### FINALE ####    (  COMPARE A    /  /    #### 1 10 ####  /   ####  AB\r\n" ;
+		/*String s="### MOTIVO  PAGAMENTO ####               EL 3914 H 360 2016 45*00 #### EL  3918 H 3 6 0 2016 172*00 #### EL 3961 MO 9 8 2017 3*00 #### ER 3918 D600 2018 243*00  ####      #### IIIIIII  8 ####      L  #### LLLLLL EURO - 1 463*00 #### FINALE ####    (  COMPARE A    /  /    #### 1 10 ####  /   ####  AB\r\n" ;
 		StringTokenizer tokens=new StringTokenizer(s, "####");
 		
 		while (tokens.hasMoreElements()) {
@@ -144,6 +149,25 @@ public class Sample {
 				System.out.println(token);
 			}
 			
+		}*/
+		//testing
+		F24OCRService f24ocrService=new F24OCRService();
+		
+	Data data=new Data();
+	
+	
+	TextAnnotation annotation=new TextAnnotation();
+	
+	annotation.setDescription("CODICEFISCALEANAGRAFICI");
+	List<TextAnnotation> annotations =new ArrayList<>();
+	data.setTextAnnotation(annotations);
+		
+		try {
+			f24ocrService.processJson(data);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		
 	}
 }
