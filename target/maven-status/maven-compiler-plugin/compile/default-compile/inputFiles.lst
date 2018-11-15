@@ -517,6 +517,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/AbstractSequenceTrainer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/io/BinaryGISModelWriter.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/FilterObjectStream.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/F24Format.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/TerminateToolException.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/eval/CrossValidationPartitionerTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/normalizer/TwitterCharSequenceNormalizerTest.java

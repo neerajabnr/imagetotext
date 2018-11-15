@@ -151,7 +151,7 @@ public class Sample {
 			
 		}*/
 		//testing
-		F24OCRService f24ocrService=new F24OCRService();
+		/*F24OCRService f24ocrService=new F24OCRService();
 		
 	Data data=new Data();
 	
@@ -167,7 +167,19 @@ public class Sample {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
+		
+		
+		String s="#### HOTIVO DEL PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       #### COPIA PER IL SOGGETTO CHE EFT ETTUA IL VERSAMENTO #### LL SALDO #### FINALE EURO 2 231*00 #### ESTREMI DEL VERSAMENTO  DA COMPILARE A CURA DI BANCA  POSTE  AGENTE DELLA RISCOSSIONE ####        ####     ####  AB CAB";
+		s=s.substring(0, s.indexOf("ESTREMI"));
+		
+//		for(int i=s.indexOf("ESTREMI");i<s.length();i++) {
+//			
+//			System.out.print(s.charAt(i));
+//			s=s.replace(s.charAt(i), ' ');
+//		}
+		
+		System.out.println(s);
 		
 	}
 }

@@ -879,3 +879,1527 @@
 
 [main] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
 
+[main] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - #### HOTIVO  PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       ####      EFT ETTUA   #### LL  ####  EURO 2 231*00 ####                ####        ####     ####  AB
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 8 4 2013 264*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	D61;I684;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####    *           #### EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 84 2013 264*00  ####        ####      L  #### LL EURO  1 2 231*00  #### FINAL ####              ####     ####  ABI    ####     ####
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 84 2013 264*00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - EURO:12231.00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Codice:	D61;I684;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Euro:	12231.00
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - #### MOTIVO  PAGAMENTO ####    *           #### EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 84 2013 264*00  ####        ####      L  #### LL EURO  1 2 231*00  #### FINAL ####              ####     ####  ABI    ####     ####
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 84 2013 264*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - EURO:12231.00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	D61;I684;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	12231.00
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - #### HOTIVO  PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       ####      EFT ETTUA   #### LL  ####  EURO 2 231*00 ####                ####        ####     ####  AB
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 8 4 2013 264*00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Codice:	D61;I684;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - #### HOTIVO  PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       ####      EFT ETTUA   #### LL  ####  EURO 2 231*00 ####                ####        ####     ####  AB
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 8 4 2013 264*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	D61;I684;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - #### HOTIVO DEL PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       #### COPIA PER IL SOGGETTO CHE EFT ETTUA IL VERSAMENTO #### LL SALDO #### FINALE EURO 2 231*00 #### ESTREMI DEL VERSAMENTO  DA COMPILARE A CURA DI BANCA  POSTE  AGENTE DELLA RISCOSSIONE ####        ####     ####  AB CAB
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:HOTIVO DEL  PAGAMENTO
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 8 4 2013 264*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:COPIA PER  IL SOGGETTO CHE EFT ETTUA IL VER SAMENTO
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:ESTREMI DEL  VERSAMENTO  DA COMPILARE A CURA DI BANCA  POSTE  AGENTE DEL LA RISCOSSIONE
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	PAGA;D61;I684;ILSO;VERS;VERS;BANC;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;;;;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ####HOTIVODLPAGAMNTO####L3918D61220131967*00####L3918I6842013264*00########FTTTUA####LLSALDO####FINALURO2231*00####STRMIDLDACOMPARACURADI############ABCAB
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - H   V        G   N                          3918   6 1 2 2013 1 967*00         3918   6 8 4 2013 264*00                        F                             F N         2 231*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### HOTIVO DEL PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       ####      EFT ETTUA   #### LL SALDO #### FINALE EURO 2 231*00 ####
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:HOTIVO DEL  PAGAMENTO
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 8 4 2013 264*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	PAGA;D61;I684;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - #### HOTIVO DEL PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       ####      EFT ETTUA   #### LL SALDO #### FINALE EURO 2 231*00 ####
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:HOTIVO DEL  PAGAMENTO
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 8 4 2013 264*00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Codice:	PAGA;D61;I684;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - #### HOTIVO  PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       ####          #### LL  ####  EURO 2 231*00 ####
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 6 1 2 2013 1 967*00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 8 4 2013 264*00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Codice:	D61;I684;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Anno:	2013;2013;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Dobito:	1967.00;264.00;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZ LRT 2 3 H 0 6 A 8 5 9 W  ,     **  DATI ANAGRAFICI GARIAZZO ** ALBERTO            0 6 0 6 1 9 2 3 M  BIELLA ** BI CODICE  ,  FISCALE      ,  , **   DAIA CODICE BANCA / POSTE / AGENIE DELLA RISCOSSIONE    AZIENDA CAB , SHORELO
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - #### KOTIVO  PAGAMENTO ####      TOW           EL  3918 D600 0101 2018 243*00 #### ER 3918 D600 2 0101 2018 243*00 PION #### *     ####   L   L  #### LL EURO  486*00 ####
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:TOW           EL   3918 D600 0101 2018 243*00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 2 0101 2018 243*00 PION
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO:486.00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23H06A859W
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	GARIAZZO 
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	ALBERTO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1923-06-06
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	M
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	BIELLA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	BI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Codice:	D600;D600;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mese:	0101;0101;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;243.00;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Euro:	486.00
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **   1 1 0 3 11 9 4 0 F  RO ** FE  CODICE ,  FISCALE      ,  , **   MOTIVO DEL PAGAMENTO **  /   CODICE
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ####                       #### EL 3914 H 36 0 2016 45*00 #### EL 3918 H 3 60 2016 172*00 #### EL 3961 MO 9 8 #### 2017 3*00 #### ER  3918 D600 #### 2018 243*00 ####         #### EURO   #### 463*00 ####  ####  ####
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3914 H 36 0 2016 45*00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 3 60 2016 172*00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO 9 8
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:ER   3918 D600
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL40C51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1194-03-11
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO  PAGAMENTO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;D600;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;2016;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Dobito:	45.00;172.00;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,      CODICE ,  FISCALE      ,  , **   CODICE
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - ####   FORLANI MARIA GIULIANA ####             #### 1 1 0 3 11 9 4 0 F RO FE #### MOTIVO  PAGAMENTO ####     ####                       #### EL 3914 H 36 0 2016 45*00 #### EL 3918 H 3 60 2016 172*00 #### EL 3961 MO 9 8 #### 2017 3*00 #### ER  3918 D600 #### 2018 243*00 ####         #### EURO   #### 463*00 ####  ####  ####
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3914 H 36 0 2016 45*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 3 60 2016 172*00
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO 9 8
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:ER   3918 D600
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL40C51H360I
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;D600;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;2016;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	45.00;172.00;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI FORLANI ** MARIA GIULIANA    **         **   1 1 0 3 11 9 4 0 F  RO ** FE CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO **  /   CODICE
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - ####                       #### EL 3914 H 36 0 2016 45*00 #### EL 3918 H 3 60 2016 172*00 #### EL 3961 MO 9 8 #### 2017 3*00 #### ER  3918 D600 #### 2018 243*00 ####         #### EURO   #### 463*00 ####  ####  ####
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3914 H 36 0 2016 45*00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 3 60 2016 172*00
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO 9 8
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Row:ER   3918 D600
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL40C51H360I
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1194-03-11
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO  PAGAMENTO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;D600;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;2016;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Dobito:	45.00;172.00;
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE PPL SFN 69 A 4 6 D 6 4 3 J  ,     **  DATI ANAGRAFICI PIPOLI ** STEFANIA    **          **   06 0 1 119 6 9 F  FOGGIA ** F G CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO CODICE
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ####                             #### EL 3918 D 612 _ #### 2013 1 967*00 #### EL 3918 I 6 84 #### 2013 264*00  ####         ####  #### FINAL EURO   2 231*00 ####
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D 612 _
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 I 6 84
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:2231.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	PPLSFN69A46D643J
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	PIPOLI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	STEFANIA
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1196-01-06
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	FOGGIA
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	FG
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	I684;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	2231.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI FORLANI ** MARIA GIULIANA     M        **  1 1 0 3 1 9 4 O F RO ** F E CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO  /    CODICE
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ####            #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 3 6 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D6 0 2018 243*00      ####      L  #### EURO 1 463*00 ####  ####
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3914 H 3 60 2016 45*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 H 3 6 0 2016 172*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3961 MO9 8 2017 3*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D6 0 2018 243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:1463.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	FRLMGL40C51H360I
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	FORLANI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARIA GIULIANA
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1940-03-11
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	RO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	FE
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;EL;ER;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3914;3918;3961;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	H360;H360;MO98;D60;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2016;2016;2017;2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	45.00;172.00;3.00;243.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	1463.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     **  DATI ANAGRAFICI BARBIERI ** LORIS            **   3 0 1 0 1 9 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - ####           #### EL 3944 H 5 3 3 0303 2018 43*00 #### ER 3918 D600 0202 2018 43*00 VR ####   ####  FINAL EURO   86*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3944 H 5 3 3 0303 2018 43*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 0202 2018 43*00 VR
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:86.00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	H533;D600;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	0303;0202;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	43.00;43.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE B L L M G H 6 4 B 5 0 F B 4 1 Y ** 1 1 DATI ANAGRAFICI BULLEGAS ** MARGHERITA     F NARCAO 9 6 4 1 0 0 2 1 CODICE FISCALE   ,  ,  ,     VODE PAGAMEN WENTIFICATIVO OPERAZIONE 8 2 1 2 1 0 0 0 0 0  0 2 2 1 0 1 0 2 ** 11100 , E L E L E L 3944 H8 21 5678 G 6 7 3 4567 J5 42 0102 0101 X 1 2018 2003 2008 ** CORA PER LA BANCA POSTE / AGENTE DELLA RISCOSSIONE 4 0101 ** 111 , 00 111 , 00 EURO 111 , 00 1 0001596453290 A LT CODICE BALUCA / FOGTE / NGENTE DELLA RISCOSSOLE DATA **   /     039
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BLLMGH64B50FB41Y11
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BULLEGAS
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARGHERITA CORA 
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1007-04-09
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	EA
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	L E L LT
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	EL
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23H06A869W     DATI ANAGRAFIGI GARIAZZO  0C " 08 1823 CODICE FISCALE   ,  ,  ,     MOTIVO DEL PADAMENTO
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - #### EL 3918 D300 #### 3918 600 #### 3918 D600 #### 3918 D800 MF  #### M BIELLA ####   #### IDENTIFICATIVO OAZIONE ####    #### 2018 #### 2018 #### 2018 EL 243*00 #### 243*00 #### 243*00 #### 243*00 2018  #### ! I #### 243*00 #### WAS A EURO #### ROSSA 7630  #### ME VERSAM P   I ERANCABOSTE CELLARISCOSS #### ASAP  ####  #### 16  05  2013
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D300
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:M BIEL LA
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:2018 EL  243*00
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:ME VERSAM P   I ERANCABOSTE CEL LARISCOSS
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23H06A869WANAGRAFIGIGARIAZZO0C081823
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ME;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Codice:	D300;PIER;LARI;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Mese:	2018;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23H06A869W     DATI ANAGRAFIGI GARIAZZO  0C " 08 1823 CODICE FISCALE   ,  ,  ,     MOTIVO DEL PADAMENTO
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - #### EL 3918 D300 #### 3918 600 #### 3918 D600 #### 3918 D800 MF  #### M BIELLA ####   #### IDENTIFICATIVO OAZIONE ####    #### 2018 #### 2018 #### 2018 EL 243*00 #### 243*00 #### 243*00 #### 243*00 2018  #### ! I #### 243*00 #### WAS A EURO #### ROSSA 7630  #### ME VERSAM P   I ERANCABOSTE CELLARISCOSS #### ASAP  ####  #### 16  05  2013
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D300
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:M BIEL LA
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:2018 EL  243*00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:ME VERSAM P   I ERANCABOSTE CEL LARISCOSS
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23H06A869WANAGRAFIGIGARIAZZO0C081823
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ME;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Codice:	D300;PIER;LARI;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Mese:	2018;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23H06A869W     DATI ANAGRAFIGI GARIAZZO  0C " 08 1823 CODICE FISCALE   ,  ,  ,     MOTIVO DEL PADAMENTO
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### EL 3918 D300 #### 3918 600 #### 3918 D600 #### 3918 D800 MF  #### M BIELLA ####   #### IDENTIFICATIVO OAZIONE ####    #### 2018 #### 2018 #### 2018 EL 243*00 #### 243*00 #### 243*00 #### 243*00 2018  #### ! I #### 243*00 #### WAS A EURO #### ROSSA 7630  #### ME VERSAM P   I ERANCABOSTE CELLARISCOSS #### ASAP  ####  #### 16  05  2013
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D300
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:M BIEL LA
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:2018 EL  243*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ME VERSAM P   I ERANCABOSTE CEL LARISCOSS
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23H06A869WANAGRAFIGIGARIAZZO0C081823
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ME;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	D300;PIER;LARI;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BLI MCH6 4 B5 078 4 1 Y DATI ANAGRAFICI BULLEGAS ** MARGHERITA     NARCAO 9 6 4 1 0 0 2 1 CODICE FISCALE   ,  ,  ,     IDENTIFICATIVO OPERAZIONE H 8 2 1 2 1 8 0 0 0 0 0 2 2 1 0 1 0 L 3944HB 2 1 5678 G6 7 3 X 4567 5 4 2 2 1 0102 0101 ** 111 , 00 2018 2003 2008 ** CORA PER LA BANCA POSTE / AGENTE DELLA RISCOSSIONE 111 , 00 111 , 00 4 101 ** EURO TILT 111  00 10001596453290 CODICE BNICA POSTE / AGENTE DELLA RISCOSSOTE DATA **  /   091
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BLIMCH64B507841Y
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BULLEGAS
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Nome:	MARGHERITA NARCAO CORA  EURO TT
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	0024-08-04
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS             30 10 19 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - #### EL  3944 H 5 3 3 0303 2018 43*00 #### ER  3918 D600 0202 2018 43*00 V R ####       #### EURO 86*00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3944 H 5 3 3 0303 2018 43*00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:ER   3918 D600 0202 2018 43*00 V R
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - EURO:86.00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Codice:	H533;D600;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Mese:	0303;0202;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Dobito:	43.00;43.00;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 47 R 30 E 5 1 2 B   DATI ANAGRAFICI BARBIERI ** LORIS     F LEGNAGO ** VR 30 10 19 4  7 CODICE FISCALE   ,  , MOTIVO DEL PAGAMENTO  ,    **
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - #### EL 3944 H 5 3 3 #### ER  3918 D6 0 0 0303 #### 0202 2018 #### 2018 43*00 #### 43*00 II X ####  EURO
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3944 H 5 3 3
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:ER   3918 D6 0 0 0303
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS VR
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Codice:	H533;D600;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Anno:	0303;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E512B DATI ANAGRAFICI BARBIERI ** LORIS      F LEGNAGO ** VR 30 10 19 4  7 CODICE FISCALE   ,  ,  ,     MOTIVO DEL PAGAMENTO
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - #### EL  3944 H 5 3 3 #### ER 3918 D 600    1 0303 #### 0202 2018 #### 2018 43*00 #### 43*00 #### EURO  1 86*00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3944 H 5 3 3
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D 600    1 0303
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - EURO:186.00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS VR
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Codice:	H533;D600;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Anno:	0303;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Euro:	186.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23H06A869W  ,    DATI ANAGRAFIGI SARIAZZO  08 " 081823 CODICE FISCALE   ,  ,  ,     MOTIVO DEL PAGAMENTO
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### EL 3918 DOO #### 3918 600 #### 3918 D600 #### 3918 D800   #### IDENTIFICATIVO OAZIONE ####   #### EL 2018 #### 2018 #### 2018    #### 243*00 #### 243*00 #### 243*00 #### 243*00 2018 #### 243*00 #### NINA A EURO #### OSS 7640  #### ME VERA P   I  ERANCABOSTE CELLARISCOSS #### WAND  DO  #### 16  05  2013
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 DOO
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  2018
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ME VERA P   I  ERANCABOSTE CEL LARISCOSS
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23H06A869WANAGRAFIGISARIAZZO08081823
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;ME;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	DOO;PIER;LARI;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23H06A859W  ,      DATI ANAGRAFICI GARIAZZO   M CODICE FISCALE   ,   ,    DICERENTO   EL 3918 0600 3918 0800 3918 600 3018 D600 ** IDENTIFICATIVO OPERAZIONE     2018 2018 2018 2018     243 , 00 243 , 00 243 , 00 243 , 00  IIIIIIIII IIIIIIIII ! ** EUROOL 243 , 00   ** OS31670 MELAMINROMANO CODICE BANCAPODTENDENTE DELLA RISCOSOKONG       DA POLO         SU  DATA **  16  05  2018
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23H06A859WRISCOSOKONGDAPOLOSU
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Cognome:	GARIAZZO M IIIIIIIII
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Nome:	IDENTIFICATIVO OAZIONE IIIIIIIII EUROOL
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	0601-07-09
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Prov:	MELAMINROMANO
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS           3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **   KOTIVO DEL PAGAMENTO     **        EL  3944 H 5 3 3 0303 2018 43 , 00 ER 3918 D600 2 0202 2018 43 , 00    IIIIIII IIIIII SALDO FINALE ** EURO  86  00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS EL EURO
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO  PAGAMENTO IIIIIII IIIIII  
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23HOBASSOW  ,   DATI ANAGRAFICI GARIAZZO   06 / 08 / 1823 CODICE FISCALE   ,  ,  ,     MOTIVO DE PAGAMENTO
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - #### 3918 D600 #### 3018 D800 #### 3918 D800 #### 3918 600 BIELLA #### EL #### 40 2014 ####  #### TE  2013
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:3918 600 BIEL LA
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Row:EL
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23HOBASSOW
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Cognome:	GARIAZZO
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1823
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Seizone:	LA;EL;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Anno:	3918;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Dobito:	600;
+
+[http-nio-6000-exec-8] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23H06A869W  ,    DATI ANAGRAFIGI SARIAZZO  08 " 081823 CODICE FISCALE   ,  ,  ,     MOTIVO DEL PAGAMENTO
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - #### EL 3918 DOO #### 3918 600 #### 3918 D600 #### 3918 D800   #### IDENTIFICATIVO OAZIONE ####   #### EL 2018 #### 2018 #### 2018    #### 243*00 #### 243*00 #### 243*00 #### 243*00 2018 #### 243*00 #### NINA A EURO #### OSS 7640  #### ME VERA P   I  ERANCABOSTE CELLARISCOSS #### WAND  DO  #### 16  05  2013
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 DOO
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL  2018
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ME VERA P   I  ERANCABOSTE CEL LARISCOSS
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23H06A869WANAGRAFIGISARIAZZO08081823
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;ME;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	DOO;PIER;LARI;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23HOBASSOW  ,   DATI ANAGRAFICI GARIAZZO   06 / 08 / 1823 CODICE FISCALE   ,  ,  ,     MOTIVO DE PAGAMENTO
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - #### 3918 D600 #### 3018 D800 #### 3918 D800 #### 3918 600 BIELLA #### EL #### 40 2014 ####  #### TE  2013
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:3918 600 BIEL LA
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Row:EL
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23HOBASSOW
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Cognome:	GARIAZZO
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1823
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	LA;EL;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	3918;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	600;
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRTZHOSAOOW DATI ANAGRAFICI GARIAZZO ** ALBERTO  BIELLA CODICE FISCALE   ,      IDENTIFICATIVO OPERAZIONE EL **  2018 EL 2018 3918 3018 3918 DOGO D600 D800 DOGO  ** 243 , 00 243 , 00 243 , 00 243 , 00 2018 2018 2018 EL **  DS FURO  TO CONCE BANCA POSTE AGENTE DELLA RISCOSSIONE DATA **        NE 165 / 2018
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRTZHOSAOOWGARIAZZO
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Cognome:	IDENTIFICATIVO OAZIONE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Nome:	ALBERTO BIELLA EL DS FURO NE
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	3919-06-20
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Comune:	EL
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 47R 30 E 5 1 2 B      DAN ANAGRAFICI BARBIERI ** LORIS         3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **    MOTIVO DEL PAGAMENTO
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - #### EL 3944 H 3 3 3 1 0303 2018 43*00 #### ER 3918 D600 0202 2018 43*00 #### I #### EURO 86*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3944 H 3 3 3 1 0303 2018 43*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Row:ER  3918 D600 0202 2018 43*00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - EURO:86.00
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512BDANBARBIERI
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Prov:	VR
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	H333;D600;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	0303;0202;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	43.00;43.00;
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23HOBASSOW  ,   DATI ANAGRAFICI GARIAZZO   06 / 08 / 1823 CODICE FISCALE   ,  ,  ,     MOTIVO DE PAGAMENTO
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - #### 3918 D600 #### 3018 D800 #### 3918 D800 #### 3918 600 BIELLA #### EL #### 40 2014 ####  #### TE  2013
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:3918 600 BIEL LA
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Row:EL
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23HOBASSOW
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Cognome:	GARIAZZO
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1823
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Seizone:	LA;EL;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Anno:	3918;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Dobito:	600;
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE GRZLRT23H06A869W  ,    DATI ANAGRAFIGI SARIAZZO  08 " 081823 CODICE FISCALE   ,  ,  ,     MOTIVO DEL PAGAMENTO
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - #### EL 3918 DOO #### 3918 600 #### 3918 D600 #### 3918 D800   #### IDENTIFICATIVO OAZIONE ####   #### EL 2018 #### 2018 #### 2018    #### 243*00 #### 243*00 #### 243*00 #### 243*00 2018 #### 243*00 #### NINA A EURO #### OSS 7640  #### ME VERA P   I  ERANCABOSTE CELLARISCOSS #### WAND  DO  #### 16  05  2013
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 DOO
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:EL  2018
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - EURO:
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:ME VERA P   I  ERANCABOSTE CEL LARISCOSS
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23H06A869WANAGRAFIGISARIAZZO08081823
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Nome:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Comune:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;EL;ME;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;2018;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Codice:	DOO;PIER;LARI;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 3 O E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS            3 0 1 0 1 9 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,     **   KOTIVO DEL PAGAMENTO **        **        EL  3944 H 5 3 3 1 0303 2018 43 , 00 ER 3918 D600 0202 2018 43 , 00      EURO 86  00 FINALE
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R3OE512B
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO  PAGAMENTO
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE GRZLRT23HOBAB50W  ,     GARIAZZO DATI ANAGRAFICI ** ALBERTO **  STORA ** SCONSINONE 681 1825 ** CAMO   W BIELLA M **   IDENTIFICATIVO OPERAZIONE 06 " CODICE FISCALE   ,  ,  ,     MOTO DEL PEAMENTO   ,     3918  EL 3918 D600 3918 0600 D600 ** ENTE DELLA     EL ** 2018 2018 2018 2018 **     243 , 00 243 , 00 243 , 00  243 , 00 111 ! ! ! ! ** X X X X X II III 1 1 1 1 1 1 1 1 1 1 ** 243  00   ** S  OSS EURO TY6400 ESTREMI DEL VERSAMENTO COOICE BANCA / POSTEJAGENTE DELLA RISCOSSIONE DATA **     **    /   TC 105  2013 ** 09
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	GRZLRT23HOBAB50WGARIAZZO
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Cognome:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Nome:	ALBERTO STORA SCONSINONE CAMO IDENTIFICATIVO OAZIONE ENTE 
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	3919-07-09
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Sesso:	MS
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Comune:	OSS EURO ESTREMI   COOICE 
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Prov:	XXXXX
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-1] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7 R 3 O E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS            3 0 1 0 1 9 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,     **   KOTIVO DEL PAGAMENTO **        **        EL  3944 H 5 3 3 1 0303 2018 43 , 00 ER 3918 D600 0202 2018 43 , 00      EURO 86  00 FINALE
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R3OE512B
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO  PAGAMENTO
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-5] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BLLMG3 6 4 B5 OY  41 DATI ANAGRAFICI BULLEGAS ** BARGHERITA   MARCA 9 6 4 1 0 0 2 1 CODICE FISCALE   ,  ,  ,     DENTIFICATIVO OFERAZONE 8 2 1 2 1 0 0 0 0 0 0 2 2 1 0 1 0 2 ** 11100 E L EL 3944 H8 21 5678 6 7 3 4567 5 4 2 X 1 4 0102 0101 0101 2018 2003 2008 ** CORA PER LA BANCA POSTE AGENTE DELLA RISCOSSIONE EURO 11100 10001546453295 COCICI BACAROGIENIENTE DELLA COSTE DATA ** ALE  0923000 ** 2003 2004 2044 2 / 3
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BLLMG364B5OY41
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BULLEGAS
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Nome:	BARGHERITA MARCA CORA  ALE
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	0024-08-04
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Sesso:	EL
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Comune:	EL
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-6] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - ** CODICE FISCALE BRSDRN24C42A859R  ,     **  DATI ANAGRAFICI BORASIO ** ADRIANA    **   **        **   2 , 03 1924 ** BIELLA CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO ** IDENTIFICATIVO OPERAZIONE   CODICE
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - ####       #### ####            #### EL 3918 D600 2018 243*00 BI ####  CONFORME AL PROVV  19  06  2013 A E  ZUCTTI S      VERONA ####  #### ! #### ! #### !   LA      #### EURO 243*00 ####  ####    COS348960000 ####
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:EL  3918 D600 2018 243*00 BI
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:CONFORME AL PROVV  19  06  2013 A E  ZUCTTI S      VER ONA
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - EURO:243.00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRSDRN24C42A859R
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BORASIO
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Nome:	ADRIANA IDENTIFICATIVO OAZIONE
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	0926-07-20
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Sesso:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Comune:	 PAGAMENTO
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Prov:	BIELLA
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - tributo:	3918;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Codice:	D600;1906;SVER;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2013;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Dobito:	243.00;AE;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Euro:	243.00
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BRBLRS 4 7R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS             30 10 19 4 7 F LEGNAGO CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - #### EL  3944 H 5 3 3 0303 2018 43*00 #### ER  3918 D600 0202 2018 43*00 V R ####       #### EURO 86*00
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Row:EL   3944 H 5 3 3 0303 2018 43*00
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Row:ER   3918 D600 0202 2018 43*00 V R
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - EURO:86.00
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BRBLRS47R30E512B
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BARBIERI
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Nome:	LORIS
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	1947-10-30
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Sesso:	F
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Comune:	LEGNAGO
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Codice:	H533;D600;
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Mese:	0303;0202;
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Dobito:	43.00;43.00;
+
+[http-nio-6000-exec-10] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - CODICE FISCALE BLLMG3 6 4 B5 OY  41 DATI ANAGRAFICI BULLEGAS ** BARGHERITA   MARCA 9 6 4 1 0 0 2 1 CODICE FISCALE   ,  ,  ,     DENTIFICATIVO OFERAZONE 8 2 1 2 1 0 0 0 0 0 0 2 2 1 0 1 0 2 ** 11100 E L EL 3944 H8 21 5678 6 7 3 4567 5 4 2 X 1 4 0102 0101 0101 2018 2003 2008 ** CORA PER LA BANCA POSTE AGENTE DELLA RISCOSSIONE EURO 11100 10001546453295 COCICI BACAROGIENIENTE DELLA COSTE DATA ** ALE  0923000 ** 2003 2004 2044 2 / 3
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - 
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale:	BLLMG364B5OY41
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Cognome:	BULLEGAS
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Nome:	BARGHERITA MARCA CORA  ALE
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita:	0024-08-04
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Sesso:	EL
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Comune:	EL
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Prov:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-4] INFO  it.sella.f24.service.F24OCRService  - Euro:	
+

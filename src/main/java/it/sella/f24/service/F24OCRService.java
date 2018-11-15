@@ -42,11 +42,11 @@ public class F24OCRService {
 			// JSONParser parser = new JSONParser();
 			// Object obj = parser.parse(new FileReader("D:\\Neeraja\\ocr\\json\\1.json"));
 			// JSONObject jsonObject = (JSONObject) obj;
-
+			System.out.println("Data from Google service");
 			List<DataDescription> list = new ArrayList<>();
 			int keycount = 0;
 			for (TextAnnotation txtAnn : data.getTextAnnotation()) {
-
+				System.out.print(txtAnn.getDescription().replaceAll("[a-z]", ""));
 				if (txtAnn.getDescription().equalsIgnoreCase("FISCALE")
 						|| txtAnn.getDescription().equalsIgnoreCase("ANAGRAFICI")
 						|| txtAnn.getDescription().equalsIgnoreCase("IDENTIFICATIVO")
@@ -64,7 +64,7 @@ public class F24OCRService {
 			System.out.println(spacecount + "space");
 			// logger.info("Space count" + spacecount);
 			list = process(data);
-
+			System.out.println("processing done");
 			/*
 			 * try { Collections.sort(list); } catch (IllegalArgumentException e) {
 			 * e.printStackTrace(); System.out.
@@ -131,13 +131,12 @@ public class F24OCRService {
 			String sec1 = "";
 			String sec2 = "";
 
-			Collections.sort(sec1list);
+//			Collections.sort(sec1list);
 //			System.out.println(sec1list);
 
 			xprevEnd = 0;
 			xprev = 0;
-			
-			System.out.println("preparing Sec1 list");
+			System.out.println("preparing sec1list");
 
 			for (int i = 0; i < sec1list.size(); i++) {
 				if ((sec1list.get(i).getxStart() - xprevEnd) > 200) {
@@ -150,10 +149,8 @@ public class F24OCRService {
 
 			yprev=0;
 			yprevEnd=0;
-			System.out.println("Sorting sec2");
 //			Collections.sort(sec2list);
-			
-			System.out.println("preparing Sec2 list");
+			System.out.println("preparing sec2list");
 			
 			for (int i = 0; i < sec2list.size(); i++) {
 				if ((sec2list.get(i).getyStart() - yprev) > 10) {
@@ -164,10 +161,11 @@ public class F24OCRService {
 				yprevEnd=sec2list.get(i).getyEnd();
 				
 			}
+			System.out.println("done"+sec2);
 			
 			
+//			sec1=searchKeyword(sec1);
 			sec2=searchKeyword(sec2);
-			System.out.println("sec2 list done");
 
 			sec2 = sec2.replace(" , ", "*");
 			sec2 = sec2.replace(" . ", " ");
@@ -178,7 +176,6 @@ public class F24OCRService {
 			sec1 = sec1.replace(")", "");
 			sec1 = sec1.replace(" MF ", "");
 			sec1 = sec1.replace(" MOF ", "");
-			sec1 = sec1.replace(" FO", " F ");
 
 			sec1 = sec1.replace(":", "");
 			sec2 = sec2.replace(":", "");
@@ -209,18 +206,26 @@ public class F24OCRService {
 			if(sec2.contains("LLL")) {
 				sec2=sec2.replace("LLL", "");
 			}
-
+			System.out.println("replacing ESTREMI");
+			
+			if(sec2.contains("ESTREMI")) {
+				
+				sec2=sec2.substring(0, sec2.indexOf("ESTREMI"));
+			}
+			System.out.println("replacing done");
+			System.out.println("printing ");
+			
 			System.out.println("Section1:----\n" + sec1.trim());
 			System.out.println("Section2:----\n" + sec2.trim());
 
 			// logger.info("After the data conversion");
-//			logger.info(/* "Section1:----\n" + */ sec1.trim());
+			logger.info(sec1.trim());
 			logger.info(sec2.trim());
 			
 			List<Result> seconelist = new ArrayList<>();
 			List<Result> sectwolist = new ArrayList<>();
 			
-			
+			System.out.println("sending to NLP");
 			NameFinderMETest4 test = new NameFinderMETest4();
 			seconelist = test.f24_section1(sec1.trim());
 			
@@ -284,7 +289,7 @@ public class F24OCRService {
 
 			
 			// System.out.println(seconelist);
-			// logger.info("Sending the data to prepare Json");
+			System.out.println("Sending the data to prepare Json");
 			return prepareJSON(seconelist);
 
 		} catch (IOException e1) {
@@ -410,13 +415,13 @@ public class F24OCRService {
 		v4 = v4.replaceAll("[A-Z]", "");
 		v6 = v6.trim();
 		// Replacing the keywords with empty space in both the sections
-		v1 = searchKeyword(v1);
-		v2 = searchKeyword(v2);
-		v3 = searchKeyword(v3);
-		v4 = searchKeyword(v4);
-		v5 = searchKeyword(v5);
-		v6 = searchKeyword(v6);
-		v7 = searchKeyword(v7);
+//		v1 = searchKeyword(v1);
+//		v2 = searchKeyword(v2);
+//		v3 = searchKeyword(v3);
+//		v4 = searchKeyword(v4);
+//		v5 = searchKeyword(v5);
+//		v6 = searchKeyword(v6);
+//		v7 = searchKeyword(v7);
 
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -432,15 +437,15 @@ public class F24OCRService {
 
 		System.out.println("Date" + v4);
 
-		sz = searchKeyword(sz);
-		t = searchKeyword(t);
-		c = searchKeyword(c);
-		m = searchKeyword(m);
-		a = searchKeyword(a);
-		d = searchKeyword(d);
-		db = searchKeyword(db);
-		cr = searchKeyword(cr);
-		e = searchKeyword(e);
+//		sz = searchKeyword(sz);
+//		t = searchKeyword(t);
+//		c = searchKeyword(c);
+//		m = searchKeyword(m);
+//		a = searchKeyword(a);
+//		d = searchKeyword(d);
+//		db = searchKeyword(db);
+//		cr = searchKeyword(cr);
+//		e = searchKeyword(e);
 
 		// logger.info("Section1 Result data:\n");
 		// logger.info("CodiceFiscale: "+v1+"\n");
@@ -453,6 +458,7 @@ public class F24OCRService {
 
 		// Replacing * with , in the debit values
 		db = db.replace("*", ".");
+		db=db.replaceAll("[A-Z]", "");
 		e = e.replace("*", ".");
 		// replacing the values in Json
 
@@ -475,14 +481,7 @@ public class F24OCRService {
 		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
 		
-		logger.info("Section2 Result data:\n");
-		 logger.info("Seizone:\t"+sz+"\n");
-		 logger.info("tributo:\t"+t+"\n");
-		 logger.info("Codice:\t"+c+"\n");
-		 logger.info("Mese:\t"+m+"\n");
-		 logger.info("Anno:\t"+a+"\n");
-		 logger.info("Dobito:\t"+db+"\n");
-		 logger.info("Euro:\t"+e+"\n");
+
 
 		 
 		
@@ -712,14 +711,14 @@ public class F24OCRService {
 		cr = searchKeyword(cr);
 		e = searchKeyword(e);
 
-//		logger.info("Section1 Result data:\n");
-//		logger.info("CodiceFiscale:	" + v1 + "\n");
-//		logger.info("Cognome:	" + v2 + "\n");
-//		logger.info("Nome:	" + v3 + "\n");
-//		logger.info("DataDiNascita:	" + v4 + "\n");
-//		logger.info("Sesso:	" + v5 + "\n");
-//		logger.info("Comune:	" + v6 + "\n");
-//		logger.info("Prov:	" + v7 + "\n");
+		logger.info("Section1 Result data:\n");
+		logger.info("CodiceFiscale:	" + v1 + "\n");
+		logger.info("Cognome:	" + v2 + "\n");
+		logger.info("Nome:	" + v3 + "\n");
+		logger.info("DataDiNascita:	" + v4 + "\n");
+		logger.info("Sesso:	" + v5 + "\n");
+		logger.info("Comune:	" + v6 + "\n");
+		logger.info("Prov:	" + v7 + "\n");
 
 		// Replacing * with , in the debit values
 		db = db.replace("*", ".");
@@ -744,6 +743,15 @@ public class F24OCRService {
 		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
 		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
+		
+		logger.info("Section2 Result data:\n");
+		 logger.info("Seizone:\t"+sz+"\n");
+		 logger.info("tributo:\t"+t+"\n");
+		 logger.info("Codice:\t"+c+"\n");
+		 logger.info("Mese:\t"+m+"\n");
+		 logger.info("Anno:\t"+a+"\n");
+		 logger.info("Dobito:\t"+db+"\n");
+		 logger.info("Euro:\t"+e+"\n");
 
 		try (BufferedReader br = new BufferedReader(
 				new FileReader("src/main/java/it/sella/f24/service/f24testfile.txt"))) {
@@ -838,9 +846,11 @@ public class F24OCRService {
 	}
 
 	private String searchKeyword(String value) {
-		String[] keywords = { "CODICE", "FISCALE", "DATI", "ANAGRAFICI", "COPIA", "PER", "IL", "SOGGETTO", "CHE","SHORELO",
-				"EFFETTUA", "IL", "VERSAMENTO", "BANCA", "POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA", "ESTREMI",
-				"DEL", "DA", "COMPILARE","CANER","POTERSSON", "CURA", "DI", "SPORTELO","SPORTELLO", "PON","CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" ,"COMPILARE","CURA","DI","W TASTE","COMPARE A","FINALE","SALDO","TOW"};
+//		String[] keywords = { "CODICE", "FISCALE", "DATI", "ANAGRAFICI", "COPIA", "PER", "IL", "SOGGETTO", "CHE","SHORELO",
+//				"EFFETTUA",  "VERSAMENTO", "BANCA", "POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA", "ESTREMI",
+//				"DEL", "DA", "COMPILARE","CANER","POTERSSON", "CURA", "DI", "SPORTELO","SPORTELLO", "PON","CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" ,"COMPILARE","CURA","DI","W TASTE","COMPARE A","FINALE","SALDO","TOW"};
+		String[] keywords= {"CODICE", "FISCALE", "DATI", "ANAGRAFICI","BANCA","POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA","COPIA", "PER", "IL", "SOGGETTO", "CHE","SHORELO",
+				"EFFETTUA","VERSAMENTO","DEL","EFT","ETTUA","SALDO","FINALE"};
 		for (int i = 0; i < keywords.length; i++) {
 			value = value.replace(keywords[i], "");
 		}
@@ -975,7 +985,7 @@ public class F24OCRService {
 
 				if (!first && txtAnn.getDescription().equals("CODICE")) {
 					first = true;
-				} else if (first && txtAnn.getDescription().equals("CODICE")) {
+				} else if (first && txtAnn.getDescription().equals("MOTIVO")||txtAnn.getDescription().equals("HOTIVO")||txtAnn.getDescription().equals("KOTIVO")) {//CODICE->MOTIVO->FISCALE
 					secTwo = txtAnn.getBoundingPoly().getVertices().get(3).getY() + 10;
 				}
 
