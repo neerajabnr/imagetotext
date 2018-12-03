@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -12,8 +13,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Map;
+import java.util.Properties;
 import java.util.StringTokenizer;
 
 import org.apache.commons.lang3.StringUtils;
@@ -21,749 +25,500 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.springframework.stereotype.Service;
 
-import it.sella.f24.service.opennlp.Data;
-import it.sella.f24.service.opennlp.DataDescription;
-import it.sella.f24.service.opennlp.TextAnnotation;
-import it.sella.f24.testclasses.Result;
-import opennlp.tools.namefind.NameFinderMETest4;
+import it.sella.f24.bean.Data;
+import it.sella.f24.bean.DataDescription;
+import it.sella.f24.bean.Result;
+import it.sella.f24.bean.TextAnnotation;
+import it.sella.f24.controller.F24Controller;
+import it.sella.f24.util.LoadPropertiesUtil;
+import opennlp.tools.namefind.NameFinderMESectionTest;
+import opennlp.tools.namefind.NameFinderMETokenFinder;
 
 @Service
 public class F24OCRService {
 
 	private static Logger logger = null;
+	private static Properties props = null;
+	private static Map<String, String> propslist = new HashMap<>();
 	static {
 		logger = Logger.getLogger(F24OCRService.class);
-		PropertyConfigurator.configure("src/main/resources/log4j.properties");
+		props = LoadPropertiesUtil.loadPropertiesFile();
+
+		String[] section1data = props.getProperty("section1").split(";");
+		String[] section1start = section1data[0].split(":");
+		propslist.put("section1start", section1start[1]);
+		String[] section1end = section1data[1].split(":");
+		propslist.put("section1end", section1end[1]);
+
+		String[] section2data = props.getProperty("section2").split(";");
+		String[] section2start = section2data[0].split(":");
+		propslist.put("section2start", section2start[1]);
+		String[] section2end = section1data[1].split(":");
+		propslist.put("section2end", section2end[1]);
+
+		propslist.put("section1Remove", props.getProperty("section1Remove"));
+		
+		propslist.put("section2Remove", props.getProperty("section2Remove"));
+		
+		propslist.put("section2Replace", props.getProperty("section2Replace"));
+
+		propslist.put("section1Label", props.getProperty("section1Label"));
+
+		propslist.put("imageRecognitionDoubleCheck", props.getProperty("imageRecognitionDoubleCheck"));
+
+		propslist.put("section2Pattern", props.getProperty("section2Pattern"));
+		
+		propslist.put("euroRemove", props.getProperty("euroRemove"));
+
 	}
 
-	public F24Format processJson(Data data) throws Exception {
+	public String processJson(Data data) throws Exception {
+
+		List<Result> seconelist = new ArrayList<>();
+		String f24Result="",ocrData = "";
+		Map<String, String> valuesMap=null;
 
 		try {
-			// JSONParser parser = new JSONParser();
-			// Object obj = parser.parse(new FileReader("D:\\Neeraja\\ocr\\json\\1.json"));
-			// JSONObject jsonObject = (JSONObject) obj;
-			System.out.println("Data from Google service");
-			List<DataDescription> list = new ArrayList<>();
-			int keycount = 0;
-			for (TextAnnotation txtAnn : data.getTextAnnotation()) {
-				System.out.print(txtAnn.getDescription().replaceAll("[a-z]", ""));
-				if (txtAnn.getDescription().equalsIgnoreCase("FISCALE")
-						|| txtAnn.getDescription().equalsIgnoreCase("ANAGRAFICI")
-						|| txtAnn.getDescription().equalsIgnoreCase("IDENTIFICATIVO")
-						|| txtAnn.getDescription().equalsIgnoreCase("EURO")) {
-					keycount++;
-				}
-			}
-			if (keycount <= 2) {
-				// logger.info("{\"status\":\"This is not a F24 Image, please provide a valid
-				// F24 image\"}");
-				// return "{\"status\":\"This is not a F24 Image, please provide a valid F24
-				// image\"}";
-			}
-			int spacecount = countSpace(data);
-			System.out.println(spacecount + "space");
-			// logger.info("Space count" + spacecount);
-			list = process(data);
-			System.out.println("processing done");
-			/*
-			 * try { Collections.sort(list); } catch (IllegalArgumentException e) {
-			 * e.printStackTrace(); System.out.
-			 * println("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}"
-			 * ); //logger.
-			 * info("{\"status\":\"Invalid input data, please try to capture one more time!!!\"}"
-			 * ); return
-			 * "{\"status\":\"Invalid input data, please try to capture one more time!!!\"}"
-			 * ; }
-			 */
+			ocrData=getImageText(data);
 
-			// FetchData f = new FetchData();
-			// f.getData(list);
-			boolean first = true;
-			int prev = 0;
-			StringBuffer section1 = new StringBuffer();
-			StringBuffer section2 = new StringBuffer();
+			valuesMap = preprocessData(ocrData);
 
-			List<DataDescription> sec1list = new ArrayList<>();
-			List<DataDescription> sec2list = new ArrayList<>();
+			System.out.println("Sending to NLP");
 
-			int s1 = 0, s2 = 0;
-			int xprev = 0, yprev = 0, ydiff = 0, xprevEnd = 0,yprevEnd=0;
-			boolean pr = false;
-			for (DataDescription dat : list) {
-				if (dat.getDescription().startsWith("777")
-						|| dat.getDescription().startsWith("177") && dat.getDescription().endsWith("7")) {
-					continue;
-				}
-				if (dat.getDescription().equals("CODICE")) {
-					s1 = 1;
-				} else if (dat.getSection().equals("two")) {
-					s1 = 0;
-					s2 = 1;
-				}
+			seconelist = sendToNLP(valuesMap);
 
-				if (s1 == 1) {
-					if (dat.getxStart() < xprev) {
-						section1.append(" \\n ");
-					} else if ((dat.getxStart() - xprevEnd) > 200) {
-						section1.append(" ** ");
-					} else {
-						section1.append(" ");
-					}
-					section1.append(dat.getDescription());
-					sec1list.add(dat);
-					xprev = dat.getxStart();
-				} else if (s2 == 1) {
-					if (dat.getxStart() < xprev) {
-						section2.append(" \\n ");
-					} else {
-						section2.append(" ");
-					}
-					section2.append(dat.getDescription());
-					sec2list.add(dat);
-					xprev = dat.getxStart();
-				}
-				xprevEnd = dat.getxEnd();
-			}
-			/*
-			 * String sec1 = section1.toString(); String sec2 = section2.toString();
-			 */
-
-			String sec1 = "";
-			String sec2 = "";
-
-//			Collections.sort(sec1list);
-//			System.out.println(sec1list);
-
-			xprevEnd = 0;
-			xprev = 0;
-			System.out.println("preparing sec1list");
-
-			for (int i = 0; i < sec1list.size(); i++) {
-				if ((sec1list.get(i).getxStart() - xprevEnd) > 200) {
-					sec1 = sec1 + "**" + " ";
-				}
-				sec1 = sec1 + sec1list.get(i).getDescription() + " ";
-				xprevEnd = sec1list.get(i).getxEnd();
-				xprev = sec1list.get(i).getxStart();
-			}
-
-			yprev=0;
-			yprevEnd=0;
-//			Collections.sort(sec2list);
-			System.out.println("preparing sec2list");
-			
-			for (int i = 0; i < sec2list.size(); i++) {
-				if ((sec2list.get(i).getyStart() - yprev) > 10) {
-					sec2 = sec2 + "####" + " ";
-				}
-				sec2 = sec2 + sec2list.get(i).getDescription() + " ";
-				yprev=sec2list.get(i).getyStart();
-				yprevEnd=sec2list.get(i).getyEnd();
-				
-			}
-			System.out.println("done"+sec2);
-			
-			
-//			sec1=searchKeyword(sec1);
-			sec2=searchKeyword(sec2);
-
-			sec2 = sec2.replace(" , ", "*");
-			sec2 = sec2.replace(" . ", " ");
-			sec2 = sec2.replace(" . ", " ");
-			sec1 = sec1.replace(".", "");
-			sec1 = sec1.replace("-", "");
-			sec1 = sec1.replace("(", "");
-			sec1 = sec1.replace(")", "");
-			sec1 = sec1.replace(" MF ", "");
-			sec1 = sec1.replace(" MOF ", "");
-
-			sec1 = sec1.replace(":", "");
-			sec2 = sec2.replace(":", "");
-			sec1 = sec1.replace("|", "");
-			sec2 = sec2.replace("|", "");
-			sec2 = sec2.replace(" 00", "*00");
-
-			sec2 = sec2.replace("E L", "EL");
-			sec2 = sec2.replace("E R", "ER");
-			sec2 = sec2.replace("ELR", "ER");
-			sec2 = sec2.replace("EL1", "EL ");
-			sec2 = sec2.replace("ELI", "EL ");
-			sec2 = sec2.replace("ER1", "ER ");
-			sec2 = sec2.replace("ERI", "ER ");
-			sec2 = sec2.replace("EIL", "EL ");
-			sec2 = sec2.replace("E1L", "EL ");
-			sec2 = sec2.replace("EIR", "ER ");
-			sec2 = sec2.replace("E1R", "ER ");
-			sec2=sec2.replace("/", "");
-			sec2=sec2.replace("(", "");
-			sec2=sec2.replace(")","");
-			sec2=sec2.replace("-","");
-			
-			if(sec2.contains("III")) {
-				sec2=sec2.replace("III", "");
-			}
-			
-			if(sec2.contains("LLL")) {
-				sec2=sec2.replace("LLL", "");
-			}
-			System.out.println("replacing ESTREMI");
-			
-			if(sec2.contains("ESTREMI")) {
-				
-				sec2=sec2.substring(0, sec2.indexOf("ESTREMI"));
-			}
-			System.out.println("replacing done");
-			System.out.println("printing ");
-			
-			System.out.println("Section1:----\n" + sec1.trim());
-			System.out.println("Section2:----\n" + sec2.trim());
-
-			// logger.info("After the data conversion");
-			logger.info(sec1.trim());
-			logger.info(sec2.trim());
-			
-			List<Result> seconelist = new ArrayList<>();
-			List<Result> sectwolist = new ArrayList<>();
-			
-			System.out.println("sending to NLP");
-			NameFinderMETest4 test = new NameFinderMETest4();
-			seconelist = test.f24_section1(sec1.trim());
-			
-			//testing 
-//			seconelist = test.f24_section1("CODICE FISCALE FRL MGL 4 0 C 5 1 H 3 6 0 I  ,     DATI ANAGRAFICI F RLANI ** MARIA GIULIANA     M        1 1 0 3 1 9 4 O F RO ** F E  CODICE ,  FISCALE      ,  , **   CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE      /  AZIENDA CAB / SPORTELO **  /\r\n");
-//			sectwolist = test.f24_section2("EL   3914 H 3 60 2016 45*00");
-//			seconelist.addAll(sectwolist);
-			
-//			String testdata="#### MOTIVO  PAGAMENTO ####                 #### EL  3914 H 3 60 2016 45*00 #### EL 3918 H 36 0 2016 172*00 #### EL 3961 MO9 8 2017 3*00 #### ER 3918 D600 2018 243*00     ####      L  #### EURO  1 463*00 ####  ####  #### 1 10 ####     ####  ABI\r\n" ;
-			
-			StringTokenizer tokens=new StringTokenizer(sec2, "####");
-			String euro="";
-			while (tokens.hasMoreElements()) {
-				String token=tokens.nextToken();
-				if(token.contains("EL") ||token.contains("ER")||token.contains("RG")||token.contains("E L")||token.contains("E R")||token.contains("E R")||token.contains("R G")){
-					if(token.contains("EL")) {
-						token=token.replace("EL", "EL ");
-					}else if(token.contains("E L")) {
-						token=token.replace("E L", "E L ");
-					}else if(token.contains("ER")) {
-						token=token.replace("ER", "ER ");
-					}else if(token.contains("E R")) {
-						token=token.replace("E R", "E R ");
-					}else if(token.contains("RG")) {
-						token=token.replace("RG", "RG ");
-					}else if(token.contains("R G")) {
-						token=token.replace("R G", "R G ");
-					}
-					
-					
-					if(token.charAt(0)=='*') {
-						token.replaceFirst("*", "");
-					}
-					logger.info("Row:"+token.trim());
-					sectwolist = test.f24_section2(token.trim());
-					System.out.println("Row:"+token.trim());
-					seconelist.addAll(sectwolist);
-				}
-				
-				else if(token.contains("EURO")) {
-					System.out.println(token);
-					
-					token =token.replaceAll("[^A-Z0-9]","");
-					token =token.replaceAll("[A-Z]","");
-					euro =token.replaceAll("00",".00");
-
-					System.out.println(euro);
-					logger.info("EURO:"+euro);
-				}
-				
-			}
-
-			Result euroval=new Result("euro", euro);
-			seconelist.add(euroval);
-			System.out.println("Section1:  " + seconelist);
-			System.out.println("Section2:  " + sectwolist);
-
-			// logger.info("Result data");
-			// logger.info("Section1: \n" + seconelist);
-			// logger.info("Section2: \n" + sectwolist);
-
-			
-			// System.out.println(seconelist);
 			System.out.println("Sending the data to prepare Json");
-			return prepareJSON(seconelist);
+			
+			f24Result = prepareJSON(seconelist);
+			
+			return f24Result;
 
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
-			return null;
+			return "{\"status\":\"KO\"}";
 		}
 
 	}
 
-	private int countSpace(Data data) {
-		int spacecount = 0;
+	public String getImageText(Data data) {
+		
+		int keycount = 0, xprevEnd = 0, xstart = 0;
+		String ocrData="";
 
+		String imageRecognitionDoubleCheck = propslist.get("imageRecognitionDoubleCheck");
+		
+		
 		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
 
-			if (txtAnn.getLocale() != null && txtAnn.getLocale() != "") {
-				for (int i = txtAnn.getDescription().indexOf("UNIFICATO"); i < txtAnn.getDescription()
-						.indexOf("EURO"); i++) {
-					if (txtAnn.getDescription().charAt(i) == ' ') {
-						spacecount++;
+			if (txtAnn.getLocale() == null || txtAnn.getLocale().isEmpty()) {
+				xstart = txtAnn.getBoundingPoly().getVertices().get(0).getX();
+				if ((xstart - xprevEnd) > 250) {
+					ocrData = ocrData + "**" + " ";
+				}
+
+				String desc = txtAnn.getDescription().replaceAll(".*[a-z].*", "");
+				ocrData = ocrData + desc + " ";
+
+				StringTokenizer checkTokenizer = new StringTokenizer(imageRecognitionDoubleCheck, ";");
+				while (checkTokenizer.hasMoreTokens()) {
+					String token = checkTokenizer.nextToken();
+					if (txtAnn.getDescription().contains(token)) {
+						keycount++;
 					}
 				}
-				break;
+				xprevEnd = txtAnn.getBoundingPoly().getVertices().get(1).getX();
 			}
+
 		}
-		return spacecount;
+
+		if (keycount <= 2) {
+			logger.info("{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}");
+			return "{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}";
+		}
+		
+		System.out.println("Data from Google Service :" + ocrData);
+
+		logger.info("Data from Google Service : :" + ocrData);
+		
+		return ocrData;
+	}
+	
+	private Map<String, String> preprocessData(String data) {
+
+		System.out.println("Sending the Data to NLP to divide it into Sections");
+
+		Map<String, String> valuesList = splitSections(data);
+		return valuesList;
+		
 	}
 
-	private String prepareJSON2(List<Result> results) throws FileNotFoundException, IOException {
-
-		StringBuffer buffer = new StringBuffer();
-		String line, mydata = null;
-		int rowcount = 0;
-		String v1 = "", v2 = "", v3 = "", v4 = "", v5 = "", v6 = "", v7 = "", sz = "", t = "", c = "", m = "", a = "",
-				d = "", db = "", cr = "", e = "";
-		// fecthing the data from the list
-		ListIterator<Result> iterator = (ListIterator<Result>) results.listIterator();
-		for (; iterator.hasNext();) {
-			Result result = iterator.next();
-			if (result.getKey().contains("Fiscale")) {
-				if (StringUtils.isAlphanumeric(result.getValue()))
-					v1 = v1 + result.getValue();
-			}
-			if (result.getKey().contains("Anagrafici")) {
-				if (StringUtils.isAlpha(result.getValue()))
-					v2 = v2 + result.getValue() + " ";
-			}
-
-			if (result.getKey().contains("Name")) {
-				v3 = v3 + result.getValue() + " ";
-			}
-			if (result.getKey().contains("DOB")) {
-				if (StringUtils.isNumeric(result.getValue()) || StringUtils.isAlpha(result.getValue()))
-					v4 = v4 + result.getValue();
-			}
-			v4 = v4.replaceAll("O", "0");
-			if (v4.length() > 8) {
-				if (StringUtils.isNumeric(v4.substring(0, 8))) {
-					v4 = v4.substring(0, 8);
-				} else if (StringUtils.isNumeric(v4.substring(v4.length() - 8, v4.length()))) {
-					v4 = v4.substring(v4.length() - 8, v4.length());
-				}
-			}
-
-			if (result.getKey().contains("Sex")) {
-				if (StringUtils.isAlpha(result.getValue()))
-					v5 = v5 + result.getValue();
-			}
-			if (result.getKey().contains("City")) {
-				if (StringUtils.isAlpha(result.getValue()))
-					v6 = v6 + result.getValue() + " ";
-			}
-			if (result.getKey().contains("Prov")) {
-				if (StringUtils.isAlpha(result.getValue()))
-					v7 = v7 + result.getValue();
-			}
-			if (result.getKey().contains("Sezione")) {
-				if (StringUtils.isAlpha(result.getValue()) && (result.getValue().length() == 2))
-					sz = sz + result.getValue() + ";";
-			}
-			if (result.getKey().contains("tributo")) {
-				if (StringUtils.isNumeric(result.getValue()) && result.getValue().length() == 4) {
-					t = t + result.getValue() + ";";
-					// rowcount++;
-				}
-			}
-			if (result.getKey().contains("codice")) {
-				if (StringUtils.isAlphanumeric(result.getValue())) {
-					if(result.getValue().length()>4) {
-						c = c + result.getValue().substring(0, 4) + ";";
-					}else {
-						c = c + result.getValue() + ";";
-					}
-				}
-					
-			}
-			if (result.getKey().contains("mese")) {
-				if (StringUtils.isNumeric(result.getValue()))
-					m = m + result.getValue() + ";";
-			}
-			if (result.getKey().contains("anno")) {
-				if (StringUtils.isNumeric(result.getValue()))
-					a = a + result.getValue() + ";";
-			}
-			if (result.getKey().contains("detrazione")) {
-				if (StringUtils.isAlpha(result.getValue()))
-					d = d + result.getValue() + ";";
-			}
-			if (result.getKey().contains("dobito")) {
-				db = db + result.getValue() + ";";
-			}
-			if (result.getKey().contains("credito")) {
-				cr = cr + result.getValue() + ";";
-			}
-
-			if (result.getKey().contains("euro")) {
-				e = e + result.getValue();
-			}
-		}
-
-		v2 = v2.trim();
-		v3 = v3.trim();
-		v4 = v4.replaceAll("[A-Z]", "");
-		v6 = v6.trim();
-		// Replacing the keywords with empty space in both the sections
-//		v1 = searchKeyword(v1);
-//		v2 = searchKeyword(v2);
-//		v3 = searchKeyword(v3);
-//		v4 = searchKeyword(v4);
-//		v5 = searchKeyword(v5);
-//		v6 = searchKeyword(v6);
-//		v7 = searchKeyword(v7);
-
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-
-		Date date;
+	private Map<String, String> splitSections(String data) {
+		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
+		F24Controller controller=new F24Controller();
+		List<Result> f24_section1 = null;
+		String section1 = "";
+		String section2Constants = "";
+		String section2Variables= "";
+		
+		String euro = "";
+		
+		//Sending to NLP to divide the data
 		try {
-			date = new SimpleDateFormat("ddMMyyyy").parse(v4);
-			v4 = format.format(date);
-		} catch (ParseException e1) {
+			f24_section1 = tokenFinder.f24SectionSplit(data);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
-			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
+			e.printStackTrace();
 		}
 
-		System.out.println("Date" + v4);
+		System.out.println("Section List:" + f24_section1);
+		logger.info("Section Result");
 
-//		sz = searchKeyword(sz);
-//		t = searchKeyword(t);
-//		c = searchKeyword(c);
-//		m = searchKeyword(m);
-//		a = searchKeyword(a);
-//		d = searchKeyword(d);
-//		db = searchKeyword(db);
-//		cr = searchKeyword(cr);
-//		e = searchKeyword(e);
+		for (Result result : f24_section1) {
 
-		// logger.info("Section1 Result data:\n");
-		// logger.info("CodiceFiscale: "+v1+"\n");
-		// logger.info("Cognome: "+v2+"\n");
-		// logger.info("Nome: "+v3+"\n");
-		// logger.info("DataDiNascita: "+v4+"\n");
-		// logger.info("Sesso: "+v5+"\n");
-		// logger.info("Comune: "+v6+"\n");
-		// logger.info("Prov: "+v7+"\n");
-
-		// Replacing * with , in the debit values
-		db = db.replace("*", ".");
-		db=db.replaceAll("[A-Z]", "");
-		e = e.replace("*", ".");
-		// replacing the values in Json
-
-		if (v1.length() > 16) {
-			String temp = "";
-			for (int i = 0; i < 16; i++) {
-				temp = temp + v1.charAt(i);
+			if (result.getKey().equals("Section1")) {
+				section1 = section1 + result.getValue();
 			}
-			v1 = temp;
+
+			if (result.getKey().equals("Constants")) {
+//				String value=controller.f24Translate(result.getValue());
+				String value=processRow(result.getValue());
+				logger.info("Row from NMT:"+value);
+				section2Constants = section2Constants + value+"####";
+			}
+			
+			if (result.getKey().equals("Variables")) {
+				section2Variables = section2Variables + result.getValue()+"####";
+			}
+			
+			if (result.getKey().equals("euro")) {
+				euro = euro + result.getValue();
+			}
+
+			logger.info(result.getKey() + " " + result.getValue());
 		}
 
-		StringTokenizer sztokenizer = new StringTokenizer(sz, ";");
-		StringTokenizer ttokenizer = new StringTokenizer(t, ";");
-		StringTokenizer ctokenizer = new StringTokenizer(c, ";");
-		rowcount = ttokenizer.countTokens();
-		buildf242(rowcount);
-		StringTokenizer mtokenizer = new StringTokenizer(m, ";");
-		StringTokenizer atokenizer = new StringTokenizer(a, ";");
-		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
-		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
-		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
 		
-
-
-		 
 		
+		String section1Remove = propslist.get("section1Remove");
+		String section2Remove = propslist.get("section2Remove");
+//		String section2Replace = propslist.get("section2Replace");
+		
+		section1 = removeNoise(section1,section1Remove);
+		section2Constants = removeNoise(section2Constants,section2Remove);
+		section2Variables = removeNoise(section2Variables,section2Remove);
+		euro = euro.replaceAll("//s", "");
 
-		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
-			while ((line = br.readLine()) != null) {
-				mydata = line;
+		System.out.println("Section1:\t" + section1);
+		System.out.println("Section2Constants:\t" + section2Constants);
+		System.out.println("Section2Variables:\t" + section2Variables);
+		System.out.println("Euro:\t" + euro);
+		
+		logger.info("Section1:\t" + section1);
+		logger.info("Section2Constants:\t" + section2Constants);
+		logger.info("Section2Variables:\t" + section2Variables);
+		logger.info("Euro:\t" + euro);
 
-				mydata = line.replace("v1", v1);
-				mydata = mydata.replace("v2", v2);
-				mydata = mydata.replace("v3", v3);
-				mydata = mydata.replace("v4", v4);
-				mydata = mydata.replace("v5", v5);
-				mydata = mydata.replace("v6", v6);
-				mydata = mydata.replace("v7", v7);
+		Map<String, String> valuesList = new HashMap<>();
 
-				// Calculating Sysdate
-				LocalDate currdate = java.time.LocalDate.now();
+		valuesList.put("section1", section1);
+		valuesList.put("section2Constants", section2Constants);
+		valuesList.put("section2Variables", section2Variables);
+		valuesList.put("euro", euro);
 
-				mydata = mydata.replace("sysdate", String.valueOf(currdate));
+		return valuesList;
+	}
 
-				if (sztokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x1", "");
-				} else if (mydata.contains("x1") && sztokenizer.hasMoreTokens()) {
-					String stemp = sztokenizer.nextToken();
-					if (stemp.length() > 2) {
-						stemp = stemp.substring(0, 1);
-					}
-					mydata = mydata.replaceFirst("x1", stemp);
+	private String removeNoise(String value,String replacements) {
+
+
+		StringTokenizer tokenizer = new StringTokenizer(replacements, ";");
+		try {
+			while (tokenizer.hasMoreElements()) {
+				String replaceValue = (String) tokenizer.nextElement();
+				String[] keys = replaceValue.split("#");
+				if (keys[1] == " ") {
+					keys[1] = "";
 				}
-				if (ttokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x2", "");
-				} else if (mydata.contains("x2") && ttokenizer.hasMoreTokens()) {
-					mydata = mydata.replaceFirst("x2", ttokenizer.nextToken());
-				}
+				if (value.contains(keys[0]))
+					value = value.replace(keys[0], keys[1]);
 
-				if (ctokenizer.countTokens() == 0) {
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-					mydata = mydata.replaceAll("x3", "");
-				} else if (mydata.contains("x3") && ctokenizer.hasMoreTokens()) {
-					mydata = mydata.replaceFirst("x3", ctokenizer.nextToken());
-				}
+		return value;
+	}
 
-				if (mtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x4", "");
-				} else if (mydata.contains("x4") && mtokenizer.hasMoreTokens()) {
-					mydata = mydata.replaceFirst("x4", mtokenizer.nextToken());
-				}
-				if (atokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x5", "");
-				} else if (mydata.contains("x5") && atokenizer.hasMoreTokens()) {
-					mydata = mydata.replaceFirst("x5", atokenizer.nextToken());
-				}
-				if (dtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x6", "");
-				} else if (mydata.contains("x6") && dtokenizer.hasMoreTokens()) {
-					mydata = mydata.replaceFirst("x6", dtokenizer.nextToken());
-				}
-				if (dbtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x7", "");
-				} else if (mydata.contains("x7") && dbtokenizer.hasMoreTokens()) {
-					mydata = mydata.replaceFirst("x7", dbtokenizer.nextToken());
-				}
+	private List<Result> sendToNLP(Map<String, String> valuesMap) {
 
-				if (crtokenizer.countTokens() == 0) {
-					mydata = mydata.replaceAll("x8", "");
-				} else if (mydata.contains("x8") && crtokenizer.hasMoreTokens()) {
-					mydata = mydata.replaceFirst("x8", crtokenizer.nextToken());
-				}
+		List<Result> secOneList = new ArrayList<>();
+		List<Result> secTwoConstantsList = new ArrayList<>();
+		List<Result> secTwoVariablesList = new ArrayList<>();
+		
+		String section1 = valuesMap.get("section1");
+		String section2Constants = valuesMap.get("section2Constants");
+		String section2Variables = valuesMap.get("section2Variables");
+		String euro = valuesMap.get("euro");
 
-				if (e.isEmpty()) {
-					mydata = mydata.replace("e1", "");
+		StringTokenizer constantData = new StringTokenizer(section2Constants, "####");
+		StringTokenizer variableData = new StringTokenizer(section2Variables, "####");
+
+		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
+
+		try {
+			secOneList = tokenFinder.f24_Section1(section1);
+			
+			while (constantData.hasMoreElements()) {
+				String row = constantData.nextToken();
+
+				row = processRow(row);
+
+				secTwoConstantsList = tokenFinder.f24_Section2_Constants(row.trim());
+
+				logger.info("Row to NLP:" + row.trim());
+
+				if (secTwoConstantsList.size() >= 2) {
+					secOneList.addAll(secTwoConstantsList);
 				} else {
-					if (e.startsWith("777")) {
-						e = e.replaceAll("7", "");
-					}
-					mydata = mydata.replace("e1", e);
+					logger.info("Error data:" + secTwoConstantsList);
 				}
 
-				buffer.append(mydata + "\n");
+			}
+
+			while (variableData.hasMoreElements()) {
+				String row = variableData.nextToken();
+
+				secTwoVariablesList = tokenFinder.f24_Section2_Variables(row.trim());
+
+				logger.info("Row to NLP:" + row.trim());
+
+				if (secTwoVariablesList.size() >= 2) {
+					secOneList.addAll(secTwoVariablesList);
+				} else {
+					logger.info("Error data:" + secTwoVariablesList);
+				}
 
 			}
-		} finally {
-
-			// writer.close();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		// System.out.println(buffer.toString());
-		// logger.info("F24 JSON:\n" + buffer.toString());
 
-		return buffer.toString();
-
+		//Adding Euro Value to the List
+		
+		Result euroVal=new Result("euro", euro);
+		secOneList.add(euroVal);
+		System.out.println("Values List:  " + secOneList);
+		
+		return secOneList;
 	}
 
-	private F24Format prepareJSON(List<Result> results) throws FileNotFoundException, IOException {
-		
-		if(results.isEmpty()) {
-			return null;
-		}
-		String f24format1 = prepareJSON2(results);
+	private String processRow(String row) {
 
-		// PrintWriter writer = new
-		// PrintWriter("D:\\Neeraja\\ocr\\json\\myjson.json", "UTF-8");
+		// EL 3944 H 5 3 3 0303 2018 43 , 00
+		String pattern = propslist.get("section2Pattern");
+		StringBuffer buffer = new StringBuffer();
+		StringTokenizer stringTokenizer = new StringTokenizer(pattern, ":");
+
+		String anotherString = "";
+		int index = 0;
+		for (int i = 0; i < row.length(); i++) {
+
+			Character character = row.charAt(i);
+			if (StringUtils.isAlphanumeric(character.toString()) && anotherString.length() < 10) {
+				anotherString = anotherString + character;
+				index = i;
+			}
+		}
+
+		anotherString = anotherString.replaceAll("\\s", "");
+
+		buffer.append(anotherString);
+
+		int count = 0, i = 0;
+		while (stringTokenizer.hasMoreTokens()) {
+			String token = stringTokenizer.nextToken();
+			buffer.insert(Integer.parseInt(token) + count + i, " ");
+			count = count + Integer.parseInt(token);
+			i++;
+		}
+
+		if (row.charAt(index + 1) == ' ') {
+			row = buffer.toString() + row.substring(index + 2, row.length());
+		} else {
+			row = buffer.toString() + row.substring(index + 1, row.length());
+		}
+
+		return row;
+	}
+
+	private String prepareJSON(List<Result> results) throws FileNotFoundException, IOException {
+
+		if (results.isEmpty()) {
+			return "{\"status\":\"KO\"}";
+		}
+
 		StringBuffer buffer = new StringBuffer();
 		String line, mydata = null;
 		int rowcount = 0;
-		String v1 = "", v2 = "", v3 = "", v4 = "", v5 = "", v6 = "", v7 = "", sz = "", t = "", c = "", m = "", a = "",
-				d = "", db = "", cr = "", e = "";
+		String codiceFiscale = "", cognome = "", nome = "", dob = "", sex = "", city = "", prov = "", seizone = "", tributo = "", codice = "", mese = "", anno = "",
+				detrazoine = "", dobito = "", credito = "", euro = "";
 		// fecthing the data from the list
 		ListIterator<Result> iterator = (ListIterator<Result>) results.listIterator();
 		for (; iterator.hasNext();) {
 			Result result = iterator.next();
 			if (result.getKey().contains("Fiscale")) {
 				if (StringUtils.isAlphanumeric(result.getValue()))
-					v1 = v1 + result.getValue();
+					codiceFiscale = codiceFiscale + result.getValue();
 			}
 			if (result.getKey().contains("Anagrafici")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v2 = v2 + result.getValue() + " ";
+					cognome = cognome + result.getValue() + " ";
 			}
 
 			if (result.getKey().contains("Name")) {
-				v3 = v3 + result.getValue() + " ";
+				nome = nome + result.getValue() + " ";
 			}
 			if (result.getKey().contains("DOB")) {
 				if (StringUtils.isNumeric(result.getValue()) || StringUtils.isAlpha(result.getValue()))
-					v4 = v4 + result.getValue();
+					dob = dob + result.getValue();
 			}
-			v4 = v4.replaceAll("O", "0");
-			if (v4.length() > 8) {
-				if (StringUtils.isNumeric(v4.substring(0, 8))) {
-					v4 = v4.substring(0, 8);
-				} else if (StringUtils.isNumeric(v4.substring(v4.length() - 8, v4.length()))) {
-					v4 = v4.substring(v4.length() - 8, v4.length());
+			dob = dob.replaceAll("O", "0");
+			if (dob.length() > 8) {
+				if (StringUtils.isNumeric(dob.substring(0, 8))) {
+					dob = dob.substring(0, 8);
+				} else if (StringUtils.isNumeric(dob.substring(dob.length() - 8, dob.length()))) {
+					dob = dob.substring(dob.length() - 8, dob.length());
 				}
 			}
 
 			if (result.getKey().contains("Sex")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v5 = v5 + result.getValue();
+					sex = sex + result.getValue();
 			}
 			if (result.getKey().contains("City")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v6 = v6 + result.getValue() + " ";
+					city = city + result.getValue() + " ";
 			}
 			if (result.getKey().contains("Prov")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					v7 = v7 + result.getValue();
+					prov = prov + result.getValue();
 			}
 			if (result.getKey().contains("Sezione")) {
 				if (StringUtils.isAlpha(result.getValue()) && (result.getValue().length() == 2))
-					sz = sz + result.getValue() + ";";
+					seizone = seizone + result.getValue() + ";";
 			}
 			if (result.getKey().contains("tributo")) {
 				if (StringUtils.isNumeric(result.getValue()) && result.getValue().length() == 4) {
-					t = t + result.getValue() + ";";
+					tributo = tributo + result.getValue() + ";";
 					// rowcount++;
 				}
 			}
 			if (result.getKey().contains("codice")) {
 				if (StringUtils.isAlphanumeric(result.getValue())) {
-					if(result.getValue().length()>4) {
-						c = c + result.getValue().substring(0, 4) + ";";
-					}else {
-						c = c + result.getValue() + ";";
+					if (result.getValue().length() > 4) {
+						codice = codice + result.getValue().substring(0, 4) + ";";
+					} else {
+						codice = codice + result.getValue() + ";";
 					}
 				}
-					
+
 			}
 			if (result.getKey().contains("mese")) {
 				if (StringUtils.isNumeric(result.getValue()))
-					m = m + result.getValue() + ";";
+					mese = mese + result.getValue() + ";";
 			}
 			if (result.getKey().contains("anno")) {
 				if (StringUtils.isNumeric(result.getValue()))
-					a = a + result.getValue() + ";";
+					anno = anno + result.getValue() + ";";
 			}
 			if (result.getKey().contains("detrazione")) {
 				if (StringUtils.isAlpha(result.getValue()))
-					d = d + result.getValue() + ";";
+					detrazoine = detrazoine + result.getValue() + ";";
 			}
 			if (result.getKey().contains("dobito")) {
-				db = db + result.getValue() + ";";
+				dobito = dobito + result.getValue() + ";";
 			}
 			if (result.getKey().contains("credito")) {
-				cr = cr + result.getValue() + ";";
+				credito = credito + result.getValue() + ";";
 			}
 
 			if (result.getKey().contains("euro")) {
-				e = e + result.getValue();
+				euro = euro + result.getValue();
 			}
 		}
 
-		v2 = v2.trim();
-		v3 = v3.trim();
-		v4 = v4.replaceAll("[A-Z]", "");
-		v6 = v6.trim();
-		// Replacing the keywords with empty space in both the sections
-		v1 = searchKeyword(v1);
-		v2 = searchKeyword(v2);
-		v3 = searchKeyword(v3);
-		v4 = searchKeyword(v4);
-		v5 = searchKeyword(v5);
-		v6 = searchKeyword(v6);
-		v7 = searchKeyword(v7);
+		cognome = cognome.trim();
+		nome = nome.trim();
+		dob = dob.replaceAll("[A-Z]", "");
+		city = city.trim();
+		// Replacing the keywords with empty space in both the section1
 
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		codiceFiscale = searchKeyword(codiceFiscale);
+		cognome = searchKeyword(cognome);
+		nome = searchKeyword(nome);
+		dob = searchKeyword(dob);
+		sex = searchKeyword(sex);
+		city = searchKeyword(city);
+		prov = searchKeyword(prov);
+		
 
-		Date date=null;
-		try {
-			date = new SimpleDateFormat("ddMMyyyy").parse(v4);
-			v4 = format.format(date);
-		} catch (ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-			// return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
-		}
-
-		System.out.println("Date" + v4);
-
-		sz = searchKeyword(sz);
-		t = searchKeyword(t);
-		c = searchKeyword(c);
-		m = searchKeyword(m);
-		a = searchKeyword(a);
-		d = searchKeyword(d);
-		db = searchKeyword(db);
-		cr = searchKeyword(cr);
-		e = searchKeyword(e);
-
-		logger.info("Section1 Result data:\n");
-		logger.info("CodiceFiscale:	" + v1 + "\n");
-		logger.info("Cognome:	" + v2 + "\n");
-		logger.info("Nome:	" + v3 + "\n");
-		logger.info("DataDiNascita:	" + v4 + "\n");
-		logger.info("Sesso:	" + v5 + "\n");
-		logger.info("Comune:	" + v6 + "\n");
-		logger.info("Prov:	" + v7 + "\n");
-
-		// Replacing * with , in the debit values
-		db = db.replace("*", ".");
-		e = e.replace("*", ".");
-		// replacing the values in Json
-
-		if (v1.length() > 16) {
+		
+		if (codiceFiscale.length() > 16) {
 			String temp = "";
 			for (int i = 0; i < 16; i++) {
-				temp = temp + v1.charAt(i);
+				temp = temp + codiceFiscale.charAt(i);
 			}
-			v1 = temp;
+			codiceFiscale = temp;
 		}
+		dob=convertDOB(dob);
 
-		StringTokenizer sztokenizer = new StringTokenizer(sz, ";");
-		StringTokenizer ttokenizer = new StringTokenizer(t, ";");
-		StringTokenizer ctokenizer = new StringTokenizer(c, ";");
+		System.out.println("Date" + dob);
+
+		 logger.info("Section1 Result data:\n");
+		 logger.info("CodiceFiscale: " + codiceFiscale + "\n");
+		 logger.info("Cognome: " + cognome + "\n");
+		 logger.info("Nome: " + nome + "\n");
+		 logger.info("DataDiNascita: " + dob + "\n");
+		 logger.info("Sesso: " + sex + "\n");
+		 logger.info("Comune: " + city + "\n");
+		 logger.info("Prov: " + prov + "\n");
+
+		// Replacing * with , in the debit values
+		dobito = dobito.replace("*", ".");
+		euro = euro.replace("*", ".");
+
+		StringTokenizer sztokenizer = new StringTokenizer(seizone, ";");
+		StringTokenizer ttokenizer = new StringTokenizer(tributo, ";");
+		StringTokenizer ctokenizer = new StringTokenizer(codice, ";");
 		rowcount = ttokenizer.countTokens();
 		buildf24(rowcount);
-		StringTokenizer mtokenizer = new StringTokenizer(m, ";");
-		StringTokenizer atokenizer = new StringTokenizer(a, ";");
-		StringTokenizer dtokenizer = new StringTokenizer(d, ";");
-		StringTokenizer dbtokenizer = new StringTokenizer(db, ";");
-		StringTokenizer crtokenizer = new StringTokenizer(cr, ";");
-		
-		logger.info("Section2 Result data:\n");
-		 logger.info("Seizone:\t"+sz+"\n");
-		 logger.info("tributo:\t"+t+"\n");
-		 logger.info("Codice:\t"+c+"\n");
-		 logger.info("Mese:\t"+m+"\n");
-		 logger.info("Anno:\t"+a+"\n");
-		 logger.info("Dobito:\t"+db+"\n");
-		 logger.info("Euro:\t"+e+"\n");
+		StringTokenizer mtokenizer = new StringTokenizer(mese, ";");
+		StringTokenizer atokenizer = new StringTokenizer(anno, ";");
+		StringTokenizer dtokenizer = new StringTokenizer(detrazoine, ";");
+		StringTokenizer dbtokenizer = new StringTokenizer(dobito, ";");
+		StringTokenizer crtokenizer = new StringTokenizer(credito, ";");
+
+		 logger.info("Section2 Result data:\n");
+		 logger.info("Seizone:\t"+seizone+"\n");
+		 logger.info("tributo:\t"+tributo+"\n");
+		 logger.info("Codice:\t"+codice+"\n");
+		 logger.info("Mese:\t"+mese+"\n");
+		 logger.info("Anno:\t"+anno+"\n");
+		 logger.info("Dobito:\t"+dobito+"\n");
+		 logger.info("Euro:\t"+euro+"\n");
 
 		try (BufferedReader br = new BufferedReader(
 				new FileReader("src/main/java/it/sella/f24/service/f24testfile.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
-				mydata = line.replace("v1", v1);
-				mydata = mydata.replace("v2", v2);
-				mydata = mydata.replace("v3", v3);
-				mydata = mydata.replace("v4", v4);
-				mydata = mydata.replace("v5", v5);
-				mydata = mydata.replace("v6", v6);
-				mydata = mydata.replace("v7", v7);
+				mydata = line.replace("v1", codiceFiscale);
+				mydata = mydata.replace("v2", cognome);
+				mydata = mydata.replace("v3", nome);
+				mydata = mydata.replace("v4", dob);
+				mydata = mydata.replace("v5", sex);
+				mydata = mydata.replace("v6", city);
+				mydata = mydata.replace("v7", prov);
 
 				// Calculating Sysdate
 				LocalDate currdate = java.time.LocalDate.now();
@@ -819,13 +574,10 @@ public class F24OCRService {
 					mydata = mydata.replaceFirst("x8", crtokenizer.nextToken());
 				}
 
-				if (e.isEmpty()) {
+				if (euro.isEmpty()) {
 					mydata = mydata.replace("e1", "0");
 				} else {
-					if (e.startsWith("777")) {
-						e = e.replaceAll("7", "");
-					}
-					mydata = mydata.replace("e1", e);
+					mydata = mydata.replace("e1", euro);
 				}
 
 				buffer.append(mydata + "\n");
@@ -835,72 +587,48 @@ public class F24OCRService {
 
 			// writer.close();
 		}
-		// System.out.println(buffer.toString());
-		// logger.info("F24 JSON:\n" + buffer.toString());
 
-		F24Format f24Format = new F24Format();
-		f24Format.setF24format1(f24format1);
-		f24Format.setF24format2(buffer.toString());
-		return f24Format;
+		return buffer.toString();
 
 	}
 
 	private String searchKeyword(String value) {
-//		String[] keywords = { "CODICE", "FISCALE", "DATI", "ANAGRAFICI", "COPIA", "PER", "IL", "SOGGETTO", "CHE","SHORELO",
-//				"EFFETTUA",  "VERSAMENTO", "BANCA", "POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA", "ESTREMI",
-//				"DEL", "DA", "COMPILARE","CANER","POTERSSON", "CURA", "DI", "SPORTELO","SPORTELLO", "PON","CAB", "AZENDA", "AZIEN", "MOMOA", "SPORO" ,"COMPILARE","CURA","DI","W TASTE","COMPARE A","FINALE","SALDO","TOW"};
-		String[] keywords= {"CODICE", "FISCALE", "DATI", "ANAGRAFICI","BANCA","POSTE", "AGENTE", "DELLA", "RISCOSSIONE", "DATA","COPIA", "PER", "IL", "SOGGETTO", "CHE","SHORELO",
-				"EFFETTUA","VERSAMENTO","DEL","EFT","ETTUA","SALDO","FINALE"};
-		for (int i = 0; i < keywords.length; i++) {
-			value = value.replace(keywords[i], "");
+
+		String section1Label = propslist.get("section1Label");
+
+		StringTokenizer tokenizer = new StringTokenizer(section1Label, ";");
+
+		while (tokenizer.hasMoreTokens()) {
+			String keyword = tokenizer.nextToken();
+			String[] replaceKeywords = keyword.split("#");
+
+			if (replaceKeywords[1] == " ") {
+				replaceKeywords[1] = "";
+			}
+			if (value.contains(replaceKeywords[0])) {
+				value = value.replace(replaceKeywords[0], replaceKeywords[1]);
+			}
+
 		}
 		return value;
 	}
 	
+	private String convertDOB(String dob) {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
-	public void buildf242(int rowcount) {
-		String data = "", section2row = "", section2rows = "";
-		StringBuffer buffer = new StringBuffer();
-		try (BufferedReader br = new BufferedReader(
-				new FileReader("src/main/java/it/sella/f24/service/section2row.txt"))) {
-			while ((data = br.readLine()) != null) {
-				section2row = section2row + data + "\n";
-			}
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
+		Date date = null;
+		try {
+			date = new SimpleDateFormat("ddMMyyyy").parse(dob);
+			dob = format.format(date);
+		} catch (ParseException e1) {
 			e1.printStackTrace();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
 		}
-
-		for (int i = 0; i < rowcount; i++) {
-			if (i == rowcount - 1) {
-				section2rows = section2rows + section2row + "\n";
-			} else {
-				section2rows = section2rows + section2row + "," + "\n\t";
-			}
-		}
-
-		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testf24.txt"))) {
-			while ((data = br.readLine()) != null) {
-				data = data.replace("section2rows", section2rows);
-				buffer.append(data + "\n");
-			}
-			FileWriter writer = new FileWriter("src/main/java/it/sella/f24/service/f24.txt");
-			writer.append(buffer);
-			writer.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		return dob;
 	}
 
-	public void buildf24(int rowcount) {
+
+	private void buildf24(int rowcount) {
 		String data = "", section2row = "", section2rows = "";
 		StringBuffer buffer = new StringBuffer();
 		try (BufferedReader br = new BufferedReader(
@@ -942,77 +670,5 @@ public class F24OCRService {
 		}
 
 	}
-
-	private List<DataDescription> process(Data data) {
-		boolean diff = true, found = false;
-		int diffxStart = 0, diffxEnd = 0, diffxEnd2 = 0, diffyStart = 0, diffyStart2 = 0, diffyEnd = 0, diffyEnd2 = 0,
-				difference = 0;
-		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
-			if (diff) {
-				if (txtAnn.getDescription().equalsIgnoreCase("CODICE")) {
-					diffxStart = txtAnn.getBoundingPoly().getVertices().get(0).getX();
-					diffyStart = txtAnn.getBoundingPoly().getVertices().get(0).getY();
-					diffyStart2 = txtAnn.getBoundingPoly().getVertices().get(3).getY();
-					found = true;
-				} else if (found && txtAnn.getDescription().equalsIgnoreCase("FISCALE")) {
-					diffxEnd = txtAnn.getBoundingPoly().getVertices().get(0).getX();
-					diffxEnd2 = txtAnn.getBoundingPoly().getVertices().get(1).getX();
-					diffyEnd = txtAnn.getBoundingPoly().getVertices().get(0).getY();
-					diffyEnd2 = txtAnn.getBoundingPoly().getVertices().get(3).getY();
-					if (diffyEnd - diffyStart != 0)
-						difference = (diffxEnd - diffxStart) / (diffyEnd - diffyStart);
-					else if (diffyEnd2 - diffyStart2 != 0) {
-						difference = (diffxEnd2 - diffxStart) / (diffyEnd2 - diffyStart2);
-					}
-
-					break;
-				}
-			}
-		}
-		List<DataDescription> list = new ArrayList<>();
-		boolean first = false;
-		int start = 0, end = 0;
-		int secTwo = 10000;
-		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
-			if (txtAnn.getLocale() == null || (txtAnn.getLocale().isEmpty())) {
-
-				if (txtAnn.getDescription().equalsIgnoreCase("Semplificato")
-						|| txtAnn.getDescription().equalsIgnoreCase("Surplificato")) {
-					end = txtAnn.getBoundingPoly().getVertices().get(1).getX();
-				} else if (txtAnn.getDescription().equalsIgnoreCase("MODELLO")) {
-					start = txtAnn.getBoundingPoly().getVertices().get(0).getX();
-				}
-
-				if (!first && txtAnn.getDescription().equals("CODICE")) {
-					first = true;
-				} else if (first && txtAnn.getDescription().equals("MOTIVO")||txtAnn.getDescription().equals("HOTIVO")||txtAnn.getDescription().equals("KOTIVO")) {//CODICE->MOTIVO->FISCALE
-					secTwo = txtAnn.getBoundingPoly().getVertices().get(3).getY() + 10;
-				}
-
-				// if (txtAnn.getBoundingPoly().getVertices().get(0).getX() > start
-				// && txtAnn.getBoundingPoly().getVertices().get(1).getX() < end) {
-				String des = txtAnn.getDescription();
-				if (txtAnn.getDescription().equals("*")) {
-					des = "X";
-				}
-
-				// if (txtAnn.getBoundingPoly().getVertices().get(0).getY() < secTwo) {
-				des = des.replaceAll(".*[a-z].*", "");
-				// }
-
-				DataDescription d = new DataDescription(des, txtAnn.getBoundingPoly().getVertices().get(0).getX(),
-						txtAnn.getBoundingPoly().getVertices().get(0).getY(),
-						txtAnn.getBoundingPoly().getVertices().get(1).getX(),
-						txtAnn.getBoundingPoly().getVertices().get(3).getY());
-				d.setDifference(difference);
-				if (txtAnn.getBoundingPoly().getVertices().get(0).getY() > secTwo) {
-					// System.out.println(txtAnn.getBoundingPoly().getVertices().get(0).getY()+"---"+secTwo);
-					d.setSection("two");
-				}
-
-				list.add(d);
-			}
-		}
-		return list;
-	}
+	
 }

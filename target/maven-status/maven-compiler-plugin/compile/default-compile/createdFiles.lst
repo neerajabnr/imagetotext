@@ -1,4 +1,3 @@
-it/sella/f24/testclasses/TestService2.class
 opennlp/tools/postag/POSEventStream.class
 opennlp/maxent/io/BinToAscii.class
 opennlp/tools/formats/letsmt/LetsmtDocument.class
@@ -45,7 +44,6 @@ opennlp/tools/formats/brat/SpanAnnotation.class
 opennlp/maxent/io/ObjectGISModelReader.class
 opennlp/tools/util/featuregen/PrefixFeatureGeneratorTest.class
 opennlp/tools/ml/maxent/GISTrainer.class
-it/sella/f24/testclasses/DataDescription.class
 opennlp/tools/util/TokenTag.class
 opennlp/tools/formats/TwentyNewsgroupSampleStream.class
 opennlp/maxent/io/SuffixSensitiveGISModelWriter.class
@@ -87,6 +85,7 @@ opennlp/tools/formats/conllu/ConlluLemmaSampleStream.class
 opennlp/tools/ml/maxent/quasinewton/ParallelNegLogLikelihood$NegLLComputeTask.class
 opennlp/tools/coref/resolver/ResolverUtils.class
 opennlp/tools/lemmatizer/LemmaSampleSequenceStream.class
+it/sella/f24/bean/Vertex.class
 opennlp/tools/ml/model/Event.class
 opennlp/tools/doccat/DocumentCategorizer.class
 opennlp/tools/cmdline/entitylinker/EntityLinkerTool.class
@@ -98,7 +97,6 @@ opennlp/tools/formats/ad/ADParagraphStreamTest.class
 opennlp/tools/cmdline/chunker/ChunkerEvaluatorTool.class
 opennlp/tools/util/AbstractEventStreamTest.class
 opennlp/tools/lemmatizer/LemmatizerEvaluator.class
-it/sella/f24/testclasses/Main4.class
 opennlp/tools/tokenize/TokenSampleStream.class
 opennlp/tools/ml/ArrayMathTest.class
 opennlp/tools/dictionary/DictionaryTest.class
@@ -138,6 +136,7 @@ opennlp/tools/ml/maxent/io/QNModelReader.class
 opennlp/tools/util/Evaluator.class
 opennlp/tools/formats/leipzig/SampleSkipStream.class
 opennlp/tools/cmdline/AbstractTrainerTool.class
+it/sella/f24/appinit/AppInitializer.class
 opennlp/tools/coref/mention/AbstractParse.class
 opennlp/tools/ml/naivebayes/PlainTextNaiveBayesModelReader.class
 opennlp/tools/cmdline/chunker/ChunkerEvaluatorTool$EvalToolParams.class
@@ -160,6 +159,7 @@ opennlp/tools/entitylinker/LinkedSpan.class
 opennlp/tools/ml/maxent/RealBasicEventStream.class
 opennlp/tools/postag/POSSampleEventStreamTest.class
 opennlp/tools/util/FileUtil.class
+it/sella/f24/util/Sample.class
 opennlp/tools/coref/mention/DictionaryFactory.class
 opennlp/tools/util/TrainingParameters.class
 opennlp/tools/cmdline/TerminateToolException.class
@@ -167,7 +167,6 @@ opennlp/tools/cmdline/tokenizer/CommandLineTokenizer.class
 opennlp/tools/eval/ConllXPosTaggerEval.class
 opennlp/tools/util/model/ClassSerializer$1.class
 opennlp/maxent/ContextGenerator.class
-it/sella/f24/service/opennlp/F24JSON.class
 opennlp/tools/formats/brat/BratAnnotationStream$AttributeAnnotationParser.class
 opennlp/tools/sentdetect/NewlineSentenceDetector.class
 opennlp/tools/ml/model/SequenceStreamEventStream.class
@@ -195,7 +194,6 @@ opennlp/tools/chunker/ChunkerFactoryTest.class
 opennlp/tools/cmdline/postag/POSTaggerTool.class
 opennlp/tools/formats/leipzig/LeipzigLanguageSampleStream$1.class
 opennlp/tools/util/ModelType.class
-it/sella/f24/testclasses/Main3.class
 opennlp/tools/tokenize/Detokenizer.class
 opennlp/tools/formats/conllu/ConlluStream.class
 opennlp/tools/cmdline/langdetect/LanguageDetectorEvaluatorTool$EvalToolParams.class
@@ -210,7 +208,6 @@ opennlp/tools/util/model/DictionarySerializer.class
 opennlp/tools/ml/maxent/GISTrainerTest.class
 opennlp/tools/formats/ontonotes/DocumentToLineStream.class
 opennlp/tools/formats/ChunkerSampleStreamFactory$Parameters.class
-it/sella/f24/service/opennlp/TextAnnotation.class
 opennlp/maxent/ModelApplier.class
 opennlp/tools/parser/Cons.class
 opennlp/tools/namefind/DictionaryNameFinderEvaluatorTest.class
@@ -325,14 +322,12 @@ opennlp/tools/tokenize/TokenSampleTest.class
 opennlp/tools/dictionary/DictionaryAsSetCaseSensitiveTest.class
 opennlp/tools/cmdline/namefind/TokenNameFinderTrainer.class
 opennlp/tools/stemmer/snowball/italianStemmer.class
-it/sella/f24/testclasses/TestService.class
 opennlp/tools/ml/maxent/quasinewton/QNMinimizer$Evaluator.class
 opennlp/tools/formats/Conll02NameSampleStream$LANGUAGE.class
 opennlp/tools/cmdline/tokenizer/TokenizerME.class
 opennlp/tools/util/featuregen/DictionaryFeatureGenerator.class
 opennlp/tools/util/SequenceValidator.class
 opennlp/tools/ml/model/MutableContext.class
-it/sella/f24/service/opennlp/Vertex.class
 opennlp/tools/util/featuregen/SentenceFeatureGeneratorFactory.class
 opennlp/tools/chunker/DummyChunker.class
 opennlp/tools/formats/Conll02NameSampleStreamTest.class
@@ -352,7 +347,6 @@ opennlp/tools/doccat/FeatureGenerator.class
 opennlp/tools/util/DataStreamBuilder.class
 opennlp/tools/postag/DefaultPOSContextGeneratorTest.class
 opennlp/tools/namefind/RegexNameFinderFactory.class
-it/sella/f24/testclasses/FileReaderfromFolder.class
 opennlp/tools/formats/conllu/ConlluLemmaSampleStreamFactory.class
 opennlp/tools/formats/brat/BratAnnotationStream.class
 opennlp/tools/cmdline/ArgumentParserTest$ZeroMethods.class
@@ -405,6 +399,7 @@ opennlp/tools/formats/ConllXTokenSampleStreamFactory.class
 opennlp/tools/parser/Constituent.class
 opennlp/tools/util/featuregen/PreviousMapFeatureGeneratorTest.class
 opennlp/tools/formats/conllu/ConlluSentenceSampleStreamFactory$Parameters.class
+it/sella/f24/util/DataFill.class
 opennlp/tools/formats/ConllXSentenceSampleStreamFactory$Parameters.class
 opennlp/maxent/BasicContextGenerator.class
 opennlp/tools/formats/conllu/ConlluSentenceSampleStreamTest.class
@@ -429,6 +424,7 @@ opennlp/tools/coref/Linker.class
 opennlp/model/BinaryFileDataReader.class
 opennlp/tools/namefind/RegexNameFinderFactory$1.class
 opennlp/tools/ml/model/OnePassRealValueDataIndexer.class
+it/sella/f24/util/DataFillSpace.class
 opennlp/tools/util/eval/Evaluator.class
 opennlp/tools/langdetect/LanguageTest.class
 opennlp/tools/util/ext/ExtensionLoaderTest$TestStringGenerator.class
@@ -436,7 +432,6 @@ opennlp/tools/coref/sim/GenderModel.class
 opennlp/tools/langdetect/DefaultLanguageDetectorContextGenerator.class
 opennlp/tools/cmdline/chunker/ChunkerDetailedFMeasureListener.class
 it/sella/f24/controller/F24Controller.class
-it/sella/f24/service/opennlp/DataDescription.class
 opennlp/tools/ml/AbstractTrainer.class
 opennlp/tools/cmdline/postag/POSTaggerTrainer.class
 opennlp/model/RealValueFileEventStream2.class
@@ -445,7 +440,6 @@ opennlp/tools/namefind/NameSampleDataStream.class
 opennlp/tools/cmdline/CLI.class
 opennlp/tools/postag/POSTaggerFactory.class
 opennlp/tools/cmdline/params/FineGrainedEvaluatorParams.class
-it/sella/f24/testclasses/DataFillSpace.class
 opennlp/tools/util/PerformanceMonitor$1.class
 opennlp/tools/util/CrossValidationPartitioner.class
 opennlp/tools/util/featuregen/IdentityFeatureGenerator.class
@@ -494,9 +488,9 @@ opennlp/tools/ml/maxent/io/BinaryQNModelReader.class
 opennlp/tools/formats/letsmt/LetsmtSentenceStreamFactory.class
 opennlp/tools/coref/resolver/SingularPronounResolver.class
 opennlp/tools/formats/leipzig/LeipzigLanguageSampleStreamFactory.class
+it/sella/f24/bean/ResBody.class
 opennlp/tools/cmdline/postag/POSTaggerConverterTool.class
 opennlp/model/TwoPassDataIndexer.class
-it/sella/f24/service/opennlp/Payload.class
 opennlp/tools/lemmatizer/DictionaryLemmatizerMultiTest.class
 opennlp/tools/parser/ParserModel$1.class
 opennlp/tools/formats/conllu/ConlluTokenSampleStreamTest.class
@@ -526,7 +520,6 @@ opennlp/tools/parser/ParserChunkerFactory.class
 opennlp/tools/namefind/RegexNameFinderFactory$DEFAULT_REGEX_NAME_FINDER$5.class
 opennlp/tools/util/eval/FMeasure.class
 opennlp/tools/cmdline/sentdetect/TrainingParams.class
-it/sella/f24/testclasses/Sample.class
 opennlp/tools/ml/model/RealValueFileEventStreamTest.class
 opennlp/tools/ml/maxent/GISModel.class
 opennlp/tools/ml/perceptron/BinaryPerceptronModelWriter.class
@@ -614,10 +607,10 @@ opennlp/tools/ml/model/TwoPassDataIndexer.class
 opennlp/maxent/ModelSetter.class
 opennlp/tools/util/featuregen/BrownTokenFeatureGenerator.class
 opennlp/tools/formats/letsmt/LetsmtSentenceStream.class
-it/sella/f24/service/F24Format.class
 opennlp/tools/namefind/TokenNameFinderEvaluationMonitor.class
 opennlp/tools/namefind/RegexNameFinderFactory$DEFAULT_REGEX_NAME_FINDER$1.class
 opennlp/tools/postag/POSEvaluator.class
+it/sella/f24/bean/DataDescription.class
 opennlp/tools/cmdline/EncodingMapperTest.class
 opennlp/tools/doccat/BagOfWordsFeatureGeneratorTest.class
 opennlp/tools/eval/UniversalDependency20Eval.class
@@ -626,6 +619,7 @@ opennlp/tools/parser/ParserType.class
 opennlp/tools/parser/ParseSampleStream.class
 opennlp/tools/cmdline/namefind/CensusDictionaryCreatorTool.class
 opennlp/tools/formats/muc/Muc6NameSampleStreamFactory$Parameters.class
+it/sella/f24/bean/Payload.class
 opennlp/tools/cmdline/sentdetect/SentenceDetectorEvaluator.class
 opennlp/tools/lemmatizer/LemmaSampleTest.class
 opennlp/model/MutableContext.class
@@ -734,7 +728,6 @@ opennlp/tools/parser/ChunkSampleStream.class
 opennlp/tools/coref/mention/PTBMentionFinder.class
 opennlp/tools/tokenize/WhitespaceTokenizerTest.class
 opennlp/tools/formats/BioNLP2004NameSampleStreamFactory.class
-it/sella/f24/service/opennlp/Data.class
 opennlp/tools/util/featuregen/FeatureGeneratorUtil.class
 opennlp/tools/chunker/ChunkSample.class
 opennlp/tools/parser/lang/en/HeadRulesTest.class
@@ -763,6 +756,7 @@ opennlp/tools/formats/ad/ADSentenceStream$SentenceParser.class
 opennlp/tools/util/featuregen/CharacterNgramFeatureGeneratorTest.class
 opennlp/tools/eval/OntoNotes4PosTaggerEval.class
 opennlp/tools/cmdline/namefind/CensusDictionaryCreatorTool$Parameters.class
+it/sella/f24/bean/BoundingPoly.class
 opennlp/tools/coref/LinkerMode.class
 opennlp/tools/coref/resolver/Resolver.class
 opennlp/tools/util/featuregen/StringPattern.class
@@ -864,6 +858,7 @@ opennlp/tools/formats/ad/ADTokenSampleStreamFactory$Parameters.class
 opennlp/tools/util/AbstractObjectStream.class
 opennlp/tools/util/model/BaseModel.class
 opennlp/tools/formats/ontonotes/OntoNotesParseSampleStream.class
+it/sella/f24/bean/Data.class
 opennlp/tools/formats/leipzig/LeipzigLanguageSampleStreamTest.class
 opennlp/tools/util/FMeasureTest.class
 opennlp/maxent/BasicEventStream.class
@@ -885,7 +880,6 @@ opennlp/tools/cmdline/dictionary/DictionaryBuilderTool$Params.class
 opennlp/tools/parser/chunking/ParserTest.class
 opennlp/tools/formats/EvalitaNameSampleStream.class
 opennlp/tools/stemmer/snowball/swedishStemmer.class
-it/sella/f24/AppInitializer.class
 opennlp/tools/cmdline/lemmatizer/LemmatizerModelLoader.class
 opennlp/tools/util/featuregen/BrownBigramFeatureGenerator.class
 opennlp/tools/namefind/NameFinderMETest4.class
@@ -1001,7 +995,6 @@ opennlp/tools/util/featuregen/PreviousTwoMapFeatureGenerator.class
 opennlp/tools/chunker/ChunkerDetailedFMeasureListenerTest.class
 opennlp/tools/langdetect/LanguageDetectorContextGenerator.class
 opennlp/tools/util/normalizer/NumberCharSequenceNormalizer.class
-it/sella/f24/service/opennlp/ResBody.class
 opennlp/tools/tokenize/Tokenizer.class
 opennlp/tools/util/featuregen/WordClusterFeatureGeneratorFactory.class
 opennlp/tools/coref/resolver/DefiniteNounResolver.class
@@ -1093,6 +1086,7 @@ opennlp/tools/sentdetect/SentenceDetectorEvaluatorTest.class
 opennlp/maxent/GISModel.class
 opennlp/tools/lemmatizer/LemmatizerContextGenerator.class
 opennlp/tools/formats/conllu/ConlluPOSSampleStreamFactory$Parameters.class
+it/sella/f24/bean/Result.class
 opennlp/tools/formats/ad/ADChunkSampleStreamFactory.class
 opennlp/tools/stemmer/PorterStemmerTest.class
 opennlp/tools/cmdline/chunker/TrainingParams.class
@@ -1147,7 +1141,6 @@ opennlp/tools/coref/resolver/PerfectResolver.class
 opennlp/maxent/io/BinaryGISModelWriter.class
 opennlp/tools/namefind/RegexNameFinderFactory$DEFAULT_REGEX_NAME_FINDER.class
 opennlp/tools/ml/PrepAttachDataUtil.class
-it/sella/f24/testclasses/MyTrustManager.class
 opennlp/tools/formats/EvalitaNameSampleStreamTest.class
 opennlp/tools/util/Sequence.class
 opennlp/tools/lemmatizer/DefaultLemmatizerSequenceValidator.class
@@ -1180,7 +1173,6 @@ opennlp/tools/cmdline/sentdetect/SentenceDetectorCrossValidatorTool.class
 opennlp/tools/postag/POSModelTest.class
 opennlp/tools/ml/AbstractEventModelSequenceTrainer.class
 opennlp/tools/tokenize/TokSpanEventStreamTest.class
-it/sella/f24/service/opennlp/Util.class
 opennlp/tools/tokenize/DetokenizerEvaluatorTest$DummyDetokenizer.class
 opennlp/tools/formats/conllu/ConlluSentenceSampleStream.class
 opennlp/tools/util/Cache.class
@@ -1213,7 +1205,6 @@ opennlp/tools/ml/perceptron/PerceptronModel.class
 opennlp/tools/formats/ad/ADTokenSampleStreamTest.class
 opennlp/tools/formats/convert/ParseToTokenSampleStreamFactory$Parameters.class
 opennlp/tools/parser/chunking/CheckContextGenerator.class
-it/sella/f24/testclasses/DataFill.class
 opennlp/tools/formats/convert/ParseToSentenceSampleStreamFactory.class
 opennlp/tools/cmdline/doccat/TrainingParams.class
 opennlp/tools/parser/ParserEvaluator.class
@@ -1223,9 +1214,7 @@ opennlp/tools/formats/irishsentencebank/IrishSentenceBankDocument$IrishSentenceB
 opennlp/tools/langdetect/Language.class
 opennlp/tools/cmdline/parser/TrainingParams.class
 opennlp/tools/ml/maxent/ScaleDoesntMatterTest.class
-it/sella/f24/testclasses/Result.class
 opennlp/tools/formats/ResourceAsStreamFactory.class
-it/sella/f24/service/opennlp/BoundingPoly.class
 opennlp/tools/parser/treeinsert/ParserTest.class
 opennlp/tools/namefind/NameFinderME.class
 opennlp/tools/tokenize/DummyTokenizerFactory$DummyDictionarySerializer.class
@@ -1249,6 +1238,7 @@ opennlp/tools/dictionary/serializer/Entry.class
 opennlp/tools/formats/ad/ADNameSampleStreamFactory$Parameters.class
 opennlp/tools/formats/moses/MosesSentenceSampleStreamFactory.class
 opennlp/tools/sentdetect/SDCrossValidator.class
+it/sella/f24/util/FileReaderfromFolder.class
 opennlp/tools/util/featuregen/FeatureGenWithSerializerMapping.class
 opennlp/tools/cmdline/parser/BuildModelUpdaterTool.class
 opennlp/tools/ngram/NGramUtils.class
@@ -1312,8 +1302,10 @@ opennlp/tools/ml/maxent/quasinewton/LineSearch.class
 opennlp/tools/lemmatizer/LemmatizerEvaluationMonitor.class
 opennlp/tools/parser/ChunkSampleStreamTest.class
 opennlp/maxent/GISTrainer.class
+it/sella/f24/bean/TextAnnotation.class
 opennlp/tools/ml/AbstractEventTrainer.class
 opennlp/tools/doccat/DocumentSampleTest.class
+it/sella/f24/bean/F24JSON.class
 opennlp/tools/ml/naivebayes/LogProbability.class
 opennlp/maxent/io/ObjectGISModelWriter.class
 opennlp/tools/namefind/TokenNameFinderCrossValidator$DocumentSample.class

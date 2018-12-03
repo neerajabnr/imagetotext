@@ -1,11 +1,9 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/POSEvaluator.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/TestService.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/POSDictionary.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/lemmatizer/LemmatizerEvaluatorTool.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/package-info.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/AbstractEventStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/mention/PTBHeadFinder.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/Data.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/chunker/ChunkSampleStreamTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/DictionaryNameFinder.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/chunker/ChunkerContextGenerator.java
@@ -13,13 +11,11 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/StringPattern.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/DictionaryDetokenizerTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/GenericModelReader.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/AppInitializer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/FeatureGeneratorFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/postag/POSTaggerFineGrainedReportListener.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/resolver/AbstractResolver.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/parser/BuildModelUpdaterTool.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/perceptron/BinaryPerceptronModelReader.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/Payload.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/model/AbstractModelReader.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/ParserModel.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/convert/NameToTokenSampleStream.java
@@ -34,7 +30,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/Version.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/model/ByteArraySerializer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/SimpleTokenizer.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/ResBody.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/maxent/quasinewton/QNTrainerTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/normalizer/ShrinkCharSequenceNormalizerTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ngram/NGramModelTest.java
@@ -71,7 +66,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/ConfigurablePOSContextGeneratorTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/StreamFactoryRegistry.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/params/BasicTrainingParams.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/TextAnnotation.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/sim/Gender.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/ad/ADSentenceSampleStreamTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/PreviousMapFeatureGeneratorFactory.java
@@ -185,7 +179,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/chunker/ChunkerEvaluator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/chunking/package-info.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/tokenizer/TrainingParameters.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/Sample.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/langdetect/LanguageDetectorFactoryTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/PosSampleStreamTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/chunker/ChunkerEvaluatorTest.java
@@ -231,7 +224,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/TokenSampleStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/StringUtil.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/CorefModel.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/DataDescription.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/tokenizer/TokenizerCrossValidator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/CollectionObjectStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/SentenceFeatureGenerator.java
@@ -308,7 +300,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/SequenceTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/DynamicEvalParameters.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/MarkableFileInputStreamFactory.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/F24JSON.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/stemmer/snowball/spanishStemmer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/naivebayes/NaiveBayesModelWriter.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/SDContextGenerator.java
@@ -356,6 +347,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/sim/TestGenderModel.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/TrigramNameFeatureGeneratorTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/normalizer/UrlCharSequenceNormalizerTest.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/Vertex.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/doccat/DocumentCategorizerME.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/entitylinker/EntityLinker.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/params/FineGrainedEvaluatorParams.java
@@ -407,6 +399,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/InsufficientTrainingDataException.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/TokenizerEvaluationMonitor.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/model/PlainTextFileDataReader.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/TextAnnotation.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/namefind/TokenNameFinderModelLoader.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/brat/BratNameSampleStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/TrainingParametersTest.java
@@ -427,8 +420,10 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/ad/ADPOSSampleStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/maxent/DataStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/tokenizer/SimpleTokenizerTool.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/Data.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/perceptron/PerceptronModel.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/TokSpanEventStream.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/BoundingPoly.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/treeinsert/CheckContextGenerator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/FMeasure.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/PlainTextByLineStream.java
@@ -515,9 +510,9 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/MockInputStreamFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/AbstractTypedParamTool.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/AbstractSequenceTrainer.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/util/FileReaderfromFolder.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/io/BinaryGISModelWriter.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/FilterObjectStream.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/F24Format.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/TerminateToolException.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/eval/CrossValidationPartitionerTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/normalizer/TwitterCharSequenceNormalizerTest.java
@@ -557,6 +552,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/doccat/DoccatTool.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/TokSpanEventStreamTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/ontonotes/OntoNotesParseSampleStreamFactory.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/util/DataFill.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/lemmatizer/LemmaSampleStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/GenericModelWriter.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/IntegerPool.java
@@ -577,7 +573,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/Conll02NameSampleStreamFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/POSEventGenerator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/model/DataReader.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/DataDescription.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/ModelDomain.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/ParseException.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/Evalable.java
@@ -603,6 +598,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/MutableContext.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/io/OldFormatGISModelReader.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/BrownCluster.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/F24JSON.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/Event.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/DefaultLinker.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/model/MaxentModel.java
@@ -617,12 +613,14 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/TypedCmdLineTool.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/ChunkerSampleStreamFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/entitylinker/EntityLinkerProperties.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/Result.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/namefind/TokenNameFinderCrossValidatorTool.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/DefaultSDContextGenerator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/MutableTagDictionary.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/NameSample.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/BioNLP2004NameSampleStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/model/ModelType.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/appinit/AppInitializer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/conllu/ConlluSentenceSampleStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/DefaultPOSContextGenerator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/PrefixFeatureGenerator.java
@@ -666,7 +664,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/SentenceDetector.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/stemmer/SnowballStemmerTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/NameContextGenerator.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/Main3.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/languagemodel/LanguageModel.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/stemmer/snowball/Among.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/Pair.java
@@ -702,6 +699,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/sentdetect/SentenceDetectorConverterTool.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/PreviousTwoMapFeatureGeneratorTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/NameSampleDataStreamFactory.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/util/Sample.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/brat/BratDocumentStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/Detokenizer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/ad/ADNameSampleStream.java
@@ -721,7 +719,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/RegexNameFinder.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/ontonotes/OntoNotesPOSSampleStreamFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/AbstractEventStreamTest.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/MyTrustManager.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/langdetect/DummyFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/dictionary/Dictionary.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/convert/ParseToPOSSampleStreamFactory.java
@@ -771,7 +768,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/naivebayes/NaiveBayesModel.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/treeinsert/ParserTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/chunker/ChunkerCrossValidatorTool.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/FileReaderfromFolder.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/io/PlainTextGISModelWriter.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/AbstractBottomUpParser.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/eval/Evaluator.java
@@ -834,6 +830,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/frenchtreebank/ConstitParseSampleStreamTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/AbstractObjectStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/BigramNameFeatureGeneratorTest.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/DataDescription.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/mention/PTBMentionFinder.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/langdetect/LanguageDetectorCrossValidatorTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/ad/PortugueseContractionUtility.java
@@ -864,6 +861,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/mention/Dictionary.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/WindowFeatureGenerator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/EvalitaNameSampleStream.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/util/DataFillSpace.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/ParserTestUtil.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/brat/AttributeAnnotation.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/package-info.java
@@ -887,6 +885,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/lang/th/SentenceContextGenerator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/chunker/ChunkerConverterTool.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/DummySentenceDetectorFactory.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/ResBody.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/eval/Conll00ChunkerEval.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/treeinsert/Parser.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/AdaptiveFeatureGenerator.java
@@ -902,7 +901,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/AbstractTokenizer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/BeamSearchContextGenerator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/SuffixFeatureGeneratorFactory.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/Util.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/ext/ExtensionLoader.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/package-info.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/TokenizerModel.java
@@ -959,7 +957,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/DictionaryNameFinderTetst.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/model/SequenceStreamEventStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/SDCrossValidator.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/BoundingPoly.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/chunker/ChunkSampleTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/sim/GenderModel.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/WordTagSampleStreamTest.java
@@ -1002,7 +999,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/convert/ParseToPOSSampleStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/NameFinderMETest2.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/DictionaryNameFinderEvaluatorTest.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/TestService2.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/RealValueFileEventStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/sentdetect/SentenceDetectorEvaluator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/tokenize/TokenSample.java
@@ -1031,7 +1027,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/langdetect/LanguageSampleTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/wordvector/DoubleArrayVector.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/model/OnePassDataIndexerTest.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/Main4.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/postag/POSSample.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/AbstractDataIndexer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/doccat/DoccatFineGrainedReportListener.java
@@ -1042,7 +1037,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/conllu/ConlluLemmaSampleStreamFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/ext/OSGiExtensionLoader.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/PlainTextFileDataReader.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/DataFill.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/leipzig/SampleSkipStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/sentdetect/EndOfSentenceScanner.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/naivebayes/NaiveBayesModelReader.java
@@ -1051,12 +1045,10 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/chunker/ChunkSample.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/conllu/ConlluPOSSampleStream.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/PrefixFeatureGeneratorFactory.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/DataFillSpace.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/doccat/NGramFeatureGenerator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/muc/SgmlParser.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/ParserChunkerFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/SequenceCodec.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/testclasses/Result.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/Evaluator.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/CharacterNgramFeatureGeneratorFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/FineGrainedReportListener.java
@@ -1086,6 +1078,7 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/maxent/io/GISModelReader.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/RegexNameFinderFactoryTest.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/featuregen/PosTaggerFeatureGeneratorFactory.java
+/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/bean/Payload.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/parser/chunking/Parser.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/model/DictionarySerializer.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/coref/resolver/CommonNounResolver.java
@@ -1116,7 +1109,6 @@
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/namefind/TokenNameFinderFactory.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/model/IndexHashTable.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/util/ReverseListIterator.java
-/home/bsindia/Documents/F24_V2/src/main/java/it/sella/f24/service/opennlp/Vertex.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/ml/perceptron/BinaryPerceptronModelWriter.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/formats/brat/AnnotatorNoteAnnotation.java
 /home/bsindia/Documents/F24_V2/src/main/java/opennlp/tools/cmdline/chunker/ChunkerDetailedFMeasureListener.java

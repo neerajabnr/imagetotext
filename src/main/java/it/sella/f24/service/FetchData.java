@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import it.sella.f24.service.opennlp.DataDescription;
+import it.sella.f24.bean.DataDescription;
 
 public class FetchData {
 

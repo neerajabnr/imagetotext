@@ -33,7 +33,7 @@ import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
 
-import it.sella.f24.testclasses.Result;
+import it.sella.f24.bean.Result;
 import opennlp.tools.formats.ResourceAsStreamFactory;
 import opennlp.tools.ml.model.SequenceClassificationModel;
 import opennlp.tools.tokenize.TokenSample;
