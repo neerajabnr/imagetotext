@@ -136,7 +136,6 @@ opennlp/tools/ml/maxent/io/QNModelReader.class
 opennlp/tools/util/Evaluator.class
 opennlp/tools/formats/leipzig/SampleSkipStream.class
 opennlp/tools/cmdline/AbstractTrainerTool.class
-it/sella/f24/appinit/AppInitializer.class
 opennlp/tools/coref/mention/AbstractParse.class
 opennlp/tools/ml/naivebayes/PlainTextNaiveBayesModelReader.class
 opennlp/tools/cmdline/chunker/ChunkerEvaluatorTool$EvalToolParams.class
@@ -165,6 +164,7 @@ opennlp/tools/util/TrainingParameters.class
 opennlp/tools/cmdline/TerminateToolException.class
 opennlp/tools/cmdline/tokenizer/CommandLineTokenizer.class
 opennlp/tools/eval/ConllXPosTaggerEval.class
+it/sella/f24/bean/F24Form.class
 opennlp/tools/util/model/ClassSerializer$1.class
 opennlp/maxent/ContextGenerator.class
 opennlp/tools/formats/brat/BratAnnotationStream$AttributeAnnotationParser.class
@@ -243,6 +243,7 @@ opennlp/tools/coref/resolver/FixedNonReferentialResolver.class
 opennlp/tools/cmdline/FineGrainedReportListener$GroupedLabelComparator.class
 opennlp/tools/cmdline/chunker/ChunkerConverterTool.class
 opennlp/tools/tokenize/TokSpanEventStream.class
+it/sella/testclasses/Sample2.class
 opennlp/tools/cmdline/postag/POSEvaluationErrorListener.class
 opennlp/tools/ml/model/Prior.class
 opennlp/tools/cmdline/namefind/TokenNameFinderCrossValidatorTool.class
@@ -652,7 +653,6 @@ opennlp/tools/cmdline/langdetect/LanguageDetectorCrossValidatorTool$CVToolParams
 opennlp/model/Sequence.class
 opennlp/tools/namefind/TokenNameFinderEvaluatorTest.class
 opennlp/tools/util/model/FeatureGeneratorFactorySerializer.class
-it/sella/f24/view/F24Form.class
 opennlp/tools/util/featuregen/WindowFeatureGeneratorFactory.class
 opennlp/tools/ml/model/UniformPrior.class
 opennlp/tools/sentdetect/SentenceDetectorFactoryTest.class
@@ -669,6 +669,7 @@ opennlp/tools/util/MarkableFileInputStreamFactory.class
 opennlp/tools/cmdline/tokenizer/SimpleTokenizerTool.class
 opennlp/tools/eval/AbstractEvalTest.class
 opennlp/tools/ngram/NGramGeneratorTest.class
+it/sella/testclasses/Sample.class
 opennlp/tools/lang/spanish/TokenChunker.class
 opennlp/tools/stemmer/snowball/romanianStemmer.class
 opennlp/tools/langdetect/LanguageDetectorEvaluator.class
@@ -731,6 +732,7 @@ opennlp/tools/formats/BioNLP2004NameSampleStreamFactory.class
 opennlp/tools/util/featuregen/FeatureGeneratorUtil.class
 opennlp/tools/chunker/ChunkSample.class
 opennlp/tools/parser/lang/en/HeadRulesTest.class
+it/sella/f24/util/LoadPropertiesUtil.class
 opennlp/tools/cmdline/postag/POSTaggerFineGrainedReportListener.class
 opennlp/tools/doccat/DocumentCategorizerNBTest.class
 opennlp/tools/formats/leipzig/LeipzigLanguageSampleStream$LeipzigSentencesStream.class
@@ -848,6 +850,7 @@ opennlp/tools/cmdline/doccat/DoccatEvaluationErrorListener.class
 opennlp/tools/util/featuregen/TokenPatternFeatureGenerator.class
 opennlp/tools/cmdline/langdetect/LanguageDetectorTool.class
 opennlp/tools/ml/maxent/io/BinaryGISModelWriter.class
+opennlp/tools/namefind/NameFinderMETokenFinder.class
 opennlp/model/AbstractModelWriter.class
 opennlp/tools/formats/irishsentencebank/IrishSentenceBankDocument$IrishSentenceBankFlex.class
 opennlp/tools/langdetect/LanguageDetectorCrossValidatorTest.class
@@ -880,9 +883,9 @@ opennlp/tools/cmdline/dictionary/DictionaryBuilderTool$Params.class
 opennlp/tools/parser/chunking/ParserTest.class
 opennlp/tools/formats/EvalitaNameSampleStream.class
 opennlp/tools/stemmer/snowball/swedishStemmer.class
+it/sella/f24/AppInitializer.class
 opennlp/tools/cmdline/lemmatizer/LemmatizerModelLoader.class
 opennlp/tools/util/featuregen/BrownBigramFeatureGenerator.class
-opennlp/tools/namefind/NameFinderMETest4.class
 opennlp/tools/namefind/RegexNameFinder.class
 opennlp/tools/cmdline/doccat/DoccatFineGrainedReportListener.class
 opennlp/tools/sentdetect/DummySentenceDetectorFactory$DummyEOSScanner.class
@@ -1098,6 +1101,7 @@ opennlp/model/AbstractDataIndexer.class
 opennlp/tools/cmdline/POSEvaluator.class
 opennlp/tools/lang/english/TreebankChunker.class
 opennlp/tools/parser/GapLabeler.class
+opennlp/tools/namefind/NameFinderMESectionTest.class
 opennlp/tools/formats/Conll02NameSampleStreamFactory.class
 opennlp/tools/formats/NameFinderCensus90NameStream.class
 opennlp/tools/ml/model/EvalParameters.class

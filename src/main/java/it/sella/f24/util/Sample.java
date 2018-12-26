@@ -16,9 +16,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.json.simple.parser.ParseException;
 
 import it.sella.f24.bean.Data;
+import it.sella.f24.bean.Result;
 import it.sella.f24.bean.TextAnnotation;
 import it.sella.f24.controller.F24Controller;
 import it.sella.f24.service.F24OCRService;
+import opennlp.tools.namefind.NameFinderMETokenFinder;
 import opennlp.tools.namefind.RegexNameFinder;
 import opennlp.tools.util.Span;
 
@@ -170,8 +172,8 @@ public class Sample {
 		}*/
 		
 		
-		String s="#### HOTIVO DEL PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       #### COPIA PER IL SOGGETTO CHE EFT ETTUA IL VERSAMENTO #### LL SALDO #### FINALE EURO 2 231*00 #### ESTREMI DEL VERSAMENTO  DA COMPILARE A CURA DI BANCA  POSTE  AGENTE DELLA RISCOSSIONE ####        ####     ####  AB CAB";
-		s=s.substring(0, s.indexOf("ESTREMI"));
+//		String s="#### HOTIVO DEL PAGAMENTO ####                EL 3918 D 6 1 2 2013 1 967*00 #### EL 3918 I 6 8 4 2013 264*00  ####       #### COPIA PER IL SOGGETTO CHE EFT ETTUA IL VERSAMENTO #### LL SALDO #### FINALE EURO 2 231*00 #### ESTREMI DEL VERSAMENTO  DA COMPILARE A CURA DI BANCA  POSTE  AGENTE DELLA RISCOSSIONE ####        ####     ####  AB CAB";
+//		s=s.substring(0, s.indexOf("ESTREMI"));
 		
 //		for(int i=s.indexOf("ESTREMI");i<s.length();i++) {
 //			
@@ -179,7 +181,34 @@ public class Sample {
 //			s=s.replace(s.charAt(i), ' ');
 //		}
 		
-		System.out.println(s);
+//		System.out.println(s);
+		
+		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
+		String sentence = " **   F 24   DELEGA IRREVOCABILE A MODELLO DI PAGAMENTO UNIFICATO AGENZIA ** PROV PER L ' ACCREDITO ALLA TESORERIA COMPETENTE CONTRIBUENTE **     CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS      )       3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE    ,  ,  ,     **   MOTIVO DEL PAGAMENTO  /     .   **         EL 3944 H 5 3 3 0303  2018 43 , 00  ER 3918 D 600  0202  2018 43 , 00 PION     7777777777777777 ** EURO -  86 . 00  \r\n" ; 
+			
+		try {
+			List<Result> f24_SectionDemo = tokenFinder.f24_SectionDemo(sentence);
+			System.out.println(f24_SectionDemo);
+			
+			
+			
+			for (Result result : f24_SectionDemo) {
+				if(result.getKey().equals("Section1")) {
+					System.out.println("Section1:"+result.getValue());
+					
+				}
+				if(result.getKey().equals("Section2")) {
+					System.out.println("Section2:"+result.getValue());
+					
+				}
+			}
+				
+				
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 }

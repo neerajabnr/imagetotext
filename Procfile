@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/F24OCR.jar
+web: java $JAVA_OPTS -jar target/Sample.jar

@@ -7,6 +7,7 @@ import java.net.Proxy;
 import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -16,12 +17,16 @@ import org.apache.log4j.PropertyConfigurator;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -71,8 +76,10 @@ public class F24Controller {
 		SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
 
 		requestFactory.setProxy(Proxy.NO_PROXY);
-		// return builder.build();
+//		// return builder.build();
 		return new RestTemplate(requestFactory);
+		
+		
 
 	}
 
@@ -241,10 +248,10 @@ public class F24Controller {
 		F24Form f24Form = new F24Form();
 		f24Form.setEncodedImage(encodeBase64String);
 		f24Form.setTransactionId("123");
-		// String f24ImageToText = f24ImageToJSON(f24Form);
+		String f24ImageToText = f24ImageToJSON(f24Form);
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 
-		String f24ImageToText = f24test(f24Form);
+//		String f24ImageToText = f24test(f24Form);
 		return f24ImageToText;
 	}
 
@@ -290,7 +297,7 @@ public class F24Controller {
 		for (String filename : filesfromFolder) {
 
 			sourceimage = new File(filename);
-			// logger.info("Image path: "+filename);
+			 logger.info("Image path: "+filename);
 
 			encodedImage = f24Encode(sourceimage);
 			String reqJSON = "{\"encodedImage\":\"" + encodedImage + "\"}";
@@ -353,7 +360,7 @@ public class F24Controller {
 	}
 
 	@RequestMapping(value = "/api/translate", method = RequestMethod.POST)
-	public String f24Translate(String rowVal) {
+	public String f24Translate(@RequestBody String rowVal) {
 
 		// https://f24-img-skew.herokuapp.com/f24/api/imageskew
 
@@ -363,60 +370,17 @@ public class F24Controller {
 		HttpEntity<?> entity = null;
 		ResponseEntity<String> response = null;
 
-		String models[] = { "demo-model_step_100000.pt" };
 
-		Map<String, Object> opt = new HashMap<>();
+//
+//		String datatoService = "Namespace(alpha=0.0, attn_debug=False, avg_raw_probs=False, batch_size=30, beam_size=5, beta=-0.0, block_ngram_repeat=0, config=None,"
+//				+ "coverage_penalty='none', data_type='text', dump_beam='', dynamic_dict=False, fast=False, gpu=-1, "
+//				+ "ignore_when_blocking=[], image_channel_size=3, length_penalty='none', log_file='', log_file_level='0', max_length=100, max_sent_length=None,"
+//				+ "min_length=0, models=['demo-model_step_100000.pt'], n_best=1, output='pred.txt', replace_unk=True, report_bleu=False, report_rouge=False,"
+//				+ "sample_rate=16000, save_config=None, share_vocab=False, src='data/src-test.txt', src_dir='', stepwise_penalty=False, tgt=None,"
+//				+ "verbose=True, window='hamming', window_size=0.02, window_stride=0.01)";
 
-		opt.put("alpha", 0.0);
-		opt.put("attn_debug", "False");
-		opt.put("avg_raw_probs", 0.0);
-		opt.put("batch_size", 30);
-		opt.put("beam_size", 5);
-		opt.put("beta", -0.0);
-		opt.put("block_ngram_repeat", 0);
-		opt.put("config", "None");
-		opt.put("coverage_penalty", "none");
-		opt.put("data_type", "text");
-		opt.put("dump_beam", "");
-		opt.put("dynamic_dict", "False");
-		opt.put("fast", "False");
-		opt.put("gpu", -1);
-
-		opt.put("ignore_when_blocking", "[]");
-		opt.put("image_channel_size", 3);
-		opt.put("length_penalty", "None");
-		opt.put("log_file", "");
-		opt.put("log_file_level", "0");
-		opt.put("max_length", 100);
-		opt.put("max_sent_length", "None");
-		opt.put("min_length", 0);
-		opt.put("models", models);
-		opt.put("n_best", 1);
-		opt.put("output", "pred.txt");
-		opt.put("replace_unk", "True");
-		opt.put("report_bleu", "False");
-		opt.put("report_rouge", "False");
-		opt.put("sample_rate", 16000);
-		opt.put("save_config", "None");
-		opt.put("share_vocab", "False");
-		opt.put("src", "data/src-test.txt");
-		opt.put("src_dir", "");
-		opt.put("stepwise_penalty", "False");
-		opt.put("tgt", "None");
-		opt.put("verbose", "True");
-		opt.put("window", "hamming");
-		opt.put("window_size", 0.02);
-		opt.put("window_stride", 0.01);
-
-		String datatoService = "Namespace(alpha=0.0, attn_debug=False, avg_raw_probs=False, batch_size=30, beam_size=5, beta=-0.0, block_ngram_repeat=0, config=None,"
-				+ "coverage_penalty='none', data_type='text', dump_beam='', dynamic_dict=False, fast=False, gpu=-1, "
-				+ "ignore_when_blocking=[], image_channel_size=3, length_penalty='none', log_file='', log_file_level='0', max_length=100, max_sent_length=None,"
-				+ "min_length=0, models=['demo-model_step_100000.pt'], n_best=1, output='pred.txt', replace_unk=True, report_bleu=False, report_rouge=False,"
-				+ "sample_rate=16000, save_config=None, share_vocab=False, src='data/src-test.txt', src_dir='', stepwise_penalty=False, tgt=None,"
-				+ "verbose=True, window='hamming', window_size=0.02, window_stride=0.01)";
-
-		Map serviceMap = new HashMap<>();
-		serviceMap.put("opt", datatoService);
+//		Map serviceMap = new HashMap<>();
+//		serviceMap.put("opt", datatoService);
 
 		// String row="EL 3918 H 3 3 3 ";
 		JSONObject jsonObject = new JSONObject();
@@ -429,19 +393,56 @@ public class F24Controller {
 		System.out.println("HI Calling");
 		try {
 
-			response = restTemplate.exchange("http://localhost:9000/f24/api/translate", HttpMethod.POST, entity,
+			response = restTemplate.exchange("http://localhost:2000/f24/api/translate", HttpMethod.POST, entity,
 					String.class);
 			System.out.println(response.getBody());
+			return response.getBody();
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			return "{\"status\":\"KO\"}";
+			return rowVal;
 		}
 
 		// String sampleResult =
 		// "{\"F24Semplificato\":{\"Contribuente\":{\"CodiceFiscale\":\"VTINDR85S13D938T\",\"DatiAnagrafici\":{\"Cognome\":\"VITI\",\"Nome\":\"ANDREA\",\"RagioneSociale\":\"\",\"DataDiNascita\":\"13/11/1985\",\"Sesso\":\"M\",\"Comune\":\"GATTINARA\",\"Prov\":\"VC\"},\"DomicilioFiscale\":{\"Comune\":\"\",\"Prov\":\"\",\"ViaeNumeroCivico\":\"\"},\"SecondoCodiceFiscale\":\"\",\"CodiceIdentificativo\":\"\",\"IdentificativoOperazione\":\"\"},\"Taxes\":{\"CodiceUfficio\":\"\",\"CodiceAtto\":\"\",\"Tax\":[{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"1.11\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"ER\",\"CodiceTributo\":\"6099\",\"CodiceEnte\":\"\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"0\",\"MeseRif\":\"0101\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"2.22\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"3.33\",\"CrebitoImporto\":\"\"}]},\"Payment\":{\"DataIncasso\":\"23/07/2018\",\"ContoOrdinante\":\"11O1641490340\",\"SaldoFinale\":\"6.66\",\"Product\":\"0\"}}}";
 
-		return "Hello";
+	}
+	
+	
+	@RequestMapping(value = "/api/sample", method = RequestMethod.POST)
+	public String f24Sample(@RequestParam("file") MultipartFile file) {
+
+		String encodeBase64String = "";
+		byte[] decodeBase64 = null;
+		Data data = null;
+		String imageText = "";
+		HttpHeaders headers=new HttpHeaders();
+		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+		
+		MultiValueMap<String, Object> map=new LinkedMultiValueMap<String, Object>();
+		try {
+			map.add("file", new ByteArrayResource(file.getBytes()));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+//		JSONObject  jsonObject=new JSONObject();
+//		jsonObject.put("file", file);
+		
+		HttpEntity<?> entity=new HttpEntity(map,headers);
+		try {
+			
+			restTemplate.exchange("https://f24imagetotext.herokuapp.com/f24/api/imagetotext", HttpMethod.POST, entity, String.class);
+		}catch(Exception exception) {
+			System.out.println("Hello");
+			exception.printStackTrace();
+		}
+		return imageText;
+
+		// String f24ImageToText = f24ImageToJSON(f24Form);
+		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
+
 	}
 
 }

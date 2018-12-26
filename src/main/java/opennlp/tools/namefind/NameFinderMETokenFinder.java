@@ -348,11 +348,11 @@ public class NameFinderMETokenFinder {
 	private TokenNameFinderModel f24_Section2_Variables_Train() throws IOException, InvalidFormatException {
 		String encoding = "ISO-8859-1";
 		TokenNameFinderModel nameFinderModel;
-		FileInputStream r = new FileInputStream("src/main/resources/f24_sec2part2model.bin");
-
-		if (r != null) {
-			nameFinderModel = new TokenNameFinderModel(r);
-		} else {
+//		FileInputStream r = new FileInputStream("src/main/resources/f24_sec2part2model.bin");
+//
+//		if (r != null) {
+//			nameFinderModel = new TokenNameFinderModel(r);
+//		} else {
 			ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
 					new MockInputStreamFactory(new File("section2trainingnewspace_result_part2.txt")), encoding));
 
@@ -371,8 +371,8 @@ public class NameFinderMETokenFinder {
 				if (modelOut != null)
 					modelOut.close();
 			}
-		}
-		r.close();
+//		}
+//		r.close();
 		return nameFinderModel;
 	}
 
@@ -573,6 +573,71 @@ public class NameFinderMETokenFinder {
 		Assert.assertEquals(new Span(7, 15, "organization"), names2[1]);
 		Assert.assertEquals("person", names2[0].getType());
 		Assert.assertEquals("organization", names2[1].getType());
+	}
+	
+	
+	public List<Result> f24_SectionDemo(String sentence) throws Exception {
+		if (tokenFinderSection2Variables == null)
+			tokenFinderSection2Variables = f24_SectionSplitDemo();
+		TokenizerModel model = NameFinderMETokenFinder.createMaxentTokenModel();
+
+		TokenizerME tokenizer = new TokenizerME(model);
+		String[] sentence2 = tokenizer.tokenize(sentence);
+		NameFinderME nameFinder = new NameFinderME(tokenFinderSection2Variables);
+
+		Span[] names2 = nameFinder.find(sentence2);
+		List<Result> results = new ArrayList<>();
+		for (Span name : names2) {
+
+			System.out.print(name.getType() + " ");
+
+			StringBuffer buffer = new StringBuffer();
+
+			for (int i = name.getStart(); i < name.getEnd(); i++) {
+
+				buffer.append(sentence2[i]+" ");
+
+			}
+
+			results.add(new Result(name.getType(), buffer.toString()));
+			System.out.println();
+		}
+		return results;
+
+	}
+
+	
+
+	@SuppressWarnings("unused")
+	private TokenNameFinderModel f24_SectionSplitDemo() throws IOException, InvalidFormatException {
+		String encoding = "ISO-8859-1";
+		TokenNameFinderModel nameFinderModel;
+//		FileInputStream r = new FileInputStream("src/main/resources/f24_secdemo.bin");
+//
+//		if (r != null) {
+//			nameFinderModel = new TokenNameFinderModel(r);
+//		} else {
+			ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
+					new MockInputStreamFactory(new File("sectiontrainingdata3.txt")), encoding));
+
+			TrainingParameters params = new TrainingParameters();
+			params.put(TrainingParameters.ITERATIONS_PARAM, 100);
+			params.put(TrainingParameters.CUTOFF_PARAM, 1);
+
+			nameFinderModel = NameFinderME.train("eng", null, sampleStream, params,
+					TokenNameFinderFactory.create(null, null, Collections.emptyMap(), new BioCodec()));
+
+			BufferedOutputStream modelOut = null;
+			try {
+				modelOut = new BufferedOutputStream(new FileOutputStream("src/main/resources/f24_secdemo.bin"));
+				nameFinderModel.serialize(modelOut);
+			} finally {
+				if (modelOut != null)
+					modelOut.close();
+			}
+//		}
+//		r.close();
+		return nameFinderModel;
 	}
 
 }

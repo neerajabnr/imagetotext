@@ -17635,3 +17635,8 @@
 <START:mese> 0303 <END> <START:anno> 2012 <END> <START:dobito> 2 19*19 <END>
 <START:mese> 1901 <END> <START:anno> 2006 <END> <START:dobito> 3 9841*98 <END>
 <START:mese> 0905 <END> <START:anno> 2015 <END> <START:dobito> 2 3412908*34 <END>
+
+<START:dobito> 490*49 <END> <START:anno> 2018 <END> 
+<START:dobito> 123*89 <END> <START:anno> 2006 <END> 
+<START:dobito> 567*43 <END> <START:anno> 2004 <END> 
+<START:dobito> 457*23 <END> <START:anno> 2017 <END> 
