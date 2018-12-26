@@ -1,8 +1,10 @@
 package it.sella.f24.controller;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.Proxy;
 import java.util.Dictionary;
 import java.util.HashMap;
@@ -12,6 +14,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.json.simple.JSONObject;
@@ -393,7 +398,7 @@ public class F24Controller {
 		System.out.println("HI Calling");
 		try {
 
-			response = restTemplate.exchange("http://localhost:2000/f24/api/translate", HttpMethod.POST, entity,
+			response = restTemplate.exchange("https://fabrick.sg.gbs.tst/api/fabrick/f24/translate", HttpMethod.POST, entity,
 					String.class);
 			System.out.println(response.getBody());
 			return response.getBody();
@@ -444,5 +449,7 @@ public class F24Controller {
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 
 	}
+	
+	
 
 }
