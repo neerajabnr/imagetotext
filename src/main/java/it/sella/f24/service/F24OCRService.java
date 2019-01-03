@@ -573,7 +573,7 @@ public class F24OCRService {
 			}
 			codiceFiscale = temp;
 		}
-		dob = convertDOB(dob);
+//		dob = convertDOB(dob);
 
 		System.out.println("Date" + dob);
 
