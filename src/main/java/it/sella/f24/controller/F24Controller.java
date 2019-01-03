@@ -253,10 +253,10 @@ public class F24Controller {
 		F24Form f24Form = new F24Form();
 		f24Form.setEncodedImage(encodeBase64String);
 		f24Form.setTransactionId("123");
-		String f24ImageToText = f24ImageToJSON(f24Form);
+//		String f24ImageToText = f24ImageToJSON(f24Form);
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 
-//		String f24ImageToText = f24test(f24Form);
+		String f24ImageToText = f24test(f24Form);
 		return f24ImageToText;
 	}
 

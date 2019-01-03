@@ -183,32 +183,53 @@ public class Sample {
 		
 //		System.out.println(s);
 		
-		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
-		String sentence = " **   F 24   DELEGA IRREVOCABILE A MODELLO DI PAGAMENTO UNIFICATO AGENZIA ** PROV PER L ' ACCREDITO ALLA TESORERIA COMPETENTE CONTRIBUENTE **     CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS      )       3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE    ,  ,  ,     **   MOTIVO DEL PAGAMENTO  /     .   **         EL 3944 H 5 3 3 0303  2018 43 , 00  ER 3918 D 600  0202  2018 43 , 00 PION     7777777777777777 ** EURO -  86 . 00  \r\n" ; 
-			
-		try {
-			List<Result> f24_SectionDemo = tokenFinder.f24_SectionDemo(sentence);
-			System.out.println(f24_SectionDemo);
-			
-			
-			
-			for (Result result : f24_SectionDemo) {
-				if(result.getKey().equals("Section1")) {
-					System.out.println("Section1:"+result.getValue());
-					
-				}
-				if(result.getKey().equals("Section2")) {
-					System.out.println("Section2:"+result.getValue());
-					
-				}
-			}
-				
-				
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
+//		String sentence = " **   F 24   DELEGA IRREVOCABILE A MODELLO DI PAGAMENTO UNIFICATO AGENZIA ** PROV PER L ' ACCREDITO ALLA TESORERIA COMPETENTE CONTRIBUENTE **     CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     DATI ANAGRAFICI BARBIERI ** LORIS      )       3 0 1 0 1 9 4 7 F LEGNAGO ** VR CODICE FISCALE    ,  ,  ,     **   MOTIVO DEL PAGAMENTO  /     .   **         EL 3944 H 5 3 3 0303  2018 43 , 00  ER 3918 D 600  0202  2018 43 , 00 PION     7777777777777777 ** EURO -  86 . 00  \r\n" ; 
+//			
+//		try {
+//			List<Result> f24_SectionDemo = tokenFinder.f24_SectionDemo(sentence);
+//			System.out.println(f24_SectionDemo);
+//			
+//			
+//			
+//			for (Result result : f24_SectionDemo) {
+//				if(result.getKey().equals("Section1")) {
+//					System.out.println("Section1:"+result.getValue());
+//					
+//				}
+//				if(result.getKey().equals("Section2")) {
+//					System.out.println("Section2:"+result.getValue());
+//					
+//				}
+//			}
+//				
+//				
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
+		String row="EL 3 9 1 8  H6 0 0 ";
+		String pattern = "2:4";
+		StringBuffer buffer = new StringBuffer();
+		StringTokenizer stringTokenizer = new StringTokenizer(pattern, ":");
+
+		row = row.replaceAll("\\s", "");
+		
+
+		buffer.append(row);
+
+		int count = 0, i = 0;
+		while (stringTokenizer.hasMoreTokens()) {
+			String token = stringTokenizer.nextToken();
+			System.out.println(Integer.parseInt(token) + count + i);
+			buffer.insert(Integer.parseInt(token) + count + i, " ");
+			System.out.println(buffer);
+			count = count + Integer.parseInt(token);
+			i++;
+		}
+
+		System.out.println("row:"+buffer.toString());
 		
 	}
 }

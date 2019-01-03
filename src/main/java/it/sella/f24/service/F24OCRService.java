@@ -108,7 +108,7 @@ public class F24OCRService {
 
 			return f24Result;
 
-		} catch (IOException e1) {
+		} catch (Exception e1) {
 			e1.printStackTrace();
 			return "{\"status\":\"KO\"}";
 		}
@@ -126,7 +126,7 @@ public class F24OCRService {
 
 			if (txtAnn.getLocale() == null || txtAnn.getLocale().isEmpty()) {
 				xstart = txtAnn.getBoundingPoly().getVertices().get(0).getX();
-				if ((xstart - xprevEnd) > 250) {
+				if ((xstart - xprevEnd) > 700) {
 					ocrData = ocrData + "**" + " ";
 				}
 
@@ -170,6 +170,7 @@ public class F24OCRService {
 		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
 		List<Result> f24_section1 = null;
 		String section1 = "";
+		String operazione="";
 		String section2Constants = "";
 		String section2Variables = "";
 		HttpClient httpClient = HttpClientBuilder.create().build();
@@ -199,6 +200,10 @@ public class F24OCRService {
 			if (result.getKey().equals("Section1")) {
 				section1 = section1 + result.getValue();
 			}
+			
+			if (result.getKey().equals("Operazione")) {
+				operazione = operazione + result.getValue();
+			}
 
 			if (result.getKey().equals("Constants")) {
 
@@ -208,35 +213,35 @@ public class F24OCRService {
 					logger.info("Row:"+row);
 					
 					int countChar=checkCount(row);
-					if(countChar<=12) {
+//					if(countChar<=12) {
 						
 						//Calling OpenNMT service
-						StringBuffer output = new StringBuffer();
-						HttpPost httpPost = new HttpPost(url);
-						httpPost.setHeader("Content-type", "application/json");
-						JSONObject json = new JSONObject();
-						json.put("row", row);  
+//						StringBuffer output = new StringBuffer();
+//						HttpPost httpPost = new HttpPost(url);
+//						httpPost.setHeader("Content-type", "application/json");
+//						JSONObject json = new JSONObject();
+//						json.put("row", row);  
+//						
+//						StringEntity stringEntity = new StringEntity(json.toJSONString());
+//						httpPost.getRequestLine();
+//						httpPost.setEntity(stringEntity);
+//						
+//						CloseableHttpResponse response = (CloseableHttpResponse) httpClient.execute(httpPost);
+//						
+//						BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+//						
+//						String line = "";
+//						while ((line = rd.readLine()) != null) {
+//							output.append(line);
+//						}
+//						String value = output.toString();
+//						logger.info("Row from NMT:" + value);
+//						section2Constants = section2Constants + value + "##";
 						
-						StringEntity stringEntity = new StringEntity(json.toJSONString());
-						httpPost.getRequestLine();
-						httpPost.setEntity(stringEntity);
-						
-						CloseableHttpResponse response = (CloseableHttpResponse) httpClient.execute(httpPost);
-						
-						BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-						
-						String line = "";
-						while ((line = rd.readLine()) != null) {
-							output.append(line);
-						}
-						String value = output.toString();
-						logger.info("Row from NMT:" + value);
-						section2Constants = section2Constants + value + "##";
-					}else {
-						section2Constants = section2Constants + result.getValue() + "##";
-					}
-					// String value=processRow(result.getValue());
-					
+//					}else {
+//						section2Constants = section2Constants + result.getValue() + "##";
+//					}
+					 section2Constants = section2Constants + result.getValue() + "##";
 					
 				} catch (Exception e) {
 					throw new RuntimeException(e);
@@ -255,12 +260,11 @@ public class F24OCRService {
 
 		String section1Remove = propslist.get("section1Remove");
 		String section2Remove = propslist.get("section2Remove");
+		String section2Replace = propslist.get("section2Replace");
 		String euroRemove = propslist.get("euroRemove");
 
-		section1 =
-
-				removeNoise(section1, section1Remove);
-//		section2Constants = removeNoise(section2Constants, section2Remove);
+		section1 =removeNoise(section1, section1Remove);
+		section2Constants = removeNoise(section2Constants, section2Replace);
 		section2Variables = removeNoise(section2Variables, section2Remove);
 //		euro = removeNoise(euro, euroRemove);
 		euro = euro.replaceAll("\\s+", "");
@@ -269,11 +273,14 @@ public class F24OCRService {
 		System.out.println("Section2Constants:\t" + section2Constants);
 		System.out.println("Section2Variables:\t" + section2Variables);
 		System.out.println("Euro:\t" + euro);
+		System.out.println("Operazione:\t" + operazione);
 
 		logger.info("Section1:\t" + section1);
 		logger.info("Section2Constants:\t" + section2Constants);
 		logger.info("Section2Variables:\t" + section2Variables);
 		logger.info("Euro:\t" + euro);
+		logger.info("Operazione:\t" + operazione);
+
 
 		Map<String, String> valuesList = new HashMap<>();
 
@@ -281,6 +288,7 @@ public class F24OCRService {
 		valuesList.put("section2Constants", section2Constants);
 		valuesList.put("section2Variables", section2Variables);
 		valuesList.put("euro", euro);
+		valuesList.put("operazione", operazione);
 
 		return valuesList;
 	}
@@ -362,6 +370,7 @@ public class F24OCRService {
 		String section2Constants = valuesMap.get("section2Constants");
 		String section2Variables = valuesMap.get("section2Variables");
 		String euro = valuesMap.get("euro");
+		String operazione=valuesMap.get("operazione");
 
 		StringTokenizer constantData = new StringTokenizer(section2Constants, "##");
 		StringTokenizer variableData = new StringTokenizer(section2Variables, "##");
@@ -373,9 +382,9 @@ public class F24OCRService {
 
 			while (constantData.hasMoreElements()) {
 				String row = constantData.nextToken();
-
-//				row = processRow(row);
-
+				logger.info("After process row");
+				row = processRow(row);
+				System.out.println("row"+row);
 				secTwoConstantsList = tokenFinder.f24_Section2_Constants(row.trim());
 
 				logger.info("Row to NLP:" + row.trim());
@@ -409,7 +418,9 @@ public class F24OCRService {
 		// Adding Euro Value to the List
 
 		Result euroVal = new Result("euro", euro);
+		Result operazioneVal=new Result("operazione", operazione);
 		secOneList.add(euroVal);
+		secOneList.add(operazioneVal);
 		System.out.println("Values List:  " + secOneList);
 
 		return secOneList;
@@ -422,36 +433,22 @@ public class F24OCRService {
 		StringBuffer buffer = new StringBuffer();
 		StringTokenizer stringTokenizer = new StringTokenizer(pattern, ":");
 
-		String anotherString = "";
-		int index = 0;
-		for (int i = 0; i < row.length(); i++) {
+		row = row.replaceAll("\\s", "");
+		
 
-			Character character = row.charAt(i);
-			if (StringUtils.isAlphanumeric(character.toString()) && anotherString.length() < 10) {
-				anotherString = anotherString + character;
-				index = i;
-			}
-		}
-
-		anotherString = anotherString.replaceAll("\\s", "");
-
-		buffer.append(anotherString);
+		buffer.append(row);
 
 		int count = 0, i = 0;
 		while (stringTokenizer.hasMoreTokens()) {
 			String token = stringTokenizer.nextToken();
+			System.out.println(Integer.parseInt(token) + count + i);
 			buffer.insert(Integer.parseInt(token) + count + i, " ");
+			System.out.println(buffer);
 			count = count + Integer.parseInt(token);
 			i++;
 		}
 
-		if (row.charAt(index + 1) == ' ') {
-			row = buffer.toString() + row.substring(index + 2, row.length());
-		} else {
-			row = buffer.toString() + row.substring(index + 1, row.length());
-		}
-
-		return row;
+		return buffer.toString();
 	}
 
 	private String prepareJSON(List<Result> results) throws FileNotFoundException, IOException {
@@ -463,7 +460,7 @@ public class F24OCRService {
 		StringBuffer buffer = new StringBuffer();
 		String line, mydata = null;
 		int rowcount = 0;
-		String codiceFiscale = "", cognome = "", nome = "", dob = "", sex = "", city = "", prov = "", seizone = "",
+		String codiceFiscale = "", cognome = "", nome = "", dob = "", sex = "", city = "", prov = "", operazione = "",seizone = "",
 				tributo = "", codice = "", mese = "", anno = "", detrazoine = "", dobito = "", credito = "", euro = "";
 		// fecthing the data from the list
 		ListIterator<Result> iterator = (ListIterator<Result>) results.listIterator();
@@ -506,6 +503,10 @@ public class F24OCRService {
 				if (StringUtils.isAlpha(result.getValue()))
 					prov = prov + result.getValue();
 			}
+			if (result.getKey().contains("operazione")) {
+					operazione = operazione + result.getValue() + ";";
+			}
+			
 			if (result.getKey().contains("Sezione")) {
 				if (StringUtils.isAlpha(result.getValue()) && (result.getValue().length() == 2))
 					seizone = seizone + result.getValue() + ";";
@@ -526,6 +527,7 @@ public class F24OCRService {
 				}
 
 			}
+			
 			if (result.getKey().contains("mese")) {
 				if (StringUtils.isNumeric(result.getValue()))
 					mese = mese + result.getValue() + ";";
@@ -583,6 +585,7 @@ public class F24OCRService {
 		logger.info("Sesso: " + sex + "\n");
 		logger.info("Comune: " + city + "\n");
 		logger.info("Prov: " + prov + "\n");
+		logger.info("Operazione:"+ operazione + "\n");
 
 		// Replacing * with , in the debit values
 		dobito = dobito.replace("*", ".");
