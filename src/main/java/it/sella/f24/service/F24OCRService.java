@@ -268,6 +268,8 @@ public class F24OCRService {
 		section2Variables = removeNoise(section2Variables, section2Remove);
 //		euro = removeNoise(euro, euroRemove);
 		euro = euro.replaceAll("\\s+", "");
+		
+		
 
 		System.out.println("Section1:\t" + section1);
 		System.out.println("Section2Constants:\t" + section2Constants);
@@ -433,7 +435,7 @@ public class F24OCRService {
 		StringBuffer buffer = new StringBuffer();
 		StringTokenizer stringTokenizer = new StringTokenizer(pattern, ":");
 
-		row = row.replaceAll("\\s", "");
+		row = row.replaceAll("\\W+", "");
 		
 
 		buffer.append(row);

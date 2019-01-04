@@ -226,7 +226,7 @@ public class NameFinderMETokenFinder {
 		} else {
 
 			ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
-					new MockInputStreamFactory(new File("section1trainingnewspace_result3.txt")), encoding));
+					new MockInputStreamFactory(new File("section1trainingnewspace_result4.txt")), encoding));
 
 			TrainingParameters params = new TrainingParameters();
 			params.put(TrainingParameters.ITERATIONS_PARAM, 100);
