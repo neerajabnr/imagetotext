@@ -512,16 +512,20 @@ public class F24OCRService {
 			}
 			
 			if (result.getKey().contains("Sezione")) {
+				System.out.println("Sezione"+result.getValue());
 				if (StringUtils.isAlpha(result.getValue()) && (result.getValue().length() == 2))
 					seizone = seizone + result.getValue() + ";";
+				System.out.println("");
 			}
 			if (result.getKey().contains("tributo")) {
+				System.out.println("tributo"+result.getValue());
 				if (StringUtils.isNumeric(result.getValue()) && result.getValue().length() == 4) {
 					tributo = tributo + result.getValue() + ";";
 					// rowcount++;
 				}
 			}
 			if (result.getKey().contains("codice")) {
+				System.out.println("codice"+result.getValue());
 				if (StringUtils.isAlphanumeric(result.getValue())) {
 					if (result.getValue().length() > 4) {
 						codice = codice + result.getValue().substring(0, 4) + ";";
@@ -533,10 +537,12 @@ public class F24OCRService {
 			}
 			
 			if (result.getKey().contains("mese")) {
+				System.out.println("mese"+result.getValue());
 				if (StringUtils.isNumeric(result.getValue()))
 					mese = mese + result.getValue() + ";";
 			}
 			if (result.getKey().contains("anno")) {
+				System.out.println("anno"+result.getValue());
 				if (StringUtils.isNumeric(result.getValue()))
 					anno = anno + result.getValue() + ";";
 			}
@@ -545,6 +551,7 @@ public class F24OCRService {
 					detrazoine = detrazoine + result.getValue() + ";";
 			}
 			if (result.getKey().contains("dobito")) {
+				System.out.println("dobito"+result.getValue());
 				dobito = dobito + result.getValue() + ";";
 			}
 			if (result.getKey().contains("credito")) {
