@@ -385,13 +385,15 @@ public class F24OCRService {
 			while (constantData.hasMoreElements()) {
 				String row = constantData.nextToken();
 				logger.info("After process row");
-				row = processRow(row);
+				if(checkCount(row)>=9) {
+					row = processRow(row);
+				}
 				System.out.println("row"+row);
 				secTwoConstantsList = tokenFinder.f24_Section2_Constants(row.trim());
 
 				logger.info("Row to NLP:" + row.trim());
 
-				if (secTwoConstantsList.size() >= 2) {
+				if (secTwoConstantsList.size() >= 1) {
 					secOneList.addAll(secTwoConstantsList);
 				} else {
 					logger.info("Error data:" + secTwoConstantsList);
@@ -406,7 +408,7 @@ public class F24OCRService {
 
 				logger.info("Row to NLP:" + row.trim());
 
-				if (secTwoVariablesList.size() >= 2) {
+				if (secTwoVariablesList.size() >= 1) {
 					secOneList.addAll(secTwoVariablesList);
 				} else {
 					logger.info("Error data:" + secTwoVariablesList);
