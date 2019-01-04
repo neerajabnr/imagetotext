@@ -348,11 +348,11 @@ public class NameFinderMETokenFinder {
 	private TokenNameFinderModel f24_Section2_Variables_Train() throws IOException, InvalidFormatException {
 		String encoding = "ISO-8859-1";
 		TokenNameFinderModel nameFinderModel;
-//		FileInputStream r = new FileInputStream("src/main/resources/f24_sec2part2model.bin");
-//
-//		if (r != null) {
-//			nameFinderModel = new TokenNameFinderModel(r);
-//		} else {
+		FileInputStream r = new FileInputStream("src/main/resources/f24_sec2part2model.bin");
+
+		if (r != null) {
+			nameFinderModel = new TokenNameFinderModel(r);
+		} else {
 			ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
 					new MockInputStreamFactory(new File("section2trainingnewspace_result_part2.txt")), encoding));
 
@@ -371,8 +371,8 @@ public class NameFinderMETokenFinder {
 				if (modelOut != null)
 					modelOut.close();
 			}
-//		}
-//		r.close();
+		}
+		r.close();
 		return nameFinderModel;
 	}
 
