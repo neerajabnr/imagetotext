@@ -597,6 +597,18 @@ public class F24OCRService {
 		logger.info("Comune: " + city + "\n");
 		logger.info("Prov: " + prov + "\n");
 		logger.info("Operazione:"+ operazione + "\n");
+		
+		System.out.println("Section1 Result data:\n");
+		System.out.println("CodiceFiscale: " + codiceFiscale + "\n");
+		System.out.println("Cognome: " + cognome + "\n");
+		System.out.println("Nome: " + nome + "\n");
+		System.out.println("DataDiNascita: " + dob + "\n");
+		System.out.println("Sesso: " + sex + "\n");
+		System.out.println("Comune: " + city + "\n");
+		System.out.println("Prov: " + prov + "\n");
+		System.out.println("Operazione:"+ operazione + "\n");
+		
+		System.out.println();
 
 		// Replacing * with , in the debit values
 		dobito = dobito.replace("*", ".");
@@ -621,6 +633,16 @@ public class F24OCRService {
 		logger.info("Anno:\t" + anno + "\n");
 		logger.info("Dobito:\t" + dobito + "\n");
 		logger.info("Euro:\t" + euro + "\n");
+		
+		
+		System.out.println("Section2 Result data:\n");
+		System.out.println("Seizone:\t" + seizone + "\n");
+		System.out.println("tributo:\t" + tributo + "\n");
+		System.out.println("Codice:\t" + codice + "\n");
+		System.out.println("Mese:\t" + mese + "\n");
+		System.out.println("Anno:\t" + anno + "\n");
+		System.out.println("Dobito:\t" + dobito + "\n");
+		System.out.println("Euro:\t" + euro + "\n");
 
 		try (BufferedReader br = new BufferedReader(
 				new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
