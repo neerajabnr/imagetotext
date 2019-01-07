@@ -302,7 +302,7 @@ public class F24Controller {
 		for (String filename : filesfromFolder) {
 
 			sourceimage = new File(filename);
-			 logger.info("Image path: "+filename);
+//			 logger.info("Image path: "+filename);
 
 			encodedImage = f24Encode(sourceimage);
 			String reqJSON = "{\"encodedImage\":\"" + encodedImage + "\"}";

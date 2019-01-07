@@ -126,7 +126,7 @@ public class F24OCRService {
 
 			if (txtAnn.getLocale() == null || txtAnn.getLocale().isEmpty()) {
 				xstart = txtAnn.getBoundingPoly().getVertices().get(0).getX();
-				if ((xstart - xprevEnd) > 800) {
+				if ((xstart - xprevEnd) > 250) {
 					ocrData = ocrData + "**" + " ";
 				}
 
