@@ -617,14 +617,33 @@ public class F24OCRService {
 		StringTokenizer sztokenizer = new StringTokenizer(seizone, ";");
 		StringTokenizer ttokenizer = new StringTokenizer(tributo, ";");
 		StringTokenizer ctokenizer = new StringTokenizer(codice, ";");
-		rowcount = ttokenizer.countTokens();
-		buildf24(rowcount);
 		StringTokenizer mtokenizer = new StringTokenizer(mese, ";");
 		StringTokenizer atokenizer = new StringTokenizer(anno, ";");
 		StringTokenizer dtokenizer = new StringTokenizer(detrazoine, ";");
 		StringTokenizer dbtokenizer = new StringTokenizer(dobito, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(credito, ";");
 
+		//Calculating the rowcount
+		
+		if(ttokenizer.countTokens()!=0) {
+			rowcount = ttokenizer.countTokens();
+		}else if(ctokenizer.countTokens()!=0) {
+			rowcount = ctokenizer.countTokens();
+		}else if(dtokenizer.countTokens()!=0) {
+			rowcount = dtokenizer.countTokens();
+		}else if(atokenizer.countTokens()!=0) {
+			rowcount = dtokenizer.countTokens();
+		}else if(dbtokenizer.countTokens()!=0) {
+			rowcount = dtokenizer.countTokens();
+		}
+		
+		System.out.println("Row count:"+rowcount);
+		logger.info("Row count:"+rowcount);
+		buildf24(rowcount);
+		
+		
+		
+		
 		logger.info("Section2 Result data:\n");
 		logger.info("Seizone:\t" + seizone + "\n");
 		logger.info("tributo:\t" + tributo + "\n");
