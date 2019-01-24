@@ -81,10 +81,8 @@ public class F24Controller {
 		SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
 
 		requestFactory.setProxy(Proxy.NO_PROXY);
-//		// return builder.build();
+		// // return builder.build();
 		return new RestTemplate(requestFactory);
-		
-		
 
 	}
 
@@ -253,7 +251,7 @@ public class F24Controller {
 		F24Form f24Form = new F24Form();
 		f24Form.setEncodedImage(encodeBase64String);
 		f24Form.setTransactionId("123");
-//		String f24ImageToText = f24ImageToJSON(f24Form);
+		// String f24ImageToText = f24ImageToJSON(f24Form);
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 
 		String f24ImageToText = f24test(f24Form);
@@ -302,7 +300,7 @@ public class F24Controller {
 		for (String filename : filesfromFolder) {
 
 			sourceimage = new File(filename);
-			 logger.info("Image path: "+filename);
+			logger.info("Image path: " + filename);
 
 			encodedImage = f24Encode(sourceimage);
 			String reqJSON = "{\"encodedImage\":\"" + encodedImage + "\"}";
@@ -375,17 +373,22 @@ public class F24Controller {
 		HttpEntity<?> entity = null;
 		ResponseEntity<String> response = null;
 
+		//
+		// String datatoService = "Namespace(alpha=0.0, attn_debug=False,
+		// avg_raw_probs=False, batch_size=30, beam_size=5, beta=-0.0,
+		// block_ngram_repeat=0, config=None,"
+		// + "coverage_penalty='none', data_type='text', dump_beam='',
+		// dynamic_dict=False, fast=False, gpu=-1, "
+		// + "ignore_when_blocking=[], image_channel_size=3, length_penalty='none',
+		// log_file='', log_file_level='0', max_length=100, max_sent_length=None,"
+		// + "min_length=0, models=['demo-model_step_100000.pt'], n_best=1,
+		// output='pred.txt', replace_unk=True, report_bleu=False, report_rouge=False,"
+		// + "sample_rate=16000, save_config=None, share_vocab=False,
+		// src='data/src-test.txt', src_dir='', stepwise_penalty=False, tgt=None,"
+		// + "verbose=True, window='hamming', window_size=0.02, window_stride=0.01)";
 
-//
-//		String datatoService = "Namespace(alpha=0.0, attn_debug=False, avg_raw_probs=False, batch_size=30, beam_size=5, beta=-0.0, block_ngram_repeat=0, config=None,"
-//				+ "coverage_penalty='none', data_type='text', dump_beam='', dynamic_dict=False, fast=False, gpu=-1, "
-//				+ "ignore_when_blocking=[], image_channel_size=3, length_penalty='none', log_file='', log_file_level='0', max_length=100, max_sent_length=None,"
-//				+ "min_length=0, models=['demo-model_step_100000.pt'], n_best=1, output='pred.txt', replace_unk=True, report_bleu=False, report_rouge=False,"
-//				+ "sample_rate=16000, save_config=None, share_vocab=False, src='data/src-test.txt', src_dir='', stepwise_penalty=False, tgt=None,"
-//				+ "verbose=True, window='hamming', window_size=0.02, window_stride=0.01)";
-
-//		Map serviceMap = new HashMap<>();
-//		serviceMap.put("opt", datatoService);
+		// Map serviceMap = new HashMap<>();
+		// serviceMap.put("opt", datatoService);
 
 		// String row="EL 3918 H 3 3 3 ";
 		JSONObject jsonObject = new JSONObject();
@@ -398,8 +401,8 @@ public class F24Controller {
 		System.out.println("HI Calling");
 		try {
 
-			response = restTemplate.exchange("https://fabrick.sg.gbs.tst/api/fabrick/f24/translate", HttpMethod.POST, entity,
-					String.class);
+			response = restTemplate.exchange("https://fabrick.sg.gbs.tst/api/fabrick/f24/translate", HttpMethod.POST,
+					entity, String.class);
 			System.out.println(response.getBody());
 			return response.getBody();
 
@@ -412,8 +415,7 @@ public class F24Controller {
 		// "{\"F24Semplificato\":{\"Contribuente\":{\"CodiceFiscale\":\"VTINDR85S13D938T\",\"DatiAnagrafici\":{\"Cognome\":\"VITI\",\"Nome\":\"ANDREA\",\"RagioneSociale\":\"\",\"DataDiNascita\":\"13/11/1985\",\"Sesso\":\"M\",\"Comune\":\"GATTINARA\",\"Prov\":\"VC\"},\"DomicilioFiscale\":{\"Comune\":\"\",\"Prov\":\"\",\"ViaeNumeroCivico\":\"\"},\"SecondoCodiceFiscale\":\"\",\"CodiceIdentificativo\":\"\",\"IdentificativoOperazione\":\"\"},\"Taxes\":{\"CodiceUfficio\":\"\",\"CodiceAtto\":\"\",\"Tax\":[{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"1.11\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"ER\",\"CodiceTributo\":\"6099\",\"CodiceEnte\":\"\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"0\",\"MeseRif\":\"0101\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"2.22\",\"CrebitoImporto\":\"\"},{\"Sezione\":\"EL\",\"CodiceTributo\":\"3944\",\"CodiceEnte\":\"D933\",\"Ravv\":\"\",\"ImmVar\":\"\",\"Acc\":\"\",\"Saldo\":\"\",\"NumImm\":\"1\",\"MeseRif\":\"0104\",\"AnnoRif\":\"2018\",\"Detrazione\":\"\",\"DebitoImporto\":\"3.33\",\"CrebitoImporto\":\"\"}]},\"Payment\":{\"DataIncasso\":\"23/07/2018\",\"ContoOrdinante\":\"11O1641490340\",\"SaldoFinale\":\"6.66\",\"Product\":\"0\"}}}";
 
 	}
-	
-	
+
 	@RequestMapping(value = "/api/sample", method = RequestMethod.POST)
 	public String f24Sample(@RequestParam("file") MultipartFile file) {
 
@@ -421,25 +423,26 @@ public class F24Controller {
 		byte[] decodeBase64 = null;
 		Data data = null;
 		String imageText = "";
-		HttpHeaders headers=new HttpHeaders();
+		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-		
-		MultiValueMap<String, Object> map=new LinkedMultiValueMap<String, Object>();
+
+		MultiValueMap<String, Object> map = new LinkedMultiValueMap<String, Object>();
 		try {
 			map.add("file", new ByteArrayResource(file.getBytes()));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-//		JSONObject  jsonObject=new JSONObject();
-//		jsonObject.put("file", file);
-		
-		HttpEntity<?> entity=new HttpEntity(map,headers);
+
+		// JSONObject jsonObject=new JSONObject();
+		// jsonObject.put("file", file);
+
+		HttpEntity<?> entity = new HttpEntity(map, headers);
 		try {
-			
-			restTemplate.exchange("https://f24imagetotext.herokuapp.com/f24/api/imagetotext", HttpMethod.POST, entity, String.class);
-		}catch(Exception exception) {
+
+			restTemplate.exchange("https://f24imagetotext.herokuapp.com/f24/api/imagetotext", HttpMethod.POST, entity,
+					String.class);
+		} catch (Exception exception) {
 			System.out.println("Hello");
 			exception.printStackTrace();
 		}
@@ -449,7 +452,92 @@ public class F24Controller {
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 
 	}
-	
-	
+
+	@RequestMapping(value = "/api/image/googletest", method = RequestMethod.PUT)
+	public String f24GoogleTest(@RequestParam("file") MultipartFile file) {
+		System.out.println("Hello");
+		String encodeBase64String = "";
+		try {
+
+			encodeBase64String = Base64.encodeBase64String(file.getBytes());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		F24Form f24Form = new F24Form();
+		f24Form.setEncodedImage(encodeBase64String);
+		f24Form.setTransactionId("123");
+		// String f24ImageToText = f24ImageToJSON(f24Form);
+		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
+
+
+		String accessToken = "123";
+		if (accessToken.isEmpty()) {
+			return "{\"status\":\"Access token is empty, please provide the correct details\"}";
+		} else {
+			// for local testing
+			ObjectMapper mapper = new ObjectMapper();
+			String reqJSON = "{\"encodedImage\":\"" + f24Form.getEncodedImage() + "\"}";
+
+			// testing in cloud
+
+			JSONObject jsonObject = new JSONObject();
+			jsonObject.put("encodedImage", f24Form.getEncodedImage());
+
+			System.out.println("Input JSON:" + jsonObject);
+			F24JSON f24json = null;
+			HttpHeaders headers = new HttpHeaders();
+			headers.setContentType(MediaType.APPLICATION_JSON);
+			// HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(),
+			// headers);
+
+			HttpEntity<String> entity = new HttpEntity<>(reqJSON, headers);
+			String f24Result = "{}";
+			byte[] decodeBase64 = null;
+			Data data = null;
+
+			try {
+				System.out.println("Calling Skew Service");
+				ResponseEntity<String> response = restTemplate.exchange("http://localhost:4000/f24/api/imageskew",
+						HttpMethod.POST, entity, String.class);
+				// http://localhost:5000/f24/api/imageskew
+
+				f24json = mapper.readValue(response.getBody(), F24JSON.class);
+				System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
+				decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
+
+				// decodeBase64 = Base64.decodeBase64(f24Form.getEncodedImage());
+
+				System.out.println("Decoded" + decodeBase64);
+				for (int i = 0; i < decodeBase64.length / 4; i++) {
+					System.out.print(decodeBase64[i]);
+				}
+
+				System.out.println("nextline");
+
+				for (int i = (decodeBase64.length / 4) + 1; i < decodeBase64.length / 2; i++) {
+					System.out.print(decodeBase64[i]);
+				}
+
+				System.out.println("nextline");
+
+				for (int i = (decodeBase64.length / 2) + 1; i < decodeBase64.length; i++) {
+					System.out.print(decodeBase64[i]);
+				}
+
+				System.out.println("Calling Google Service");
+				data = googleService.readText(decodeBase64, "");
+				System.out.println("Calling OCR Service");
+				f24Result = ocrService.getGoogleText(data);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return "Hi";
+			}
+
+			return "Hello";
+		}
+
+	}
 
 }

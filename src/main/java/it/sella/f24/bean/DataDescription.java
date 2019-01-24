@@ -1,6 +1,6 @@
 package it.sella.f24.bean;
 
-public class DataDescription implements Comparable<DataDescription> {
+public class DataDescription {
 
 	private String description;
 	private String key;
@@ -72,37 +72,44 @@ public class DataDescription implements Comparable<DataDescription> {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((description == null) ? 0 : description.hashCode());
-		result = prime * result + xEnd;
-		result = prime * result + xStart;
-		result = prime * result + yEnd;
+//		result = prime * result + ((description == null) ? 0 : description.hashCode());
+//		result = prime * result + xEnd;
+//		result = prime * result + xStart;
+//		result = prime * result + yEnd;
 		result = prime * result + yStart;
 		return result;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		DataDescription description = (DataDescription) obj;
+		
+		if(this.yStart>description.yStart) {
 			return true;
-		if (obj == null)
+		}else {
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		DataDescription other = (DataDescription) obj;
-		if (description == null) {
-			if (other.description != null)
-				return false;
-		} else if (!description.equals(other.description))
-			return false;
-		if (xEnd != other.xEnd)
-			return false;
-		if (xStart != other.xStart)
-			return false;
-		if (yEnd != other.yEnd)
-			return false;
-		if (yStart != other.yStart)
-			return false;
-		return true;
+		}
+//		if (this == obj)
+//			return true;
+//		if (obj == null)
+//			return false;
+//		if (getClass() != obj.getClass())
+//			return false;
+//		DataDescription other = (DataDescription) obj;
+//		if (description == null) {
+//			if (other.description != null)
+//				return false;
+//		} else if (!description.equals(other.description))
+//			return false;
+//		if (xEnd != other.xEnd)
+//			return false;
+//		if (xStart != other.xStart)
+//			return false;
+//		if (yEnd != other.yEnd)
+//			return false;
+//		if (yStart != other.yStart)
+//			return false;
+//		return true;
 	}
 
 	@Override
@@ -111,36 +118,42 @@ public class DataDescription implements Comparable<DataDescription> {
 				+ yStart + ", xEnd=" + xEnd + ", yEnd=" + yEnd + "]";
 	}
 
-	@Override
-	public int compareTo(DataDescription o) {
-		int result = o.yEnd - this.yEnd;
-		int xdiffval = 0;
-		int xdifference = this.xStart - o.xStart;
-		if (difference != 0)
-			xdiffval = xdifference / difference;
-		result = result + xdiffval;
-		int result1=0;
-		boolean ycomp = true;
-		for(int i=o.yStart+xdiffval;i<o.yEnd+xdiffval;i++){
-			for(int j=this.yStart;j<this.yEnd;j++) {
-				if(i == j){
-						result1 = Integer.compare(this.xStart, o.xStart);
-						ycomp= false;
-						break;
-				}
-			}
-		}
-		
-		
-//		if (result <= 5 && result >= -5) {
-//			result1 = Integer.compare(this.xStart, o.xStart);
-//		} else 
-		
-		if (ycomp){
-			result1 = Integer.compare(this.yEnd, o.yEnd);
-		}
-		return result1;
-	}
+//	@Override
+//	public int compareTo(DataDescription description) {
+//		
+//		if(this.yStart>description.yStart) {
+//			return 1;
+//		}else {
+//			return 0;
+//		}
+////		int result = o.yEnd - this.yEnd;
+////		int xdiffval = 0;
+////		int xdifference = this.xStart - o.xStart;
+////		if (difference != 0)
+////			xdiffval = xdifference / difference;
+////		result = result + xdiffval;
+////		int result1=0;
+////		boolean ycomp = true;
+////		for(int i=o.yStart+xdiffval;i<o.yEnd+xdiffval;i++){
+////			for(int j=this.yStart;j<this.yEnd;j++) {
+////				if(i == j){
+////						result1 = Integer.compare(this.xStart, o.xStart);
+////						ycomp= false;
+////						break;
+////				}
+////			}
+////		}
+//		
+//		
+////		if (result <= 5 && result >= -5) {
+////			result1 = Integer.compare(this.xStart, o.xStart);
+////		} else 
+//		
+////		if (ycomp){
+////			result1 = Integer.compare(this.yEnd, o.yEnd);
+////		}
+////		return result1;
+//	}
 
 	public int getDifference() {
 		return difference;

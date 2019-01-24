@@ -42,6 +42,8 @@ import org.springframework.stereotype.Service;
 
 import it.sella.f24.bean.Data;
 import it.sella.f24.bean.DataDescription;
+import it.sella.f24.bean.DescComparator;
+import it.sella.f24.bean.DescXComparator;
 import it.sella.f24.bean.Result;
 import it.sella.f24.bean.TextAnnotation;
 import it.sella.f24.controller.F24Controller;
@@ -116,6 +118,7 @@ public class F24OCRService {
 	}
 
 	public String getImageText(Data data) {
+		logger.info("before processing" + data);
 
 		int keycount = 0, xprevEnd = 0, xstart = 0;
 		String ocrData = "";
@@ -170,14 +173,14 @@ public class F24OCRService {
 		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
 		List<Result> f24_section1 = null;
 		String section1 = "";
-		String operazione="";
+		String operazione = "";
 		String section2Constants = "";
 		String section2Variables = "";
 		HttpClient httpClient = HttpClientBuilder.create().build();
 
 		String euro = "";
 
-		//String url = "http://localhost:2000/f24/api/translate";//
+		// String url = "http://localhost:2000/f24/api/translate";//
 		String url = "https://fabrick.sg.gbs.tst/api/fabrick/f24/translate";
 
 		// add header
@@ -200,7 +203,7 @@ public class F24OCRService {
 			if (result.getKey().equals("Section1")) {
 				section1 = section1 + result.getValue();
 			}
-			
+
 			if (result.getKey().equals("Operazione")) {
 				operazione = operazione + result.getValue();
 			}
@@ -208,41 +211,43 @@ public class F24OCRService {
 			if (result.getKey().equals("Constants")) {
 
 				try {
-					
-					String row=checkPattern(result.getValue());
-					logger.info("Row:"+row);
-					
-					int countChar=checkCount(row);
-//					if(countChar<=12) {
-						
-						//Calling OpenNMT service
-//						StringBuffer output = new StringBuffer();
-//						HttpPost httpPost = new HttpPost(url);
-//						httpPost.setHeader("Content-type", "application/json");
-//						JSONObject json = new JSONObject();
-//						json.put("row", row);  
-//						
-//						StringEntity stringEntity = new StringEntity(json.toJSONString());
-//						httpPost.getRequestLine();
-//						httpPost.setEntity(stringEntity);
-//						
-//						CloseableHttpResponse response = (CloseableHttpResponse) httpClient.execute(httpPost);
-//						
-//						BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-//						
-//						String line = "";
-//						while ((line = rd.readLine()) != null) {
-//							output.append(line);
-//						}
-//						String value = output.toString();
-//						logger.info("Row from NMT:" + value);
-//						section2Constants = section2Constants + value + "##";
-						
-//					}else {
-//						section2Constants = section2Constants + result.getValue() + "##";
-//					}
-					 section2Constants = section2Constants + result.getValue() + "##";
-					
+
+					String row = checkPattern(result.getValue());
+					logger.info("Row:" + row);
+
+					int countChar = checkCount(row);
+					// if(countChar<=12) {
+
+					// Calling OpenNMT service
+					// StringBuffer output = new StringBuffer();
+					// HttpPost httpPost = new HttpPost(url);
+					// httpPost.setHeader("Content-type", "application/json");
+					// JSONObject json = new JSONObject();
+					// json.put("row", row);
+					//
+					// StringEntity stringEntity = new StringEntity(json.toJSONString());
+					// httpPost.getRequestLine();
+					// httpPost.setEntity(stringEntity);
+					//
+					// CloseableHttpResponse response = (CloseableHttpResponse)
+					// httpClient.execute(httpPost);
+					//
+					// BufferedReader rd = new BufferedReader(new
+					// InputStreamReader(response.getEntity().getContent()));
+					//
+					// String line = "";
+					// while ((line = rd.readLine()) != null) {
+					// output.append(line);
+					// }
+					// String value = output.toString();
+					// logger.info("Row from NMT:" + value);
+					// section2Constants = section2Constants + value + "##";
+
+					// }else {
+					// section2Constants = section2Constants + result.getValue() + "##";
+					// }
+					section2Constants = section2Constants + result.getValue() + "##";
+
 				} catch (Exception e) {
 					throw new RuntimeException(e);
 				}
@@ -263,13 +268,11 @@ public class F24OCRService {
 		String section2Replace = propslist.get("section2Replace");
 		String euroRemove = propslist.get("euroRemove");
 
-		section1 =removeNoise(section1, section1Remove);
+		section1 = removeNoise(section1, section1Remove);
 		section2Constants = removeNoise(section2Constants, section2Replace);
 		section2Variables = removeNoise(section2Variables, section2Remove);
-//		euro = removeNoise(euro, euroRemove);
+		// euro = removeNoise(euro, euroRemove);
 		euro = euro.replaceAll("\\s+", "");
-		
-		
 
 		System.out.println("Section1:\t" + section1);
 		System.out.println("Section2Constants:\t" + section2Constants);
@@ -283,7 +286,6 @@ public class F24OCRService {
 		logger.info("Euro:\t" + euro);
 		logger.info("Operazione:\t" + operazione);
 
-
 		Map<String, String> valuesList = new HashMap<>();
 
 		valuesList.put("section1", section1);
@@ -296,12 +298,12 @@ public class F24OCRService {
 	}
 
 	private int checkCount(String row) {
-		int count=0;
-		for(int i=0;i<row.length();i++) {
-			Character character=row.charAt(i);
-			if(StringUtils.isAlphanumeric(character.toString())) {
+		int count = 0;
+		for (int i = 0; i < row.length(); i++) {
+			Character character = row.charAt(i);
+			if (StringUtils.isAlphanumeric(character.toString())) {
 				count++;
-			}else {
+			} else {
 				continue;
 			}
 		}
@@ -309,35 +311,32 @@ public class F24OCRService {
 	}
 
 	private String checkPattern(String value) {
-		value=value.replaceAll("[^a-zA-Z0-9\\s]", "");
+		value = value.replaceAll("[^a-zA-Z0-9\\s]", "");
 		StringBuffer buffer = new StringBuffer(value);
-	    
-	    Pattern pattern1 = Pattern.compile("[0-9]{5} ");//EL13918 H553,EIL13918 H553
-        Pattern pattern2 = Pattern.compile("[A-Z][0-9]{4} ");//EL3918 H553,ELI3918
-        
-        Matcher matcher1 = pattern1.matcher(value);
-        Matcher matcher2 = pattern2.matcher(value);
-        
-        
-        if (matcher1.find()) {
-    		System.out.println("matcher1"+pattern1);
-    		logger.info("matcher1:"+pattern1);
-    		System.out.println("Pattern found from " + matcher1.start() + 
-    				" to " + (matcher1.end()-1)); 
-    		
-    		buffer.insert(matcher1.start()+1, " ");
-    	} else if (matcher2.find()) {
-    		System.out.println("matcher2"+pattern2);
-    		logger.info("matcher2:"+pattern2);
-    		System.out.println("Pattern found from " + matcher2.start() + 
-    				" to " + (matcher2.end()-1)); 
-    		
-    		buffer.insert(matcher2.start()+1, " ");
-    	}else {//EL 3918 H533
-    		logger.info("No match");
-    	}
-        
-        System.out.println(buffer.toString());
+
+		Pattern pattern1 = Pattern.compile("[0-9]{5} ");// EL13918 H553,EIL13918 H553
+		Pattern pattern2 = Pattern.compile("[A-Z][0-9]{4} ");// EL3918 H553,ELI3918
+
+		Matcher matcher1 = pattern1.matcher(value);
+		Matcher matcher2 = pattern2.matcher(value);
+
+		if (matcher1.find()) {
+			System.out.println("matcher1" + pattern1);
+			logger.info("matcher1:" + pattern1);
+			System.out.println("Pattern found from " + matcher1.start() + " to " + (matcher1.end() - 1));
+
+			buffer.insert(matcher1.start() + 1, " ");
+		} else if (matcher2.find()) {
+			System.out.println("matcher2" + pattern2);
+			logger.info("matcher2:" + pattern2);
+			System.out.println("Pattern found from " + matcher2.start() + " to " + (matcher2.end() - 1));
+
+			buffer.insert(matcher2.start() + 1, " ");
+		} else {// EL 3918 H533
+			logger.info("No match");
+		}
+
+		System.out.println(buffer.toString());
 		return buffer.toString();
 	}
 
@@ -372,7 +371,7 @@ public class F24OCRService {
 		String section2Constants = valuesMap.get("section2Constants");
 		String section2Variables = valuesMap.get("section2Variables");
 		String euro = valuesMap.get("euro");
-		String operazione=valuesMap.get("operazione");
+		String operazione = valuesMap.get("operazione");
 
 		StringTokenizer constantData = new StringTokenizer(section2Constants, "##");
 		StringTokenizer variableData = new StringTokenizer(section2Variables, "##");
@@ -385,10 +384,10 @@ public class F24OCRService {
 			while (constantData.hasMoreElements()) {
 				String row = constantData.nextToken();
 				logger.info("After process row");
-				if(checkCount(row)>=9) {
+				if (checkCount(row) >= 9) {
 					row = processRow(row);
 				}
-				System.out.println("row"+row);
+				System.out.println("row" + row);
 				secTwoConstantsList = tokenFinder.f24_Section2_Constants(row.trim());
 
 				logger.info("Row to NLP:" + row.trim());
@@ -422,7 +421,7 @@ public class F24OCRService {
 		// Adding Euro Value to the List
 
 		Result euroVal = new Result("euro", euro);
-		Result operazioneVal=new Result("operazione", operazione);
+		Result operazioneVal = new Result("operazione", operazione);
 		secOneList.add(euroVal);
 		secOneList.add(operazioneVal);
 		System.out.println("Values List:  " + secOneList);
@@ -438,7 +437,6 @@ public class F24OCRService {
 		StringTokenizer stringTokenizer = new StringTokenizer(pattern, ":");
 
 		row = row.replaceAll("\\W+", "");
-		
 
 		buffer.append(row);
 
@@ -464,8 +462,9 @@ public class F24OCRService {
 		StringBuffer buffer = new StringBuffer();
 		String line, mydata = null;
 		int rowcount = 0;
-		String codiceFiscale = "", cognome = "", nome = "", dob = "", sex = "", city = "", prov = "", operazione = "",seizone = "",
-				tributo = "", codice = "", mese = "", anno = "", detrazoine = "", dobito = "", credito = "", euro = "";
+		String codiceFiscale = "", cognome = "", nome = "", dob = "", sex = "", city = "", prov = "", operazione = "",
+				seizone = "", tributo = "", codice = "", mese = "", anno = "", detrazoine = "", dobito = "",
+				credito = "", euro = "";
 		// fecthing the data from the list
 		ListIterator<Result> iterator = (ListIterator<Result>) results.listIterator();
 		for (; iterator.hasNext();) {
@@ -508,24 +507,24 @@ public class F24OCRService {
 					prov = prov + result.getValue();
 			}
 			if (result.getKey().contains("operazione")) {
-					operazione = operazione + result.getValue() + ";";
+				operazione = operazione + result.getValue() + ";";
 			}
-			
+
 			if (result.getKey().contains("Sezione")) {
-				System.out.println("Sezione"+result.getValue());
+				System.out.println("Sezione" + result.getValue());
 				if (StringUtils.isAlpha(result.getValue()) && (result.getValue().length() == 2))
 					seizone = seizone + result.getValue() + ";";
 				System.out.println("");
 			}
 			if (result.getKey().contains("tributo")) {
-				System.out.println("tributo"+result.getValue());
+				System.out.println("tributo" + result.getValue());
 				if (StringUtils.isNumeric(result.getValue()) && result.getValue().length() == 4) {
 					tributo = tributo + result.getValue() + ";";
 					// rowcount++;
 				}
 			}
 			if (result.getKey().contains("codice")) {
-				System.out.println("codice"+result.getValue());
+				System.out.println("codice" + result.getValue());
 				if (StringUtils.isAlphanumeric(result.getValue())) {
 					if (result.getValue().length() > 4) {
 						codice = codice + result.getValue().substring(0, 4) + ";";
@@ -535,14 +534,14 @@ public class F24OCRService {
 				}
 
 			}
-			
+
 			if (result.getKey().contains("mese")) {
-				System.out.println("mese"+result.getValue());
+				System.out.println("mese" + result.getValue());
 				if (StringUtils.isNumeric(result.getValue()))
 					mese = mese + result.getValue() + ";";
 			}
 			if (result.getKey().contains("anno")) {
-				System.out.println("anno"+result.getValue());
+				System.out.println("anno" + result.getValue());
 				if (StringUtils.isNumeric(result.getValue()))
 					anno = anno + result.getValue() + ";";
 			}
@@ -551,7 +550,7 @@ public class F24OCRService {
 					detrazoine = detrazoine + result.getValue() + ";";
 			}
 			if (result.getKey().contains("dobito")) {
-				System.out.println("dobito"+result.getValue());
+				System.out.println("dobito" + result.getValue());
 				dobito = dobito + result.getValue() + ";";
 			}
 			if (result.getKey().contains("credito")) {
@@ -584,7 +583,7 @@ public class F24OCRService {
 			}
 			codiceFiscale = temp;
 		}
-//		dob = convertDOB(dob);
+		// dob = convertDOB(dob);
 
 		System.out.println("Date" + dob);
 
@@ -596,8 +595,8 @@ public class F24OCRService {
 		logger.info("Sesso: " + sex + "\n");
 		logger.info("Comune: " + city + "\n");
 		logger.info("Prov: " + prov + "\n");
-		logger.info("Operazione:"+ operazione + "\n");
-		
+		logger.info("Operazione:" + operazione + "\n");
+
 		System.out.println("Section1 Result data:\n");
 		System.out.println("CodiceFiscale: " + codiceFiscale + "\n");
 		System.out.println("Cognome: " + cognome + "\n");
@@ -606,8 +605,8 @@ public class F24OCRService {
 		System.out.println("Sesso: " + sex + "\n");
 		System.out.println("Comune: " + city + "\n");
 		System.out.println("Prov: " + prov + "\n");
-		System.out.println("Operazione:"+ operazione + "\n");
-		
+		System.out.println("Operazione:" + operazione + "\n");
+
 		System.out.println();
 
 		// Replacing * with , in the debit values
@@ -623,27 +622,24 @@ public class F24OCRService {
 		StringTokenizer dbtokenizer = new StringTokenizer(dobito, ";");
 		StringTokenizer crtokenizer = new StringTokenizer(credito, ";");
 
-		//Calculating the rowcount
-		
-		if(ttokenizer.countTokens()!=0) {
+		// Calculating the rowcount
+
+		if (ttokenizer.countTokens() != 0) {
 			rowcount = ttokenizer.countTokens();
-		}else if(ctokenizer.countTokens()!=0) {
+		} else if (ctokenizer.countTokens() != 0) {
 			rowcount = ctokenizer.countTokens();
-		}else if(dtokenizer.countTokens()!=0) {
+		} else if (dtokenizer.countTokens() != 0) {
 			rowcount = dtokenizer.countTokens();
-		}else if(atokenizer.countTokens()!=0) {
+		} else if (atokenizer.countTokens() != 0) {
 			rowcount = dtokenizer.countTokens();
-		}else if(dbtokenizer.countTokens()!=0) {
+		} else if (dbtokenizer.countTokens() != 0) {
 			rowcount = dtokenizer.countTokens();
 		}
-		
-		System.out.println("Row count:"+rowcount);
-		logger.info("Row count:"+rowcount);
+
+		System.out.println("Row count:" + rowcount);
+		logger.info("Row count:" + rowcount);
 		buildf24(rowcount);
-		
-		
-		
-		
+
 		logger.info("Section2 Result data:\n");
 		logger.info("Seizone:\t" + seizone + "\n");
 		logger.info("tributo:\t" + tributo + "\n");
@@ -652,8 +648,7 @@ public class F24OCRService {
 		logger.info("Anno:\t" + anno + "\n");
 		logger.info("Dobito:\t" + dobito + "\n");
 		logger.info("Euro:\t" + euro + "\n");
-		
-		
+
 		System.out.println("Section2 Result data:\n");
 		System.out.println("Seizone:\t" + seizone + "\n");
 		System.out.println("tributo:\t" + tributo + "\n");
@@ -663,8 +658,7 @@ public class F24OCRService {
 		System.out.println("Dobito:\t" + dobito + "\n");
 		System.out.println("Euro:\t" + euro + "\n");
 
-		try (BufferedReader br = new BufferedReader(
-				new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/f24.txt"))) {
 			while ((line = br.readLine()) != null) {
 				mydata = line;
 				mydata = line.replace("v1", codiceFiscale);
@@ -806,8 +800,7 @@ public class F24OCRService {
 			}
 		}
 
-		try (BufferedReader br = new BufferedReader(
-				new FileReader("src/main/java/it/sella/f24/service/testf24.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/it/sella/f24/service/testf24.txt"))) {
 			while ((data = br.readLine()) != null) {
 				data = data.replace("section2rows", section2rows);
 				buffer.append(data + "\n");
@@ -823,6 +816,148 @@ public class F24OCRService {
 			e.printStackTrace();
 		}
 
+	}
+
+	public String getGoogleText(Data data) {
+		logger.info("before processing" + data);
+
+		int keycount = 0, xprevEnd = 0, xstart = 0;
+		String ocrData = "";
+
+		String imageRecognitionDoubleCheck = propslist.get("imageRecognitionDoubleCheck");
+		
+		
+		List<DataDescription> descriptions=new ArrayList<>();
+		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
+			if (txtAnn.getLocale() == null || txtAnn.getLocale().isEmpty()) {
+			DataDescription d = new DataDescription(txtAnn.getDescription(),
+					txtAnn.getBoundingPoly().getVertices().get(0).getX(),
+					txtAnn.getBoundingPoly().getVertices().get(0).getY(),
+					txtAnn.getBoundingPoly().getVertices().get(1).getX(),
+					txtAnn.getBoundingPoly().getVertices().get(3).getY());
+			d.setDifference(0);
+			descriptions.add(d);
+			}
+		}
+
+		descriptions.sort(new DescComparator());
+//		descriptions.sort(new DescXComparator());
+		System.out.println("Data Description");
+		for (DataDescription dataDescription : descriptions) {
+			System.out.print(dataDescription.getDescription().replaceAll(".*[a-z].*", "")+" ");
+//			System.out.print(dataDescription.getyStart()+" ");
+		}
+		
+		System.out.println();
+		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
+
+			if (txtAnn.getLocale() == null || txtAnn.getLocale().isEmpty()) {
+				xstart = txtAnn.getBoundingPoly().getVertices().get(0).getX();
+				if ((xstart - xprevEnd) > 250) {
+					ocrData = ocrData + "**" + " ";
+				}
+
+				String desc = txtAnn.getDescription().replaceAll(".*[a-z].*", "");
+				ocrData = ocrData + desc + " ";
+
+				StringTokenizer checkTokenizer = new StringTokenizer(imageRecognitionDoubleCheck, ";");
+				while (checkTokenizer.hasMoreTokens()) {
+					String token = checkTokenizer.nextToken();
+					if (txtAnn.getDescription().contains(token)) {
+						keycount++;
+					}
+				}
+				xprevEnd = txtAnn.getBoundingPoly().getVertices().get(1).getX();
+			}
+
+		}
+
+		if (keycount <= 2) {
+			logger.info("{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}");
+			return "{\"status\":\"This is not a F24 Image, please provide a valid F24 image\"}";
+		}
+
+		System.out.println("Data from Google Service :" + ocrData);
+
+		logger.info("Data from Google Service : :" + ocrData);
+
+		return ocrData;
+	}
+
+	private List<DataDescription> process(Data data) {
+		boolean diff = true, found = false;
+		int diffxStart = 0, diffxEnd = 0, diffxEnd2 = 0, diffyStart = 0, diffyStart2 = 0, diffyEnd = 0, diffyEnd2 = 0,
+				difference = 0;
+		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
+			if (diff) {
+				if (txtAnn.getDescription().equalsIgnoreCase("CODICE")) {
+					diffxStart = txtAnn.getBoundingPoly().getVertices().get(0).getX();
+					diffyStart = txtAnn.getBoundingPoly().getVertices().get(0).getY();
+					diffyStart2 = txtAnn.getBoundingPoly().getVertices().get(3).getY();
+					found = true;
+				} else if (found && txtAnn.getDescription().equalsIgnoreCase("FISCALE")) {
+					diffxEnd = txtAnn.getBoundingPoly().getVertices().get(0).getX();
+					diffxEnd2 = txtAnn.getBoundingPoly().getVertices().get(1).getX();
+					diffyEnd = txtAnn.getBoundingPoly().getVertices().get(0).getY();
+					diffyEnd2 = txtAnn.getBoundingPoly().getVertices().get(3).getY();
+					if (diffyEnd - diffyStart != 0)
+						difference = (diffxEnd - diffxStart) / (diffyEnd - diffyStart);
+					else if (diffyEnd2 - diffyStart2 != 0) {
+						difference = (diffxEnd2 - diffxStart) / (diffyEnd2 - diffyStart2);
+					}
+
+					break;
+				}
+			}
+		}
+		List<DataDescription> list = new ArrayList<>();
+		boolean first = false;
+		int start = 0, end = 0;
+		int secTwo = 10000;
+		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
+			if (txtAnn.getLocale() == null || (txtAnn.getLocale().isEmpty())) {
+
+				/*
+				 * if (txtAnn.getDescription().equalsIgnoreCase("Semplificato") ||
+				 * txtAnn.getDescription().equalsIgnoreCase("Surplificato")) { end =
+				 * txtAnn.getBoundingPoly().getVertices().get(1).getX(); } else if
+				 * (txtAnn.getDescription().equalsIgnoreCase("MODELLO")) { start =
+				 * txtAnn.getBoundingPoly().getVertices().get(0).getX(); }
+				 */
+
+				// if (!first && txtAnn.getDescription().equals(propslist.get("section1start")))
+				// {
+				// first = true;
+				// } else if (first &&
+				// txtAnn.getDescription().equals(propslist.get("section2start"))||txtAnn.getDescription().equals("HOTIVO")||txtAnn.getDescription().equals("KOTIVO"))
+				// {//CODICE->MOTIVO->FISCALE
+				// secTwo = txtAnn.getBoundingPoly().getVertices().get(3).getY() + 10;
+				// }
+
+				// if (txtAnn.getBoundingPoly().getVertices().get(0).getX() > start
+				// && txtAnn.getBoundingPoly().getVertices().get(1).getX() < end) {
+				String des = txtAnn.getDescription();
+				/*
+				 * if (txtAnn.getDescription().equals("*")) { des = "X"; }
+				 */
+				// if (txtAnn.getBoundingPoly().getVertices().get(0).getY() < secTwo) {
+				des = des.replaceAll(".*[a-z].*", "");
+				// }
+
+				DataDescription d = new DataDescription(des, txtAnn.getBoundingPoly().getVertices().get(0).getX(),
+						txtAnn.getBoundingPoly().getVertices().get(0).getY(),
+						txtAnn.getBoundingPoly().getVertices().get(1).getX(),
+						txtAnn.getBoundingPoly().getVertices().get(3).getY());
+				d.setDifference(difference);
+				// if (txtAnn.getBoundingPoly().getVertices().get(0).getY() > secTwo) {
+				// System.out.println(txtAnn.getBoundingPoly().getVertices().get(0).getY()+"---"+secTwo);
+				// d.setSection("two");
+				// }
+
+				list.add(d);
+			}
+		}
+		return list;
 	}
 
 }
