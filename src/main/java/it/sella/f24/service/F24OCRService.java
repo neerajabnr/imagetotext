@@ -124,28 +124,40 @@ public class F24OCRService {
 		String ocrData = "";
 
 		String imageRecognitionDoubleCheck = propslist.get("imageRecognitionDoubleCheck");
-
+		
+		List<DataDescription> descriptions=new ArrayList<>();
 		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
-
 			if (txtAnn.getLocale() == null || txtAnn.getLocale().isEmpty()) {
-				xstart = txtAnn.getBoundingPoly().getVertices().get(0).getX();
-				if ((xstart - xprevEnd) > 250) {
-					ocrData = ocrData + "**" + " ";
-				}
-
-				String desc = txtAnn.getDescription().replaceAll(".*[a-z].*", "");
-				ocrData = ocrData + desc + " ";
-
-				StringTokenizer checkTokenizer = new StringTokenizer(imageRecognitionDoubleCheck, ";");
-				while (checkTokenizer.hasMoreTokens()) {
-					String token = checkTokenizer.nextToken();
-					if (txtAnn.getDescription().contains(token)) {
-						keycount++;
-					}
-				}
-				xprevEnd = txtAnn.getBoundingPoly().getVertices().get(1).getX();
+			DataDescription d = new DataDescription(txtAnn.getDescription(),
+					txtAnn.getBoundingPoly().getVertices().get(0).getX(),
+					txtAnn.getBoundingPoly().getVertices().get(0).getY(),
+					txtAnn.getBoundingPoly().getVertices().get(1).getX(),
+					txtAnn.getBoundingPoly().getVertices().get(3).getY());
+			d.setDifference(0);
+			descriptions.add(d);
 			}
+		}
 
+		descriptions.sort(new DescComparator());
+		System.out.println("Data Description");
+		for (DataDescription dataDescription : descriptions) {
+			xstart = dataDescription.getxStart();
+			if ((xstart - xprevEnd) > 250) {
+				ocrData = ocrData + "**" + " ";
+			}
+			
+			String desc = dataDescription.getDescription().replaceAll(".*[a-z].*", "");
+			ocrData = ocrData + desc + " ";
+
+			StringTokenizer checkTokenizer = new StringTokenizer(imageRecognitionDoubleCheck, ";");
+			while (checkTokenizer.hasMoreTokens()) {
+				String token = checkTokenizer.nextToken();
+				if (dataDescription.getDescription().contains(token)) {
+					keycount++;
+				}
+			}
+			
+			xprevEnd = dataDescription.getxEnd();
 		}
 
 		if (keycount <= 2) {
@@ -844,8 +856,23 @@ public class F24OCRService {
 //		descriptions.sort(new DescXComparator());
 		System.out.println("Data Description");
 		for (DataDescription dataDescription : descriptions) {
-			System.out.print(dataDescription.getDescription().replaceAll(".*[a-z].*", "")+" ");
-//			System.out.print(dataDescription.getyStart()+" ");
+			xstart = dataDescription.getxStart();
+			if ((xstart - xprevEnd) > 250) {
+				ocrData = ocrData + "**" + " ";
+			}
+			
+			String desc = dataDescription.getDescription().replaceAll(".*[a-z].*", "");
+			ocrData = ocrData + desc + " ";
+
+			StringTokenizer checkTokenizer = new StringTokenizer(imageRecognitionDoubleCheck, ";");
+			while (checkTokenizer.hasMoreTokens()) {
+				String token = checkTokenizer.nextToken();
+				if (dataDescription.getDescription().contains(token)) {
+					keycount++;
+				}
+			}
+			
+			xprevEnd = dataDescription.getxEnd();
 		}
 		
 		System.out.println();
@@ -882,82 +909,6 @@ public class F24OCRService {
 		logger.info("Data from Google Service : :" + ocrData);
 
 		return ocrData;
-	}
-
-	private List<DataDescription> process(Data data) {
-		boolean diff = true, found = false;
-		int diffxStart = 0, diffxEnd = 0, diffxEnd2 = 0, diffyStart = 0, diffyStart2 = 0, diffyEnd = 0, diffyEnd2 = 0,
-				difference = 0;
-		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
-			if (diff) {
-				if (txtAnn.getDescription().equalsIgnoreCase("CODICE")) {
-					diffxStart = txtAnn.getBoundingPoly().getVertices().get(0).getX();
-					diffyStart = txtAnn.getBoundingPoly().getVertices().get(0).getY();
-					diffyStart2 = txtAnn.getBoundingPoly().getVertices().get(3).getY();
-					found = true;
-				} else if (found && txtAnn.getDescription().equalsIgnoreCase("FISCALE")) {
-					diffxEnd = txtAnn.getBoundingPoly().getVertices().get(0).getX();
-					diffxEnd2 = txtAnn.getBoundingPoly().getVertices().get(1).getX();
-					diffyEnd = txtAnn.getBoundingPoly().getVertices().get(0).getY();
-					diffyEnd2 = txtAnn.getBoundingPoly().getVertices().get(3).getY();
-					if (diffyEnd - diffyStart != 0)
-						difference = (diffxEnd - diffxStart) / (diffyEnd - diffyStart);
-					else if (diffyEnd2 - diffyStart2 != 0) {
-						difference = (diffxEnd2 - diffxStart) / (diffyEnd2 - diffyStart2);
-					}
-
-					break;
-				}
-			}
-		}
-		List<DataDescription> list = new ArrayList<>();
-		boolean first = false;
-		int start = 0, end = 0;
-		int secTwo = 10000;
-		for (TextAnnotation txtAnn : data.getTextAnnotation()) {
-			if (txtAnn.getLocale() == null || (txtAnn.getLocale().isEmpty())) {
-
-				/*
-				 * if (txtAnn.getDescription().equalsIgnoreCase("Semplificato") ||
-				 * txtAnn.getDescription().equalsIgnoreCase("Surplificato")) { end =
-				 * txtAnn.getBoundingPoly().getVertices().get(1).getX(); } else if
-				 * (txtAnn.getDescription().equalsIgnoreCase("MODELLO")) { start =
-				 * txtAnn.getBoundingPoly().getVertices().get(0).getX(); }
-				 */
-
-				// if (!first && txtAnn.getDescription().equals(propslist.get("section1start")))
-				// {
-				// first = true;
-				// } else if (first &&
-				// txtAnn.getDescription().equals(propslist.get("section2start"))||txtAnn.getDescription().equals("HOTIVO")||txtAnn.getDescription().equals("KOTIVO"))
-				// {//CODICE->MOTIVO->FISCALE
-				// secTwo = txtAnn.getBoundingPoly().getVertices().get(3).getY() + 10;
-				// }
-
-				// if (txtAnn.getBoundingPoly().getVertices().get(0).getX() > start
-				// && txtAnn.getBoundingPoly().getVertices().get(1).getX() < end) {
-				String des = txtAnn.getDescription();
-				/*
-				 * if (txtAnn.getDescription().equals("*")) { des = "X"; }
-				 */
-				// if (txtAnn.getBoundingPoly().getVertices().get(0).getY() < secTwo) {
-				des = des.replaceAll(".*[a-z].*", "");
-				// }
-
-				DataDescription d = new DataDescription(des, txtAnn.getBoundingPoly().getVertices().get(0).getX(),
-						txtAnn.getBoundingPoly().getVertices().get(0).getY(),
-						txtAnn.getBoundingPoly().getVertices().get(1).getX(),
-						txtAnn.getBoundingPoly().getVertices().get(3).getY());
-				d.setDifference(difference);
-				// if (txtAnn.getBoundingPoly().getVertices().get(0).getY() > secTwo) {
-				// System.out.println(txtAnn.getBoundingPoly().getVertices().get(0).getY()+"---"+secTwo);
-				// d.setSection("two");
-				// }
-
-				list.add(d);
-			}
-		}
-		return list;
 	}
 
 }
