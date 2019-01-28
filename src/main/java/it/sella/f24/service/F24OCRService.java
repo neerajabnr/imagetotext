@@ -167,7 +167,7 @@ public class F24OCRService {
 
 		System.out.println("Data from Google Service :" + ocrData);
 
-		logger.info("Data from Google Service : :" + ocrData);
+		logger.info("Data from Google Service :" + ocrData);
 
 		return ocrData;
 	}
@@ -645,9 +645,9 @@ public class F24OCRService {
 		} else if (dtokenizer.countTokens() != 0) {
 			rowcount = dtokenizer.countTokens();
 		} else if (atokenizer.countTokens() != 0) {
-			rowcount = dtokenizer.countTokens();
+			rowcount = atokenizer.countTokens();
 		} else if (dbtokenizer.countTokens() != 0) {
-			rowcount = dtokenizer.countTokens();
+			rowcount = dbtokenizer.countTokens();
 		}else if(sztokenizer.countTokens()!=0) {
 			rowcount = sztokenizer.countTokens();
 		}else if(mtokenizer.countTokens()!=0) {

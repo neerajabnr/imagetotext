@@ -122,7 +122,7 @@ public class F24Controller {
 
 				ObjectMapper mapper = new ObjectMapper();
 				F24JSON f24json = mapper.readValue(response.getBody(), F24JSON.class);
-				System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
+//				System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
 				byte[] decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
 
 				System.out.println("Calling Google Service for processing of the Image data");
