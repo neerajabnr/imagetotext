@@ -102,11 +102,11 @@ public class F24OCRService {
 
 			System.out.println("Sending to NLP");
 
-//			seconelist = sendToNLP(valuesMap);
+			seconelist = sendToNLP(valuesMap);
 
 			System.out.println("Sending the data to prepare Json");
 
-//			f24Result = prepareJSON(seconelist);
+			f24Result = prepareJSON(seconelist);
 
 			return f24Result;
 
