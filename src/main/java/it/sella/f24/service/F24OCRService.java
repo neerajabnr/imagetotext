@@ -102,11 +102,11 @@ public class F24OCRService {
 
 			System.out.println("Sending to NLP");
 
-			seconelist = sendToNLP(valuesMap);
+//			seconelist = sendToNLP(valuesMap);
 
 			System.out.println("Sending the data to prepare Json");
 
-			f24Result = prepareJSON(seconelist);
+//			f24Result = prepareJSON(seconelist);
 
 			return f24Result;
 
@@ -118,7 +118,7 @@ public class F24OCRService {
 	}
 
 	public String getImageText(Data data) {
-		logger.info("before processing" + data);
+//		logger.info("before processing" + data);
 
 		int keycount = 0, xprevEnd = 0, xstart = 0;
 		String ocrData = "";
@@ -223,11 +223,15 @@ public class F24OCRService {
 			if (result.getKey().equals("Constants")) {
 
 				try {
+					logger.info("Row:" + result.getValue());
+					String row=result.getValue().replaceAll("[1]{5,}|[7]{5,}|1[7]{5,}|[I]{2,}|[L]{2,}", "");
+					row = checkPattern(row);
+//					
+//					if (checkCount(row) >= 9) {
+//						row = processRow(row);
+//					}
 
-					String row = checkPattern(result.getValue());
-					logger.info("Row:" + row);
-
-					int countChar = checkCount(row);
+//					int countChar = checkCount(row);
 					// if(countChar<=12) {
 
 					// Calling OpenNMT service
@@ -258,7 +262,7 @@ public class F24OCRService {
 					// }else {
 					// section2Constants = section2Constants + result.getValue() + "##";
 					// }
-					section2Constants = section2Constants + result.getValue() + "##";
+					section2Constants = section2Constants + row + "##";
 
 				} catch (Exception e) {
 					throw new RuntimeException(e);
@@ -266,7 +270,8 @@ public class F24OCRService {
 
 			}
 			if (result.getKey().equals("Variables")) {
-				section2Variables = section2Variables + result.getValue() + "##";
+				String value=result.getValue().replaceAll("[1]{5,}|[7]{5,}|1[7]{5,}|[I]{2,}|[L]{2,}", "");
+				section2Variables = section2Variables + value + "##";
 			}
 
 			if (result.getKey().equals("euro")) {
@@ -281,7 +286,7 @@ public class F24OCRService {
 		String euroRemove = propslist.get("euroRemove");
 
 		section1 = removeNoise(section1, section1Remove);
-		section2Constants = removeNoise(section2Constants, section2Replace);
+		section2Constants = removeNoise(section2Constants, section2Replace+section2Remove);
 		section2Variables = removeNoise(section2Variables, section2Remove);
 		// euro = removeNoise(euro, euroRemove);
 		euro = euro.replaceAll("\\s+", "");
@@ -369,7 +374,6 @@ public class F24OCRService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return value;
 	}
 
@@ -455,9 +459,7 @@ public class F24OCRService {
 		int count = 0, i = 0;
 		while (stringTokenizer.hasMoreTokens()) {
 			String token = stringTokenizer.nextToken();
-			System.out.println(Integer.parseInt(token) + count + i);
 			buffer.insert(Integer.parseInt(token) + count + i, " ");
-			System.out.println(buffer);
 			count = count + Integer.parseInt(token);
 			i++;
 		}
@@ -646,6 +648,10 @@ public class F24OCRService {
 			rowcount = dtokenizer.countTokens();
 		} else if (dbtokenizer.countTokens() != 0) {
 			rowcount = dtokenizer.countTokens();
+		}else if(sztokenizer.countTokens()!=0) {
+			rowcount = sztokenizer.countTokens();
+		}else if(mtokenizer.countTokens()!=0) {
+			rowcount = mtokenizer.countTokens();
 		}
 
 		System.out.println("Row count:" + rowcount);
@@ -910,5 +916,7 @@ public class F24OCRService {
 
 		return ocrData;
 	}
+	
+	
 
 }

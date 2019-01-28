@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
@@ -209,27 +210,48 @@ public class Sample {
 //			e.printStackTrace();
 //		}
 		
-		String row="EL 3 9 1 8  H6 0 0 ";
-		String pattern = "2:4";
-		StringBuffer buffer = new StringBuffer();
-		StringTokenizer stringTokenizer = new StringTokenizer(pattern, ":");
-
-		row = row.replaceAll("\\s", "");
+//		String row="EL 3 9 1 8  H6 0 0 ";
+//		String pattern = "2:4";
+//		StringBuffer buffer = new StringBuffer();
+//		StringTokenizer stringTokenizer = new StringTokenizer(pattern, ":");
+//
+//		row = row.replaceAll("\\s", "");
+//		
+//
+//		buffer.append(row);
+//
+//		int count = 0, i = 0;
+//		while (stringTokenizer.hasMoreTokens()) {
+//			String token = stringTokenizer.nextToken();
+//			System.out.println(Integer.parseInt(token) + count + i);
+//			buffer.insert(Integer.parseInt(token) + count + i, " ");
+//			System.out.println(buffer);
+//			count = count + Integer.parseInt(token);
+//			i++;
+//		}
+//
+//		System.out.println("row:"+buffer.toString());
+//	
+		String value="2 LLLLL0303 1777777774300";
 		
-
-		buffer.append(row);
-
-		int count = 0, i = 0;
-		while (stringTokenizer.hasMoreTokens()) {
-			String token = stringTokenizer.nextToken();
-			System.out.println(Integer.parseInt(token) + count + i);
-			buffer.insert(Integer.parseInt(token) + count + i, " ");
-			System.out.println(buffer);
-			count = count + Integer.parseInt(token);
-			i++;
-		}
-
-		System.out.println("row:"+buffer.toString());
+		value=value.replaceAll("[1]{5,}|[7]{5,}|1[7]{5,}|[I]{2,}|[L]{2,}", "");
 		
+		System.out.println("Val:"+value);
+//		Pattern pattern1 = Pattern.compile("[1]{5,}|[7]{5,}|1[7]{5,}|[I]{2,}|[L]{3,}");// EL13918 H553,EIL13918 H553
+//
+//		Matcher matcher1 = pattern1.matcher(value);
+//
+//		if (matcher1.find()) {
+//			System.out.println("matcher1" + pattern1);
+//			System.out.println("Pattern found from " + matcher1.start() + " to " + (matcher1.end() - 1));
+//			
+//			for(int i=matcher1.start();i<matcher1.end();i++) {
+//				System.out.println(i+" "+value.charAt(i));
+//				value.replace(String.valueOf(value.charAt(i)), "");
+//			}
+//			System.out.println(value);
+//		}else {
+//			System.out.println("No match :"+value);
+//		}
 	}
 }
