@@ -228,7 +228,7 @@ private static AdaptiveFeatureGenerator createFeatureGenerator(
 
     trainParams.putIfAbsent(TrainingParameters.ALGORITHM_PARAM, PerceptronTrainer.PERCEPTRON_VALUE);
     trainParams.putIfAbsent(TrainingParameters.CUTOFF_PARAM, 0);
-    trainParams.putIfAbsent(TrainingParameters.ITERATIONS_PARAM, 300);
+  //  trainParams.putIfAbsent(TrainingParameters.ITERATIONS_PARAM, 300);
 
     int beamSize = trainParams.getIntParameter(BeamSearch.BEAM_SIZE_PARAMETER,
             NameFinderME.DEFAULT_BEAM_SIZE);

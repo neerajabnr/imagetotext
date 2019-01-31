@@ -17,11 +17,14 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.aop.framework.autoproxy.target.QuickTargetSourceCreator;
 
 import it.sella.f24.bean.Result;
 import it.sella.f24.service.F24OCRService;
 import opennlp.tools.formats.ResourceAsStreamFactory;
+import opennlp.tools.ml.maxent.quasinewton.QNTrainer;
 import opennlp.tools.ml.model.SequenceClassificationModel;
+import opennlp.tools.ml.naivebayes.NaiveBayesTrainer;
 import opennlp.tools.tokenize.TokenSample;
 import opennlp.tools.tokenize.TokenSampleStream;
 import opennlp.tools.tokenize.TokenizerFactory;
@@ -157,11 +160,11 @@ public class NameFinderMETokenFinder {
 
 		String encoding = "ISO-8859-1";
 		TokenNameFinderModel nameFinderModel;
-		FileInputStream r = new FileInputStream("src/main/resources/f24_sectionmodel.bin");
-
-		if (r != null) {
-			nameFinderModel = new TokenNameFinderModel(r);
-		} else {
+//		FileInputStream r = new FileInputStream("src/main/resources/f24_sectionmodel.bin");
+//
+//		if (r != null) {
+//			nameFinderModel = new TokenNameFinderModel(r);
+//		} else {
 
 
 			ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
@@ -182,8 +185,8 @@ public class NameFinderMETokenFinder {
 				if (modelOut != null)
 					modelOut.close();
 			}
-		}
-		r.close();
+//		}
+//		r.close();
 		return nameFinderModel;
 
 	}
@@ -195,19 +198,24 @@ public class NameFinderMETokenFinder {
 
 		TokenizerME tokenizer = new TokenizerME(model);
 		String[] sentence2 = tokenizer.tokenize(sentence);
+//		logger.info("Sentence");
+//		for(String sentencex : sentence2) {
+//			logger.info(sentencex+"\n");	
+//		}
 		NameFinderME nameFinder = new NameFinderME(tokenFinderSection1);
 
 		List<Result> results = new ArrayList<>();
 		Span[] names2 = nameFinder.find(sentence2);
 		for (Span name : names2) {
+			System.out.println(name);
 			System.out.print(name.getType() + " ");
 
 			for (int i = name.getStart(); i < name.getEnd(); i++) {
 
 				results.add(new Result(name.getType(), sentence2[i]));
 
-				System.out.print(sentence2[i] + " ");
-				//// logger.info(sentence2[i] + " ");
+				System.out.print(sentence2[i] + " \n");
+//				logger.info(sentence2[i] + " ");
 
 			}
 		}
@@ -226,11 +234,14 @@ public class NameFinderMETokenFinder {
 		} else {
 
 			ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
-					new MockInputStreamFactory(new File("section1trainingnewspace_result4.txt")), encoding));
+					new MockInputStreamFactory(new File("section1trainingnewspace_result.txt")), encoding));
 
 			TrainingParameters params = new TrainingParameters();
 			params.put(TrainingParameters.ITERATIONS_PARAM, 100);
 			params.put(TrainingParameters.CUTOFF_PARAM, 1);
+//	
+			
+//			params.put(TrainingParameters.ALGORITHM_PARAM, QNTrainer.MAXENT_QN_VALUE);
 
 			nameFinderModel = NameFinderME.train("eng", null, sampleStream, params,
 					TokenNameFinderFactory.create(null, null, Collections.emptyMap(), new BioCodec()));
@@ -245,7 +256,7 @@ public class NameFinderMETokenFinder {
 			}
 		}
 		r.close();
-		return nameFinderModel;
+	return nameFinderModel;
 	}
 
 	public List<Result> f24_Section2_Constants(String sentence) throws Exception {
@@ -359,7 +370,7 @@ public class NameFinderMETokenFinder {
 			TrainingParameters params = new TrainingParameters();
 			params.put(TrainingParameters.ITERATIONS_PARAM, 100);
 			params.put(TrainingParameters.CUTOFF_PARAM, 1);
-
+			
 			nameFinderModel = NameFinderME.train("eng", null, sampleStream, params,
 					TokenNameFinderFactory.create(null, null, Collections.emptyMap(), new BioCodec()));
 

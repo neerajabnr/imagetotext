@@ -232,11 +232,11 @@ public class Sample {
 //
 //		System.out.println("row:"+buffer.toString());
 //	
-		String value="2 LLLLL0303 1777777774300";
-		
-		value=value.replaceAll("[1]{5,}|[7]{5,}|1[7]{5,}|[I]{2,}|[L]{2,}", "");
-		
-		System.out.println("Val:"+value);
+//		String value="2 LLLLL0303 1777777774300";
+//		
+//		value=value.replaceAll("[1]{5,}|[7]{5,}|1[7]{5,}|[I]{2,}|[L]{2,}", "");
+//		
+//		System.out.println("Val:"+value);
 //		Pattern pattern1 = Pattern.compile("[1]{5,}|[7]{5,}|1[7]{5,}|[I]{2,}|[L]{3,}");// EL13918 H553,EIL13918 H553
 //
 //		Matcher matcher1 = pattern1.matcher(value);
@@ -253,5 +253,19 @@ public class Sample {
 //		}else {
 //			System.out.println("No match :"+value);
 //		}
+		
+		
+		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
+		
+		try {
+		//	String section1="CODICE FISCALE GRZLRT23H06A859W ,  DATI ANAGRAFICI GARIAZZO  ** ALBERTO  14 07 1523 M BIELLA CODICE FISCALE \r\n" + 
+						
+			//String section1="	CODICE FISCALE BRBLRS 47 R 30 E 5 1 2B , ** DATI ANAGRAFICI BARBIERI ** LORIS F   30 10 19 4   7 F LEGNAGO ** VR CODICE FISCALE ";
+			//String section1=  "CODICE FISCALE PLLNS I 43 R 6 OF 4 4 3 Z , ** RTS DATI ANAGRAFICI ** PDF CODICE FISCALE ";
+			String section1= "CODICE FISCALE MNT LD I 4 4 4 2 8 9 2 R DATI ANAGRAFICI MONTE PIANO ** LIDIA 0 2 0 6 1 9 4 4 F MANOPPELLO ** PE CODICE FISCALE ";		
+			tokenFinder.f24_Section1(section1);
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 }

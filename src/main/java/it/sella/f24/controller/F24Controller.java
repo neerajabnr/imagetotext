@@ -122,7 +122,8 @@ public class F24Controller {
 
 				ObjectMapper mapper = new ObjectMapper();
 				F24JSON f24json = mapper.readValue(response.getBody(), F24JSON.class);
-//				System.out.println("Response from Skew Service:" + f24json.getEncodedImage());
+				// System.out.println("Response from Skew Service:" +
+				// f24json.getEncodedImage());
 				byte[] decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
 
 				System.out.println("Calling Google Service for processing of the Image data");
@@ -338,24 +339,52 @@ public class F24Controller {
 	@RequestMapping(value = "/api/imagetotext", method = RequestMethod.POST)
 	public String f24ImagetoText(@RequestParam("file") MultipartFile file) {
 
-		String encodeBase64String = "";
-		byte[] decodeBase64 = null;
-		Data data = null;
-		String imageText = "";
+		JSONObject jsonObject = new JSONObject();
 		try {
+		jsonObject.put("encodedImage", Base64.encodeBase64String(file.getBytes()));
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
+		String imageText = "";
 
-			encodeBase64String = Base64.encodeBase64String(file.getBytes());
-			decodeBase64 = Base64.decodeBase64(encodeBase64String);
-			System.out.println("Calling Google Service");
-			data = googleService.readText(decodeBase64, "");
+			System.out.println("Calling Service for Template Matching and Skewing");
+			ResponseEntity<String> response = restTemplate.exchange(props.getProperty("ServiceURL"), HttpMethod.POST,
+					entity, String.class);
+
+			ObjectMapper mapper = new ObjectMapper();
+			F24JSON f24json = mapper.readValue(response.getBody(), F24JSON.class);
+			// System.out.println("Response from Skew Service:" +
+			// f24json.getEncodedImage());
+			byte[] decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
+
+			System.out.println("Calling Google Service for processing of the Image data");
+			Data data = googleService.readText(decodeBase64, "");
 			imageText = ocrService.getImageText(data);
 			return imageText;
-
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return "{\"status\":\"KO\"}";
 		}
+
+		// String encodeBase64String = "";
+		// byte[] decodeBase64 = null;
+		// Data data = null;
+		// String imageText = "";
+		// try {
+		//
+		// encodeBase64String = Base64.encodeBase64String(file.getBytes());
+		// decodeBase64 = Base64.decodeBase64(encodeBase64String);
+		// System.out.println("Calling Google Service");
+		// data = googleService.readText(decodeBase64, "");
+		// imageText = ocrService.getImageText(data);
+		// return imageText;
+		//
+		// } catch (IOException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// return "{\"status\":\"KO\"}";
+		// }
 
 		// String f24ImageToText = f24ImageToJSON(f24Form);
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
@@ -469,7 +498,6 @@ public class F24Controller {
 		f24Form.setTransactionId("123");
 		// String f24ImageToText = f24ImageToJSON(f24Form);
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
-
 
 		String accessToken = "123";
 		if (accessToken.isEmpty()) {

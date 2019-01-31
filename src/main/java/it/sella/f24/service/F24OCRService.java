@@ -142,7 +142,7 @@ public class F24OCRService {
 		System.out.println("Data Description");
 		for (DataDescription dataDescription : descriptions) {
 			xstart = dataDescription.getxStart();
-			if ((xstart - xprevEnd) > 250) {
+			if ((xstart - xprevEnd) > 300) {
 				ocrData = ocrData + "**" + " ";
 			}
 			
@@ -395,6 +395,7 @@ public class F24OCRService {
 		NameFinderMETokenFinder tokenFinder = new NameFinderMETokenFinder();
 
 		try {
+//			section1="CODICE FISCALE FRLMGL4 0 C 5 1 H 3 610 I , ** DATI ANAGRAFICI FORLANI GIULIANA 1980 ** MARIA GULIYANA COMO   1 1 013 1 940 F IVERA VITTORIA ** FE CODICE FISCALE \r\n" ;
 			secOneList = tokenFinder.f24_Section1(section1);
 
 			while (constantData.hasMoreElements()) {

@@ -4,7 +4,7 @@
 <START:Sezione> RG <END> <START:tributo> 7975 <END> <START:codice> G726 <END>
 <START:Sezione> EL <END> <START:tributo> 1521 <END> <START:codice> T036 <END>
 <START:Sezione> EL <END> <START:tributo> 5168 <END> <START:codice> Q502 <END>
-<START:Sezione> EL <END> <START:tributo> 2009 <END> <START:codice> Z092 <END>
+<START:Sezione> EL <END> <START:tributo> 2345 <END> <START:codice> Z092 <END>
 <START:Sezione> EL <END> <START:tributo> 1948 <END> <START:codice> A134 <END>
 <START:Sezione> RG <END> <START:tributo> 7510 <END> <START:codice> A275 <END>
 <START:Sezione> ER <END> <START:tributo> 3370 <END> <START:codice> A649 <END>
@@ -9368,3 +9368,2403 @@
 <START:Sezione> ER <END> <START:tributo> 8890 <END> <START:codice> W840 <END>
 <START:Sezione> EL <END> <START:tributo> 7210 <END> <START:codice> Q058 <END>
 <START:Sezione> EL <END> <START:tributo> 3132 <END> <START:codice> K025 <END>
+<START:tributo> 3792 <END> <START:codice> Z 1 3 0 <END>
+<START:tributo> 7374 <END> <START:codice> F6 27 <END>
+<START:tributo> 5208 <END> <START:codice> J 173 <END>
+<START:tributo> 6035 <END> <START:codice> M42 3 <END>
+<START:tributo> 9466 <END> <START:codice> G 07 6 <END>
+<START:tributo> 8532 <END> <START:codice> J5 0 4 <END>
+<START:tributo> 1730 <END> <START:codice> U 3 38 <END>
+<START:tributo> 2775 <END> <START:codice> L667 <END>
+<START:tributo> 4696 <END> <START:codice> X 2 3 4 <END>
+<START:tributo> 5644 <END> <START:codice> U2 53 <END>
+<START:tributo> 5787 <END> <START:codice> T 061 <END>
+<START:tributo> 2856 <END> <START:codice> F51 8 <END>
+<START:tributo> 4921 <END> <START:codice> H 74 6 <END>
+<START:tributo> 9827 <END> <START:codice> O1 6 6 <END>
+<START:tributo> 4696 <END> <START:codice> X 3 68 <END>
+<START:tributo> 3082 <END> <START:codice> H538 <END>
+<START:tributo> 8455 <END> <START:codice> T 2 1 7 <END>
+<START:tributo> 9877 <END> <START:codice> E1 14 <END>
+<START:tributo> 5180 <END> <START:codice> M 272 <END>
+<START:tributo> 8921 <END> <START:codice> P72 7 <END>
+<START:tributo> 1319 <END> <START:codice> M 30 4 <END>
+<START:tributo> 3061 <END> <START:codice> P1 5 0 <END>
+<START:tributo> 6349 <END> <START:codice> J 6 15 <END>
+<START:tributo> 7944 <END> <START:codice> W112 <END>
+<START:tributo> 6628 <END> <START:codice> Q 0 8 6 <END>
+<START:tributo> 6176 <END> <START:codice> Q8 13 <END>
+<START:tributo> 9716 <END> <START:codice> V 461 <END>
+<START:tributo> 1692 <END> <START:codice> T21 8 <END>
+<START:tributo> 1115 <END> <START:codice> O 78 2 <END>
+<START:tributo> 7082 <END> <START:codice> Z1 2 5 <END>
+<START:tributo> 9576 <END> <START:codice> Y 5 36 <END>
+<START:tributo> 6832 <END> <START:codice> N112 <END>
+<START:tributo> 1928 <END> <START:codice> X 1 2 0 <END>
+<START:tributo> 2518 <END> <START:codice> N1 50 <END>
+<START:tributo> 7755 <END> <START:codice> R 602 <END>
+<START:tributo> 8729 <END> <START:codice> E41 6 <END>
+<START:tributo> 9750 <END> <START:codice> T 16 5 <END>
+<START:tributo> 6265 <END> <START:codice> Q4 8 1 <END>
+<START:tributo> 4242 <END> <START:codice> A 3 87 <END>
+<START:tributo> 1131 <END> <START:codice> S047 <END>
+<START:tributo> 1611 <END> <START:codice> F 3 8 3 <END>
+<START:tributo> 3863 <END> <START:codice> F1 22 <END>
+<START:tributo> 2032 <END> <START:codice> U 740 <END>
+<START:tributo> 9978 <END> <START:codice> H01 0 <END>
+<START:tributo> 5336 <END> <START:codice> X 83 7 <END>
+<START:tributo> 1539 <END> <START:codice> I1 2 2 <END>
+<START:tributo> 1210 <END> <START:codice> N 1 38 <END>
+<START:tributo> 7793 <END> <START:codice> N605 <END>
+<START:tributo> 4060 <END> <START:codice> V 3 5 4 <END>
+<START:tributo> 7690 <END> <START:codice> P7 70 <END>
+<START:tributo> 3412 <END> <START:codice> J 674 <END>
+<START:tributo> 6524 <END> <START:codice> O01 1 <END>
+<START:tributo> 8761 <END> <START:codice> Q 67 1 <END>
+<START:tributo> 1911 <END> <START:codice> J0 0 4 <END>
+<START:tributo> 7441 <END> <START:codice> D 5 30 <END>
+<START:tributo> 3425 <END> <START:codice> S827 <END>
+<START:tributo> 1387 <END> <START:codice> M 2 1 1 <END>
+<START:tributo> 7376 <END> <START:codice> N7 82 <END>
+<START:tributo> 7022 <END> <START:codice> M 371 <END>
+<START:tributo> 3842 <END> <START:codice> L83 2 <END>
+<START:tributo> 2928 <END> <START:codice> U 04 2 <END>
+<START:tributo> 5350 <END> <START:codice> E7 3 5 <END>
+<START:tributo> 3167 <END> <START:codice> J 8 86 <END>
+<START:tributo> 9468 <END> <START:codice> X284 <END>
+<START:tributo> 9498 <END> <START:codice> D 2 1 4 <END>
+<START:tributo> 4544 <END> <START:codice> S5 12 <END>
+<START:tributo> 5383 <END> <START:codice> H 681 <END>
+<START:tributo> 1514 <END> <START:codice> S44 0 <END>
+<START:tributo> 5101 <END> <START:codice> J 23 4 <END>
+<START:tributo> 5208 <END> <START:codice> W6 1 4 <END>
+<START:tributo> 8107 <END> <START:codice> A 3 83 <END>
+<START:tributo> 8089 <END> <START:codice> N430 <END>
+<START:tributo> 9431 <END> <START:codice> A 1 8 1 <END>
+<START:tributo> 1955 <END> <START:codice> P8 26 <END>
+<START:tributo> 9943 <END> <START:codice> J 057 <END>
+<START:tributo> 6589 <END> <START:codice> P07 6 <END>
+<START:tributo> 8650 <END> <START:codice> H 24 1 <END>
+<START:tributo> 9533 <END> <START:codice> R8 6 8 <END>
+<START:tributo> 3078 <END> <START:codice> W 2 15 <END>
+<START:tributo> 6065 <END> <START:codice> P734 <END>
+<START:tributo> 5050 <END> <START:codice> B 1 6 6 <END>
+<START:tributo> 2881 <END> <START:codice> F4 26 <END>
+<START:tributo> 9277 <END> <START:codice> L 653 <END>
+<START:tributo> 2722 <END> <START:codice> O28 5 <END>
+<START:tributo> 3021 <END> <START:codice> C 18 6 <END>
+<START:tributo> 2092 <END> <START:codice> Y0 5 4 <END>
+<START:tributo> 6696 <END> <START:codice> L 5 08 <END>
+<START:tributo> 3684 <END> <START:codice> M764 <END>
+<START:tributo> 7229 <END> <START:codice> X 5 0 3 <END>
+<START:tributo> 8081 <END> <START:codice> C6 61 <END>
+<START:tributo> 7442 <END> <START:codice> R 176 <END>
+<START:tributo> 7650 <END> <START:codice> T22 7 <END>
+<START:tributo> 7246 <END> <START:codice> W 68 2 <END>
+<START:tributo> 4525 <END> <START:codice> H4 0 0 <END>
+<START:tributo> 7472 <END> <START:codice> L 2 82 <END>
+<START:tributo> 6257 <END> <START:codice> V333 <END>
+<START:tributo> 3613 <END> <START:codice> Z 8 7 3 <END>
+<START:tributo> 7252 <END> <START:codice> U4 47 <END>
+<START:tributo> 3469 <END> <START:codice> L 607 <END>
+<START:tributo> 9589 <END> <START:codice> I13 6 <END>
+<START:tributo> 5766 <END> <START:codice> Y 75 8 <END>
+<START:tributo> 5337 <END> <START:codice> R2 0 3 <END>
+<START:tributo> 9055 <END> <START:codice> O 1 52 <END>
+<START:tributo> 1593 <END> <START:codice> I154 <END>
+<START:tributo> 4709 <END> <START:codice> X 4 5 1 <END>
+<START:tributo> 4906 <END> <START:codice> Z4 86 <END>
+<START:tributo> 9704 <END> <START:codice> F 333 <END>
+<START:tributo> 4762 <END> <START:codice> Q62 7 <END>
+<START:tributo> 3229 <END> <START:codice> M 35 5 <END>
+<START:tributo> 3312 <END> <START:codice> H5 1 3 <END>
+<START:tributo> 3316 <END> <START:codice> G 8 35 <END>
+<START:tributo> 9300 <END> <START:codice> U748 <END>
+<START:tributo> 3795 <END> <START:codice> E 0 4 0 <END>
+<START:tributo> 9578 <END> <START:codice> A7 26 <END>
+<START:tributo> 3672 <END> <START:codice> G 017 <END>
+<START:tributo> 3306 <END> <START:codice> K58 8 <END>
+<START:tributo> 3795 <END> <START:codice> S 58 4 <END>
+<START:tributo> 2810 <END> <START:codice> V2 0 6 <END>
+<START:tributo> 3824 <END> <START:codice> W 7 88 <END>
+<START:tributo> 9657 <END> <START:codice> C021 <END>
+<START:tributo> 7472 <END> <START:codice> K 3 2 2 <END>
+<START:tributo> 6061 <END> <START:codice> G4 21 <END>
+<START:tributo> 2632 <END> <START:codice> R 611 <END>
+<START:tributo> 1700 <END> <START:codice> F52 0 <END>
+<START:tributo> 9087 <END> <START:codice> H 15 4 <END>
+<START:tributo> 9294 <END> <START:codice> S4 0 7 <END>
+<START:tributo> 8443 <END> <START:codice> E 8 11 <END>
+<START:tributo> 4048 <END> <START:codice> V520 <END>
+<START:tributo> 2867 <END> <START:codice> V 2 5 5 <END>
+<START:tributo> 1458 <END> <START:codice> N0 62 <END>
+<START:tributo> 3030 <END> <START:codice> W 116 <END>
+<START:tributo> 8689 <END> <START:codice> S85 7 <END>
+<START:tributo> 3577 <END> <START:codice> B 57 6 <END>
+<START:tributo> 7813 <END> <START:codice> J6 5 3 <END>
+<START:tributo> 9660 <END> <START:codice> I 0 78 <END>
+<START:tributo> 5731 <END> <START:codice> T884 <END>
+<START:tributo> 4997 <END> <START:codice> H 3 7 6 <END>
+<START:tributo> 2146 <END> <START:codice> N5 76 <END>
+<START:tributo> 4602 <END> <START:codice> C 727 <END>
+<START:tributo> 8505 <END> <START:codice> V60 6 <END>
+<START:tributo> 1707 <END> <START:codice> U 75 4 <END>
+<START:tributo> 6414 <END> <START:codice> M0 3 4 <END>
+<START:tributo> 1308 <END> <START:codice> P 5 87 <END>
+<START:tributo> 4096 <END> <START:codice> W473 <END>
+<START:tributo> 9718 <END> <START:codice> V 0 2 3 <END>
+<START:tributo> 8741 <END> <START:codice> A0 78 <END>
+<START:tributo> 2206 <END> <START:codice> V 743 <END>
+<START:tributo> 6163 <END> <START:codice> S47 5 <END>
+<START:tributo> 8843 <END> <START:codice> H 41 2 <END>
+<START:tributo> 7338 <END> <START:codice> U7 4 2 <END>
+<START:tributo> 3787 <END> <START:codice> N 2 26 <END>
+<START:tributo> 7168 <END> <START:codice> K414 <END>
+<START:tributo> 2013 <END> <START:codice> N 4 4 8 <END>
+<START:tributo> 9874 <END> <START:codice> G1 44 <END>
+<START:tributo> 8952 <END> <START:codice> P 004 <END>
+<START:tributo> 5584 <END> <START:codice> T21 4 <END>
+<START:tributo> 2665 <END> <START:codice> X 10 6 <END>
+<START:tributo> 1905 <END> <START:codice> H1 4 4 <END>
+<START:tributo> 8888 <END> <START:codice> I 3 18 <END>
+<START:tributo> 4266 <END> <START:codice> W386 <END>
+<START:tributo> 6395 <END> <START:codice> B 3 2 3 <END>
+<START:tributo> 4146 <END> <START:codice> T3 40 <END>
+<START:tributo> 5200 <END> <START:codice> E 611 <END>
+<START:tributo> 1880 <END> <START:codice> G60 4 <END>
+<START:tributo> 4302 <END> <START:codice> V 13 3 <END>
+<START:tributo> 7370 <END> <START:codice> U4 4 0 <END>
+<START:tributo> 9820 <END> <START:codice> S 1 85 <END>
+<START:tributo> 2495 <END> <START:codice> O708 <END>
+<START:tributo> 1583 <END> <START:codice> H 4 0 0 <END>
+<START:tributo> 3749 <END> <START:codice> I8 81 <END>
+<START:tributo> 5815 <END> <START:codice> O 236 <END>
+<START:tributo> 7434 <END> <START:codice> H48 8 <END>
+<START:tributo> 6066 <END> <START:codice> V 83 4 <END>
+<START:tributo> 1198 <END> <START:codice> O1 0 1 <END>
+<START:tributo> 2806 <END> <START:codice> P 1 58 <END>
+<START:tributo> 6862 <END> <START:codice> F308 <END>
+<START:tributo> 2939 <END> <START:codice> G 8 6 1 <END>
+<START:tributo> 1490 <END> <START:codice> L7 13 <END>
+<START:tributo> 8197 <END> <START:codice> T 405 <END>
+<START:tributo> 3199 <END> <START:codice> V86 6 <END>
+<START:tributo> 6077 <END> <START:codice> W 22 4 <END>
+<START:tributo> 3316 <END> <START:codice> W3 1 1 <END>
+<START:tributo> 9823 <END> <START:codice> O 3 87 <END>
+<START:tributo> 1840 <END> <START:codice> Y820 <END>
+<START:tributo> 5404 <END> <START:codice> V 6 2 8 <END>
+<START:tributo> 3322 <END> <START:codice> C6 43 <END>
+<START:tributo> 5249 <END> <START:codice> D 155 <END>
+<START:tributo> 5127 <END> <START:codice> E20 5 <END>
+<START:tributo> 6142 <END> <START:codice> X 50 4 <END>
+<START:tributo> 8790 <END> <START:codice> V3 3 8 <END>
+<START:tributo> 1167 <END> <START:codice> X 8 76 <END>
+<START:tributo> 2269 <END> <START:codice> L553 <END>
+<START:tributo> 2125 <END> <START:codice> R 4 8 7 <END>
+<START:tributo> 8980 <END> <START:codice> K4 31 <END>
+<START:tributo> 8677 <END> <START:codice> C 712 <END>
+<START:tributo> 5617 <END> <START:codice> J72 6 <END>
+<START:tributo> 3541 <END> <START:codice> X 55 3 <END>
+<START:tributo> 1849 <END> <START:codice> B5 1 6 <END>
+<START:tributo> 7390 <END> <START:codice> I 6 52 <END>
+<START:tributo> 3525 <END> <START:codice> U688 <END>
+<START:tributo> 7060 <END> <START:codice> D 7 2 2 <END>
+<START:tributo> 3593 <END> <START:codice> Q3 56 <END>
+<START:tributo> 5102 <END> <START:codice> S 610 <END>
+<START:tributo> 9765 <END> <START:codice> D26 3 <END>
+<START:tributo> 7004 <END> <START:codice> O 60 6 <END>
+<START:tributo> 8200 <END> <START:codice> R3 8 5 <END>
+<START:tributo> 3434 <END> <START:codice> Q 6 33 <END>
+<START:tributo> 9207 <END> <START:codice> X725 <END>
+<START:tributo> 6657 <END> <START:codice> B 5 3 4 <END>
+<START:tributo> 1497 <END> <START:codice> Z5 57 <END>
+<START:tributo> 5070 <END> <START:codice> K 508 <END>
+<START:tributo> 6997 <END> <START:codice> X17 1 <END>
+<START:tributo> 7833 <END> <START:codice> E 86 6 <END>
+<START:tributo> 6553 <END> <START:codice> S6 3 5 <END>
+<START:tributo> 6318 <END> <START:codice> W 5 67 <END>
+<START:tributo> 9571 <END> <START:codice> J307 <END>
+<START:tributo> 5613 <END> <START:codice> N 4 6 5 <END>
+<START:tributo> 8939 <END> <START:codice> E6 02 <END>
+<START:tributo> 3965 <END> <START:codice> E 183 <END>
+<START:tributo> 6351 <END> <START:codice> U14 8 <END>
+<START:tributo> 1324 <END> <START:codice> Y 53 4 <END>
+<START:tributo> 7916 <END> <START:codice> V3 6 4 <END>
+<START:tributo> 2104 <END> <START:codice> R 4 72 <END>
+<START:tributo> 4491 <END> <START:codice> N427 <END>
+<START:tributo> 2968 <END> <START:codice> S 1 7 4 <END>
+<START:tributo> 3440 <END> <START:codice> B7 07 <END>
+<START:tributo> 8435 <END> <START:codice> Q 388 <END>
+<START:tributo> 1467 <END> <START:codice> F00 2 <END>
+<START:tributo> 4502 <END> <START:codice> P 77 7 <END>
+<START:tributo> 8051 <END> <START:codice> T4 8 3 <END>
+<START:tributo> 7073 <END> <START:codice> W 6 82 <END>
+<START:tributo> 3109 <END> <START:codice> I153 <END>
+<START:tributo> 8394 <END> <START:codice> M 2 4 8 <END>
+<START:tributo> 7312 <END> <START:codice> F8 02 <END>
+<START:tributo> 8439 <END> <START:codice> U 736 <END>
+<START:tributo> 9323 <END> <START:codice> P00 0 <END>
+<START:tributo> 1703 <END> <START:codice> P 33 6 <END>
+<START:tributo> 5499 <END> <START:codice> M7 7 6 <END>
+<START:tributo> 5825 <END> <START:codice> C 5 32 <END>
+<START:tributo> 4601 <END> <START:codice> I456 <END>
+<START:tributo> 5882 <END> <START:codice> N 1 7 3 <END>
+<START:tributo> 5762 <END> <START:codice> W6 34 <END>
+<START:tributo> 2074 <END> <START:codice> X 608 <END>
+<START:tributo> 3820 <END> <START:codice> S17 6 <END>
+<START:tributo> 7710 <END> <START:codice> Z 17 8 <END>
+<START:tributo> 9615 <END> <START:codice> A8 1 1 <END>
+<START:tributo> 1319 <END> <START:codice> W 1 04 <END>
+<START:tributo> 5760 <END> <START:codice> M022 <END>
+<START:tributo> 3345 <END> <START:codice> L 3 1 4 <END>
+<START:tributo> 6087 <END> <START:codice> Q4 18 <END>
+<START:tributo> 6051 <END> <START:codice> F 420 <END>
+<START:tributo> 8817 <END> <START:codice> P15 6 <END>
+<START:tributo> 9821 <END> <START:codice> Y 74 8 <END>
+<START:tributo> 4941 <END> <START:codice> J2 7 3 <END>
+<START:tributo> 7907 <END> <START:codice> R 5 84 <END>
+<START:tributo> 1130 <END> <START:codice> T766 <END>
+<START:tributo> 2382 <END> <START:codice> D 1 3 6 <END>
+<START:tributo> 3734 <END> <START:codice> U8 16 <END>
+<START:tributo> 9099 <END> <START:codice> D 805 <END>
+<START:tributo> 8496 <END> <START:codice> L35 0 <END>
+<START:tributo> 6553 <END> <START:codice> A 86 1 <END>
+<START:tributo> 1438 <END> <START:codice> H5 5 6 <END>
+<START:tributo> 2647 <END> <START:codice> G 5 32 <END>
+<START:tributo> 9326 <END> <START:codice> U827 <END>
+<START:tributo> 5610 <END> <START:codice> N 8 5 7 <END>
+<START:tributo> 5624 <END> <START:codice> R0 82 <END>
+<START:tributo> 2386 <END> <START:codice> L 853 <END>
+<START:tributo> 3314 <END> <START:codice> W32 8 <END>
+<START:tributo> 2725 <END> <START:codice> O 31 3 <END>
+<START:tributo> 8073 <END> <START:codice> N3 3 7 <END>
+<START:tributo> 8809 <END> <START:codice> A 2 36 <END>
+<START:tributo> 7438 <END> <START:codice> Q013 <END>
+<START:tributo> 9005 <END> <START:codice> M 4 8 1 <END>
+<START:tributo> 4781 <END> <START:codice> B7 30 <END>
+<START:tributo> 5695 <END> <START:codice> I 666 <END>
+<START:tributo> 2534 <END> <START:codice> B74 5 <END>
+<START:tributo> 4038 <END> <START:codice> G 76 7 <END>
+<START:tributo> 5935 <END> <START:codice> E7 8 0 <END>
+<START:tributo> 9401 <END> <START:codice> U 1 78 <END>
+<START:tributo> 2103 <END> <START:codice> N854 <END>
+<START:tributo> 8910 <END> <START:codice> O 5 2 4 <END>
+<START:tributo> 4612 <END> <START:codice> B7 57 <END>
+<START:tributo> 2891 <END> <START:codice> Z 143 <END>
+<START:tributo> 4341 <END> <START:codice> Y15 0 <END>
+<START:tributo> 9279 <END> <START:codice> W 76 7 <END>
+<START:tributo> 7824 <END> <START:codice> D4 6 1 <END>
+<START:tributo> 3696 <END> <START:codice> U 7 25 <END>
+<START:tributo> 3627 <END> <START:codice> I130 <END>
+<START:tributo> 7998 <END> <START:codice> N 8 7 1 <END>
+<START:tributo> 1470 <END> <START:codice> X5 16 <END>
+<START:tributo> 9654 <END> <START:codice> G 154 <END>
+<START:tributo> 5831 <END> <START:codice> B31 0 <END>
+<START:tributo> 9062 <END> <START:codice> C 20 1 <END>
+<START:tributo> 4379 <END> <START:codice> G6 8 2 <END>
+<START:tributo> 4262 <END> <START:codice> V 4 50 <END>
+<START:tributo> 4658 <END> <START:codice> C006 <END>
+<START:tributo> 8020 <END> <START:codice> G 1 1 6 <END>
+<START:tributo> 7331 <END> <START:codice> H5 15 <END>
+<START:tributo> 8695 <END> <START:codice> F 125 <END>
+<START:tributo> 6267 <END> <START:codice> D08 0 <END>
+<START:tributo> 5012 <END> <START:codice> L 71 4 <END>
+<START:tributo> 9417 <END> <START:codice> X0 0 8 <END>
+<START:tributo> 2371 <END> <START:codice> G 0 00 <END>
+<START:tributo> 7948 <END> <START:codice> K813 <END>
+<START:tributo> 7201 <END> <START:codice> M 6 2 2 <END>
+<START:tributo> 9210 <END> <START:codice> Y8 18 <END>
+<START:tributo> 1886 <END> <START:codice> K 744 <END>
+<START:tributo> 4738 <END> <START:codice> L76 5 <END>
+<START:tributo> 2432 <END> <START:codice> G 45 2 <END>
+<START:tributo> 1898 <END> <START:codice> U7 4 8 <END>
+<START:tributo> 8510 <END> <START:codice> F 3 00 <END>
+<START:tributo> 5352 <END> <START:codice> J851 <END>
+<START:tributo> 2197 <END> <START:codice> F 0 8 6 <END>
+<START:tributo> 6740 <END> <START:codice> S3 78 <END>
+<START:tributo> 8013 <END> <START:codice> C 074 <END>
+<START:tributo> 6859 <END> <START:codice> J64 2 <END>
+<START:tributo> 8899 <END> <START:codice> Y 02 0 <END>
+<START:tributo> 9693 <END> <START:codice> D6 7 6 <END>
+<START:tributo> 9224 <END> <START:codice> T 1 43 <END>
+<START:tributo> 6551 <END> <START:codice> D386 <END>
+<START:tributo> 8631 <END> <START:codice> Q 8 1 7 <END>
+<START:tributo> 8736 <END> <START:codice> L8 61 <END>
+<START:tributo> 1594 <END> <START:codice> B 747 <END>
+<START:tributo> 8815 <END> <START:codice> S85 4 <END>
+<START:tributo> 7557 <END> <START:codice> D 61 3 <END>
+<START:tributo> 6154 <END> <START:codice> E4 8 4 <END>
+<START:tributo> 9864 <END> <START:codice> E 8 41 <END>
+<START:tributo> 9480 <END> <START:codice> B115 <END>
+<START:tributo> 2440 <END> <START:codice> N 8 6 7 <END>
+<START:tributo> 8879 <END> <START:codice> X0 88 <END>
+<START:tributo> 9366 <END> <START:codice> R 526 <END>
+<START:tributo> 3102 <END> <START:codice> K02 8 <END>
+<START:tributo> 7437 <END> <START:codice> C 88 6 <END>
+<START:tributo> 1811 <END> <START:codice> L1 4 3 <END>
+<START:tributo> 8887 <END> <START:codice> K 0 74 <END>
+<START:tributo> 6476 <END> <START:codice> J544 <END>
+<START:tributo> 5504 <END> <START:codice> Z 1 1 2 <END>
+<START:tributo> 5425 <END> <START:codice> Z7 72 <END>
+<START:tributo> 1784 <END> <START:codice> B 554 <END>
+<START:tributo> 4127 <END> <START:codice> Z86 8 <END>
+<START:tributo> 8188 <END> <START:codice> R 86 4 <END>
+<START:tributo> 4750 <END> <START:codice> X0 4 8 <END>
+<START:tributo> 8500 <END> <START:codice> P 0 40 <END>
+<START:tributo> 5867 <END> <START:codice> F267 <END>
+<START:tributo> 5694 <END> <START:codice> X 8 5 2 <END>
+<START:tributo> 8989 <END> <START:codice> Y7 45 <END>
+<START:tributo> 7601 <END> <START:codice> Y 247 <END>
+<START:tributo> 4787 <END> <START:codice> E61 8 <END>
+<START:tributo> 8834 <END> <START:codice> F 15 1 <END>
+<START:tributo> 5339 <END> <START:codice> J0 6 3 <END>
+<START:tributo> 5849 <END> <START:codice> K 5 52 <END>
+<START:tributo> 9212 <END> <START:codice> O000 <END>
+<START:tributo> 9195 <END> <START:codice> T 0 1 4 <END>
+<START:tributo> 4772 <END> <START:codice> V1 00 <END>
+<START:tributo> 8248 <END> <START:codice> X 434 <END>
+<START:tributo> 8714 <END> <START:codice> T47 3 <END>
+<START:tributo> 5814 <END> <START:codice> Y 51 8 <END>
+<START:tributo> 6756 <END> <START:codice> O6 3 2 <END>
+<START:tributo> 7747 <END> <START:codice> O 3 54 <END>
+<START:tributo> 2072 <END> <START:codice> Q120 <END>
+<START:tributo> 2751 <END> <START:codice> P 7 0 4 <END>
+<START:tributo> 6382 <END> <START:codice> C8 26 <END>
+<START:tributo> 3174 <END> <START:codice> W 643 <END>
+<START:tributo> 4307 <END> <START:codice> L76 3 <END>
+<START:tributo> 7753 <END> <START:codice> G 28 8 <END>
+<START:tributo> 8743 <END> <START:codice> J3 2 1 <END>
+<START:tributo> 3773 <END> <START:codice> J 7 85 <END>
+<START:tributo> 7791 <END> <START:codice> S732 <END>
+<START:tributo> 6945 <END> <START:codice> B 7 3 7 <END>
+<START:tributo> 9490 <END> <START:codice> O4 83 <END>
+<START:tributo> 6155 <END> <START:codice> K 674 <END>
+<START:tributo> 7471 <END> <START:codice> D86 2 <END>
+<START:tributo> 5306 <END> <START:codice> C 77 4 <END>
+<START:tributo> 8028 <END> <START:codice> H7 8 8 <END>
+<START:tributo> 2293 <END> <START:codice> F 6 23 <END>
+<START:tributo> 5560 <END> <START:codice> V672 <END>
+<START:tributo> 5138 <END> <START:codice> F 3 6 5 <END>
+<START:tributo> 9145 <END> <START:codice> Q8 05 <END>
+<START:tributo> 4935 <END> <START:codice> U 020 <END>
+<START:tributo> 6741 <END> <START:codice> D31 8 <END>
+<START:tributo> 5234 <END> <START:codice> J 24 1 <END>
+<START:tributo> 1388 <END> <START:codice> W8 5 0 <END>
+<START:tributo> 8284 <END> <START:codice> V 0 31 <END>
+<START:tributo> 1660 <END> <START:codice> D840 <END>
+<START:tributo> 2753 <END> <START:codice> T 3 6 5 <END>
+<START:tributo> 6434 <END> <START:codice> G3 31 <END>
+<START:tributo> 5425 <END> <START:codice> J 832 <END>
+<START:tributo> 8263 <END> <START:codice> Z62 1 <END>
+<START:tributo> 3769 <END> <START:codice> B 72 0 <END>
+<START:tributo> 8639 <END> <START:codice> O6 8 5 <END>
+<START:tributo> 9553 <END> <START:codice> N 1 20 <END>
+<START:tributo> 7498 <END> <START:codice> R311 <END>
+<START:tributo> 9863 <END> <START:codice> C 7 1 3 <END>
+<START:tributo> 8982 <END> <START:codice> U5 03 <END>
+<START:tributo> 3113 <END> <START:codice> L 773 <END>
+<START:tributo> 7258 <END> <START:codice> O37 6 <END>
+<START:tributo> 3230 <END> <START:codice> F 87 8 <END>
+<START:tributo> 2996 <END> <START:codice> G7 0 6 <END>
+<START:tributo> 5645 <END> <START:codice> V 4 50 <END>
+<START:tributo> 7715 <END> <START:codice> S674 <END>
+<START:tributo> 3668 <END> <START:codice> V 7 0 3 <END>
+<START:tributo> 3661 <END> <START:codice> Q0 68 <END>
+<START:tributo> 4120 <END> <START:codice> T 715 <END>
+<START:tributo> 4745 <END> <START:codice> E22 0 <END>
+<START:tributo> 1570 <END> <START:codice> Z 44 6 <END>
+<START:tributo> 5492 <END> <START:codice> D5 4 4 <END>
+<START:tributo> 3912 <END> <START:codice> N 5 65 <END>
+<START:tributo> 9007 <END> <START:codice> A621 <END>
+<START:tributo> 9167 <END> <START:codice> X 1 0 7 <END>
+<START:tributo> 7534 <END> <START:codice> B2 11 <END>
+<START:tributo> 7662 <END> <START:codice> T 721 <END>
+<START:tributo> 5986 <END> <START:codice> X86 3 <END>
+<START:tributo> 2341 <END> <START:codice> M 83 1 <END>
+<START:tributo> 7407 <END> <START:codice> K2 2 5 <END>
+<START:tributo> 3017 <END> <START:codice> H 4 53 <END>
+<START:tributo> 4709 <END> <START:codice> G202 <END>
+<START:tributo> 6713 <END> <START:codice> P 4 3 3 <END>
+<START:tributo> 5338 <END> <START:codice> K0 22 <END>
+<START:tributo> 4603 <END> <START:codice> X 210 <END>
+<START:tributo> 3893 <END> <START:codice> G51 7 <END>
+<START:tributo> 8966 <END> <START:codice> J 82 1 <END>
+<START:tributo> 7836 <END> <START:codice> U7 3 3 <END>
+<START:tributo> 7745 <END> <START:codice> O 2 57 <END>
+<START:tributo> 9366 <END> <START:codice> W274 <END>
+<START:tributo> 6033 <END> <START:codice> E 1 6 6 <END>
+<START:tributo> 9633 <END> <START:codice> G2 48 <END>
+<START:tributo> 5318 <END> <START:codice> N 468 <END>
+<START:tributo> 2547 <END> <START:codice> Z81 5 <END>
+<START:tributo> 4598 <END> <START:codice> Y 57 1 <END>
+<START:tributo> 3140 <END> <START:codice> A2 0 8 <END>
+<START:tributo> 4575 <END> <START:codice> B 8 65 <END>
+<START:tributo> 5858 <END> <START:codice> O274 <END>
+<START:tributo> 4232 <END> <START:codice> O 1 8 1 <END>
+<START:tributo> 8770 <END> <START:codice> P1 77 <END>
+<START:tributo> 8704 <END> <START:codice> Y 512 <END>
+<START:tributo> 7244 <END> <START:codice> E85 4 <END>
+<START:tributo> 4444 <END> <START:codice> L 33 4 <END>
+<START:tributo> 3855 <END> <START:codice> W5 8 3 <END>
+<START:tributo> 9164 <END> <START:codice> C 8 87 <END>
+<START:tributo> 3752 <END> <START:codice> C875 <END>
+<START:tributo> 8086 <END> <START:codice> Q 4 8 8 <END>
+<START:tributo> 8310 <END> <START:codice> I5 12 <END>
+<START:tributo> 4336 <END> <START:codice> L 664 <END>
+<START:tributo> 7736 <END> <START:codice> E56 7 <END>
+<START:tributo> 1673 <END> <START:codice> R 57 2 <END>
+<START:tributo> 6684 <END> <START:codice> B4 2 4 <END>
+<START:tributo> 9248 <END> <START:codice> F 3 80 <END>
+<START:tributo> 5168 <END> <START:codice> X722 <END>
+<START:tributo> 3170 <END> <START:codice> K 8 7 5 <END>
+<START:tributo> 5332 <END> <START:codice> K4 54 <END>
+<START:tributo> 4015 <END> <START:codice> F 260 <END>
+<START:tributo> 3510 <END> <START:codice> H61 3 <END>
+<START:tributo> 1645 <END> <START:codice> L 62 5 <END>
+<START:tributo> 2844 <END> <START:codice> C0 7 4 <END>
+<START:tributo> 9882 <END> <START:codice> T 8 74 <END>
+<START:tributo> 2516 <END> <START:codice> C205 <END>
+<START:tributo> 6909 <END> <START:codice> X 1 1 1 <END>
+<START:tributo> 2869 <END> <START:codice> I8 31 <END>
+<START:tributo> 9333 <END> <START:codice> U 381 <END>
+<START:tributo> 8255 <END> <START:codice> F72 0 <END>
+<START:tributo> 3687 <END> <START:codice> D 54 0 <END>
+<START:tributo> 3062 <END> <START:codice> Q6 2 2 <END>
+<START:tributo> 4611 <END> <START:codice> O 3 20 <END>
+<START:tributo> 4330 <END> <START:codice> I756 <END>
+<START:tributo> 5671 <END> <START:codice> R 3 8 8 <END>
+<START:tributo> 1673 <END> <START:codice> B8 28 <END>
+<START:tributo> 5425 <END> <START:codice> S 864 <END>
+<START:tributo> 1226 <END> <START:codice> J12 1 <END>
+<START:tributo> 1376 <END> <START:codice> Y 05 3 <END>
+<START:tributo> 2443 <END> <START:codice> G4 7 0 <END>
+<START:tributo> 3251 <END> <START:codice> O 4 52 <END>
+<START:tributo> 9227 <END> <START:codice> J783 <END>
+<START:tributo> 7495 <END> <START:codice> P 4 5 5 <END>
+<START:tributo> 7359 <END> <START:codice> Y0 64 <END>
+<START:tributo> 8852 <END> <START:codice> D 057 <END>
+<START:tributo> 1216 <END> <START:codice> T37 1 <END>
+<START:tributo> 2672 <END> <START:codice> Y 38 7 <END>
+<START:tributo> 4507 <END> <START:codice> T8 1 3 <END>
+<START:tributo> 9065 <END> <START:codice> D 3 72 <END>
+<START:tributo> 2198 <END> <START:codice> Y422 <END>
+<START:tributo> 4254 <END> <START:codice> X 0 7 0 <END>
+<START:tributo> 4080 <END> <START:codice> T0 27 <END>
+<START:tributo> 2014 <END> <START:codice> B 774 <END>
+<START:tributo> 6792 <END> <START:codice> P11 0 <END>
+<START:tributo> 2646 <END> <START:codice> D 07 2 <END>
+<START:tributo> 3509 <END> <START:codice> K8 2 5 <END>
+<START:tributo> 4990 <END> <START:codice> J 6 54 <END>
+<START:tributo> 8876 <END> <START:codice> Y523 <END>
+<START:tributo> 7564 <END> <START:codice> C 1 2 3 <END>
+<START:tributo> 5148 <END> <START:codice> O0 25 <END>
+<START:tributo> 6094 <END> <START:codice> S 653 <END>
+<START:tributo> 2044 <END> <START:codice> B41 0 <END>
+<START:tributo> 8987 <END> <START:codice> Q 38 4 <END>
+<START:tributo> 9442 <END> <START:codice> I2 0 7 <END>
+<START:tributo> 1593 <END> <START:codice> A 8 52 <END>
+<START:tributo> 6468 <END> <START:codice> B007 <END>
+<START:tributo> 2376 <END> <START:codice> G 4 0 0 <END>
+<START:tributo> 8610 <END> <START:codice> E0 10 <END>
+<START:tributo> 3708 <END> <START:codice> F 776 <END>
+<START:tributo> 1874 <END> <START:codice> T32 7 <END>
+<START:tributo> 2318 <END> <START:codice> Y 74 5 <END>
+<START:tributo> 4009 <END> <START:codice> G3 0 1 <END>
+<START:tributo> 4563 <END> <START:codice> W 3 06 <END>
+<START:tributo> 8775 <END> <START:codice> E583 <END>
+<START:tributo> 1626 <END> <START:codice> E 6 0 3 <END>
+<START:tributo> 4395 <END> <START:codice> X5 73 <END>
+<START:tributo> 5842 <END> <START:codice> K 363 <END>
+<START:tributo> 4098 <END> <START:codice> A23 8 <END>
+<START:tributo> 3336 <END> <START:codice> K 41 6 <END>
+<START:tributo> 7827 <END> <START:codice> Z3 5 8 <END>
+<START:tributo> 9660 <END> <START:codice> P 6 20 <END>
+<START:tributo> 4749 <END> <START:codice> E105 <END>
+<START:tributo> 4556 <END> <START:codice> M 7 2 7 <END>
+<START:tributo> 1310 <END> <START:codice> D3 14 <END>
+<START:tributo> 2758 <END> <START:codice> K 674 <END>
+<START:tributo> 9037 <END> <START:codice> W26 8 <END>
+<START:tributo> 4225 <END> <START:codice> J 12 6 <END>
+<START:tributo> 4368 <END> <START:codice> A6 3 1 <END>
+<START:tributo> 5435 <END> <START:codice> X 2 01 <END>
+<START:tributo> 2590 <END> <START:codice> K354 <END>
+<START:tributo> 2188 <END> <START:codice> P 8 4 5 <END>
+<START:tributo> 7204 <END> <START:codice> T1 15 <END>
+<START:tributo> 1393 <END> <START:codice> B 017 <END>
+<START:tributo> 8123 <END> <START:codice> D47 6 <END>
+<START:tributo> 6248 <END> <START:codice> I 75 5 <END>
+<START:tributo> 3639 <END> <START:codice> Q5 1 3 <END>
+<START:tributo> 4697 <END> <START:codice> K 7 21 <END>
+<START:tributo> 1617 <END> <START:codice> J351 <END>
+<START:tributo> 6434 <END> <START:codice> I 4 2 2 <END>
+<START:tributo> 2957 <END> <START:codice> H5 33 <END>
+<START:tributo> 1970 <END> <START:codice> E 054 <END>
+<START:tributo> 9499 <END> <START:codice> E18 0 <END>
+<START:tributo> 8654 <END> <START:codice> G 23 6 <END>
+<START:tributo> 3281 <END> <START:codice> U1 1 0 <END>
+<START:tributo> 2470 <END> <START:codice> C 1 83 <END>
+<START:tributo> 7462 <END> <START:codice> N703 <END>
+<START:tributo> 9536 <END> <START:codice> C 8 8 6 <END>
+<START:tributo> 8640 <END> <START:codice> M4 87 <END>
+<START:tributo> 4642 <END> <START:codice> R 211 <END>
+<START:tributo> 1566 <END> <START:codice> W20 0 <END>
+<START:tributo> 7835 <END> <START:codice> B 57 6 <END>
+<START:tributo> 8766 <END> <START:codice> R5 2 6 <END>
+<START:tributo> 5857 <END> <START:codice> N 1 23 <END>
+<START:tributo> 7463 <END> <START:codice> C423 <END>
+<START:tributo> 4595 <END> <START:codice> Z 0 1 5 <END>
+<START:tributo> 7062 <END> <START:codice> W8 27 <END>
+<START:tributo> 7968 <END> <START:codice> O 268 <END>
+<START:tributo> 6844 <END> <START:codice> H34 1 <END>
+<START:tributo> 6246 <END> <START:codice> V 35 3 <END>
+<START:tributo> 1141 <END> <START:codice> Z3 2 1 <END>
+<START:tributo> 3771 <END> <START:codice> W 6 05 <END>
+<START:tributo> 2026 <END> <START:codice> S371 <END>
+<START:tributo> 7558 <END> <START:codice> I 4 2 3 <END>
+<START:tributo> 3279 <END> <START:codice> N3 63 <END>
+<START:tributo> 7629 <END> <START:codice> V 807 <END>
+<START:tributo> 7724 <END> <START:codice> V84 4 <END>
+<START:tributo> 9328 <END> <START:codice> P 86 2 <END>
+<START:tributo> 4551 <END> <START:codice> B3 5 6 <END>
+<START:tributo> 4083 <END> <START:codice> B 1 43 <END>
+<START:tributo> 6367 <END> <START:codice> A117 <END>
+<START:tributo> 7599 <END> <START:codice> K 7 2 7 <END>
+<START:tributo> 5554 <END> <START:codice> O7 86 <END>
+<START:tributo> 6673 <END> <START:codice> F 016 <END>
+<START:tributo> 8263 <END> <START:codice> P36 4 <END>
+<START:tributo> 9360 <END> <START:codice> D 68 6 <END>
+<START:tributo> 6660 <END> <START:codice> L8 3 8 <END>
+<START:tributo> 1755 <END> <START:codice> T 8 66 <END>
+<START:tributo> 4127 <END> <START:codice> F384 <END>
+<START:tributo> 3999 <END> <START:codice> A 4 4 4 <END>
+<START:tributo> 5840 <END> <START:codice> N2 40 <END>
+<START:tributo> 3100 <END> <START:codice> N 741 <END>
+<START:tributo> 7892 <END> <START:codice> Z50 7 <END>
+<START:tributo> 1119 <END> <START:codice> J 85 4 <END>
+<START:tributo> 9355 <END> <START:codice> W7 0 0 <END>
+<START:tributo> 9976 <END> <START:codice> A 8 76 <END>
+<START:tributo> 6522 <END> <START:codice> Q585 <END>
+<START:tributo> 3213 <END> <START:codice> T 6 0 6 <END>
+<START:tributo> 8056 <END> <START:codice> G2 67 <END>
+<START:tributo> 8037 <END> <START:codice> A 013 <END>
+<START:tributo> 8284 <END> <START:codice> P62 0 <END>
+<START:tributo> 5373 <END> <START:codice> Z 78 3 <END>
+<START:tributo> 2821 <END> <START:codice> C5 4 4 <END>
+<START:tributo> 8925 <END> <START:codice> D 8 47 <END>
+<START:tributo> 2511 <END> <START:codice> T288 <END>
+<START:tributo> 5298 <END> <START:codice> L 5 5 7 <END>
+<START:tributo> 6331 <END> <START:codice> W4 20 <END>
+<START:tributo> 8260 <END> <START:codice> T 757 <END>
+<START:tributo> 2599 <END> <START:codice> H60 1 <END>
+<START:tributo> 1737 <END> <START:codice> L 15 4 <END>
+<START:tributo> 8313 <END> <START:codice> Y2 8 5 <END>
+<START:tributo> 5808 <END> <START:codice> N 3 51 <END>
+<START:tributo> 6824 <END> <START:codice> I356 <END>
+<START:tributo> 3150 <END> <START:codice> H 0 4 3 <END>
+<START:tributo> 4073 <END> <START:codice> Y3 46 <END>
+<START:tributo> 2466 <END> <START:codice> F 661 <END>
+<START:tributo> 3645 <END> <START:codice> H78 4 <END>
+<START:tributo> 1340 <END> <START:codice> M 57 7 <END>
+<START:tributo> 6192 <END> <START:codice> P2 3 0 <END>
+<START:tributo> 5481 <END> <START:codice> B 4 73 <END>
+<START:tributo> 7242 <END> <START:codice> E126 <END>
+<START:tributo> 8000 <END> <START:codice> N 5 2 1 <END>
+<START:tributo> 3338 <END> <START:codice> P8 08 <END>
+<START:tributo> 5991 <END> <START:codice> N 373 <END>
+<START:tributo> 4220 <END> <START:codice> E58 1 <END>
+<START:tributo> 9222 <END> <START:codice> L 32 1 <END>
+<START:tributo> 6322 <END> <START:codice> P6 5 5 <END>
+<START:tributo> 3553 <END> <START:codice> N 8 06 <END>
+<START:tributo> 1575 <END> <START:codice> X625 <END>
+<START:tributo> 6457 <END> <START:codice> D 1 4 1 <END>
+<START:tributo> 2604 <END> <START:codice> G6 06 <END>
+<START:tributo> 1723 <END> <START:codice> C 756 <END>
+<START:tributo> 5599 <END> <START:codice> D77 2 <END>
+<START:tributo> 6518 <END> <START:codice> D 51 6 <END>
+<START:tributo> 1166 <END> <START:codice> J4 7 8 <END>
+<START:tributo> 1120 <END> <START:codice> O 3 55 <END>
+<START:tributo> 9967 <END> <START:codice> Z465 <END>
+<START:tributo> 8504 <END> <START:codice> U 8 5 3 <END>
+<START:tributo> 6802 <END> <START:codice> I5 87 <END>
+<START:tributo> 3517 <END> <START:codice> I 103 <END>
+<START:tributo> 6772 <END> <START:codice> F17 3 <END>
+<START:tributo> 7749 <END> <START:codice> A 27 7 <END>
+<START:tributo> 2877 <END> <START:codice> V2 7 2 <END>
+<START:tributo> 4518 <END> <START:codice> Z 0 33 <END>
+<START:tributo> 5530 <END> <START:codice> B288 <END>
+<START:tributo> 7423 <END> <START:codice> I 8 1 6 <END>
+<START:tributo> 6986 <END> <START:codice> R1 82 <END>
+<START:tributo> 8710 <END> <START:codice> Z 065 <END>
+<START:tributo> 2108 <END> <START:codice> H15 2 <END>
+<START:tributo> 5282 <END> <START:codice> V 15 0 <END>
+<START:tributo> 4318 <END> <START:codice> D6 2 8 <END>
+<START:tributo> 6746 <END> <START:codice> O 8 50 <END>
+<START:tributo> 3199 <END> <START:codice> E605 <END>
+<START:tributo> 9051 <END> <START:codice> M 4 5 0 <END>
+<START:tributo> 8461 <END> <START:codice> J4 05 <END>
+<START:tributo> 8525 <END> <START:codice> H 514 <END>
+<START:tributo> 8391 <END> <START:codice> H38 1 <END>
+<START:tributo> 4046 <END> <START:codice> L 43 6 <END>
+<START:tributo> 6946 <END> <START:codice> Z5 4 2 <END>
+<START:tributo> 2756 <END> <START:codice> F 2 45 <END>
+<START:tributo> 2703 <END> <START:codice> Z274 <END>
+<START:tributo> 8527 <END> <START:codice> W 8 7 6 <END>
+<START:tributo> 7578 <END> <START:codice> I3 05 <END>
+<START:tributo> 2483 <END> <START:codice> F 562 <END>
+<START:tributo> 3140 <END> <START:codice> C31 1 <END>
+<START:tributo> 1865 <END> <START:codice> U 45 3 <END>
+<START:tributo> 8817 <END> <START:codice> A1 1 3 <END>
+<START:tributo> 1702 <END> <START:codice> K 0 66 <END>
+<START:tributo> 6633 <END> <START:codice> Z482 <END>
+<START:tributo> 3369 <END> <START:codice> W 0 3 3 <END>
+<START:tributo> 3683 <END> <START:codice> Q4 02 <END>
+<START:tributo> 8488 <END> <START:codice> Z 577 <END>
+<START:tributo> 8427 <END> <START:codice> K64 2 <END>
+<START:tributo> 7994 <END> <START:codice> K 67 7 <END>
+<START:tributo> 5483 <END> <START:codice> C0 7 6 <END>
+<START:tributo> 1870 <END> <START:codice> U 2 80 <END>
+<START:tributo> 2486 <END> <START:codice> Z751 <END>
+<START:tributo> 4809 <END> <START:codice> C 1 6 8 <END>
+<START:tributo> 6093 <END> <START:codice> U7 58 <END>
+<START:tributo> 6451 <END> <START:codice> D 845 <END>
+<START:tributo> 4134 <END> <START:codice> U25 6 <END>
+<START:tributo> 4082 <END> <START:codice> I 73 6 <END>
+<START:tributo> 5623 <END> <START:codice> M2 5 1 <END>
+<START:tributo> 3252 <END> <START:codice> T 1 66 <END>
+<START:tributo> 5158 <END> <START:codice> Z840 <END>
+<START:tributo> 8040 <END> <START:codice> F 5 3 3 <END>
+<START:tributo> 5059 <END> <START:codice> I6 58 <END>
+<START:tributo> 2029 <END> <START:codice> E 402 <END>
+<START:tributo> 7675 <END> <START:codice> K88 2 <END>
+<START:tributo> 8745 <END> <START:codice> C 51 0 <END>
+<START:tributo> 3037 <END> <START:codice> O2 4 3 <END>
+<START:tributo> 4417 <END> <START:codice> Q 6 51 <END>
+<START:tributo> 3752 <END> <START:codice> N030 <END>
+<START:tributo> 1302 <END> <START:codice> Q 2 4 2 <END>
+<START:tributo> 8282 <END> <START:codice> E5 62 <END>
+<START:tributo> 3558 <END> <START:codice> W 725 <END>
+<START:tributo> 6562 <END> <START:codice> O60 1 <END>
+<START:tributo> 1374 <END> <START:codice> B 37 4 <END>
+<START:tributo> 5326 <END> <START:codice> I6 0 3 <END>
+<START:tributo> 4589 <END> <START:codice> U 1 65 <END>
+<START:tributo> 2477 <END> <START:codice> N117 <END>
+<START:tributo> 6915 <END> <START:codice> Z 5 5 8 <END>
+<START:tributo> 1389 <END> <START:codice> L7 65 <END>
+<START:tributo> 9957 <END> <START:codice> L 075 <END>
+<START:tributo> 8021 <END> <START:codice> L44 7 <END>
+<START:tributo> 6090 <END> <START:codice> I 84 4 <END>
+<START:tributo> 9970 <END> <START:codice> X6 6 8 <END>
+<START:tributo> 5888 <END> <START:codice> U 1 33 <END>
+<START:tributo> 5885 <END> <START:codice> J404 <END>
+<START:tributo> 4366 <END> <START:codice> Z 0 8 4 <END>
+<START:tributo> 5106 <END> <START:codice> R8 50 <END>
+<START:tributo> 1922 <END> <START:codice> R 301 <END>
+<START:tributo> 4857 <END> <START:codice> M73 6 <END>
+<START:tributo> 5700 <END> <START:codice> I 37 1 <END>
+<START:tributo> 7945 <END> <START:codice> O1 6 2 <END>
+<START:tributo> 1153 <END> <START:codice> K 0 27 <END>
+<START:tributo> 3559 <END> <START:codice> K247 <END>
+<START:tributo> 5296 <END> <START:codice> N 1 1 4 <END>
+<START:tributo> 7466 <END> <START:codice> A1 76 <END>
+<START:tributo> 2535 <END> <START:codice> I 710 <END>
+<START:tributo> 5705 <END> <START:codice> X25 0 <END>
+<START:tributo> 7557 <END> <START:codice> I 14 2 <END>
+<START:tributo> 8402 <END> <START:codice> E8 1 6 <END>
+<START:tributo> 2529 <END> <START:codice> F 1 71 <END>
+<START:tributo> 2676 <END> <START:codice> M671 <END>
+<START:tributo> 2288 <END> <START:codice> E 1 1 0 <END>
+<START:tributo> 9221 <END> <START:codice> R6 24 <END>
+<START:tributo> 5914 <END> <START:codice> C 101 <END>
+<START:tributo> 7611 <END> <START:codice> B88 7 <END>
+<START:tributo> 2277 <END> <START:codice> L 30 5 <END>
+<START:tributo> 7622 <END> <START:codice> S3 3 3 <END>
+<START:tributo> 9911 <END> <START:codice> I 4 54 <END>
+<START:tributo> 3483 <END> <START:codice> V001 <END>
+<START:tributo> 9903 <END> <START:codice> D 0 8 8 <END>
+<START:tributo> 5282 <END> <START:codice> M1 87 <END>
+<START:tributo> 9564 <END> <START:codice> U 534 <END>
+<START:tributo> 7472 <END> <START:codice> V68 3 <END>
+<START:tributo> 3891 <END> <START:codice> N 84 4 <END>
+<START:tributo> 3276 <END> <START:codice> Y4 3 3 <END>
+<START:tributo> 6220 <END> <START:codice> S 7 73 <END>
+<START:tributo> 9285 <END> <START:codice> E488 <END>
+<START:tributo> 4261 <END> <START:codice> B 2 0 5 <END>
+<START:tributo> 1233 <END> <START:codice> N1 66 <END>
+<START:tributo> 8124 <END> <START:codice> A 325 <END>
+<START:tributo> 8007 <END> <START:codice> Y14 8 <END>
+<START:tributo> 6968 <END> <START:codice> K 61 0 <END>
+<START:tributo> 4301 <END> <START:codice> L4 1 1 <END>
+<START:tributo> 4239 <END> <START:codice> S 5 72 <END>
+<START:tributo> 8642 <END> <START:codice> I311 <END>
+<START:tributo> 6913 <END> <START:codice> N 5 6 0 <END>
+<START:tributo> 3340 <END> <START:codice> B5 42 <END>
+<START:tributo> 7619 <END> <START:codice> B 706 <END>
+<START:tributo> 3489 <END> <START:codice> O25 3 <END>
+<START:tributo> 9947 <END> <START:codice> U 41 1 <END>
+<START:tributo> 9289 <END> <START:codice> H1 0 1 <END>
+<START:tributo> 6658 <END> <START:codice> M 4 58 <END>
+<START:tributo> 8497 <END> <START:codice> F241 <END>
+<START:tributo> 8252 <END> <START:codice> Z 4 4 5 <END>
+<START:tributo> 8713 <END> <START:codice> V5 18 <END>
+<START:tributo> 7440 <END> <START:codice> W 472 <END>
+<START:tributo> 6942 <END> <START:codice> Z87 6 <END>
+<START:tributo> 9414 <END> <START:codice> F 34 3 <END>
+<START:tributo> 9711 <END> <START:codice> O3 0 8 <END>
+<START:tributo> 7507 <END> <START:codice> Y 7 58 <END>
+<START:tributo> 6531 <END> <START:codice> O664 <END>
+<START:tributo> 8541 <END> <START:codice> G 3 0 1 <END>
+<START:tributo> 4528 <END> <START:codice> F1 44 <END>
+<START:tributo> 7308 <END> <START:codice> U 564 <END>
+<START:tributo> 3837 <END> <START:codice> G67 1 <END>
+<START:tributo> 9102 <END> <START:codice> K 53 2 <END>
+<START:tributo> 9872 <END> <START:codice> Q8 5 8 <END>
+<START:tributo> 7130 <END> <START:codice> J 3 15 <END>
+<START:tributo> 1144 <END> <START:codice> A456 <END>
+<START:tributo> 8909 <END> <START:codice> G 4 7 3 <END>
+<START:tributo> 2954 <END> <START:codice> R1 14 <END>
+<START:tributo> 9271 <END> <START:codice> R 806 <END>
+<START:tributo> 4999 <END> <START:codice> E50 0 <END>
+<START:tributo> 2478 <END> <START:codice> Q 25 8 <END>
+<START:tributo> 6347 <END> <START:codice> X5 1 7 <END>
+<START:tributo> 5696 <END> <START:codice> D 8 00 <END>
+<START:tributo> 5367 <END> <START:codice> L238 <END>
+<START:tributo> 8260 <END> <START:codice> B 0 8 4 <END>
+<START:tributo> 2575 <END> <START:codice> J8 27 <END>
+<START:tributo> 2729 <END> <START:codice> Q 108 <END>
+<START:tributo> 1899 <END> <START:codice> G56 4 <END>
+<START:tributo> 6804 <END> <START:codice> F 03 4 <END>
+<START:tributo> 5698 <END> <START:codice> J8 4 3 <END>
+<START:tributo> 6397 <END> <START:codice> H 7 76 <END>
+<START:tributo> 3840 <END> <START:codice> V873 <END>
+<START:tributo> 6033 <END> <START:codice> M 8 5 4 <END>
+<START:tributo> 7783 <END> <START:codice> X5 66 <END>
+<START:tributo> 5505 <END> <START:codice> O 588 <END>
+<START:tributo> 9714 <END> <START:codice> R71 8 <END>
+<START:tributo> 7289 <END> <START:codice> C 46 8 <END>
+<START:tributo> 6146 <END> <START:codice> C1 4 5 <END>
+<START:tributo> 9920 <END> <START:codice> E 0 63 <END>
+<START:tributo> 3237 <END> <START:codice> H475 <END>
+<START:tributo> 7045 <END> <START:codice> X 8 0 3 <END>
+<START:tributo> 1329 <END> <START:codice> M2 87 <END>
+<START:tributo> 2191 <END> <START:codice> O 204 <END>
+<START:tributo> 3244 <END> <START:codice> V14 2 <END>
+<START:tributo> 2924 <END> <START:codice> Q 30 1 <END>
+<START:tributo> 3526 <END> <START:codice> U8 5 5 <END>
+<START:tributo> 9722 <END> <START:codice> F 2 78 <END>
+<START:tributo> 6052 <END> <START:codice> V143 <END>
+<START:tributo> 4232 <END> <START:codice> K 3 0 5 <END>
+<START:tributo> 2077 <END> <START:codice> L5 63 <END>
+<START:tributo> 4597 <END> <START:codice> A 767 <END>
+<START:tributo> 4728 <END> <START:codice> J58 0 <END>
+<START:tributo> 2998 <END> <START:codice> A 30 2 <END>
+<START:tributo> 1220 <END> <START:codice> Y0 0 1 <END>
+<START:tributo> 3955 <END> <START:codice> I 4 58 <END>
+<START:tributo> 9302 <END> <START:codice> I585 <END>
+<START:tributo> 3505 <END> <START:codice> B 2 6 8 <END>
+<START:tributo> 6165 <END> <START:codice> H0 85 <END>
+<START:tributo> 6904 <END> <START:codice> H 278 <END>
+<START:tributo> 4871 <END> <START:codice> E72 3 <END>
+<START:tributo> 2790 <END> <START:codice> Q 34 8 <END>
+<START:tributo> 8180 <END> <START:codice> F5 7 7 <END>
+<START:tributo> 7554 <END> <START:codice> V 0 12 <END>
+<START:tributo> 2738 <END> <START:codice> M050 <END>
+<START:tributo> 6177 <END> <START:codice> A 0 0 7 <END>
+<START:tributo> 9519 <END> <START:codice> U0 24 <END>
+<START:tributo> 2003 <END> <START:codice> Y 607 <END>
+<START:tributo> 5257 <END> <START:codice> D24 1 <END>
+<START:tributo> 5790 <END> <START:codice> L 57 1 <END>
+<START:tributo> 3472 <END> <START:codice> S5 3 0 <END>
+<START:tributo> 3552 <END> <START:codice> U 8 86 <END>
+<START:tributo> 5337 <END> <START:codice> P624 <END>
+<START:tributo> 6192 <END> <START:codice> B 1 5 8 <END>
+<START:tributo> 7075 <END> <START:codice> Y4 11 <END>
+<START:tributo> 7428 <END> <START:codice> M 386 <END>
+<START:tributo> 6957 <END> <START:codice> K75 5 <END>
+<START:tributo> 6675 <END> <START:codice> N 56 2 <END>
+<START:tributo> 5069 <END> <START:codice> K8 3 5 <END>
+<START:tributo> 6252 <END> <START:codice> S 6 55 <END>
+<START:tributo> 7946 <END> <START:codice> U356 <END>
+<START:tributo> 9061 <END> <START:codice> Y 8 4 2 <END>
+<START:tributo> 4242 <END> <START:codice> Q7 17 <END>
+<START:tributo> 9628 <END> <START:codice> B 858 <END>
+<START:tributo> 2500 <END> <START:codice> E01 4 <END>
+<START:tributo> 8168 <END> <START:codice> T 21 8 <END>
+<START:tributo> 6142 <END> <START:codice> J7 1 8 <END>
+<START:tributo> 5895 <END> <START:codice> L 8 78 <END>
+<START:tributo> 1846 <END> <START:codice> R820 <END>
+<START:tributo> 1473 <END> <START:codice> U 8 3 6 <END>
+<START:tributo> 2428 <END> <START:codice> H6 41 <END>
+<START:tributo> 2314 <END> <START:codice> V 407 <END>
+<START:tributo> 9878 <END> <START:codice> A13 3 <END>
+<START:tributo> 1771 <END> <START:codice> B 28 7 <END>
+<START:tributo> 2929 <END> <START:codice> T6 8 3 <END>
+<START:tributo> 5489 <END> <START:codice> T 5 23 <END>
+<START:tributo> 2989 <END> <START:codice> V060 <END>
+<START:tributo> 8659 <END> <START:codice> K 1 8 4 <END>
+<START:tributo> 9545 <END> <START:codice> D3 72 <END>
+<START:tributo> 7199 <END> <START:codice> D 325 <END>
+<START:tributo> 1978 <END> <START:codice> T63 5 <END>
+<START:tributo> 2717 <END> <START:codice> D 54 6 <END>
+<START:tributo> 2447 <END> <START:codice> T7 5 7 <END>
+<START:tributo> 5753 <END> <START:codice> F 1 70 <END>
+<START:tributo> 8495 <END> <START:codice> Y240 <END>
+<START:tributo> 5236 <END> <START:codice> O 3 8 5 <END>
+<START:tributo> 2392 <END> <START:codice> B0 51 <END>
+<START:tributo> 7291 <END> <START:codice> L 720 <END>
+<START:tributo> 8816 <END> <START:codice> K36 4 <END>
+<START:tributo> 5645 <END> <START:codice> L 20 8 <END>
+<START:tributo> 1127 <END> <START:codice> V6 6 7 <END>
+<START:tributo> 2952 <END> <START:codice> R 1 47 <END>
+<START:tributo> 9123 <END> <START:codice> C365 <END>
+<START:tributo> 3395 <END> <START:codice> K 2 8 6 <END>
+<START:tributo> 6665 <END> <START:codice> U4 45 <END>
+<START:tributo> 2221 <END> <START:codice> M 614 <END>
+<START:tributo> 3490 <END> <START:codice> C04 6 <END>
+<START:tributo> 5860 <END> <START:codice> M 30 4 <END>
+<START:tributo> 4290 <END> <START:codice> D8 5 4 <END>
+<START:tributo> 7150 <END> <START:codice> I 6 48 <END>
+<START:tributo> 1977 <END> <START:codice> R612 <END>
+<START:tributo> 9786 <END> <START:codice> A 0 2 0 <END>
+<START:tributo> 6974 <END> <START:codice> Y7 21 <END>
+<START:tributo> 3438 <END> <START:codice> J 413 <END>
+<START:tributo> 7926 <END> <START:codice> B44 5 <END>
+<START:tributo> 4889 <END> <START:codice> Z 83 6 <END>
+<START:tributo> 5104 <END> <START:codice> D0 1 2 <END>
+<START:tributo> 9858 <END> <START:codice> B 1 12 <END>
+<START:tributo> 4579 <END> <START:codice> L876 <END>
+<START:tributo> 1607 <END> <START:codice> Z 7 5 3 <END>
+<START:tributo> 6829 <END> <START:codice> T5 73 <END>
+<START:tributo> 2894 <END> <START:codice> L 347 <END>
+<START:tributo> 3260 <END> <START:codice> M06 4 <END>
+<START:tributo> 4118 <END> <START:codice> S 84 2 <END>
+<START:tributo> 5016 <END> <START:codice> U7 3 2 <END>
+<START:tributo> 7733 <END> <START:codice> X 6 26 <END>
+<START:tributo> 1831 <END> <START:codice> W610 <END>
+<START:tributo> 1274 <END> <START:codice> Q 6 6 2 <END>
+<START:tributo> 3118 <END> <START:codice> T7 68 <END>
+<START:tributo> 3468 <END> <START:codice> E 585 <END>
+<START:tributo> 5406 <END> <START:codice> V25 7 <END>
+<START:tributo> 8104 <END> <START:codice> L 43 5 <END>
+<START:tributo> 8891 <END> <START:codice> X7 6 6 <END>
+<START:tributo> 5454 <END> <START:codice> P 0 88 <END>
+<START:tributo> 6773 <END> <START:codice> M020 <END>
+<START:tributo> 2708 <END> <START:codice> B 8 3 5 <END>
+<START:tributo> 8946 <END> <START:codice> J7 33 <END>
+<START:tributo> 2553 <END> <START:codice> G 030 <END>
+<START:tributo> 7529 <END> <START:codice> O13 6 <END>
+<START:tributo> 9010 <END> <START:codice> C 70 3 <END>
+<START:tributo> 7648 <END> <START:codice> B0 5 0 <END>
+<START:tributo> 8598 <END> <START:codice> G 3 82 <END>
+<START:tributo> 4670 <END> <START:codice> D803 <END>
+<START:tributo> 6285 <END> <START:codice> X 8 7 2 <END>
+<START:tributo> 2401 <END> <START:codice> M3 32 <END>
+<START:tributo> 5660 <END> <START:codice> Q 863 <END>
+<START:tributo> 1336 <END> <START:codice> O27 8 <END>
+<START:tributo> 2322 <END> <START:codice> J 71 4 <END>
+<START:tributo> 5505 <END> <START:codice> R5 2 1 <END>
+<START:tributo> 2093 <END> <START:codice> Y 1 85 <END>
+<START:tributo> 9674 <END> <START:codice> C760 <END>
+<START:tributo> 7660 <END> <START:codice> D 7 1 2 <END>
+<START:tributo> 3683 <END> <START:codice> Q1 08 <END>
+<START:tributo> 3358 <END> <START:codice> A 770 <END>
+<START:tributo> 4265 <END> <START:codice> A02 7 <END>
+<START:tributo> 3952 <END> <START:codice> W 47 5 <END>
+<START:tributo> 7339 <END> <START:codice> L0 5 5 <END>
+<START:tributo> 5626 <END> <START:codice> J 1 15 <END>
+<START:tributo> 5392 <END> <START:codice> C665 <END>
+<START:tributo> 7658 <END> <START:codice> L 4 1 5 <END>
+<START:tributo> 3215 <END> <START:codice> P2 55 <END>
+<START:tributo> 2975 <END> <START:codice> H 308 <END>
+<START:tributo> 4941 <END> <START:codice> B64 7 <END>
+<START:tributo> 4070 <END> <START:codice> L 34 2 <END>
+<START:tributo> 2457 <END> <START:codice> S0 3 1 <END>
+<START:tributo> 7342 <END> <START:codice> W 6 73 <END>
+<START:tributo> 8842 <END> <START:codice> A841 <END>
+<START:tributo> 1415 <END> <START:codice> E 1 5 6 <END>
+<START:tributo> 4821 <END> <START:codice> M1 51 <END>
+<START:tributo> 2014 <END> <START:codice> S 814 <END>
+<START:tributo> 7827 <END> <START:codice> N82 2 <END>
+<START:tributo> 2930 <END> <START:codice> F 46 8 <END>
+<START:tributo> 5601 <END> <START:codice> A7 4 2 <END>
+<START:tributo> 3073 <END> <START:codice> F 1 27 <END>
+<START:tributo> 8845 <END> <START:codice> Z134 <END>
+<START:tributo> 3162 <END> <START:codice> L 4 3 1 <END>
+<START:tributo> 1159 <END> <START:codice> X1 13 <END>
+<START:tributo> 1764 <END> <START:codice> R 378 <END>
+<START:tributo> 3100 <END> <START:codice> Y18 0 <END>
+<START:tributo> 8828 <END> <START:codice> N 27 3 <END>
+<START:tributo> 6123 <END> <START:codice> I1 5 6 <END>
+<START:tributo> 6506 <END> <START:codice> I 4 66 <END>
+<START:tributo> 5491 <END> <START:codice> W383 <END>
+<START:tributo> 2700 <END> <START:codice> F 4 1 5 <END>
+<START:tributo> 2563 <END> <START:codice> U6 88 <END>
+<START:tributo> 3928 <END> <START:codice> U 254 <END>
+<START:tributo> 4016 <END> <START:codice> O43 3 <END>
+<START:tributo> 3149 <END> <START:codice> X 56 8 <END>
+<START:tributo> 7401 <END> <START:codice> X8 1 7 <END>
+<START:tributo> 1778 <END> <START:codice> D 5 74 <END>
+<START:tributo> 2820 <END> <START:codice> J118 <END>
+<START:tributo> 8917 <END> <START:codice> S 4 1 2 <END>
+<START:tributo> 5833 <END> <START:codice> L2 83 <END>
+<START:tributo> 2939 <END> <START:codice> N 333 <END>
+<START:tributo> 8214 <END> <START:codice> A21 4 <END>
+<START:tributo> 7181 <END> <START:codice> U 62 8 <END>
+<START:tributo> 2345 <END> <START:codice> U3 1 3 <END>
+<START:tributo> 9208 <END> <START:codice> C 0 68 <END>
+<START:tributo> 8640 <END> <START:codice> R484 <END>
+<START:tributo> 9068 <END> <START:codice> D 2 0 6 <END>
+<START:tributo> 8186 <END> <START:codice> O0 83 <END>
+<START:tributo> 7653 <END> <START:codice> J 348 <END>
+<START:tributo> 7463 <END> <START:codice> M07 1 <END>
+<START:tributo> 4964 <END> <START:codice> K 06 6 <END>
+<START:tributo> 6171 <END> <START:codice> P4 5 7 <END>
+<START:tributo> 4510 <END> <START:codice> X 1 24 <END>
+<START:tributo> 3998 <END> <START:codice> X627 <END>
+<START:tributo> 1241 <END> <START:codice> W 4 4 0 <END>
+<START:tributo> 8070 <END> <START:codice> V3 44 <END>
+<START:tributo> 9878 <END> <START:codice> E 878 <END>
+<START:tributo> 1970 <END> <START:codice> O77 4 <END>
+<START:tributo> 2177 <END> <START:codice> L 77 4 <END>
+<START:tributo> 3008 <END> <START:codice> B0 3 3 <END>
+<START:tributo> 9017 <END> <START:codice> A 2 37 <END>
+<START:tributo> 7455 <END> <START:codice> T880 <END>
+<START:tributo> 5366 <END> <START:codice> Z 8 0 7 <END>
+<START:tributo> 9909 <END> <START:codice> D2 20 <END>
+<START:tributo> 5109 <END> <START:codice> P 115 <END>
+<START:tributo> 2840 <END> <START:codice> T32 6 <END>
+<START:tributo> 9604 <END> <START:codice> N 74 6 <END>
+<START:tributo> 6288 <END> <START:codice> K5 3 7 <END>
+<START:tributo> 7940 <END> <START:codice> K 2 50 <END>
+<START:tributo> 9962 <END> <START:codice> C514 <END>
+<START:tributo> 3273 <END> <START:codice> P 8 8 4 <END>
+<START:tributo> 9382 <END> <START:codice> J6 26 <END>
+<START:tributo> 5818 <END> <START:codice> Q 852 <END>
+<START:tributo> 9873 <END> <START:codice> E51 2 <END>
+<START:tributo> 2015 <END> <START:codice> P 03 1 <END>
+<START:tributo> 6314 <END> <START:codice> N4 1 2 <END>
+<START:tributo> 9125 <END> <START:codice> P 6 83 <END>
+<START:tributo> 9592 <END> <START:codice> Y368 <END>
+<START:tributo> 7194 <END> <START:codice> T 1 6 7 <END>
+<START:tributo> 8017 <END> <START:codice> X2 36 <END>
+<START:tributo> 6623 <END> <START:codice> S 462 <END>
+<START:tributo> 4172 <END> <START:codice> B24 6 <END>
+<START:tributo> 4192 <END> <START:codice> Z 05 3 <END>
+<START:tributo> 2391 <END> <START:codice> P3 8 5 <END>
+<START:tributo> 1660 <END> <START:codice> L 6 34 <END>
+<START:tributo> 2625 <END> <START:codice> D526 <END>
+<START:tributo> 7755 <END> <START:codice> C 3 2 4 <END>
+<START:tributo> 3840 <END> <START:codice> E2 16 <END>
+<START:tributo> 9977 <END> <START:codice> A 786 <END>
+<START:tributo> 8178 <END> <START:codice> Y08 3 <END>
+<START:tributo> 1855 <END> <START:codice> V 54 5 <END>
+<START:tributo> 2759 <END> <START:codice> B0 4 6 <END>
+<START:tributo> 4154 <END> <START:codice> Y 2 58 <END>
+<START:tributo> 8428 <END> <START:codice> M642 <END>
+<START:tributo> 4033 <END> <START:codice> C 6 3 8 <END>
+<START:tributo> 6921 <END> <START:codice> H1 12 <END>
+<START:tributo> 7523 <END> <START:codice> M 871 <END>
+<START:tributo> 4291 <END> <START:codice> J27 2 <END>
+<START:tributo> 1989 <END> <START:codice> V 78 0 <END>
+<START:tributo> 6913 <END> <START:codice> E8 7 6 <END>
+<START:tributo> 5239 <END> <START:codice> X 1 52 <END>
+<START:tributo> 7538 <END> <START:codice> I120 <END>
+<START:tributo> 7767 <END> <START:codice> Y 8 2 1 <END>
+<START:tributo> 4964 <END> <START:codice> R4 64 <END>
+<START:tributo> 4179 <END> <START:codice> O 806 <END>
+<START:tributo> 7310 <END> <START:codice> B54 0 <END>
+<START:tributo> 8218 <END> <START:codice> Y 03 2 <END>
+<START:tributo> 3942 <END> <START:codice> D5 3 7 <END>
+<START:tributo> 4563 <END> <START:codice> S 2 21 <END>
+<START:tributo> 8739 <END> <START:codice> G305 <END>
+<START:tributo> 3267 <END> <START:codice> C 8 5 6 <END>
+<START:tributo> 5203 <END> <START:codice> T5 35 <END>
+<START:tributo> 2370 <END> <START:codice> M 870 <END>
+<START:tributo> 7484 <END> <START:codice> X52 1 <END>
+<START:tributo> 4590 <END> <START:codice> K 34 5 <END>
+<START:tributo> 6574 <END> <START:codice> O4 1 2 <END>
+<START:tributo> 5021 <END> <START:codice> R 7 54 <END>
+<START:tributo> 8438 <END> <START:codice> A872 <END>
+<START:tributo> 2070 <END> <START:codice> I 4 6 1 <END>
+<START:tributo> 7907 <END> <START:codice> O0 62 <END>
+<START:tributo> 6743 <END> <START:codice> T 811 <END>
+<START:tributo> 5796 <END> <START:codice> N32 6 <END>
+<START:tributo> 7496 <END> <START:codice> Y 64 5 <END>
+<START:tributo> 5392 <END> <START:codice> I6 7 4 <END>
+<START:tributo> 7709 <END> <START:codice> L 5 62 <END>
+<START:tributo> 2180 <END> <START:codice> X345 <END>
+<START:tributo> 4455 <END> <START:codice> J 0 5 1 <END>
+<START:tributo> 4167 <END> <START:codice> N7 37 <END>
+<START:tributo> 8075 <END> <START:codice> X 400 <END>
+<START:tributo> 4976 <END> <START:codice> K04 1 <END>
+<START:tributo> 2776 <END> <START:codice> T 16 8 <END>
+<START:tributo> 5764 <END> <START:codice> N6 2 4 <END>
+<START:tributo> 8317 <END> <START:codice> M 4 17 <END>
+<START:tributo> 5276 <END> <START:codice> S316 <END>
+<START:tributo> 8695 <END> <START:codice> A 8 3 1 <END>
+<START:tributo> 3045 <END> <START:codice> C3 28 <END>
+<START:tributo> 6086 <END> <START:codice> X 278 <END>
+<START:tributo> 8909 <END> <START:codice> Y33 5 <END>
+<START:tributo> 6208 <END> <START:codice> M 63 0 <END>
+<START:tributo> 5844 <END> <START:codice> X7 5 7 <END>
+<START:tributo> 7611 <END> <START:codice> I 6 74 <END>
+<START:tributo> 6903 <END> <START:codice> Y554 <END>
+<START:tributo> 9086 <END> <START:codice> M 8 0 2 <END>
+<START:tributo> 2374 <END> <START:codice> W1 73 <END>
+<START:tributo> 3831 <END> <START:codice> F 283 <END>
+<START:tributo> 9494 <END> <START:codice> Q02 7 <END>
+<START:tributo> 1566 <END> <START:codice> D 20 5 <END>
+<START:tributo> 7790 <END> <START:codice> Q0 6 5 <END>
+<START:tributo> 6231 <END> <START:codice> U 3 84 <END>
+<START:tributo> 1789 <END> <START:codice> Q775 <END>
+<START:tributo> 5515 <END> <START:codice> L 8 4 5 <END>
+<START:tributo> 6065 <END> <START:codice> K7 15 <END>
+<START:tributo> 2255 <END> <START:codice> Y 806 <END>
+<START:tributo> 8625 <END> <START:codice> J31 1 <END>
+<START:tributo> 7762 <END> <START:codice> O 15 8 <END>
+<START:tributo> 5618 <END> <START:codice> Q8 3 7 <END>
+<START:tributo> 9811 <END> <START:codice> S 7 84 <END>
+<START:tributo> 2437 <END> <START:codice> H231 <END>
+<START:tributo> 9423 <END> <START:codice> Z 4 7 0 <END>
+<START:tributo> 6671 <END> <START:codice> B8 36 <END>
+<START:tributo> 1870 <END> <START:codice> T 575 <END>
+<START:tributo> 4086 <END> <START:codice> C84 5 <END>
+<START:tributo> 3933 <END> <START:codice> G 65 0 <END>
+<START:tributo> 1154 <END> <START:codice> X1 0 7 <END>
+<START:tributo> 3108 <END> <START:codice> U 6 54 <END>
+<START:tributo> 7640 <END> <START:codice> D852 <END>
+<START:tributo> 7969 <END> <START:codice> T 0 5 4 <END>
+<START:tributo> 9343 <END> <START:codice> X3 50 <END>
+<START:tributo> 9075 <END> <START:codice> Y 361 <END>
+<START:tributo> 6742 <END> <START:codice> P22 6 <END>
+<START:tributo> 1303 <END> <START:codice> J 22 1 <END>
+<START:tributo> 7484 <END> <START:codice> B4 3 3 <END>
+<START:tributo> 1173 <END> <START:codice> G 6 42 <END>
+<START:tributo> 4854 <END> <START:codice> B013 <END>
+<START:tributo> 9066 <END> <START:codice> F 2 1 2 <END>
+<START:tributo> 4547 <END> <START:codice> X4 21 <END>
+<START:tributo> 1967 <END> <START:codice> E 400 <END>
+<START:tributo> 7761 <END> <START:codice> M11 2 <END>
+<START:tributo> 2864 <END> <START:codice> X 67 0 <END>
+<START:tributo> 6784 <END> <START:codice> B2 5 8 <END>
+<START:tributo> 4100 <END> <START:codice> E 3 22 <END>
+<START:tributo> 1246 <END> <START:codice> I554 <END>
+<START:tributo> 1386 <END> <START:codice> J 2 4 3 <END>
+<START:tributo> 3784 <END> <START:codice> I0 68 <END>
+<START:tributo> 6161 <END> <START:codice> U 178 <END>
+<START:tributo> 7503 <END> <START:codice> D13 8 <END>
+<START:tributo> 7655 <END> <START:codice> G 68 3 <END>
+<START:tributo> 7423 <END> <START:codice> A0 6 1 <END>
+<START:tributo> 5994 <END> <START:codice> N 0 76 <END>
+<START:tributo> 7976 <END> <START:codice> B754 <END>
+<START:tributo> 1633 <END> <START:codice> O 3 0 6 <END>
+<START:tributo> 1825 <END> <START:codice> N2 60 <END>
+<START:tributo> 9514 <END> <START:codice> R 166 <END>
+<START:tributo> 2119 <END> <START:codice> B71 0 <END>
+<START:tributo> 5676 <END> <START:codice> X 54 8 <END>
+<START:tributo> 4025 <END> <START:codice> G5 3 2 <END>
+<START:tributo> 1454 <END> <START:codice> K 2 30 <END>
+<START:tributo> 2382 <END> <START:codice> C405 <END>
+<START:tributo> 7262 <END> <START:codice> Y 0 8 4 <END>
+<START:tributo> 3220 <END> <START:codice> H7 56 <END>
+<START:tributo> 7122 <END> <START:codice> P 247 <END>
+<START:tributo> 5794 <END> <START:codice> G65 5 <END>
+<START:tributo> 6593 <END> <START:codice> F 74 5 <END>
+<START:tributo> 5029 <END> <START:codice> D2 5 0 <END>
+<START:tributo> 2465 <END> <START:codice> C 8 37 <END>
+<START:tributo> 7782 <END> <START:codice> L524 <END>
+<START:tributo> 2761 <END> <START:codice> E 2 6 7 <END>
+<START:tributo> 1986 <END> <START:codice> X6 22 <END>
+<START:tributo> 1472 <END> <START:codice> N 336 <END>
+<START:tributo> 7159 <END> <START:codice> C00 3 <END>
+<START:tributo> 8299 <END> <START:codice> X 63 3 <END>
+<START:tributo> 5804 <END> <START:codice> H3 8 2 <END>
+<START:tributo> 3963 <END> <START:codice> X 1 70 <END>
+<START:tributo> 9625 <END> <START:codice> B453 <END>
+<START:tributo> 7331 <END> <START:codice> H 4 4 0 <END>
+<START:tributo> 9722 <END> <START:codice> D6 22 <END>
+<START:tributo> 8373 <END> <START:codice> U 473 <END>
+<START:tributo> 2023 <END> <START:codice> W58 8 <END>
+<START:tributo> 9453 <END> <START:codice> Z 82 0 <END>
+<START:tributo> 1238 <END> <START:codice> V6 7 8 <END>
+<START:tributo> 7371 <END> <START:codice> F 4 88 <END>
+<START:tributo> 2622 <END> <START:codice> K616 <END>
+<START:tributo> 7820 <END> <START:codice> R 8 8 7 <END>
+<START:tributo> 8949 <END> <START:codice> Q1 00 <END>
+<START:tributo> 4096 <END> <START:codice> G 553 <END>
+<START:tributo> 3433 <END> <START:codice> H43 0 <END>
+<START:tributo> 5021 <END> <START:codice> P 08 4 <END>
+<START:tributo> 8730 <END> <START:codice> T8 4 4 <END>
+<START:tributo> 1706 <END> <START:codice> A 8 26 <END>
+<START:tributo> 7542 <END> <START:codice> P021 <END>
+<START:tributo> 3524 <END> <START:codice> H 0 0 3 <END>
+<START:tributo> 3730 <END> <START:codice> L5 27 <END>
+<START:tributo> 3370 <END> <START:codice> Z 868 <END>
+<START:tributo> 3623 <END> <START:codice> Y83 1 <END>
+<START:tributo> 4820 <END> <START:codice> E 16 0 <END>
+<START:tributo> 8721 <END> <START:codice> L5 6 4 <END>
+<START:tributo> 8407 <END> <START:codice> B 4 37 <END>
+<START:tributo> 4328 <END> <START:codice> C376 <END>
+<START:tributo> 6138 <END> <START:codice> N 4 2 2 <END>
+<START:tributo> 5115 <END> <START:codice> J5 40 <END>
+<START:tributo> 6203 <END> <START:codice> F 750 <END>
+<START:tributo> 9775 <END> <START:codice> V20 6 <END>
+<START:tributo> 4641 <END> <START:codice> P 56 1 <END>
+<START:tributo> 8603 <END> <START:codice> S8 7 3 <END>
+<START:tributo> 9435 <END> <START:codice> L 2 68 <END>
+<START:tributo> 5101 <END> <START:codice> C538 <END>
+<START:tributo> 2327 <END> <START:codice> F 8 7 5 <END>
+<START:tributo> 7773 <END> <START:codice> V1 51 <END>
+<START:tributo> 5091 <END> <START:codice> A 246 <END>
+<START:tributo> 5009 <END> <START:codice> J00 7 <END>
+<START:tributo> 4470 <END> <START:codice> P 88 2 <END>
+<START:tributo> 5183 <END> <START:codice> S1 3 0 <END>
+<START:tributo> 5718 <END> <START:codice> F 7 35 <END>
+<START:tributo> 7933 <END> <START:codice> W208 <END>
+<START:tributo> 5402 <END> <START:codice> G 7 4 6 <END>
+<START:tributo> 1787 <END> <START:codice> W5 07 <END>
+<START:tributo> 9593 <END> <START:codice> H 072 <END>
+<START:tributo> 5446 <END> <START:codice> I05 7 <END>
+<START:tributo> 5952 <END> <START:codice> W 88 6 <END>
+<START:tributo> 3198 <END> <START:codice> U3 4 7 <END>
+<START:tributo> 2735 <END> <START:codice> Y 5 25 <END>
+<START:tributo> 6672 <END> <START:codice> X752 <END>
+<START:tributo> 2996 <END> <START:codice> S 0 8 0 <END>
+<START:tributo> 4851 <END> <START:codice> U1 50 <END>
+<START:tributo> 5653 <END> <START:codice> Y 380 <END>
+<START:tributo> 9422 <END> <START:codice> K84 8 <END>
+<START:tributo> 4913 <END> <START:codice> D 66 8 <END>
+<START:tributo> 1559 <END> <START:codice> I6 8 3 <END>
+<START:tributo> 5791 <END> <START:codice> W 5 14 <END>
+<START:tributo> 4053 <END> <START:codice> P322 <END>
+<START:tributo> 5861 <END> <START:codice> M 2 7 7 <END>
+<START:tributo> 7686 <END> <START:codice> O2 33 <END>
+<START:tributo> 8369 <END> <START:codice> K 330 <END>
+<START:tributo> 8512 <END> <START:codice> F12 2 <END>
+<START:tributo> 3721 <END> <START:codice> P 27 5 <END>
+<START:tributo> 5219 <END> <START:codice> H2 1 3 <END>
+<START:tributo> 3358 <END> <START:codice> U 5 12 <END>
+<START:tributo> 4068 <END> <START:codice> I177 <END>
+<START:tributo> 8588 <END> <START:codice> D 4 1 6 <END>
+<START:tributo> 2155 <END> <START:codice> E8 03 <END>
+<START:tributo> 7690 <END> <START:codice> G 888 <END>
+<START:tributo> 4405 <END> <START:codice> G72 8 <END>
+<START:tributo> 8600 <END> <START:codice> M 67 3 <END>
+<START:tributo> 5410 <END> <START:codice> I0 4 5 <END>
+<START:tributo> 8387 <END> <START:codice> E 2 75 <END>
+<START:tributo> 3215 <END> <START:codice> V104 <END>
+<START:tributo> 8226 <END> <START:codice> C 5 3 2 <END>
+<START:tributo> 4427 <END> <START:codice> E0 72 <END>
+<START:tributo> 5659 <END> <START:codice> P 007 <END>
+<START:tributo> 6877 <END> <START:codice> A55 8 <END>
+<START:tributo> 1645 <END> <START:codice> Z 44 8 <END>
+<START:tributo> 4483 <END> <START:codice> R0 1 2 <END>
+<START:tributo> 8983 <END> <START:codice> T 5 73 <END>
+<START:tributo> 4084 <END> <START:codice> T715 <END>
+<START:tributo> 7838 <END> <START:codice> W 3 3 4 <END>
+<START:tributo> 2781 <END> <START:codice> H5 46 <END>
+<START:tributo> 2386 <END> <START:codice> E 824 <END>
+<START:tributo> 6543 <END> <START:codice> N23 5 <END>
+<START:tributo> 3233 <END> <START:codice> G 04 2 <END>
+<START:tributo> 5999 <END> <START:codice> Q6 8 4 <END>
+<START:tributo> 4273 <END> <START:codice> R 6 25 <END>
+<START:tributo> 9491 <END> <START:codice> B617 <END>
+<START:tributo> 5009 <END> <START:codice> K 0 5 7 <END>
+<START:tributo> 7115 <END> <START:codice> E2 27 <END>
+<START:tributo> 7584 <END> <START:codice> Y 465 <END>
+<START:tributo> 8708 <END> <START:codice> R37 8 <END>
+<START:tributo> 7523 <END> <START:codice> H 71 6 <END>
+<START:tributo> 5613 <END> <START:codice> M6 8 5 <END>
+<START:tributo> 2402 <END> <START:codice> F 0 14 <END>
+<START:tributo> 7805 <END> <START:codice> T106 <END>
+<START:tributo> 1411 <END> <START:codice> G 3 2 3 <END>
+<START:tributo> 7874 <END> <START:codice> F0 80 <END>
+<START:tributo> 8452 <END> <START:codice> M 202 <END>
+<START:tributo> 7715 <END> <START:codice> T05 0 <END>
+<START:tributo> 8996 <END> <START:codice> W 22 2 <END>
+<START:tributo> 7510 <END> <START:codice> P2 7 1 <END>
+<START:tributo> 3394 <END> <START:codice> W 7 02 <END>
+<START:tributo> 4226 <END> <START:codice> I620 <END>
+<START:tributo> 7483 <END> <START:codice> H 8 3 2 <END>
+<START:tributo> 5549 <END> <START:codice> C5 76 <END>
+<START:tributo> 3143 <END> <START:codice> J 526 <END>
+<START:tributo> 1421 <END> <START:codice> O36 2 <END>
+<START:tributo> 2412 <END> <START:codice> P 41 7 <END>
+<START:tributo> 6082 <END> <START:codice> I6 6 0 <END>
+<START:tributo> 5072 <END> <START:codice> Q 6 15 <END>
+<START:tributo> 6433 <END> <START:codice> M766 <END>
+<START:tributo> 1554 <END> <START:codice> W 0 7 7 <END>
+<START:tributo> 4834 <END> <START:codice> Z5 31 <END>
+<START:tributo> 7649 <END> <START:codice> P 355 <END>
+<START:tributo> 9666 <END> <START:codice> Q88 7 <END>
+<START:tributo> 4546 <END> <START:codice> J 56 6 <END>
+<START:tributo> 2041 <END> <START:codice> Y6 1 8 <END>
+<START:tributo> 4661 <END> <START:codice> B 6 06 <END>
+<START:tributo> 7268 <END> <START:codice> A674 <END>
+<START:tributo> 3384 <END> <START:codice> L 0 6 2 <END>
+<START:tributo> 3202 <END> <START:codice> B8 76 <END>
+<START:tributo> 9593 <END> <START:codice> S 242 <END>
+<START:tributo> 9714 <END> <START:codice> V14 2 <END>
+<START:tributo> 6263 <END> <START:codice> R 68 3 <END>
+<START:tributo> 2834 <END> <START:codice> D8 2 1 <END>
+<START:tributo> 3745 <END> <START:codice> V 5 31 <END>
+<START:tributo> 2480 <END> <START:codice> T383 <END>
+<START:tributo> 7580 <END> <START:codice> P 5 8 6 <END>
+<START:tributo> 6932 <END> <START:codice> K7 35 <END>
+<START:tributo> 7224 <END> <START:codice> I 652 <END>
+<START:tributo> 7731 <END> <START:codice> L87 3 <END>
+<START:tributo> 9147 <END> <START:codice> K 27 8 <END>
+<START:tributo> 9853 <END> <START:codice> B6 0 6 <END>
+<START:tributo> 1939 <END> <START:codice> I 8 27 <END>
+<START:tributo> 5447 <END> <START:codice> U667 <END>
+<START:tributo> 4135 <END> <START:codice> J 8 6 6 <END>
+<START:tributo> 4785 <END> <START:codice> X8 16 <END>
+<START:tributo> 2206 <END> <START:codice> W 116 <END>
+<START:tributo> 2496 <END> <START:codice> U47 7 <END>
+<START:tributo> 4557 <END> <START:codice> K 83 6 <END>
+<START:tributo> 2675 <END> <START:codice> I7 5 7 <END>
+<START:tributo> 8500 <END> <START:codice> G 3 07 <END>
+<START:tributo> 5585 <END> <START:codice> W664 <END>
+<START:tributo> 9929 <END> <START:codice> W 0 2 8 <END>
+<START:tributo> 3409 <END> <START:codice> R6 44 <END>
+<START:tributo> 5298 <END> <START:codice> N 166 <END>
+<START:tributo> 7631 <END> <START:codice> M05 5 <END>
+<START:tributo> 1694 <END> <START:codice> J 88 8 <END>
+<START:tributo> 8500 <END> <START:codice> Z0 7 4 <END>
+<START:tributo> 3963 <END> <START:codice> E 7 52 <END>
+<START:tributo> 6206 <END> <START:codice> G774 <END>
+<START:tributo> 8313 <END> <START:codice> D 4 8 1 <END>
+<START:tributo> 5099 <END> <START:codice> Y2 37 <END>
+<START:tributo> 9773 <END> <START:codice> I 416 <END>
+<START:tributo> 2977 <END> <START:codice> Y66 8 <END>
+<START:tributo> 5053 <END> <START:codice> X 52 0 <END>
+<START:tributo> 2880 <END> <START:codice> G1 7 6 <END>
+<START:tributo> 2841 <END> <START:codice> Q 0 87 <END>
+<START:tributo> 1669 <END> <START:codice> K023 <END>
+<START:tributo> 6320 <END> <START:codice> G 1 2 8 <END>
+<START:tributo> 1648 <END> <START:codice> P1 74 <END>
+<START:tributo> 8862 <END> <START:codice> H 052 <END>
+<START:tributo> 8558 <END> <START:codice> M55 6 <END>
+<START:tributo> 9819 <END> <START:codice> K 70 1 <END>
+<START:tributo> 5502 <END> <START:codice> G6 4 5 <END>
+<START:tributo> 5414 <END> <START:codice> F 2 33 <END>
+<START:tributo> 1623 <END> <START:codice> L443 <END>
+<START:tributo> 3149 <END> <START:codice> R 3 7 7 <END>
+<START:tributo> 6391 <END> <START:codice> F6 24 <END>
+<START:tributo> 2486 <END> <START:codice> F 655 <END>
+<START:tributo> 6405 <END> <START:codice> T34 8 <END>
+<START:tributo> 5664 <END> <START:codice> Q 04 8 <END>
+<START:tributo> 1575 <END> <START:codice> H5 2 2 <END>
+<START:tributo> 9977 <END> <START:codice> K 6 07 <END>
+<START:tributo> 2715 <END> <START:codice> F205 <END>
+<START:tributo> 2617 <END> <START:codice> J 1 0 4 <END>
+<START:tributo> 2017 <END> <START:codice> F7 03 <END>
+<START:tributo> 4853 <END> <START:codice> O 376 <END>
+<START:tributo> 9798 <END> <START:codice> B66 1 <END>
+<START:tributo> 3531 <END> <START:codice> K 80 4 <END>
+<START:tributo> 9986 <END> <START:codice> M2 4 5 <END>
+<START:tributo> 6835 <END> <START:codice> F 6 14 <END>
+<START:tributo> 5546 <END> <START:codice> B022 <END>
+<START:tributo> 6707 <END> <START:codice> A 8 7 7 <END>
+<START:tributo> 9126 <END> <START:codice> C2 42 <END>
+<START:tributo> 2018 <END> <START:codice> A 021 <END>
+<START:tributo> 9515 <END> <START:codice> L48 7 <END>
+<START:tributo> 8045 <END> <START:codice> W 46 5 <END>
+<START:tributo> 4368 <END> <START:codice> V3 6 0 <END>
+<START:tributo> 9284 <END> <START:codice> G 0 83 <END>
+<START:tributo> 5116 <END> <START:codice> P087 <END>
+<START:tributo> 2957 <END> <START:codice> W 8 1 3 <END>
+<START:tributo> 5773 <END> <START:codice> C2 31 <END>
+<START:tributo> 8014 <END> <START:codice> U 818 <END>
+<START:tributo> 7194 <END> <START:codice> V22 7 <END>
+<START:tributo> 1454 <END> <START:codice> P 38 5 <END>
+<START:tributo> 6961 <END> <START:codice> Z7 1 6 <END>
+<START:tributo> 3483 <END> <START:codice> X 4 68 <END>
+<START:tributo> 8096 <END> <START:codice> O210 <END>
+<START:tributo> 9093 <END> <START:codice> E 1 3 0 <END>
+<START:tributo> 5879 <END> <START:codice> W5 01 <END>
+<START:tributo> 8152 <END> <START:codice> B 315 <END>
+<START:tributo> 5707 <END> <START:codice> V70 6 <END>
+<START:tributo> 7085 <END> <START:codice> U 70 8 <END>
+<START:tributo> 1748 <END> <START:codice> N3 0 1 <END>
+<START:tributo> 4505 <END> <START:codice> A 4 56 <END>
+<START:tributo> 3903 <END> <START:codice> T013 <END>
+<START:tributo> 9971 <END> <START:codice> X 6 1 6 <END>
+<START:tributo> 7036 <END> <START:codice> V8 77 <END>
+<START:tributo> 4025 <END> <START:codice> K 328 <END>
+<START:tributo> 2248 <END> <START:codice> N50 4 <END>
+<START:tributo> 7627 <END> <START:codice> C 45 8 <END>
+<START:tributo> 1978 <END> <START:codice> N3 7 1 <END>
+<START:tributo> 6526 <END> <START:codice> I 4 02 <END>
+<START:tributo> 9593 <END> <START:codice> I427 <END>
+<START:tributo> 2536 <END> <START:codice> W 5 0 2 <END>
+<START:tributo> 3819 <END> <START:codice> R8 22 <END>
+<START:tributo> 2849 <END> <START:codice> O 235 <END>
+<START:tributo> 8806 <END> <START:codice> W77 7 <END>
+<START:tributo> 8263 <END> <START:codice> I 81 0 <END>
+<START:tributo> 8058 <END> <START:codice> E6 2 2 <END>
+<START:tributo> 5561 <END> <START:codice> D 1 51 <END>
+<START:tributo> 5701 <END> <START:codice> E473 <END>
+<START:tributo> 8588 <END> <START:codice> D 4 2 3 <END>
+<START:tributo> 8301 <END> <START:codice> N4 46 <END>
+<START:tributo> 6896 <END> <START:codice> B 128 <END>
+<START:tributo> 2424 <END> <START:codice> W42 5 <END>
+<START:tributo> 6042 <END> <START:codice> D 28 7 <END>
+<START:tributo> 2373 <END> <START:codice> C7 4 1 <END>
+<START:tributo> 2666 <END> <START:codice> I 0 07 <END>
+<START:tributo> 6204 <END> <START:codice> L525 <END>
+<START:tributo> 6438 <END> <START:codice> F 6 7 7 <END>
+<START:tributo> 2745 <END> <START:codice> D8 42 <END>
+<START:tributo> 5717 <END> <START:codice> G 635 <END>
+<START:tributo> 2516 <END> <START:codice> V12 4 <END>
+<START:tributo> 9532 <END> <START:codice> U 62 0 <END>
+<START:tributo> 5907 <END> <START:codice> J1 8 7 <END>
+<START:tributo> 4099 <END> <START:codice> H 8 47 <END>
+<START:tributo> 6765 <END> <START:codice> Y435 <END>
+<START:tributo> 7495 <END> <START:codice> N 1 1 6 <END>
+<START:tributo> 8008 <END> <START:codice> T0 85 <END>
+<START:tributo> 9056 <END> <START:codice> E 535 <END>
+<START:tributo> 6795 <END> <START:codice> J27 0 <END>
+<START:tributo> 9148 <END> <START:codice> G 62 5 <END>
+<START:tributo> 1636 <END> <START:codice> N2 7 7 <END>
+<START:tributo> 3290 <END> <START:codice> E 1 61 <END>
+<START:tributo> 5457 <END> <START:codice> Y815 <END>
+<START:tributo> 5375 <END> <START:codice> X 3 7 0 <END>
+<START:tributo> 6762 <END> <START:codice> B1 88 <END>
+<START:tributo> 1283 <END> <START:codice> I 878 <END>
+<START:tributo> 8620 <END> <START:codice> T88 5 <END>
+<START:tributo> 4739 <END> <START:codice> U 76 5 <END>
+<START:tributo> 9247 <END> <START:codice> J0 7 7 <END>
+<START:tributo> 7351 <END> <START:codice> Y 5 32 <END>
+<START:tributo> 6576 <END> <START:codice> X651 <END>
+<START:tributo> 5805 <END> <START:codice> Q 6 0 0 <END>
+<START:tributo> 1406 <END> <START:codice> C1 42 <END>
+<START:tributo> 4483 <END> <START:codice> N 860 <END>
+<START:tributo> 6904 <END> <START:codice> E60 4 <END>
+<START:tributo> 1617 <END> <START:codice> A 58 5 <END>
+<START:tributo> 1244 <END> <START:codice> N0 4 0 <END>
+<START:tributo> 6003 <END> <START:codice> F 2 70 <END>
+<START:tributo> 8689 <END> <START:codice> L434 <END>
+<START:tributo> 3362 <END> <START:codice> V 7 1 7 <END>
+<START:tributo> 5517 <END> <START:codice> M5 87 <END>
+<START:tributo> 4635 <END> <START:codice> O 676 <END>
+<START:tributo> 1527 <END> <START:codice> U68 2 <END>
+<START:tributo> 4189 <END> <START:codice> E 04 1 <END>
+<START:tributo> 9701 <END> <START:codice> G8 3 0 <END>
+<START:tributo> 1598 <END> <START:codice> J 7 10 <END>
+<START:tributo> 3013 <END> <START:codice> J748 <END>
+<START:tributo> 2806 <END> <START:codice> F 1 4 8 <END>
+<START:tributo> 6871 <END> <START:codice> Y6 36 <END>
+<START:tributo> 3569 <END> <START:codice> D 630 <END>
+<START:tributo> 4840 <END> <START:codice> P10 0 <END>
+<START:tributo> 2784 <END> <START:codice> D 53 7 <END>
+<START:tributo> 9047 <END> <START:codice> B2 1 7 <END>
+<START:tributo> 4392 <END> <START:codice> L 6 36 <END>
+<START:tributo> 1172 <END> <START:codice> X364 <END>
+<START:tributo> 5024 <END> <START:codice> M 1 2 5 <END>
+<START:tributo> 2371 <END> <START:codice> H4 62 <END>
+<START:tributo> 1990 <END> <START:codice> S 230 <END>
+<START:tributo> 1852 <END> <START:codice> C64 7 <END>
+<START:tributo> 4433 <END> <START:codice> L 13 5 <END>
+<START:tributo> 4733 <END> <START:codice> A0 1 0 <END>
+<START:tributo> 8920 <END> <START:codice> E 7 17 <END>
+<START:tributo> 5949 <END> <START:codice> K653 <END>
+<START:tributo> 2024 <END> <START:codice> P 6 5 1 <END>
+<START:tributo> 5194 <END> <START:codice> O0 28 <END>
+<START:tributo> 7961 <END> <START:codice> J 536 <END>
+<START:tributo> 5850 <END> <START:codice> L13 4 <END>
+<START:tributo> 6649 <END> <START:codice> X 73 7 <END>
+<START:tributo> 4573 <END> <START:codice> L4 8 8 <END>
+<START:tributo> 6087 <END> <START:codice> A 7 51 <END>
+<START:tributo> 9504 <END> <START:codice> B572 <END>
+<START:tributo> 7000 <END> <START:codice> H 8 7 2 <END>
+<START:tributo> 1323 <END> <START:codice> Y0 25 <END>
+<START:tributo> 3675 <END> <START:codice> V 782 <END>
+<START:tributo> 1131 <END> <START:codice> W72 0 <END>
+<START:tributo> 3784 <END> <START:codice> S 35 2 <END>
+<START:tributo> 2352 <END> <START:codice> G3 1 4 <END>
+<START:tributo> 4300 <END> <START:codice> F 0 73 <END>
+<START:tributo> 5119 <END> <START:codice> G412 <END>
+<START:tributo> 1998 <END> <START:codice> N 6 1 7 <END>
+<START:tributo> 7783 <END> <START:codice> X2 48 <END>
+<START:tributo> 7020 <END> <START:codice> E 276 <END>
+<START:tributo> 5911 <END> <START:codice> T56 2 <END>
+<START:tributo> 6205 <END> <START:codice> P 15 1 <END>
+<START:tributo> 9789 <END> <START:codice> H8 4 0 <END>
+<START:tributo> 6328 <END> <START:codice> N 3 25 <END>
+<START:tributo> 7272 <END> <START:codice> T108 <END>
+<START:tributo> 7058 <END> <START:codice> Q 4 4 6 <END>
+<START:tributo> 3470 <END> <START:codice> H8 31 <END>
+<START:tributo> 8163 <END> <START:codice> K 123 <END>
+<START:tributo> 9685 <END> <START:codice> T82 5 <END>
+<START:tributo> 2537 <END> <START:codice> Q 05 3 <END>
+<START:tributo> 2349 <END> <START:codice> A0 5 6 <END>
+<START:tributo> 4730 <END> <START:codice> C 1 63 <END>
+<START:tributo> 2772 <END> <START:codice> W114 <END>
+<START:tributo> 3462 <END> <START:codice> O 8 5 5 <END>
+<START:tributo> 6759 <END> <START:codice> J7 44 <END>
+<START:tributo> 2217 <END> <START:codice> Q 683 <END>
+<START:tributo> 5958 <END> <START:codice> W87 0 <END>
+<START:tributo> 3260 <END> <START:codice> N 18 2 <END>
+<START:tributo> 8696 <END> <START:codice> N7 7 3 <END>
+<START:tributo> 2836 <END> <START:codice> Q 0 63 <END>
+<START:tributo> 8626 <END> <START:codice> Z354 <END>
+<START:tributo> 3751 <END> <START:codice> P 1 3 4 <END>
+<START:tributo> 3459 <END> <START:codice> V5 10 <END>
+<START:tributo> 9974 <END> <START:codice> Y 182 <END>
+<START:tributo> 1666 <END> <START:codice> H23 8 <END>
+<START:tributo> 2629 <END> <START:codice> S 84 6 <END>
+<START:tributo> 2853 <END> <START:codice> W8 1 2 <END>
+<START:tributo> 8571 <END> <START:codice> W 1 83 <END>
+<START:tributo> 8843 <END> <START:codice> Z838 <END>
+<START:tributo> 9648 <END> <START:codice> M 3 3 6 <END>
+<START:tributo> 7602 <END> <START:codice> E0 63 <END>
+<START:tributo> 9281 <END> <START:codice> W 272 <END>
+<START:tributo> 5784 <END> <START:codice> S64 0 <END>
+<START:tributo> 9301 <END> <START:codice> C 06 0 <END>
+<START:tributo> 9197 <END> <START:codice> H7 0 3 <END>
+<START:tributo> 2434 <END> <START:codice> I 5 40 <END>
+<START:tributo> 1246 <END> <START:codice> R167 <END>
+<START:tributo> 6807 <END> <START:codice> R 4 2 3 <END>
+<START:tributo> 9411 <END> <START:codice> M6 74 <END>
+<START:tributo> 2459 <END> <START:codice> H 634 <END>
+<START:tributo> 4161 <END> <START:codice> U83 7 <END>
+<START:tributo> 1531 <END> <START:codice> B 83 6 <END>
+<START:tributo> 3823 <END> <START:codice> W7 4 8 <END>
+<START:tributo> 3383 <END> <START:codice> X 6 10 <END>
+<START:tributo> 8828 <END> <START:codice> L705 <END>
+<START:tributo> 2405 <END> <START:codice> H 4 5 4 <END>
+<START:tributo> 5271 <END> <START:codice> J5 16 <END>
+<START:tributo> 8931 <END> <START:codice> A 351 <END>
+<START:tributo> 8741 <END> <START:codice> W77 3 <END>
+<START:tributo> 6400 <END> <START:codice> V 44 2 <END>
+<START:tributo> 2085 <END> <START:codice> Y8 1 0 <END>
+<START:tributo> 2859 <END> <START:codice> B 0 05 <END>
+<START:tributo> 5013 <END> <START:codice> X724 <END>
+<START:tributo> 6281 <END> <START:codice> F 4 2 2 <END>
+<START:tributo> 3181 <END> <START:codice> M0 12 <END>
+<START:tributo> 8530 <END> <START:codice> Y 616 <END>
+<START:tributo> 6691 <END> <START:codice> G55 2 <END>
+<START:tributo> 3284 <END> <START:codice> V 85 2 <END>
+<START:tributo> 4716 <END> <START:codice> T5 5 5 <END>
+<START:tributo> 1133 <END> <START:codice> Y 2 53 <END>
+<START:tributo> 5321 <END> <START:codice> R474 <END>
+<START:tributo> 9756 <END> <START:codice> I 1 0 2 <END>
+<START:tributo> 7326 <END> <START:codice> E3 00 <END>
+<START:tributo> 6832 <END> <START:codice> I 787 <END>
+<START:tributo> 9307 <END> <START:codice> X27 2 <END>
+<START:tributo> 7166 <END> <START:codice> Z 33 6 <END>
+<START:tributo> 6983 <END> <START:codice> X7 5 0 <END>
+<START:tributo> 2582 <END> <START:codice> U 4 82 <END>
+<START:tributo> 5607 <END> <START:codice> G283 <END>
+<START:tributo> 5206 <END> <START:codice> L 4 5 2 <END>
+<START:tributo> 1594 <END> <START:codice> V2 06 <END>
+<START:tributo> 8572 <END> <START:codice> M 071 <END>
+<START:tributo> 9711 <END> <START:codice> R38 1 <END>
+<START:tributo> 9903 <END> <START:codice> T 40 1 <END>
+<START:tributo> 4780 <END> <START:codice> T0 8 1 <END>
+<START:tributo> 3510 <END> <START:codice> G 2 56 <END>
+<START:tributo> 1735 <END> <START:codice> S503 <END>
+<START:tributo> 1390 <END> <START:codice> H 4 5 0 <END>
+<START:tributo> 1800 <END> <START:codice> L0 58 <END>
+<START:tributo> 9071 <END> <START:codice> F 252 <END>
+<START:tributo> 6685 <END> <START:codice> S28 3 <END>
+<START:tributo> 2279 <END> <START:codice> Y 71 4 <END>
+<START:tributo> 2179 <END> <START:codice> U1 3 5 <END>
+<START:tributo> 9924 <END> <START:codice> T 2 36 <END>
+<START:tributo> 2371 <END> <START:codice> Y706 <END>
+<START:tributo> 5237 <END> <START:codice> K 6 5 8 <END>
+<START:tributo> 2057 <END> <START:codice> L5 50 <END>
+<START:tributo> 2240 <END> <START:codice> P 487 <END>
+<START:tributo> 3293 <END> <START:codice> L17 1 <END>
+<START:tributo> 3829 <END> <START:codice> Y 14 4 <END>
+<START:tributo> 4558 <END> <START:codice> H6 7 3 <END>
+<START:tributo> 9185 <END> <START:codice> A 3 88 <END>
+<START:tributo> 3249 <END> <START:codice> V887 <END>
+<START:tributo> 2578 <END> <START:codice> Z 4 4 5 <END>
+<START:tributo> 8261 <END> <START:codice> H5 60 <END>
+<START:tributo> 2761 <END> <START:codice> K 174 <END>
+<START:tributo> 7577 <END> <START:codice> K64 5 <END>
+<START:tributo> 3946 <END> <START:codice> R 26 4 <END>
+<START:tributo> 4202 <END> <START:codice> S4 6 3 <END>
+<START:tributo> 5876 <END> <START:codice> M 4 03 <END>
+<START:tributo> 3489 <END> <START:codice> N783 <END>
+<START:tributo> 1830 <END> <START:codice> N 1 4 1 <END>
+<START:tributo> 1275 <END> <START:codice> E1 24 <END>
+<START:tributo> 6199 <END> <START:codice> Q 101 <END>
+<START:tributo> 3542 <END> <START:codice> B82 3 <END>
+<START:tributo> 8517 <END> <START:codice> W 87 2 <END>
+<START:tributo> 2346 <END> <START:codice> G8 5 1 <END>
+<START:tributo> 8990 <END> <START:codice> A 4 70 <END>
+<START:tributo> 6212 <END> <START:codice> T573 <END>
+<START:tributo> 7441 <END> <START:codice> M 8 2 7 <END>
+<START:tributo> 8212 <END> <START:codice> V3 56 <END>
+<START:tributo> 1341 <END> <START:codice> O 381 <END>
+<START:tributo> 4871 <END> <START:codice> Y44 7 <END>
+<START:tributo> 2327 <END> <START:codice> E 40 3 <END>
+<START:tributo> 3980 <END> <START:codice> Y1 1 7 <END>
+<START:tributo> 8463 <END> <START:codice> K 8 58 <END>
+<START:tributo> 5946 <END> <START:codice> M344 <END>
+<START:tributo> 8003 <END> <START:codice> F 8 0 1 <END>
+<START:tributo> 4359 <END> <START:codice> Y7 62 <END>
+<START:tributo> 6777 <END> <START:codice> P 538 <END>
+<START:tributo> 7810 <END> <START:codice> A78 5 <END>
+<START:tributo> 1704 <END> <START:codice> V 61 3 <END>
+<START:tributo> 9065 <END> <START:codice> K6 7 4 <END>
+<START:tributo> 6478 <END> <START:codice> F 5 51 <END>
+<START:tributo> 7338 <END> <START:codice> G622 <END>
+<START:tributo> 3347 <END> <START:codice> P 2 4 8 <END>
+<START:tributo> 6325 <END> <START:codice> P7 23 <END>
+<START:tributo> 7403 <END> <START:codice> K 334 <END>
+<START:tributo> 1400 <END> <START:codice> Y48 5 <END>
+<START:tributo> 8991 <END> <START:codice> T 54 8 <END>
+<START:tributo> 4536 <END> <START:codice> U7 6 8 <END>
+<START:tributo> 8900 <END> <START:codice> I 6 04 <END>
+<START:tributo> 5918 <END> <START:codice> C025 <END>
+<START:tributo> 3785 <END> <START:codice> H 5 3 2 <END>
+<START:tributo> 4790 <END> <START:codice> S7 56 <END>
+<START:tributo> 7189 <END> <START:codice> A 554 <END>
+<START:tributo> 7008 <END> <START:codice> V40 1 <END>
+<START:tributo> 2021 <END> <START:codice> Z 44 6 <END>
+<START:tributo> 5322 <END> <START:codice> J2 6 1 <END>
+<START:tributo> 5489 <END> <START:codice> Q 0 45 <END>
+<START:tributo> 4563 <END> <START:codice> W528 <END>
+<START:tributo> 8606 <END> <START:codice> G 4 7 3 <END>
+<START:tributo> 4001 <END> <START:codice> M8 63 <END>
+<START:tributo> 7869 <END> <START:codice> X 234 <END>
+<START:tributo> 1915 <END> <START:codice> H24 7 <END>
+<START:tributo> 5730 <END> <START:codice> E 33 6 <END>
+<START:tributo> 2231 <END> <START:codice> S1 6 7 <END>
+<START:tributo> 7372 <END> <START:codice> K 5 33 <END>
+<START:tributo> 4755 <END> <START:codice> H002 <END>
+<START:tributo> 2506 <END> <START:codice> L 3 4 2 <END>
+<START:tributo> 6255 <END> <START:codice> G5 22 <END>
+<START:tributo> 3659 <END> <START:codice> U 631 <END>
+<START:tributo> 4889 <END> <START:codice> L85 6 <END>
+<START:tributo> 9565 <END> <START:codice> F 51 2 <END>
+<START:tributo> 2646 <END> <START:codice> P1 5 1 <END>
+<START:tributo> 6606 <END> <START:codice> N 1 36 <END>
+<START:tributo> 4950 <END> <START:codice> O221 <END>
+<START:tributo> 7997 <END> <START:codice> Q 7 1 4 <END>
+<START:tributo> 8552 <END> <START:codice> S4 06 <END>
+<START:tributo> 2792 <END> <START:codice> A 088 <END>
+<START:tributo> 3857 <END> <START:codice> T26 8 <END>
+<START:tributo> 3231 <END> <START:codice> M 88 4 <END>
+<START:tributo> 5400 <END> <START:codice> U5 7 8 <END>
+<START:tributo> 5718 <END> <START:codice> U 3 62 <END>
+<START:tributo> 6724 <END> <START:codice> S468 <END>
+<START:tributo> 4726 <END> <START:codice> P 3 3 7 <END>
+<START:tributo> 1331 <END> <START:codice> S1 00 <END>
+<START:tributo> 2852 <END> <START:codice> P 356 <END>
+<START:tributo> 8812 <END> <START:codice> I13 8 <END>
+<START:tributo> 2351 <END> <START:codice> A 38 8 <END>
+<START:tributo> 7517 <END> <START:codice> L8 1 6 <END>
+<START:tributo> 2333 <END> <START:codice> J 5 15 <END>
+<START:tributo> 8420 <END> <START:codice> I056 <END>
+<START:tributo> 8870 <END> <START:codice> T 0 5 8 <END>
+<START:tributo> 6121 <END> <START:codice> F2 67 <END>
+<START:tributo> 4382 <END> <START:codice> S 080 <END>
+<START:tributo> 7745 <END> <START:codice> R16 5 <END>
+<START:tributo> 1342 <END> <START:codice> X 57 0 <END>
+<START:tributo> 4788 <END> <START:codice> I6 1 0 <END>
+<START:tributo> 5099 <END> <START:codice> O 1 18 <END>
+<START:tributo> 9695 <END> <START:codice> V751 <END>
+<START:tributo> 9268 <END> <START:codice> P 0 4 3 <END>
+<START:tributo> 9177 <END> <START:codice> Q0 31 <END>
+<START:tributo> 5599 <END> <START:codice> X 884 <END>
+<START:tributo> 5865 <END> <START:codice> K84 3 <END>
+<START:tributo> 2596 <END> <START:codice> E 32 7 <END>
+<START:tributo> 5805 <END> <START:codice> B1 6 1 <END>
+<START:tributo> 6543 <END> <START:codice> U 3 10 <END>
+<START:tributo> 4844 <END> <START:codice> A527 <END>
+<START:tributo> 2057 <END> <START:codice> C 6 1 2 <END>
+<START:tributo> 5780 <END> <START:codice> N0 87 <END>
+<START:tributo> 3591 <END> <START:codice> T 558 <END>
+<START:tributo> 4108 <END> <START:codice> U73 5 <END>
+<START:tributo> 1384 <END> <START:codice> C 05 7 <END>
+<START:tributo> 5554 <END> <START:codice> I7 3 6 <END>
+<START:tributo> 6930 <END> <START:codice> U 3 12 <END>
+<START:tributo> 4804 <END> <START:codice> U276 <END>
+<START:tributo> 7757 <END> <START:codice> E 5 3 7 <END>
+<START:tributo> 1530 <END> <START:codice> F4 88 <END>
+<START:tributo> 2077 <END> <START:codice> Q 785 <END>
+<START:tributo> 1841 <END> <START:codice> M08 3 <END>
+<START:tributo> 9675 <END> <START:codice> N 04 4 <END>
+<START:tributo> 4881 <END> <START:codice> T7 6 1 <END>
+<START:tributo> 7772 <END> <START:codice> G 5 46 <END>
+<START:tributo> 4775 <END> <START:codice> G155 <END>
+<START:tributo> 9735 <END> <START:codice> D 8 4 4 <END>
+<START:tributo> 6762 <END> <START:codice> G2 68 <END>
+<START:tributo> 1482 <END> <START:codice> R 481 <END>
+<START:tributo> 6769 <END> <START:codice> U17 1 <END>
+<START:tributo> 3244 <END> <START:codice> L 52 6 <END>
+<START:tributo> 4034 <END> <START:codice> Q4 5 2 <END>
+<START:tributo> 6140 <END> <START:codice> Z 5 32 <END>
+<START:tributo> 5900 <END> <START:codice> P033 <END>
+<START:tributo> 2048 <END> <START:codice> B 0 4 1 <END>
+<START:tributo> 5173 <END> <START:codice> L6 28 <END>
+<START:tributo> 5734 <END> <START:codice> H 210 <END>
+<START:tributo> 8164 <END> <START:codice> H56 4 <END>
+<START:tributo> 6749 <END> <START:codice> P 47 3 <END>
+<START:tributo> 6599 <END> <START:codice> P8 3 8 <END>
+<START:tributo> 7555 <END> <START:codice> H 5 78 <END>
+<START:tributo> 8596 <END> <START:codice> U067 <END>
+<START:tributo> 3167 <END> <START:codice> S 4 3 5 <END>
+<START:tributo> 1883 <END> <START:codice> Q7 52 <END>
+<START:tributo> 5048 <END> <START:codice> Z 143 <END>
+<START:tributo> 1665 <END> <START:codice> Z05 3 <END>
+<START:tributo> 8163 <END> <START:codice> Q 13 8 <END>
+<START:tributo> 8302 <END> <START:codice> J5 5 7 <END>
+<START:tributo> 3480 <END> <START:codice> Q 6 36 <END>
+<START:tributo> 9807 <END> <START:codice> E851 <END>
+<START:tributo> 4453 <END> <START:codice> M 7 5 6 <END>
+<START:tributo> 7595 <END> <START:codice> G0 62 <END>
+<START:tributo> 9713 <END> <START:codice> Y 468 <END>
+<START:tributo> 4713 <END> <START:codice> C34 3 <END>
+<START:tributo> 6065 <END> <START:codice> K 04 6 <END>
+<START:tributo> 3119 <END> <START:codice> V7 0 4 <END>
+<START:tributo> 8637 <END> <START:codice> Y 2 22 <END>
+<START:tributo> 1700 <END> <START:codice> R423 <END>
+<START:tributo> 1978 <END> <START:codice> Q 5 6 8 <END>
+<START:tributo> 1302 <END> <START:codice> O2 01 <END>
+<START:tributo> 5888 <END> <START:codice> L 163 <END>
+<START:tributo> 5515 <END> <START:codice> G14 1 <END>
+<START:tributo> 5021 <END> <START:codice> Q 53 4 <END>
+<START:tributo> 2267 <END> <START:codice> Z1 2 8 <END>
+<START:tributo> 3903 <END> <START:codice> O 8 27 <END>
+<START:tributo> 7996 <END> <START:codice> Z101 <END>
+<START:tributo> 8173 <END> <START:codice> S 0 7 3 <END>
+<START:tributo> 8051 <END> <START:codice> I1 24 <END>
+<START:tributo> 4286 <END> <START:codice> Q 805 <END>
+<START:tributo> 2265 <END> <START:codice> P87 1 <END>
+<START:tributo> 2256 <END> <START:codice> I 46 1 <END>
+<START:tributo> 5074 <END> <START:codice> W7 5 2 <END>
+<START:tributo> 9505 <END> <START:codice> J 7 03 <END>
+<START:tributo> 2990 <END> <START:codice> E387 <END>
+<START:tributo> 9671 <END> <START:codice> O 3 3 1 <END>
+<START:tributo> 9923 <END> <START:codice> P0 16 <END>
+<START:tributo> 9019 <END> <START:codice> P 181 <END>
+<START:tributo> 7672 <END> <START:codice> L33 2 <END>
+<START:tributo> 5545 <END> <START:codice> A 06 2 <END>
+<START:tributo> 8123 <END> <START:codice> Z1 5 4 <END>
+<START:tributo> 9817 <END> <START:codice> B 5 07 <END>
+<START:tributo> 4659 <END> <START:codice> Z642 <END>
+<START:tributo> 9776 <END> <START:codice> O 6 1 2 <END>
+<START:tributo> 8902 <END> <START:codice> X0 84 <END>
+<START:tributo> 3102 <END> <START:codice> Q 450 <END>
+<START:tributo> 5955 <END> <START:codice> I58 5 <END>
+<START:tributo> 4345 <END> <START:codice> O 35 8 <END>
+<START:tributo> 3751 <END> <START:codice> T5 7 6 <END>
+<START:tributo> 8455 <END> <START:codice> T 1 65 <END>
+<START:tributo> 8011 <END> <START:codice> D735 <END>
+<START:tributo> 8807 <END> <START:codice> C 8 1 4 <END>
+<START:tributo> 4795 <END> <START:codice> Q0 55 <END>
+<START:tributo> 4584 <END> <START:codice> U 074 <END>
+<START:tributo> 2128 <END> <START:codice> V23 5 <END>
+<START:tributo> 7063 <END> <START:codice> Y 34 1 <END>
+<START:tributo> 4726 <END> <START:codice> W0 4 4 <END>
+<START:tributo> 8012 <END> <START:codice> J 6 26 <END>
+<START:tributo> 6765 <END> <START:codice> Z681 <END>
+<START:tributo> 5013 <END> <START:codice> W 3 5 4 <END>
+<START:tributo> 7019 <END> <START:codice> R2 05 <END>
+<START:tributo> 8568 <END> <START:codice> R 668 <END>
+<START:tributo> 7895 <END> <START:codice> T71 2 <END>
+<START:tributo> 2341 <END> <START:codice> Z 31 7 <END>
+<START:tributo> 1823 <END> <START:codice> G4 6 0 <END>
+<START:tributo> 1328 <END> <START:codice> W 6 32 <END>
+<START:tributo> 2538 <END> <START:codice> L028 <END>
+<START:tributo> 9506 <END> <START:codice> B 3 0 8 <END>
+<START:tributo> 2670 <END> <START:codice> W1 03 <END>
+<START:tributo> 6192 <END> <START:codice> Z 662 <END>
+<START:tributo> 8713 <END> <START:codice> U14 1 <END>
+<START:tributo> 2968 <END> <START:codice> Z 13 6 <END>
+<START:tributo> 2763 <END> <START:codice> M6 0 6 <END>
+<START:tributo> 2955 <END> <START:codice> M 7 87 <END>
+<START:tributo> 4658 <END> <START:codice> V504 <END>
+<START:tributo> 1773 <END> <START:codice> B 4 4 4 <END>
+<START:tributo> 3539 <END> <START:codice> W4 55 <END>
+<START:tributo> 1909 <END> <START:codice> K 566 <END>
+<START:tributo> 3966 <END> <START:codice> M67 8 <END>
+<START:tributo> 8771 <END> <START:codice> K 17 7 <END>
+<START:tributo> 8522 <END> <START:codice> F2 6 0 <END>
+<START:tributo> 9036 <END> <START:codice> Z 7 13 <END>
+<START:tributo> 1556 <END> <START:codice> O534 <END>
+<START:tributo> 9070 <END> <START:codice> O 8 1 3 <END>
+<START:tributo> 8819 <END> <START:codice> K8 78 <END>
+<START:tributo> 2290 <END> <START:codice> M 018 <END>
+<START:tributo> 7342 <END> <START:codice> J56 1 <END>
+<START:tributo> 8324 <END> <START:codice> G 51 8 <END>
+<START:tributo> 2459 <END> <START:codice> R3 0 2 <END>
+<START:tributo> 8755 <END> <START:codice> R 7 40 <END>
+<START:tributo> 3424 <END> <START:codice> Q858 <END>
+<START:tributo> 5727 <END> <START:codice> U 3 2 0 <END>
+<START:tributo> 2237 <END> <START:codice> F0 84 <END>
+<START:tributo> 5677 <END> <START:codice> A 338 <END>
+<START:tributo> 2288 <END> <START:codice> F50 1 <END>
+<START:tributo> 8780 <END> <START:codice> W 87 0 <END>
+<START:tributo> 1183 <END> <START:codice> Z2 3 5 <END>
+<START:tributo> 5474 <END> <START:codice> T 8 54 <END>
+<START:tributo> 8240 <END> <START:codice> B754 <END>
+<START:tributo> 5582 <END> <START:codice> V 3 7 5 <END>
+<START:tributo> 7162 <END> <START:codice> R8 56 <END>
+<START:tributo> 4030 <END> <START:codice> H 848 <END>
+<START:tributo> 3005 <END> <START:codice> V14 5 <END>
+<START:tributo> 6194 <END> <START:codice> H 84 7 <END>
+<START:tributo> 1477 <END> <START:codice> Z4 5 2 <END>
+<START:tributo> 3111 <END> <START:codice> I 3 42 <END>
+<START:tributo> 7906 <END> <START:codice> T568 <END>
+<START:tributo> 9819 <END> <START:codice> K 3 2 2 <END>
+<START:tributo> 2786 <END> <START:codice> C5 72 <END>
+<START:tributo> 4623 <END> <START:codice> R 654 <END>
+<START:tributo> 7660 <END> <START:codice> S48 6 <END>
+<START:tributo> 2303 <END> <START:codice> O 00 4 <END>
+<START:tributo> 6742 <END> <START:codice> K6 4 8 <END>
+<START:tributo> 9186 <END> <START:codice> Q 1 15 <END>
+<START:tributo> 4087 <END> <START:codice> V116 <END>
+<START:tributo> 3880 <END> <START:codice> H 1 8 8 <END>
+<START:tributo> 5572 <END> <START:codice> Y5 21 <END>
+<START:tributo> 7454 <END> <START:codice> P 262 <END>
+<START:tributo> 6374 <END> <START:codice> C13 3 <END>
+<START:tributo> 3754 <END> <START:codice> R 06 0 <END>
+<START:tributo> 5314 <END> <START:codice> L6 1 6 <END>
+<START:tributo> 2468 <END> <START:codice> A 6 75 <END>
+<START:tributo> 2014 <END> <START:codice> B681 <END>
+<START:tributo> 3379 <END> <START:codice> T 6 2 0 <END>
+<START:tributo> 5457 <END> <START:codice> S3 55 <END>
+<START:tributo> 6931 <END> <START:codice> G 775 <END>
+<START:tributo> 9699 <END> <START:codice> S37 8 <END>
+<START:tributo> 4932 <END> <START:codice> R 38 4 <END>
+<START:tributo> 9952 <END> <START:codice> Z2 0 4 <END>
+<START:tributo> 7437 <END> <START:codice> X 8 57 <END>
+<START:tributo> 4384 <END> <START:codice> K053 <END>
+<START:tributo> 8180 <END> <START:codice> Y 6 4 7 <END>
+<START:tributo> 8865 <END> <START:codice> F6 07 <END>
+<START:tributo> 5799 <END> <START:codice> V 161 <END>
+<START:tributo> 9282 <END> <START:codice> X30 1 <END>
+<START:tributo> 1445 <END> <START:codice> G 70 7 <END>
+<START:tributo> 7257 <END> <START:codice> L7 7 3 <END>
+<START:tributo> 1957 <END> <START:codice> L 7 37 <END>
+<START:tributo> 5484 <END> <START:codice> A800 <END>
+<START:tributo> 7964 <END> <START:codice> V 4 3 5 <END>
+<START:tributo> 9499 <END> <START:codice> D3 85 <END>
+<START:tributo> 9530 <END> <START:codice> I 155 <END>
+<START:tributo> 2828 <END> <START:codice> O27 4 <END>
+<START:tributo> 2493 <END> <START:codice> X 25 7 <END>
+<START:tributo> 3804 <END> <START:codice> F1 3 5 <END>
+<START:tributo> 5995 <END> <START:codice> P 5 61 <END>
+<START:tributo> 7667 <END> <START:codice> L672 <END>
+<START:tributo> 2035 <END> <START:codice> K 5 8 1 <END>
+<START:tributo> 9496 <END> <START:codice> F7 72 <END>
+<START:tributo> 2459 <END> <START:codice> P 412 <END>
+<START:tributo> 6560 <END> <START:codice> Y57 2 <END>
+<START:tributo> 6563 <END> <START:codice> X 56 4 <END>
+<START:tributo> 8306 <END> <START:codice> U6 5 1 <END>
+<START:tributo> 9312 <END> <START:codice> R 0 45 <END>
+<START:tributo> 8757 <END> <START:codice> A336 <END>
+<START:tributo> 6488 <END> <START:codice> L 3 2 2 <END>
+<START:tributo> 4471 <END> <START:codice> N6 45 <END>
+<START:tributo> 4715 <END> <START:codice> Y 712 <END>
+<START:tributo> 3639 <END> <START:codice> L44 3 <END>
+<START:tributo> 6511 <END> <START:codice> A 23 1 <END>
+<START:tributo> 9451 <END> <START:codice> K2 1 3 <END>
+<START:tributo> 7171 <END> <START:codice> Q 7 56 <END>
+<START:tributo> 3626 <END> <START:codice> M025 <END>
+<START:tributo> 6364 <END> <START:codice> L 8 2 8 <END>
+<START:tributo> 4353 <END> <START:codice> Y3 76 <END>
+<START:tributo> 6154 <END> <START:codice> M 486 <END>
+<START:tributo> 2665 <END> <START:codice> S74 2 <END>
+<START:tributo> 9379 <END> <START:codice> A 17 1 <END>
+<START:tributo> 6022 <END> <START:codice> X8 7 6 <END>
+<START:tributo> 4501 <END> <START:codice> I 7 24 <END>
+<START:tributo> 1145 <END> <START:codice> F166 <END>
+<START:tributo> 3807 <END> <START:codice> Y 6 1 5 <END>
+<START:tributo> 4174 <END> <START:codice> J2 40 <END>
+<START:tributo> 2631 <END> <START:codice> T 660 <END>
+<START:tributo> 4829 <END> <START:codice> J20 8 <END>
+<START:tributo> 6237 <END> <START:codice> A 74 5 <END>
+<START:tributo> 2196 <END> <START:codice> P3 8 5 <END>
+<START:tributo> 3717 <END> <START:codice> H 5 24 <END>
+<START:tributo> 3186 <END> <START:codice> I387 <END>
+<START:tributo> 2248 <END> <START:codice> C 2 7 8 <END>
+<START:tributo> 8349 <END> <START:codice> Z7 20 <END>
+<START:tributo> 1363 <END> <START:codice> I 322 <END>
+<START:tributo> 5572 <END> <START:codice> Z56 7 <END>
+<START:tributo> 8181 <END> <START:codice> G 26 8 <END>
+<START:tributo> 7477 <END> <START:codice> O6 2 3 <END>
+<START:tributo> 4725 <END> <START:codice> F 0 42 <END>
+<START:tributo> 5399 <END> <START:codice> P266 <END>
+<START:tributo> 2840 <END> <START:codice> H 3 7 0 <END>
+<START:tributo> 5631 <END> <START:codice> M0 88 <END>
+<START:tributo> 7390 <END> <START:codice> U 273 <END>
+<START:tributo> 4006 <END> <START:codice> T25 3 <END>
+<START:tributo> 8892 <END> <START:codice> K 47 4 <END>
+<START:tributo> 2520 <END> <START:codice> T7 4 7 <END>
+<START:tributo> 3226 <END> <START:codice> L 0 68 <END>
+<START:tributo> 5110 <END> <START:codice> B721 <END>
+<START:tributo> 7374 <END> <START:codice> U 1 8 0 <END>
+<START:tributo> 2596 <END> <START:codice> L3 88 <END>
+<START:tributo> 5079 <END> <START:codice> Z 753 <END>
+<START:tributo> 6098 <END> <START:codice> S10 1 <END>
+<START:tributo> 2530 <END> <START:codice> Z 87 0 <END>
+<START:tributo> 6014 <END> <START:codice> U8 1 6 <END>
+<START:tributo> 8183 <END> <START:codice> I 5 55 <END>
+<START:tributo> 8751 <END> <START:codice> K002 <END>
+<START:tributo> 2308 <END> <START:codice> Y 3 8 5 <END>
+<START:tributo> 3963 <END> <START:codice> Y5 61 <END>
+<START:tributo> 3999 <END> <START:codice> W 617 <END>
+<START:tributo> 2705 <END> <START:codice> O18 4 <END>
+<START:tributo> 8191 <END> <START:codice> Y 50 6 <END>
+<START:tributo> 4631 <END> <START:codice> Y5 4 8 <END>
+<START:tributo> 3610 <END> <START:codice> L 4 84 <END>
+<START:tributo> 3891 <END> <START:codice> G602 <END>
+<START:tributo> 8999 <END> <START:codice> H 2 4 0 <END>
+<START:tributo> 3245 <END> <START:codice> U7 06 <END>
+<START:tributo> 8653 <END> <START:codice> Z 078 <END>
+<START:tributo> 7346 <END> <START:codice> A77 3 <END>
+<START:tributo> 8130 <END> <START:codice> B 86 7 <END>
+<START:tributo> 3730 <END> <START:codice> T4 6 7 <END>
+<START:tributo> 5748 <END> <START:codice> Z 7 70 <END>
+<START:tributo> 3810 <END> <START:codice> S148 <END>
+<START:tributo> 6482 <END> <START:codice> Z 2 7 6 <END>
+<START:tributo> 2137 <END> <START:codice> B0 47 <END>
+<START:tributo> 1178 <END> <START:codice> O 635 <END>
+<START:tributo> 6614 <END> <START:codice> L04 2 <END>
+<START:tributo> 6811 <END> <START:codice> O 17 8 <END>
+<START:tributo> 2712 <END> <START:codice> F0 8 5 <END>
+<START:tributo> 9252 <END> <START:codice> D 0 04 <END>
+<START:tributo> 9043 <END> <START:codice> C288 <END>
+<START:tributo> 5483 <END> <START:codice> K 3 0 5 <END>
+<START:tributo> 4617 <END> <START:codice> R1 24 <END>
+<START:tributo> 1558 <END> <START:codice> I 100 <END>
+<START:tributo> 1469 <END> <START:codice> D22 7 <END>
+<START:tributo> 6284 <END> <START:codice> E 84 1 <END>
+<START:tributo> 7928 <END> <START:codice> F6 2 7 <END>
+<START:tributo> 5363 <END> <START:codice> F 8 20 <END>
+<START:tributo> 9760 <END> <START:codice> O230 <END>
+<START:tributo> 6426 <END> <START:codice> G 4 0 6 <END>
+<START:tributo> 1738 <END> <START:codice> Y3 31 <END>
+<START:tributo> 4280 <END> <START:codice> N 821 <END>
+<START:tributo> 6815 <END> <START:codice> Z41 2 <END>
+<START:tributo> 2051 <END> <START:codice> H 67 3 <END>
+<START:tributo> 7715 <END> <START:codice> S4 1 3 <END>
+<START:tributo> 5849 <END> <START:codice> V 5 66 <END>
+<START:tributo> 7278 <END> <START:codice> U611 <END>
+<START:tributo> 7153 <END> <START:codice> D 5 0 5 <END>
+<START:tributo> 6087 <END> <START:codice> V6 26 <END>
+<START:tributo> 8441 <END> <START:codice> W 760 <END>
+<START:tributo> 5515 <END> <START:codice> P01 3 <END>
+<START:tributo> 3208 <END> <START:codice> Z 70 3 <END>
+<START:tributo> 7241 <END> <START:codice> S6 6 7 <END>
+<START:tributo> 8165 <END> <START:codice> Z 1 83 <END>
+<START:tributo> 7879 <END> <START:codice> S643 <END>
+<START:tributo> 1197 <END> <START:codice> Q 3 5 3 <END>
+<START:tributo> 5109 <END> <START:codice> M3 73 <END>
+<START:tributo> 7976 <END> <START:codice> V 523 <END>
+<START:tributo> 9225 <END> <START:codice> J48 4 <END>
+<START:tributo> 9580 <END> <START:codice> X 54 8 <END>
+<START:tributo> 6985 <END> <START:codice> B6 1 4 <END>
+<START:tributo> 2584 <END> <START:codice> Q 7 78 <END>
+<START:tributo> 9731 <END> <START:codice> H050 <END>
+<START:tributo> 1689 <END> <START:codice> J 0 8 1 <END>
+<START:tributo> 4775 <END> <START:codice> D2 07 <END>
+<START:tributo> 8151 <END> <START:codice> B 810 <END>
+<START:tributo> 6402 <END> <START:codice> X40 8 <END>
+<START:tributo> 6791 <END> <START:codice> V 10 7 <END>
+<START:tributo> 4916 <END> <START:codice> E3 7 7 <END>
+<START:tributo> 5577 <END> <START:codice> Y 2 64 <END>
+<START:tributo> 5266 <END> <START:codice> Z652 <END>
+<START:tributo> 9515 <END> <START:codice> I 1 0 2 <END>
+<START:tributo> 2923 <END> <START:codice> T3 32 <END>
+<START:tributo> 2171 <END> <START:codice> C 883 <END>
+<START:tributo> 3758 <END> <START:codice> Q71 8 <END>
+<START:tributo> 4657 <END> <START:codice> S 06 0 <END>
+<START:tributo> 2593 <END> <START:codice> U6 1 2 <END>
+<START:tributo> 8249 <END> <START:codice> Z 5 81 <END>
+<START:tributo> 3979 <END> <START:codice> I655 <END>
+<START:tributo> 6396 <END> <START:codice> C 5 6 8 <END>
+<START:tributo> 4018 <END> <START:codice> U1 18 <END>
+<START:tributo> 8263 <END> <START:codice> K 103 <END>
+<START:tributo> 6941 <END> <START:codice> L84 3 <END>
+<START:tributo> 5273 <END> <START:codice> S 21 5 <END>
+<START:tributo> 4465 <END> <START:codice> T0 4 4 <END>
+<START:tributo> 8120 <END> <START:codice> P 7 05 <END>
+<START:tributo> 6543 <END> <START:codice> E381 <END>
+<START:tributo> 4643 <END> <START:codice> B 6 3 8 <END>
+<START:tributo> 2987 <END> <START:codice> S3 04 <END>
+<START:tributo> 2161 <END> <START:codice> R 604 <END>
+<START:tributo> 3934 <END> <START:codice> X76 7 <END>
+<START:tributo> 6815 <END> <START:codice> P 61 6 <END>
+<START:tributo> 7796 <END> <START:codice> X3 7 2 <END>
+<START:tributo> 1677 <END> <START:codice> R 2 70 <END>
+<START:tributo> 3181 <END> <START:codice> S713 <END>
+<START:tributo> 5001 <END> <START:codice> D 4 3 6 <END>
+<START:tributo> 1576 <END> <START:codice> C3 65 <END>
+<START:tributo> 2785 <END> <START:codice> P 860 <END>
+<START:tributo> 7633 <END> <START:codice> F07 6 <END>
+<START:tributo> 6861 <END> <START:codice> M 18 7 <END>
+<START:tributo> 3562 <END> <START:codice> W3 8 0 <END>
+<START:tributo> 7593 <END> <START:codice> Z 3 77 <END>
+<START:tributo> 7758 <END> <START:codice> A351 <END>
+<START:tributo> 9254 <END> <START:codice> Q 0 3 0 <END>
+<START:tributo> 4518 <END> <START:codice> F0 87 <END>
+<START:tributo> 1857 <END> <START:codice> Z 236 <END>
+<START:tributo> 8424 <END> <START:codice> E52 1 <END>
+<START:tributo> 5225 <END> <START:codice> Z 15 2 <END>
+<START:tributo> 7938 <END> <START:codice> M2 1 6 <END>
+<START:tributo> 6268 <END> <START:codice> A 3 42 <END>
+<START:tributo> 5066 <END> <START:codice> V570 <END>
+<START:tributo> 5049 <END> <START:codice> G 1 5 7 <END>
+<START:tributo> 3864 <END> <START:codice> Q0 25 <END>
+<START:tributo> 6087 <END> <START:codice> B 577 <END>
+<START:tributo> 3777 <END> <START:codice> P54 3 <END>
+<START:tributo> 7603 <END> <START:codice> M 21 5 <END>
+<START:tributo> 1300 <END> <START:codice> M5 5 2 <END>
+<START:tributo> 6525 <END> <START:codice> H 7 04 <END>
+<START:tributo> 9976 <END> <START:codice> D803 <END>
+<START:tributo> 6771 <END> <START:codice> L 4 8 0 <END>
+<START:tributo> 4052 <END> <START:codice> L0 42 <END>
+<START:tributo> 1387 <END> <START:codice> C 710 <END>
+<START:tributo> 2556 <END> <START:codice> X57 3 <END>
+<START:tributo> 4628 <END> <START:codice> L 04 5 <END>
+<START:tributo> 7673 <END> <START:codice> L6 1 8 <END>
+<START:tributo> 5813 <END> <START:codice> X 5 64 <END>
+<START:tributo> 6161 <END> <START:codice> M550 <END>
+<START:tributo> 4491 <END> <START:codice> S 5 4 5 <END>
+<START:tributo> 2714 <END> <START:codice> O1 37 <END>
+<START:tributo> 2990 <END> <START:codice> O 703 <END>
+<START:tributo> 9219 <END> <START:codice> N37 2 <END>
+<START:tributo> 6900 <END> <START:codice> F 48 2 <END>
+<START:tributo> 2265 <END> <START:codice> K0 5 3 <END>
+<START:tributo> 7019 <END> <START:codice> C 7 44 <END>
+<START:tributo> 5565 <END> <START:codice> Z871 <END>
+<START:tributo> 3242 <END> <START:codice> P 5 6 1 <END>
+<START:tributo> 7187 <END> <START:codice> X8 66 <END>
+<START:tributo> 6680 <END> <START:codice> G 367 <END>
+<START:tributo> 2411 <END> <START:codice> L18 4 <END>
+<START:tributo> 7866 <END> <START:codice> C 86 2 <END>
+<START:tributo> 1404 <END> <START:codice> I2 1 3 <END>
+<START:tributo> 1888 <END> <START:codice> Q 4 41 <END>
+<START:tributo> 5219 <END> <START:codice> K302 <END>
+<START:tributo> 8480 <END> <START:codice> Z 4 0 0 <END>
+<START:tributo> 6743 <END> <START:codice> X3 52 <END>
+<START:tributo> 6808 <END> <START:codice> O 674 <END>
+<START:tributo> 6455 <END> <START:codice> I88 1 <END>
+<START:tributo> 1400 <END> <START:codice> F 66 5 <END>
+<START:tributo> 8505 <END> <START:codice> Q5 2 4 <END>
+<START:tributo> 4012 <END> <START:codice> T 0 73 <END>
+<START:tributo> 1956 <END> <START:codice> O085 <END>
+<START:tributo> 2821 <END> <START:codice> L 7 4 8 <END>
+<START:tributo> 9118 <END> <START:codice> S3 18 <END>
+<START:tributo> 2455 <END> <START:codice> M 573 <END>
+<START:tributo> 1717 <END> <START:codice> D78 2 <END>
+<START:tributo> 6571 <END> <START:codice> O 81 2 <END>
+<START:tributo> 2721 <END> <START:codice> M0 1 0 <END>
+<START:tributo> 2062 <END> <START:codice> V 7 20 <END>
+<START:tributo> 1591 <END> <START:codice> V061 <END>
+<START:tributo> 3568 <END> <START:codice> N 7 7 2 <END>
+<START:tributo> 1615 <END> <START:codice> V1 65 <END>
+<START:tributo> 8797 <END> <START:codice> T 647 <END>
+<START:tributo> 2742 <END> <START:codice> P44 7 <END>
+<START:tributo> 6198 <END> <START:codice> K 11 7 <END>
+<START:tributo> 2051 <END> <START:codice> J5 2 6 <END>
+<START:tributo> 7751 <END> <START:codice> Z 3 21 <END>
+<START:tributo> 7293 <END> <START:codice> Z282 <END>
+<START:Sezione> L <END> <START:tributo> 4217 <END> <START:codice> S 6 2 2 <END>
+<START:Sezione> E <END> <START:tributo> 4450 <END> <START:codice> Q4 31 <END>
+<START:Sezione> E <END> <START:tributo> 7057 <END> <START:codice> X 404 <END>
+<START:Sezione> E <END> <START:tributo> 5137 <END> <START:codice> R61 1 <END>
+<START:Sezione> L <END> <START:tributo> 6206 <END> <START:codice> C 23 5 <END>
+<START:Sezione> L <END> <START:tributo> 6592 <END> <START:codice> F5 1 6 <END>
+<START:Sezione> E <END> <START:tributo> 4903 <END> <START:codice> Y 7 21 <END>
+<START:Sezione> G <END> <START:tributo> 3062 <END> <START:codice> W663 <END>
+<START:Sezione> E <END> <START:tributo> 1801 <END> <START:codice> D 8 5 6 <END>
+<START:Sezione> E <END> <START:tributo> 7433 <END> <START:codice> P5 41 <END>
+<START:Sezione> G <END> <START:tributo> 2556 <END> <START:codice> W 035 <END>
+<START:Sezione> G <END> <START:tributo> 1807 <END> <START:codice> R70 7 <END>
+<START:Sezione> E <END> <START:tributo> 9414 <END> <START:codice> U 41 0 <END>
+<START:Sezione> R <END> <START:tributo> 8640 <END> <START:codice> C8 5 8 <END>
+<START:Sezione> G <END> <START:tributo> 5981 <END> <START:codice> Z 0 12 <END>
+<START:Sezione> R <END> <START:tributo> 6553 <END> <START:codice> D217 <END>
+<START:Sezione> R <END> <START:tributo> 4128 <END> <START:codice> T 5 2 1 <END>
+<START:Sezione> E <END> <START:tributo> 4570 <END> <START:codice> Z7 31 <END>
+<START:Sezione> L <END> <START:tributo> 8614 <END> <START:codice> K 257 <END>
+<START:Sezione> L <END> <START:tributo> 7592 <END> <START:codice> V23 8 <END>
+<START:Sezione> L <END> <START:tributo> 4108 <END> <START:codice> M 85 5 <END>
+<START:Sezione> L <END> <START:tributo> 9282 <END> <START:codice> A2 0 2 <END>
+<START:Sezione> E <END> <START:tributo> 4042 <END> <START:codice> T 7 24 <END>
+<START:Sezione> G <END> <START:tributo> 2039 <END> <START:codice> G103 <END>
+<START:Sezione> E <END> <START:tributo> 5398 <END> <START:codice> U 1 1 7 <END>
+<START:Sezione> E <END> <START:tributo> 2813 <END> <START:codice> T4 32 <END>
+<START:Sezione> L <END> <START:tributo> 7150 <END> <START:codice> C 003 <END>
+<START:Sezione> G <END> <START:tributo> 7275 <END> <START:codice> L54 5 <END>
+<START:Sezione> R <END> <START:tributo> 9249 <END> <START:codice> U 83 4 <END>
+<START:Sezione> G <END> <START:tributo> 6567 <END> <START:codice> J4 3 7 <END>
+<START:Sezione> R <END> <START:tributo> 1637 <END> <START:codice> C 5 66 <END>
+<START:Sezione> L <END> <START:tributo> 5000 <END> <START:codice> H433 <END>
+<START:Sezione> L <END> <START:tributo> 4498 <END> <START:codice> I 5 0 3 <END>
+<START:Sezione> L <END> <START:tributo> 1739 <END> <START:codice> A3 76 <END>
+<START:Sezione> R <END> <START:tributo> 2733 <END> <START:codice> Z 733 <END>
+<START:Sezione> L <END> <START:tributo> 4009 <END> <START:codice> O63 1 <END>
+<START:Sezione> G <END> <START:tributo> 9404 <END> <START:codice> V 40 3 <END>
+<START:Sezione> L <END> <START:tributo> 5446 <END> <START:codice> F7 8 6 <END>
+<START:Sezione> L <END> <START:tributo> 4328 <END> <START:codice> D 6 63 <END>
+<START:Sezione> E <END> <START:tributo> 7491 <END> <START:codice> I447 <END>
+<START:Sezione> L <END> <START:tributo> 4477 <END> <START:codice> W 3 2 1 <END>
+<START:Sezione> R <END> <START:tributo> 1972 <END> <START:codice> D2 34 <END>
+<START:Sezione> G <END> <START:tributo> 3834 <END> <START:codice> T 137 <END>
+<START:Sezione> L <END> <START:tributo> 7033 <END> <START:codice> B11 5 <END>
+<START:Sezione> E <END> <START:tributo> 1550 <END> <START:codice> S 58 3 <END>
+<START:Sezione> L <END> <START:tributo> 8185 <END> <START:codice> P8 1 4 <END>
+<START:Sezione> E <END> <START:tributo> 8664 <END> <START:codice> T 1 57 <END>
+<START:Sezione> R <END> <START:tributo> 3664 <END> <START:codice> N636 <END>
+<START:Sezione> L <END> <START:tributo> 3214 <END> <START:codice> V 8 1 7 <END>
+<START:Sezione> R <END> <START:tributo> 5520 <END> <START:codice> P7 00 <END>
+<START:Sezione> G <END> <START:tributo> 5454 <END> <START:codice> D 418 <END>
+<START:Sezione> G <END> <START:tributo> 5476 <END> <START:codice> Z56 7 <END>
+<START:Sezione> G <END> <START:tributo> 5839 <END> <START:codice> H 70 1 <END>
+<START:Sezione> L <END> <START:tributo> 1725 <END> <START:codice> B2 2 6 <END>
+<START:Sezione> E <END> <START:tributo> 4272 <END> <START:codice> L 5 46 <END>
+<START:Sezione> R <END> <START:tributo> 4001 <END> <START:codice> V427 <END>
+<START:Sezione> R <END> <START:tributo> 8430 <END> <START:codice> V 2 4 3 <END>
+<START:Sezione> L <END> <START:tributo> 4182 <END> <START:codice> J2 62 <END>
+<START:Sezione> E <END> <START:tributo> 1769 <END> <START:codice> A 153 <END>
+<START:Sezione> R <END> <START:tributo> 7802 <END> <START:codice> N75 8 <END>
+<START:Sezione> L <END> <START:tributo> 1654 <END> <START:codice> D 75 2 <END>
+<START:Sezione> R <END> <START:tributo> 4309 <END> <START:codice> R2 5 3 <END>
+<START:Sezione> R <END> <START:tributo> 4670 <END> <START:codice> D 6 27 <END>
+<START:Sezione> G <END> <START:tributo> 3412 <END> <START:codice> X383 <END>
+<START:Sezione> E <END> <START:tributo> 3933 <END> <START:codice> G 4 4 3 <END>
+<START:Sezione> L <END> <START:tributo> 6230 <END> <START:codice> L7 23 <END>
+<START:Sezione> R <END> <START:tributo> 7186 <END> <START:codice> R 858 <END>
+<START:Sezione> R <END> <START:tributo> 5194 <END> <START:codice> X20 6 <END>
+<START:Sezione> L <END> <START:tributo> 7244 <END> <START:codice> Q 06 6 <END>
+<START:Sezione> G <END> <START:tributo> 9359 <END> <START:codice> J3 4 1 <END>
+<START:Sezione> L <END> <START:tributo> 5234 <END> <START:codice> X 5 53 <END>
+<START:Sezione> E <END> <START:tributo> 3402 <END> <START:codice> R387 <END>
+<START:Sezione> L <END> <START:tributo> 6186 <END> <START:codice> V 3 1 1 <END>
+<START:Sezione> R <END> <START:tributo> 8002 <END> <START:codice> T5 04 <END>
+<START:Sezione> E <END> <START:tributo> 8378 <END> <START:codice> L 467 <END>
+<START:Sezione> E <END> <START:tributo> 3645 <END> <START:codice> E15 8 <END>
+<START:Sezione> L <END> <START:tributo> 5929 <END> <START:codice> X 82 4 <END>
+<START:Sezione> R <END> <START:tributo> 3835 <END> <START:codice> U7 1 4 <END>
+<START:Sezione> E <END> <START:tributo> 4813 <END> <START:codice> N 5 88 <END>
+<START:Sezione> L <END> <START:tributo> 2674 <END> <START:codice> L561 <END>
+<START:Sezione> L <END> <START:tributo> 7414 <END> <START:codice> M 3 8 1 <END>
+<START:Sezione> G <END> <START:tributo> 2480 <END> <START:codice> H3 75 <END>
+<START:Sezione> G <END> <START:tributo> 9760 <END> <START:codice> G 524 <END>
+<START:Sezione> G <END> <START:tributo> 6075 <END> <START:codice> G20 8 <END>
+<START:Sezione> L <END> <START:tributo> 9556 <END> <START:codice> V 27 3 <END>
+<START:Sezione> G <END> <START:tributo> 9571 <END> <START:codice> Q2 1 3 <END>
+<START:Sezione> R <END> <START:tributo> 2119 <END> <START:codice> M 4 61 <END>
+<START:Sezione> R <END> <START:tributo> 7597 <END> <START:codice> Q002 <END>
+<START:Sezione> G <END> <START:tributo> 3904 <END> <START:codice> M 5 0 5 <END>
+<START:Sezione> E <END> <START:tributo> 5816 <END> <START:codice> P4 84 <END>
+<START:Sezione> G <END> <START:tributo> 2982 <END> <START:codice> Z 141 <END>
+<START:Sezione> G <END> <START:tributo> 3499 <END> <START:codice> X04 5 <END>
+<START:Sezione> R <END> <START:tributo> 2166 <END> <START:codice> X 13 3 <END>
+<START:Sezione> G <END> <START:tributo> 3532 <END> <START:codice> F5 5 0 <END>
+<START:Sezione> E <END> <START:tributo> 4936 <END> <START:codice> X 7 44 <END>
+<START:Sezione> G <END> <START:tributo> 9122 <END> <START:codice> L770 <END>
+<START:Sezione> L <END> <START:tributo> 9257 <END> <START:codice> U 2 2 0 <END>
+<START:Sezione> L <END> <START:tributo> 9707 <END> <START:codice> O8 83 <END>
+<START:Sezione> R <END> <START:tributo> 6393 <END> <START:codice> C 343 <END>
+<START:Sezione> G <END> <START:tributo> 9518 <END> <START:codice> V37 3 <END>
+<START:Sezione> E <END> <START:tributo> 4406 <END> <START:codice> W 65 8 <END>
+<START:Sezione> L <END> <START:tributo> 5201 <END> <START:codice> Q0 1 8 <END>
+<START:Sezione> R <END> <START:tributo> 1447 <END> <START:codice> A 8 20 <END>
+<START:Sezione> G <END> <START:tributo> 3738 <END> <START:codice> W315 <END>
+<START:Sezione> R <END> <START:tributo> 4297 <END> <START:codice> A 3 1 8 <END>
+<START:Sezione> L <END> <START:tributo> 8233 <END> <START:codice> B2 87 <END>
+<START:Sezione> E <END> <START:tributo> 2436 <END> <START:codice> K 318 <END>
+<START:Sezione> L <END> <START:tributo> 4164 <END> <START:codice> F08 1 <END>
+<START:Sezione> L <END> <START:tributo> 4789 <END> <START:codice> C 82 0 <END>
+<START:Sezione> L <END> <START:tributo> 6680 <END> <START:codice> W4 4 6 <END>
+<START:Sezione> G <END> <START:tributo> 4036 <END> <START:codice> H 2 48 <END>
+<START:Sezione> E <END> <START:tributo> 8181 <END> <START:codice> U472 <END>
+<START:Sezione> E <END> <START:tributo> 3967 <END> <START:codice> A 3 5 2 <END>
+<START:Sezione> R <END> <START:tributo> 7082 <END> <START:codice> L8 22 <END>
+<START:Sezione> G <END> <START:tributo> 1605 <END> <START:codice> I 472 <END>
+<START:Sezione> R <END> <START:tributo> 6820 <END> <START:codice> B77 0 <END>
+<START:Sezione> E <END> <START:tributo> 9851 <END> <START:codice> L 26 3 <END>
+<START:Sezione> R <END> <START:tributo> 3866 <END> <START:codice> L1 7 0 <END>
+<START:Sezione> R <END> <START:tributo> 3801 <END> <START:codice> Q 3 87 <END>
+<START:Sezione> L <END> <START:tributo> 5123 <END> <START:codice> M401 <END>
+<START:Sezione> R <END> <START:tributo> 3724 <END> <START:codice> W 2 0 5 <END>
+<START:Sezione> R <END> <START:tributo> 1789 <END> <START:codice> Q6 30 <END>
+<START:Sezione> G <END> <START:tributo> 2340 <END> <START:codice> S 700 <END>
+<START:Sezione> R <END> <START:tributo> 1974 <END> <START:codice> B68 2 <END>
+<START:Sezione> L <END> <START:tributo> 1111 <END> <START:codice> H 43 4 <END>
+<START:Sezione> L <END> <START:tributo> 5590 <END> <START:codice> K3 4 2 <END>
+<START:Sezione> E <END> <START:tributo> 7060 <END> <START:codice> U 2 65 <END>
+<START:Sezione> E <END> <START:tributo> 4563 <END> <START:codice> H737 <END>
+<START:Sezione> E <END> <START:tributo> 6792 <END> <START:codice> A 4 3 6 <END>
+<START:Sezione> R <END> <START:tributo> 6978 <END> <START:codice> U2 28 <END>
+<START:Sezione> R <END> <START:tributo> 9595 <END> <START:codice> L 442 <END>
+<START:Sezione> L <END> <START:tributo> 9260 <END> <START:codice> K75 0 <END>
+<START:Sezione> E <END> <START:tributo> 3330 <END> <START:codice> O 36 8 <END>
+<START:Sezione> L <END> <START:tributo> 8653 <END> <START:codice> V6 0 7 <END>
+<START:Sezione> L <END> <START:tributo> 2845 <END> <START:codice> L 7 45 <END>
+<START:Sezione> R <END> <START:tributo> 8253 <END> <START:codice> N337 <END>
+<START:Sezione> E <END> <START:tributo> 3226 <END> <START:codice> B 3 8 1 <END>
+<START:Sezione> R <END> <START:tributo> 7619 <END> <START:codice> U0 37 <END>
+<START:Sezione> E <END> <START:tributo> 7768 <END> <START:codice> G 277 <END>
+<START:Sezione> L <END> <START:tributo> 5116 <END> <START:codice> P74 0 <END>
+<START:Sezione> E <END> <START:tributo> 4956 <END> <START:codice> M 47 3 <END>
+<START:Sezione> G <END> <START:tributo> 9775 <END> <START:codice> L2 1 6 <END>
+<START:Sezione> E <END> <START:tributo> 4214 <END> <START:codice> S 0 86 <END>
+<START:Sezione> G <END> <START:tributo> 7275 <END> <START:codice> H542 <END>
+<START:Sezione> L <END> <START:tributo> 5099 <END> <START:codice> G 8 0 6 <END>
+<START:Sezione> R <END> <START:tributo> 5078 <END> <START:codice> J4 77 <END>
+<START:Sezione> E <END> <START:tributo> 3059 <END> <START:codice> Q 226 <END>
+<START:Sezione> L <END> <START:tributo> 7086 <END> <START:codice> V07 2 <END>
+<START:Sezione> L <END> <START:tributo> 8284 <END> <START:codice> O 86 1 <END>
+<START:Sezione> G <END> <START:tributo> 9531 <END> <START:codice> W4 0 1 <END>
+<START:Sezione> R <END> <START:tributo> 5244 <END> <START:codice> Y 0 48 <END>
+<START:Sezione> L <END> <START:tributo> 8995 <END> <START:codice> X705 <END>
+<START:Sezione> G <END> <START:tributo> 3059 <END> <START:codice> S 3 2 0 <END>
+<START:Sezione> G <END> <START:tributo> 5531 <END> <START:codice> Z2 50 <END>
+<START:Sezione> E <END> <START:tributo> 4973 <END> <START:codice> W 120 <END>
+<START:Sezione> R <END> <START:tributo> 4692 <END> <START:codice> L62 2 <END>
+<START:Sezione> G <END> <START:tributo> 4195 <END> <START:codice> X 61 6 <END>
+<START:Sezione> R <END> <START:tributo> 6850 <END> <START:codice> P8 8 3 <END>
+<START:Sezione> R <END> <START:tributo> 2978 <END> <START:codice> J 2 61 <END>
+<START:Sezione> R <END> <START:tributo> 8941 <END> <START:codice> H851 <END>
+<START:Sezione> E <END> <START:tributo> 6881 <END> <START:codice> U 8 6 7 <END>
+<START:Sezione> L <END> <START:tributo> 2843 <END> <START:codice> M8 28 <END>
+<START:Sezione> E <END> <START:tributo> 7414 <END> <START:codice> J 774 <END>
+<START:Sezione> L <END> <START:tributo> 1523 <END> <START:codice> Y55 1 <END>
+<START:Sezione> G <END> <START:tributo> 5496 <END> <START:codice> E 68 3 <END>
+<START:Sezione> G <END> <START:tributo> 1348 <END> <START:codice> N3 4 5 <END>
+<START:Sezione> E <END> <START:tributo> 8702 <END> <START:codice> L 0 17 <END>
+<START:Sezione> G <END> <START:tributo> 7274 <END> <START:codice> P464 <END>
+<START:Sezione> L <END> <START:tributo> 2989 <END> <START:codice> Y 1 1 6 <END>
+<START:Sezione> L <END> <START:tributo> 2206 <END> <START:codice> D8 81 <END>
+<START:Sezione> R <END> <START:tributo> 6701 <END> <START:codice> E 408 <END>
+<START:Sezione> R <END> <START:tributo> 4814 <END> <START:codice> O27 5 <END>
+<START:Sezione> G <END> <START:tributo> 2924 <END> <START:codice> F 50 4 <END>
+<START:Sezione> R <END> <START:tributo> 9760 <END> <START:codice> P4 1 8 <END>
+<START:Sezione> R <END> <START:tributo> 1665 <END> <START:codice> H 2 13 <END>
+<START:Sezione> G <END> <START:tributo> 7642 <END> <START:codice> Q514 <END>
+<START:Sezione> L <END> <START:tributo> 2937 <END> <START:codice> O 1 1 0 <END>
+<START:Sezione> G <END> <START:tributo> 3340 <END> <START:codice> J4 36 <END>
+<START:Sezione> G <END> <START:tributo> 7731 <END> <START:codice> C 814 <END>
+<START:Sezione> R <END> <START:tributo> 8195 <END> <START:codice> J01 4 <END>
+<START:Sezione> R <END> <START:tributo> 5135 <END> <START:codice> J 00 3 <END>
+<START:Sezione> E <END> <START:tributo> 1262 <END> <START:codice> E4 0 1 <END>
+<START:Sezione> R <END> <START:tributo> 8586 <END> <START:codice> K 7 10 <END>
+<START:Sezione> L <END> <START:tributo> 8588 <END> <START:codice> B335 <END>
+<START:Sezione> R <END> <START:tributo> 1883 <END> <START:codice> B 4 3 5 <END>
+<START:Sezione> L <END> <START:tributo> 6676 <END> <START:codice> V2 50 <END>
+<START:Sezione> R <END> <START:tributo> 6760 <END> <START:codice> A 065 <END>
+<START:Sezione> L <END> <START:tributo> 8251 <END> <START:codice> N06 4 <END>
+<START:Sezione> G <END> <START:tributo> 6472 <END> <START:codice> I 16 8 <END>
+<START:Sezione> L <END> <START:tributo> 3744 <END> <START:codice> R3 8 6 <END>
+<START:Sezione> G <END> <START:tributo> 9410 <END> <START:codice> U 0 62 <END>
+<START:Sezione> E <END> <START:tributo> 1450 <END> <START:codice> V417 <END>
+<START:Sezione> L <END> <START:tributo> 2011 <END> <START:codice> I 7 1 8 <END>
+<START:Sezione> E <END> <START:tributo> 5766 <END> <START:codice> C7 67 <END>
+<START:Sezione> R <END> <START:tributo> 5491 <END> <START:codice> Q 728 <END>
+<START:Sezione> R <END> <START:tributo> 2173 <END> <START:codice> X72 8 <END>
+<START:Sezione> L <END> <START:tributo> 1256 <END> <START:codice> I 76 1 <END>
+<START:Sezione> G <END> <START:tributo> 5172 <END> <START:codice> A1 2 1 <END>
+<START:Sezione> R <END> <START:tributo> 7040 <END> <START:codice> Y 6 81 <END>
+<START:Sezione> G <END> <START:tributo> 5241 <END> <START:codice> M284 <END>
+<START:Sezione> G <END> <START:tributo> 4963 <END> <START:codice> X 2 2 7 <END>
+<START:Sezione> L <END> <START:tributo> 1396 <END> <START:codice> G4 08 <END>
+<START:Sezione> R <END> <START:tributo> 6909 <END> <START:codice> J 888 <END>
+<START:Sezione> G <END> <START:tributo> 5274 <END> <START:codice> A25 5 <END>
+<START:Sezione> G <END> <START:tributo> 1359 <END> <START:codice> P 74 0 <END>
+<START:Sezione> G <END> <START:tributo> 6218 <END> <START:codice> X2 6 7 <END>
+<START:Sezione> E <END> <START:tributo> 8286 <END> <START:codice> O 0 72 <END>
+<START:Sezione> R <END> <START:tributo> 2659 <END> <START:codice> M372 <END>
+<START:Sezione> G <END> <START:tributo> 5705 <END> <START:codice> C 7 6 0 <END>
+<START:Sezione> L <END> <START:tributo> 2556 <END> <START:codice> E8 70 <END>
+<START:Sezione> R <END> <START:tributo> 7430 <END> <START:codice> O 673 <END>
+<START:Sezione> E <END> <START:tributo> 5802 <END> <START:codice> O48 4 <END>
+<START:Sezione> R <END> <START:tributo> 7012 <END> <START:codice> H 44 7 <END>
+<START:Sezione> E <END> <START:tributo> 1940 <END> <START:codice> K3 7 5 <END>
+<START:Sezione> L <END> <START:tributo> 4394 <END> <START:codice> D 5 56 <END>
+<START:Sezione> L <END> <START:tributo> 3872 <END> <START:codice> J845 <END>
+<START:Sezione> L <END> <START:tributo> 8181 <END> <START:codice> F 6 7 2 <END>
+<START:Sezione> G <END> <START:tributo> 6606 <END> <START:codice> J1 00 <END>
+<START:Sezione> E <END> <START:tributo> 8909 <END> <START:codice> Q 188 <END>
+<START:Sezione> E <END> <START:tributo> 1188 <END> <START:codice> Z44 1 <END>
+<START:Sezione> G <END> <START:tributo> 9488 <END> <START:codice> W 87 3 <END>
+<START:Sezione> G <END> <START:tributo> 5496 <END> <START:codice> H5 0 6 <END>
+<START:Sezione> L <END> <START:tributo> 6924 <END> <START:codice> B 8 85 <END>
+<START:Sezione> E <END> <START:tributo> 6304 <END> <START:codice> L316 <END>
+<START:Sezione> G <END> <START:tributo> 8056 <END> <START:codice> N 5 2 5 <END>
+<START:Sezione> G <END> <START:tributo> 8179 <END> <START:codice> D6 42 <END>
+<START:Sezione> E <END> <START:tributo> 8627 <END> <START:codice> L 512 <END>
+<START:Sezione> G <END> <START:tributo> 2673 <END> <START:codice> W62 8 <END>
+<START:Sezione> L <END> <START:tributo> 4106 <END> <START:codice> A 17 4 <END>
+<START:Sezione> G <END> <START:tributo> 6046 <END> <START:codice> A7 4 8 <END>
+<START:Sezione> L <END> <START:tributo> 8909 <END> <START:codice> V 3 17 <END>
+<START:Sezione> G <END> <START:tributo> 6698 <END> <START:codice> C301 <END>
+<START:Sezione> R <END> <START:tributo> 5482 <END> <START:codice> Z 6 0 6 <END>
+<START:Sezione> G <END> <START:tributo> 6963 <END> <START:codice> K5 13 <END>
+<START:Sezione> E <END> <START:tributo> 5215 <END> <START:codice> G 443 <END>
+<START:Sezione> G <END> <START:tributo> 9016 <END> <START:codice> K71 7 <END>
+<START:Sezione> L <END> <START:tributo> 9091 <END> <START:codice> D 23 0 <END>
+<START:Sezione> E <END> <START:tributo> 8007 <END> <START:codice> Z3 4 7 <END>
+<START:Sezione> G <END> <START:tributo> 6469 <END> <START:codice> X 0 36 <END>
+<START:Sezione> L <END> <START:tributo> 4383 <END> <START:codice> I028 <END>
+<START:Sezione> E <END> <START:tributo> 1530 <END> <START:codice> O 1 1 7 <END>
+<START:Sezione> E <END> <START:tributo> 4838 <END> <START:codice> Q4 27 <END>
+<START:Sezione> E <END> <START:tributo> 8658 <END> <START:codice> C 720 <END>
+<START:Sezione> L <END> <START:tributo> 6394 <END> <START:codice> U37 4 <END>
+<START:Sezione> G <END> <START:tributo> 9075 <END> <START:codice> M 63 0 <END>
+<START:Sezione> L <END> <START:tributo> 7683 <END> <START:codice> K4 7 2 <END>
+<START:Sezione> R <END> <START:tributo> 8499 <END> <START:codice> U 8 61 <END>
+<START:Sezione> L <END> <START:tributo> 4766 <END> <START:codice> M436 <END>
+<START:Sezione> R <END> <START:tributo> 8721 <END> <START:codice> D 1 3 6 <END>
+<START:Sezione> L <END> <START:tributo> 7651 <END> <START:codice> J8 23 <END>
+<START:Sezione> E <END> <START:tributo> 4020 <END> <START:codice> P 027 <END>
+<START:Sezione> G <END> <START:tributo> 2087 <END> <START:codice> U75 7 <END>
+<START:Sezione> R <END> <START:tributo> 4137 <END> <START:codice> K 03 8 <END>
+<START:Sezione> L <END> <START:tributo> 6177 <END> <START:codice> G3 4 3 <END>
+<START:Sezione> R <END> <START:tributo> 7840 <END> <START:codice> G 8 58 <END>
+<START:Sezione> G <END> <START:tributo> 6424 <END> <START:codice> Z468 <END>
+<START:Sezione> G <END> <START:tributo> 2055 <END> <START:codice> Z 7 2 2 <END>
+<START:Sezione> R <END> <START:tributo> 5539 <END> <START:codice> R2 25 <END>
+<START:Sezione> E <END> <START:tributo> 8052 <END> <START:codice> V 171 <END>
+<START:Sezione> G <END> <START:tributo> 6278 <END> <START:codice> U43 0 <END>
+<START:Sezione> R <END> <START:tributo> 8806 <END> <START:codice> R 02 7 <END>
+<START:Sezione> R <END> <START:tributo> 2842 <END> <START:codice> S0 1 4 <END>
+<START:Sezione> R <END> <START:tributo> 7780 <END> <START:codice> A 0 20 <END>
+<START:Sezione> G <END> <START:tributo> 1717 <END> <START:codice> J840 <END>
+<START:Sezione> G <END> <START:tributo> 9211 <END> <START:codice> T 7 8 7 <END>
+<START:Sezione> E <END> <START:tributo> 5453 <END> <START:codice> V5 06 <END>
+<START:Sezione> E <END> <START:tributo> 4731 <END> <START:codice> T 060 <END>
+<START:Sezione> E <END> <START:tributo> 4488 <END> <START:codice> S81 3 <END>
+<START:Sezione> R <END> <START:tributo> 6850 <END> <START:codice> G 38 2 <END>
+<START:Sezione> E <END> <START:tributo> 1542 <END> <START:codice> D8 5 4 <END>
+<START:Sezione> R <END> <START:tributo> 3710 <END> <START:codice> H 0 10 <END>
+<START:Sezione> G <END> <START:tributo> 1668 <END> <START:codice> X047 <END>
+<START:Sezione> E <END> <START:tributo> 3526 <END> <START:codice> R 0 2 4 <END>
+<START:Sezione> E <END> <START:tributo> 6754 <END> <START:codice> V5 61 <END>
+<START:Sezione> E <END> <START:tributo> 8512 <END> <START:codice> U 203 <END>
+<START:Sezione> R <END> <START:tributo> 8237 <END> <START:codice> A82 2 <END>
+<START:Sezione> L <END> <START:tributo> 5844 <END> <START:codice> F 41 5 <END>
+<START:Sezione> R <END> <START:tributo> 9468 <END> <START:codice> Z5 3 8 <END>
+<START:Sezione> R <END> <START:tributo> 8671 <END> <START:codice> I 8 28 <END>
+<START:Sezione> L <END> <START:tributo> 8318 <END> <START:codice> C028 <END>
+<START:Sezione> R <END> <START:tributo> 7807 <END> <START:codice> F 5 6 8 <END>
+<START:Sezione> R <END> <START:tributo> 7393 <END> <START:codice> H2 41 <END>
+<START:Sezione> G <END> <START:tributo> 5877 <END> <START:codice> J 641 <END>
+<START:Sezione> R <END> <START:tributo> 3692 <END> <START:codice> C50 6 <END>
+<START:Sezione> R <END> <START:tributo> 4941 <END> <START:codice> A 18 0 <END>
+<START:Sezione> R <END> <START:tributo> 9453 <END> <START:codice> I7 5 8 <END>
+<START:Sezione> L <END> <START:tributo> 5462 <END> <START:codice> K 6 52 <END>
+<START:Sezione> L <END> <START:tributo> 5011 <END> <START:codice> G221 <END>
+<START:Sezione> R <END> <START:tributo> 4768 <END> <START:codice> W 0 3 6 <END>
+<START:Sezione> E <END> <START:tributo> 2652 <END> <START:codice> Y5 58 <END>
+<START:Sezione> L <END> <START:tributo> 4327 <END> <START:codice> E 435 <END>
+<START:Sezione> R <END> <START:tributo> 1374 <END> <START:codice> P57 6 <END>
+<START:Sezione> E <END> <START:tributo> 8516 <END> <START:codice> C 07 5 <END>
+<START:Sezione> L <END> <START:tributo> 6105 <END> <START:codice> R7 6 7 <END>
+<START:Sezione> G <END> <START:tributo> 3012 <END> <START:codice> B 7 21 <END>
+<START:Sezione> L <END> <START:tributo> 1450 <END> <START:codice> H800 <END>
+<START:Sezione> G <END> <START:tributo> 1198 <END> <START:codice> F 1 7 3 <END>
+<START:Sezione> E <END> <START:tributo> 3088 <END> <START:codice> T8 04 <END>
+<START:Sezione> E <END> <START:tributo> 6609 <END> <START:codice> C 218 <END>
+<START:Sezione> E <END> <START:tributo> 9226 <END> <START:codice> Z87 7 <END>
+<START:Sezione> R <END> <START:tributo> 1226 <END> <START:codice> D 52 0 <END>
+<START:Sezione> G <END> <START:tributo> 1567 <END> <START:codice> R1 1 2 <END>
+<START:Sezione> R <END> <START:tributo> 6585 <END> <START:codice> J 6 16 <END>
+<START:Sezione> E <END> <START:tributo> 2692 <END> <START:codice> Y028 <END>
+<START:Sezione> G <END> <START:tributo> 4068 <END> <START:codice> B 8 7 3 <END>
+<START:Sezione> L <END> <START:tributo> 6296 <END> <START:codice> V0 31 <END>
+<START:Sezione> L <END> <START:tributo> 9257 <END> <START:codice> N 015 <END>
+<START:Sezione> R <END> <START:tributo> 6490 <END> <START:codice> U22 3 <END>
+<START:Sezione> G <END> <START:tributo> 5775 <END> <START:codice> R 46 8 <END>
+<START:Sezione> L <END> <START:tributo> 9623 <END> <START:codice> D6 4 8 <END>
+<START:Sezione> G <END> <START:tributo> 7132 <END> <START:codice> H 5 05 <END>
+<START:Sezione> G <END> <START:tributo> 2472 <END> <START:codice> G080 <END>
+<START:Sezione> R <END> <START:tributo> 5664 <END> <START:codice> N 5 8 0 <END>
+<START:Sezione> L <END> <START:tributo> 3722 <END> <START:codice> Q8 64 <END>
+<START:Sezione> L <END> <START:tributo> 3159 <END> <START:codice> E 763 <END>
+<START:Sezione> R <END> <START:tributo> 2771 <END> <START:codice> A41 4 <END>
+<START:Sezione> R <END> <START:tributo> 8162 <END> <START:codice> L 72 7 <END>
+<START:Sezione> E <END> <START:tributo> 5755 <END> <START:codice> D7 4 8 <END>
+<START:Sezione> L <END> <START:tributo> 8990 <END> <START:codice> W 8 84 <END>
+<START:Sezione> G <END> <START:tributo> 7127 <END> <START:codice> J168 <END>
+<START:Sezione> R <END> <START:tributo> 8930 <END> <START:codice> M 1 7 3 <END>
+<START:Sezione> L <END> <START:tributo> 9271 <END> <START:codice> J6 26 <END>
+<START:Sezione> G <END> <START:tributo> 3501 <END> <START:codice> B 327 <END>
+<START:Sezione> R <END> <START:tributo> 3352 <END> <START:codice> I80 0 <END>
+<START:Sezione> R <END> <START:tributo> 1764 <END> <START:codice> B 20 8 <END>
+<START:Sezione> G <END> <START:tributo> 8825 <END> <START:codice> Q4 3 8 <END>
+<START:Sezione> E <END> <START:tributo> 9383 <END> <START:codice> E 2 30 <END>
+<START:Sezione> L <END> <START:tributo> 8265 <END> <START:codice> L856 <END>
+<START:Sezione> G <END> <START:tributo> 7812 <END> <START:codice> F 5 6 1 <END>
+<START:Sezione> G <END> <START:tributo> 9918 <END> <START:codice> S3 31 <END>
+<START:Sezione> G <END> <START:tributo> 1793 <END> <START:codice> E 602 <END>
+<START:Sezione> R <END> <START:tributo> 6999 <END> <START:codice> J60 2 <END>
+<START:Sezione> G <END> <START:tributo> 2421 <END> <START:codice> W 54 4 <END>
+<START:Sezione> G <END> <START:tributo> 7354 <END> <START:codice> Q4 6 5 <END>
+<START:Sezione> R <END> <START:tributo> 8022 <END> <START:codice> N 4 07 <END>
+<START:Sezione> E <END> <START:tributo> 9565 <END> <START:codice> Q235 <END>
+<START:Sezione> L <END> <START:tributo> 2739 <END> <START:codice> K 6 3 5 <END>
+<START:Sezione> E <END> <START:tributo> 4160 <END> <START:codice> S7 78 <END>
+<START:Sezione> E <END> <START:tributo> 3747 <END> <START:codice> Y 156 <END>
+<START:Sezione> R <END> <START:tributo> 4584 <END> <START:codice> C54 2 <END>
+<START:Sezione> E <END> <START:tributo> 7796 <END> <START:codice> E 75 3 <END>
+<START:Sezione> R <END> <START:tributo> 3413 <END> <START:codice> J3 1 2 <END>
+<START:Sezione> G <END> <START:tributo> 4708 <END> <START:codice> W 0 56 <END>
+<START:Sezione> G <END> <START:tributo> 6100 <END> <START:codice> H255 <END>
+<START:Sezione> E <END> <START:tributo> 2274 <END> <START:codice> C 7 8 2 <END>
+<START:Sezione> L <END> <START:tributo> 8196 <END> <START:codice> F3 52 <END>
+<START:Sezione> L <END> <START:tributo> 6372 <END> <START:codice> R 540 <END>
+<START:Sezione> L <END> <START:tributo> 7084 <END> <START:codice> R17 1 <END>
+<START:Sezione> L <END> <START:tributo> 7026 <END> <START:codice> X 67 4 <END>
+<START:Sezione> L <END> <START:tributo> 3995 <END> <START:codice> E3 5 4 <END>
+<START:Sezione> E <END> <START:tributo> 6688 <END> <START:codice> E 7 80 <END>
+<START:Sezione> G <END> <START:tributo> 1926 <END> <START:codice> C047 <END>
+<START:Sezione> R <END> <START:tributo> 3999 <END> <START:codice> H 5 2 2 <END>
+<START:Sezione> E <END> <START:tributo> 8948 <END> <START:codice> D7 60 <END>
+<START:Sezione> R <END> <START:tributo> 1252 <END> <START:codice> U 415 <END>
+<START:Sezione> L <END> <START:tributo> 5763 <END> <START:codice> Z37 8 <END>
+<START:Sezione> R <END> <START:tributo> 4534 <END> <START:codice> U 22 1 <END>
+<START:Sezione> E <END> <START:tributo> 8699 <END> <START:codice> J0 1 0 <END>
+<START:Sezione> G <END> <START:tributo> 5035 <END> <START:codice> I 2 72 <END>
+<START:Sezione> R <END> <START:tributo> 2450 <END> <START:codice> U128 <END>
+<START:Sezione> R <END> <START:tributo> 9139 <END> <START:codice> N 0 6 4 <END>
+<START:Sezione> R <END> <START:tributo> 9949 <END> <START:codice> T7 57 <END>
+<START:Sezione> L <END> <START:tributo> 4650 <END> <START:codice> A 222 <END>
+<START:Sezione> R <END> <START:tributo> 1773 <END> <START:codice> P53 5 <END>
+<START:Sezione> E <END> <START:tributo> 4617 <END> <START:codice> M 05 1 <END>
+<START:Sezione> R <END> <START:tributo> 2702 <END> <START:codice> H4 2 6 <END>
+<START:Sezione> L <END> <START:tributo> 1949 <END> <START:codice> O 6 04 <END>
+<START:Sezione> L <END> <START:tributo> 8808 <END> <START:codice> L575 <END>
+<START:Sezione> R <END> <START:tributo> 5693 <END> <START:codice> U 2 6 5 <END>
+<START:Sezione> G <END> <START:tributo> 4386 <END> <START:codice> M5 81 <END>
+<START:Sezione> R <END> <START:tributo> 7783 <END> <START:codice> T 278 <END>
+<START:Sezione> E <END> <START:tributo> 9817 <END> <START:codice> Z53 2 <END>
+<START:Sezione> G <END> <START:tributo> 7635 <END> <START:codice> B 10 0 <END>
+<START:Sezione> R <END> <START:tributo> 6980 <END> <START:codice> B2 0 7 <END>
+<START:Sezione> L <END> <START:tributo> 9069 <END> <START:codice> T 7 35 <END>
+<START:Sezione> R <END> <START:tributo> 3586 <END> <START:codice> F508 <END>
+<START:Sezione> R <END> <START:tributo> 3710 <END> <START:codice> Y 1 0 1 <END>
+<START:Sezione> R <END> <START:tributo> 5377 <END> <START:codice> T0 51 <END>
+<START:Sezione> L <END> <START:tributo> 7243 <END> <START:codice> R 073 <END>
+<START:Sezione> L <END> <START:tributo> 7440 <END> <START:codice> L32 1 <END>
+<START:Sezione> R <END> <START:tributo> 9491 <END> <START:codice> L 83 8 <END>
+<START:Sezione> R <END> <START:tributo> 6820 <END> <START:codice> R0 1 0 <END>
+<START:Sezione> G <END> <START:tributo> 4636 <END> <START:codice> Q 4 68 <END>
+<START:Sezione> R <END> <START:tributo> 9646 <END> <START:codice> V728 <END>
+<START:Sezione> G <END> <START:tributo> 3454 <END> <START:codice> T 6 4 3 <END>
+<START:Sezione> E <END> <START:tributo> 5395 <END> <START:codice> Y1 53 <END>
+<START:Sezione> E <END> <START:tributo> 8277 <END> <START:codice> E 763 <END>
+<START:Sezione> E <END> <START:tributo> 3145 <END> <START:codice> U20 0 <END>
+<START:Sezione> R <END> <START:tributo> 1986 <END> <START:codice> Z 15 5 <END>
+<START:Sezione> G <END> <START:tributo> 4927 <END> <START:codice> W5 0 4 <END>
+<START:Sezione> E <END> <START:tributo> 8274 <END> <START:codice> W 5 10 <END>
+<START:Sezione> R <END> <START:tributo> 9477 <END> <START:codice> V364 <END>
+<START:Sezione> E <END> <START:tributo> 1844 <END> <START:codice> A 7 0 1 <END>
+<START:Sezione> G <END> <START:tributo> 8791 <END> <START:codice> I2 82 <END>
+<START:Sezione> E <END> <START:tributo> 9814 <END> <START:codice> T 434 <END>
+<START:Sezione> R <END> <START:tributo> 8829 <END> <START:codice> X15 6 <END>
+<START:Sezione> G <END> <START:tributo> 6248 <END> <START:codice> L 58 6 <END>
+<START:Sezione> L <END> <START:tributo> 1661 <END> <START:codice> B7 5 6 <END>
+<START:Sezione> E <END> <START:tributo> 4198 <END> <START:codice> S 7 38 <END>
+<START:Sezione> R <END> <START:tributo> 7542 <END> <START:codice> F418 <END>
