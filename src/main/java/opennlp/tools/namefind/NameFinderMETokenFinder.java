@@ -160,11 +160,11 @@ public class NameFinderMETokenFinder {
 
 		String encoding = "ISO-8859-1";
 		TokenNameFinderModel nameFinderModel;
-//		FileInputStream r = new FileInputStream("src/main/resources/f24_sectionmodel.bin");
-//
-//		if (r != null) {
-//			nameFinderModel = new TokenNameFinderModel(r);
-//		} else {
+		FileInputStream r = new FileInputStream("src/main/resources/f24_sectionmodel.bin");
+
+		if (r != null) {
+			nameFinderModel = new TokenNameFinderModel(r);
+		} else {
 
 
 			ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
@@ -185,8 +185,8 @@ public class NameFinderMETokenFinder {
 				if (modelOut != null)
 					modelOut.close();
 			}
-//		}
-//		r.close();
+		}
+		r.close();
 		return nameFinderModel;
 
 	}
