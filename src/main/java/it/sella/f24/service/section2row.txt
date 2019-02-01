@@ -6,24 +6,24 @@
 
                "CodiceEnte":"x3",
 
-               "Ravv":"",
+               "Ravv":"y1",
 
-               "ImmVar":"",
+               "ImmVar":"y2",
 
-               "Acc":"",
+               "Acc":"y3",
 
-               "Saldo":"",
+               "Saldo":"y4",
 
-               "NumImm":"",
+               "NumImm":y5,
 
                "MeseRif":"x4",
 
                "AnnoRif":"x5",
 
-               "Detrazione":"x6",
+               "Detrazione":x6,
 
-               "DebitoImporto":"x7",
+               "DebitoImporto":x7,
 
-               "CrebitoImporto":"x8"
+               "CrebitoImporto":x8
 
             }

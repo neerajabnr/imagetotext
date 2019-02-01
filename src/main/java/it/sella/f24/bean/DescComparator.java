@@ -13,7 +13,7 @@ public class DescComparator implements Comparator<DataDescription> {
 			if (result < 10 && result > -10) {
 				result = des1.getxStart() - des2.getxStart();
 			} else {
-				result = des1.getyStart() - des2.getyStart();
+				result = des1.getyStart() - des2.getyStart();	
 			}
 		}catch (Exception e) {
 			System.out.println("des1.getyStart()"+des1.getyStart());

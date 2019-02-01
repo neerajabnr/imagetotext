@@ -23289,6 +23289,16 @@
 <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 8 <END> <START:anno> 2017 <END> <START:dobito> 24 93 <END>
 <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 3 <END> <START:anno> 2001 <END> <START:dobito> 23 91 <END>
 <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 1 <END> <START:anno> 2006 <END> <START:dobito> 32 4 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 1 <END> <START:anno> 2003 <END> <START:dobito> 3824 2 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 6 <END> <START:anno> 2018 <END> <START:dobito> 10 08 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2000 <END> <START:dobito> 912 92 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2008 <END> <START:dobito> 8324 1 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2012 <END> <START:dobito> 94 40 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 6 <END> <START:anno> 2018 <END> <START:dobito> 03 98 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 3 <END> <START:anno> 2010 <END> <START:dobito> 0289 92 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 8 <END> <START:anno> 2017 <END> <START:dobito> 24 93 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 3 <END> <START:anno> 2001 <END> <START:dobito> 23 91 <END>
+<START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 1 <END> <START:anno> 2006 <END> <START:dobito> 32 4 <END>
 <START:acc> X <END> <START:saldo> X <END> <START:num> 4 <END> <START:anno> 2000 <END> <START:dobito> 0912 28 <END>
 <START:acc> X <END> <START:saldo> X <END> <START:num> 8 <END> <START:anno> 2003 <END> <START:dobito> 413 89 <END>
 <START:acc> X <END> <START:saldo> X <END> <START:num> 4 <END> <START:anno> 2018 <END> <START:dobito> 901 23 <END>
@@ -23399,3 +23409,23 @@
 <START:acc> X <END> <START:saldo> X <END> <START:num> 4 <END> <START:anno> 2015 <END> <START:dobito> 9043 91 <END>
 <START:acc> X <END> <START:saldo> X <END> <START:num> 4 <END> <START:anno> 2006 <END> <START:dobito> 982 3 <END>
 <START:acc> X <END> <START:saldo> X <END> <START:num> 3 <END> <START:anno> 2003 <END> <START:dobito> 83 8 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 1 <END> <START:anno> 2003 <END> <START:dobito> 3824 2 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 6 <END> <START:anno> 2018 <END> <START:dobito> 10 08 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2000 <END> <START:dobito> 912 92 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2008 <END> <START:dobito> 8324 1 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2012 <END> <START:dobito> 94 40 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 6 <END> <START:anno> 2018 <END> <START:dobito> 03 98 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 3 <END> <START:anno> 2010 <END> <START:dobito> 0289 92 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 8 <END> <START:anno> 2017 <END> <START:dobito> 24 93 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 3 <END> <START:anno> 2001 <END> <START:dobito> 23 91 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 1 <END> <START:anno> 2006 <END> <START:dobito> 32 4 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 1 <END> <START:anno> 2003 <END> <START:dobito> 3824 2 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 6 <END> <START:anno> 2018 <END> <START:dobito> 10 08 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2000 <END> <START:dobito> 912 92 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2008 <END> <START:dobito> 8324 1 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 2 <END> <START:anno> 2012 <END> <START:dobito> 94 40 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 6 <END> <START:anno> 2018 <END> <START:dobito> 03 98 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 3 <END> <START:anno> 2010 <END> <START:dobito> 0289 92 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 8 <END> <START:anno> 2017 <END> <START:dobito> 24 93 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 3 <END> <START:anno> 2001 <END> <START:dobito> 23 91 <END>
+<START:raw> X <END> <START:immob> X <END> <START:acc> X <END> <START:saldo> X <END> <START:num> 1 <END> <START:anno> 2006 <END> <START:dobito> 32 4 <END>
