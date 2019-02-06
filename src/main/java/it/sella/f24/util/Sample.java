@@ -269,18 +269,37 @@ public class Sample {
 //		}
 		
 		
-		String value="L";
-		String[] sezioneVals= {"EL","ER","RG","L","R","E","G"};
-		for (String val : sezioneVals) {
-			if(value.equals(val)) {
-				System.out.println(true); ;
-			}else {
-				System.out.println("false");
-				continue;
-			}
+//		String value="L";
+//		String[] sezioneVals= {"EL","ER","RG","L","R","E","G"};
+//		for (String val : sezioneVals) {
+//			if(value.equals(val)) {
+//				System.out.println(true); ;
+//			}else {
+//				System.out.println("false");
+//				continue;
+//			}
+		
+		NameFinderMETokenFinder namefinder = new NameFinderMETokenFinder();
+		String sentence = "CODICE FISCALE GRZLRT23H06A859W   DATI ANAGRAFICI GARIAZZO ** ALBERTO INOISSO F     06 06 1023 BIELLA CODICE FISCALE ";
+		try {
+			removeSpecialChar(sentence);
+			namefinder.f24_Section1(sentence);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		}
+	
+	private static String removeSpecialChar(String str) {
+		String op = str.replaceAll("[{}()<>]", "");
+		System.out.println(op);
 		
-		
-		
+		//[^a-zA-Z0-9\\s*,]
+		return op;
 	}
+
+		
+		
+		
+	
 }

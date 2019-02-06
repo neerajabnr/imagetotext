@@ -137,13 +137,30 @@ public class F24OCRService {
 				descriptions.add(d);
 			}
 		}
-
-		descriptions.sort(new DescComparator());
+		try {
+			descriptions.sort(new DescComparator());
+		}catch (Exception e) {
+//			e.printStackTrace();
+			logger.info("Comparision method violates it's general contract");
+			System.out.println("Comparision method violates it's general contract");
+		}
+		
 		System.out.println("Data Description");
+		int k=1,ystart=0;
 		for (DataDescription dataDescription : descriptions) {
+			if(k==1)
+			{
+				ystart=dataDescription.getyStart();
+				System.out.println(ystart);
+				System.out.println(dataDescription.getDescription());
+			}
+			k++;
 			xstart = dataDescription.getxStart();
 			if ((xstart - xprevEnd) > 300) {
 				ocrData = ocrData + "**" + " ";
+			}
+			if(dataDescription.getyStart()<ystart/3) {
+				System.out.println(dataDescription.getDescription());
 			}
 
 			String desc = dataDescription.getDescription().replaceAll(".*[a-z].*", "");
@@ -384,6 +401,7 @@ public class F24OCRService {
 		List<Result> secTwoVariablesList = new ArrayList<>();
 
 		String section1 = valuesMap.get("section1");
+		section1 = removeSpecialChar(section1);
 		String section2Constants = valuesMap.get("section2Constants");
 		String section2Variables = valuesMap.get("section2Variables");
 		String euro = valuesMap.get("euro");
@@ -638,7 +656,7 @@ public class F24OCRService {
 				if (checkSezione(result.getValue()) != "NV") {
 					seizone = seizone + result.getValue() + ";";
 				} else {
-					seizone = seizone + "NV" + ";";
+					seizone = seizone + ";";
 				}
 			}
 			else if (result.getKey().contains("tributo")) {
@@ -724,14 +742,14 @@ public class F24OCRService {
 			}
 		}
 
-		cognome = cognome.trim();
+//		cognome = cognome.trim();
 		nome = nome.trim();
 		dob = dob.replaceAll("[A-Z]", "");
 		city = city.trim();
 		// Replacing the keywords with empty space in both the section1
 
 		codiceFiscale = searchKeyword(codiceFiscale);
-		cognome = searchKeyword(cognome);
+//		cognome = searchKeyword(cognome);
 		nome = searchKeyword(nome);
 		dob = searchKeyword(dob);
 		sex = searchKeyword(sex);
@@ -1016,7 +1034,6 @@ public class F24OCRService {
 		return buffer.toString();
 
 	}
-
 	private String checkSezione(String value) {
 		String[] sezioneVals = { "EL", "ER", "RG", "L", "R", "E", "G" };
 		for (String val : sezioneVals) {
@@ -1185,6 +1202,14 @@ public class F24OCRService {
 		logger.info("Data from Google Service : :" + ocrData);
 
 		return ocrData;
+	}
+	
+	private static String removeSpecialChar(String str) {
+		String op = str.replaceAll("[{}()<>]", "");
+		System.out.println(op);
+		
+		//[^a-zA-Z0-9\\s*,]
+		return op;
 	}
 
 }

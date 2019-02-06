@@ -61,7 +61,7 @@ public class FileReaderfromFolder {
 	}
 	
 		public List<String> getFilesfromFolder(){
-			File folder = new File("//home//bsindia//Documents//images//new//set1");
+			File folder = new File("//home//bsindia//Documents//images//sampleimages");
 		      FileReaderfromFolder listFiles = new FileReaderfromFolder();
 		      System.out.println("reading files before Java8 - Using listFiles() method");
 		      return listFiles.listAllFiles(folder);
