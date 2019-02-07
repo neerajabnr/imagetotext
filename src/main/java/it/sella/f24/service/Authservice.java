@@ -25,6 +25,7 @@ import it.sella.f24.bean.auth.AuthResponse;
 import it.sella.f24.bean.auth.AuthServiceInput;
 import it.sella.f24.bean.auth.Payload;
 import it.sella.f24.util.LoadPropertiesUtil;
+import it.sella.f24.util.RestUtil;
 
 @Service
 public class Authservice {
@@ -54,7 +55,7 @@ public class Authservice {
 		ResponseEntity<String> response = null;
 		response = restTemplate.exchange(authURL, HttpMethod.POST, entity, String.class);
 		return response;
-		// return resBody.getPayload().getAccessToken();
+		
 
 	}
 
@@ -64,22 +65,24 @@ public class Authservice {
 		
 		ObjectMapper mapper = new ObjectMapper();
 		AuthResponse resBody = null;
-		if (response.getStatusCode().equals(HttpStatus.OK)) {
+		
 			
 			try {
 				resBody = mapper.readValue(response.getBody(), AuthResponse.class);
 
 				if (Objects.nonNull(resBody.getPayload())) {
+					if (Objects.nonNull(response.getStatusCode())&&response.getStatusCode().equals(HttpStatus.OK)) {
 					String flowToken = resBody.getPayload().getFlowToken();
 					System.out.println(flowToken);
 					resBody = this.authRequestStepTwo(userName, password, flowToken);
+				}
 				}
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
+		
 		return resBody;
 	}
 
@@ -104,7 +107,7 @@ public class Authservice {
 		AuthResponse resBody = null;
 		ResponseEntity<String> response = this.callAuthService(payload);
 		ObjectMapper mapper = new ObjectMapper();
-		if (response.getStatusCode().equals(HttpStatus.OK)) {
+		
 			
 			try {
 				resBody = mapper.readValue(response.getBody(), AuthResponse.class);
@@ -113,15 +116,12 @@ public class Authservice {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
+		
 		return resBody;
 
 	}
 
-	private void authRequeststepThree() {
-
-	}
-
+	
 	public AuthResponse authorise(AuthServiceInput authServiceInput) {
 		APIKey = authServiceInput.getApiKey();
 		return this.authRequestStepOne(authServiceInput.getUserName(), authServiceInput.getPassword());

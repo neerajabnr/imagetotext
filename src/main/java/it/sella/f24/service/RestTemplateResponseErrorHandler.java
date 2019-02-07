@@ -12,6 +12,9 @@ import org.springframework.web.client.ResponseErrorHandler;
 
 import com.google.api.gax.rpc.NotFoundException;
 
+import it.sella.f24.exception.handler.CustomServerException;
+import it.sella.f24.exception.handler.ForbiddenException;
+
 @Component
 public class RestTemplateResponseErrorHandler 
   implements ResponseErrorHandler {
@@ -27,26 +30,16 @@ public class RestTemplateResponseErrorHandler
  
     @Override
     public void handleError(ClientHttpResponse httpResponse) 
-      throws IOException {
+      throws IOException{
  
         if (httpResponse.getStatusCode()
           .series() == HttpStatus.Series.SERVER_ERROR) {
             // handle SERVER_ERROR
-        	//System.out.println("Response body: {}"+ StreamUtils.copyToString(httpResponse.getBody(), Charset.defaultCharset()));
-        	System.out.println("stat text"+httpResponse.getStatusText());
-        	System.out.println("stat code" +httpResponse.getStatusCode());
-        	System.out.println("Raw stat code"+httpResponse.getRawStatusCode());
-        	System.out.println("header"+httpResponse.getHeaders());
-        	System.out.println("class" +httpResponse.getClass());
+        	throw new CustomServerException();
+        	
         } else if (httpResponse.getStatusCode()
           .series() == HttpStatus.Series.CLIENT_ERROR) {
-            // handle CLIENT_ERROR
-        	//System.out.println("Response body: {}"+ StreamUtils.copyToString(httpResponse.getBody(), Charset.defaultCharset()));
-        	System.out.println("stat text"+httpResponse.getStatusText());
-        	System.out.println("stat code" +httpResponse.getStatusCode());
-        	System.out.println("Raw stat code"+httpResponse.getRawStatusCode());
-        	System.out.println("header"+httpResponse.getHeaders());
-        	System.out.println("class" +httpResponse.getClass());
+           throw new ForbiddenException();
         }
     }
 }
