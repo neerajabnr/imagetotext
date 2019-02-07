@@ -74,17 +74,17 @@ public class F24Controller {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	@Bean
-	public RestTemplate restTemplate() {
-		// Do any additional configuration here
-
-		SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
-
-		requestFactory.setProxy(Proxy.NO_PROXY);
-		// // return builder.build();
-		return new RestTemplate(requestFactory);
-
-	}
+//	@Bean
+//	public RestTemplate restTemplate() {
+//		// Do any additional configuration here
+//
+//		SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
+//
+//		requestFactory.setProxy(Proxy.NO_PROXY);
+//		// // return builder.build();
+//		return new RestTemplate(requestFactory);
+//
+//	}
 
 	/*
 	 * main { imagetoJSO() { //Step1: templateandskew(); // ocr //preprocessing
