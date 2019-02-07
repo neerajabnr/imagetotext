@@ -423,6 +423,8 @@ public class F24OCRService {
 				logger.info("After process row");
 				if (checkCount(row) > 9) {
 					row = processRow(row);
+				}else {
+					row=row.replaceAll("[^a-zA-Z0-9\\s]", "");
 				}
 				System.out.println("row" + row);
 				logger.info("Row to NLP:" + row.trim());
@@ -810,6 +812,9 @@ public class F24OCRService {
 		// Replacing * with , in the debit values
 		dobito = dobito.replace("*", ".");
 		euro = euro.replace(",", ".");
+		
+		dobito=replaceAlphainCurrency(dobito);
+		euro=replaceAlphainCurrency(euro);
 
 		StringTokenizer sztokenizer = new StringTokenizer(seizone, ";");
 		StringTokenizer ttokenizer = new StringTokenizer(tributo, ";");
@@ -1034,6 +1039,12 @@ public class F24OCRService {
 		return buffer.toString();
 
 	}
+	private String replaceAlphainCurrency(String currency) {
+		
+		currency=currency.replaceAll("[A-Za-z]", "");
+		return currency;
+	}
+
 	private String checkSezione(String value) {
 		String[] sezioneVals = { "EL", "ER", "RG", "L", "R", "E", "G" };
 		for (String val : sezioneVals) {

@@ -146,6 +146,40 @@ public class F24Controller {
 		}
 
 	}
+	
+	
+	@RequestMapping(value = "/api/simplificato/form/callf24", method = RequestMethod.POST)
+	public String callF24(@RequestBody String f24JSON, String apiKey) {
+
+		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
+		System.setProperty("java.net.useSystemProxies", "false");
+
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+
+		headers.set("Content-Type", "application/json");
+
+		headers.set("apiKey", apiKey);
+
+		headers.set("Auth-Schema", "S2S");
+		ObjectMapper mapper = new ObjectMapper();
+		System.out.println("Input JSON:\n" + f24JSON);
+		HttpEntity<String> entity = new HttpEntity<>(f24JSON, headers);
+		ResponseEntity<String> response = null;
+
+		try {
+			System.out.println("Calling service");
+			response = restTemplate.exchange(
+					"https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders",
+					HttpMethod.POST, entity, String.class);
+
+			System.out.println("Response Body:" + response.getBody());
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "{\"status\":\"KO\"}";
+		}
+		return "hello";
+	}
 
 	@RequestMapping(value = "/api/simplificato/form/ocrtest", method = RequestMethod.POST)
 	public String f24test(@RequestBody F24Form f24Form) {
