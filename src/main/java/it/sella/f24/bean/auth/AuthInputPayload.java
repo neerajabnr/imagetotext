@@ -18,6 +18,10 @@ public class AuthInputPayload {
 	public void setData(List<AuthParam> data) {
 		this.data = data;
 	}
+	@Override
+	public String toString() {
+		return "AuthInputPayload [flowToken=" + flowToken + ", data=" + data + "]";
+	}
 	
 	
 }

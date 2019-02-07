@@ -58,9 +58,7 @@ public class Authservice {
 	private AuthResponse authRequestStepOne(String userName, String password) {
 
 		ResponseEntity<String> response = this.callAuthService(new AuthInputPayload());
-		System.out.println(response);
-		System.out.println("Response Body:" + response.getBody());
-		System.out.println("Response Body:" + response.getStatusCode());
+		
 		ObjectMapper mapper = new ObjectMapper();
 		AuthResponse resBody = null;
 		if (response.getStatusCode().equals(HttpStatus.OK)) {
@@ -99,6 +97,7 @@ public class Authservice {
 		data.add(pwd);
 		data.add(channelId);
 		payload.setData(data);
+		System.out.println(payload);
 		AuthResponse resBody = null;
 		ResponseEntity<String> response = this.callAuthService(payload);
 		ObjectMapper mapper = new ObjectMapper();
