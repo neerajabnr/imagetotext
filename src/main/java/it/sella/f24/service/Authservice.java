@@ -33,6 +33,8 @@ public class Authservice {
 	private RestTemplate restTemplate;
 
 	private static Properties props = null;
+	
+	public static String APIKey = null;
 
 	static {
 
@@ -44,8 +46,9 @@ public class Authservice {
 		System.setProperty("java.net.useSystemProxies", "false");
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+		headers.set("apiKey", APIKey);
 		headers.set("Auth-Schema", "S2S");
+		System.out.println(headers);
 		String authURL = props.getProperty("authURL");
 		HttpEntity<AuthInputPayload> entity = new HttpEntity<AuthInputPayload>(payload, headers);
 		ResponseEntity<String> response = null;
@@ -120,8 +123,7 @@ public class Authservice {
 	}
 
 	public AuthResponse authorise(AuthServiceInput authServiceInput) {
-
-		
+		APIKey = authServiceInput.getApiKey();
 		return this.authRequestStepOne(authServiceInput.getUserName(), authServiceInput.getPassword());
 
 	}

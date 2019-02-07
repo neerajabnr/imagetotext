@@ -19,7 +19,6 @@ public class AuthParam {
 	public String toString() {
 		return "AuthParam [key=" + key + ", value=" + value + "]";
 	}
-	
-	
+		
 
 }

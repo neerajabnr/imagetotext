@@ -4,6 +4,7 @@ public class AuthServiceInput {
 	
 	private String userName;
 	private String password;
+	private String apiKey;
 	
 	public String getUserName() {
 		return userName;
@@ -18,6 +19,17 @@ public class AuthServiceInput {
 		this.password = password;
 	}
 	
+	public String getApiKey() {
+		return apiKey;
+	}
+	public void setApiKey(String apiKey) {
+		this.apiKey = apiKey;
+	}
+	
+	@Override
+	public String toString() {
+		return "AuthServiceInput [userName=" + userName + ", password=" + password + "]";
+	}
 	
 
 }

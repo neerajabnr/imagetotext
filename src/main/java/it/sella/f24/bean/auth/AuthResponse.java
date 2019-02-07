@@ -7,6 +7,7 @@ public class AuthResponse {
 	private String status;
 	private List<AuthError> errors;
 	private Payload payload;
+	
 	public String getStatus() {
 		return status;
 	}
