@@ -50,7 +50,67 @@
 
          "Tax":[  
 
-            
+            	{  
+
+               "Sezione":"x1",
+
+               "CodiceTributo":"x2",
+
+               "CodiceEnte":"x3",
+
+               "Ravv":"y1",
+
+               "ImmVar":"y2",
+
+               "Acc":"y3",
+
+               "Saldo":"y4",
+
+               "NumImm":y5,
+
+               "MeseRif":"x4",
+
+               "AnnoRif":"x5",
+
+               "Detrazione":x6,
+
+               "DebitoImporto":x7,
+
+               "CrebitoImporto":x8
+
+            }
+,
+		{  
+
+               "Sezione":"x1",
+
+               "CodiceTributo":"x2",
+
+               "CodiceEnte":"x3",
+
+               "Ravv":"y1",
+
+               "ImmVar":"y2",
+
+               "Acc":"y3",
+
+               "Saldo":"y4",
+
+               "NumImm":y5,
+
+               "MeseRif":"x4",
+
+               "AnnoRif":"x5",
+
+               "Detrazione":x6,
+
+               "DebitoImporto":x7,
+
+               "CrebitoImporto":x8
+
+            }
+
+
 
 
          ]

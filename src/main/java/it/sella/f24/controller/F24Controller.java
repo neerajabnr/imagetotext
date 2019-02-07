@@ -178,7 +178,7 @@ public class F24Controller {
 			e.printStackTrace();
 			return "{\"status\":\"KO\"}";
 		}
-		return "hello";
+		return response.getBody();
 	}
 
 	@RequestMapping(value = "/api/simplificato/form/ocrtest", method = RequestMethod.POST)
