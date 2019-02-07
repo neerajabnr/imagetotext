@@ -44,7 +44,7 @@ public class Authservice {
 		System.setProperty("java.net.useSystemProxies", "false");
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("apiKey", "ADNTOWXULIDEFRYBFUAFGOIYGPJSESQFDQ");
+		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
 		headers.set("Auth-Schema", "S2S");
 		String authURL = props.getProperty("authURL");
 		HttpEntity<AuthInputPayload> entity = new HttpEntity<AuthInputPayload>(payload, headers);
