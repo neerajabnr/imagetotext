@@ -39,5 +39,10 @@ public class Payload {
 	public void setFlowToken(String flowToken) {
 		this.flowToken = flowToken;
 	}
+	@Override
+	public String toString() {
+		return "Payload [status=" + status + ", refreshToken=" + refreshToken + ", authParams=" + authParams
+				+ ", accessToken=" + accessToken + ", flowToken=" + flowToken + "]";
+	}
 
 }

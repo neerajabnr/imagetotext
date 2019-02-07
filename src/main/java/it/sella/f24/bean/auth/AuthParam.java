@@ -15,6 +15,10 @@ public class AuthParam {
 	public void setValue(String value) {
 		this.value = value;
 	}
+	@Override
+	public String toString() {
+		return "AuthParam [key=" + key + ", value=" + value + "]";
+	}
 	
 	
 

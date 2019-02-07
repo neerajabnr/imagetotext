@@ -23,6 +23,10 @@ public class AuthError {
 	public void setParams(String params) {
 		this.params = params;
 	}
+	@Override
+	public String toString() {
+		return "AuthError [code=" + code + ", description=" + description + ", params=" + params + "]";
+	}
 	
 	
 
