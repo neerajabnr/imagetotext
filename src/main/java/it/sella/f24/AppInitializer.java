@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AppInitializer {
     public static void main( String[] args )
     {
+    	//Test Commit
     	SpringApplication.run(AppInitializer.class, args);
     }
 }
