@@ -33,6 +33,7 @@ import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -148,9 +149,48 @@ public class F24Controller {
 	}
 	
 	
-	@RequestMapping(value = "/api/simplificato/form/callf24", method = RequestMethod.POST)
-	public String callF24(@RequestBody String f24JSON, String apiKey) {
+	@RequestMapping(value = "/api/authcheck", method = RequestMethod.POST)
+	public String authCheck() {
 
+		System.setProperty("java.net.useSystemProxies", "false");
+
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+		headers.set("Auth-Schema", "S2S");
+		ObjectMapper mapper = new ObjectMapper();
+
+		HttpEntity<String> entity = new HttpEntity<>(headers);
+		ResponseEntity<String> response = null;
+		// https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session
+		// https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance
+
+		try {
+			System.out.println("Calling service");
+			response = restTemplate.exchange("https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session",
+					HttpMethod.POST, entity, String.class);
+
+			System.out.println("Response Body:" + response.getBody());
+
+			ResBody resBody = mapper.readValue(response.getBody(), ResBody.class);
+
+			System.out.println(resBody.getPayload().getAccessToken());
+
+			// accessCheck(resBody.getPayload().getAccessToken());
+
+			System.out.println("Response codes:" + response.getStatusCodeValue() + " " + response.getStatusCode());
+
+			return resBody.getPayload().getAccessToken();
+		} catch (Exception exception) {
+			System.out.println("hello");
+			exception.printStackTrace();
+			return "{\"status\":\"KO\"}";
+		}
+	}
+	
+	@RequestMapping(value = "/api/simplificato/form/callf24", method = RequestMethod.POST)
+	public String callF24(@RequestHeader("Auth-Token") String authToken, @RequestHeader("apiKey") String apiKey,@RequestBody String f24JSON) {
+		System.out.println("API Key ---"+apiKey);
 		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
 		System.setProperty("java.net.useSystemProxies", "false");
 
@@ -161,7 +201,8 @@ public class F24Controller {
 
 		headers.set("apiKey", apiKey);
 
-		headers.set("Auth-Schema", "S2S");
+		headers.set("Auth-Schema", "S2S-AUTH");
+		headers.set("Auth-Token", authToken);
 		ObjectMapper mapper = new ObjectMapper();
 		System.out.println("Input JSON:\n" + f24JSON);
 		HttpEntity<String> entity = new HttpEntity<>(f24JSON, headers);

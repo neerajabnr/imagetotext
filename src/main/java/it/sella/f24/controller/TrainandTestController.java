@@ -20,7 +20,7 @@ import opennlp.tools.util.Span;
 @RequestMapping("/train")
 public class TrainandTestController {
 	
-	@RequestMapping(value = "/api/image/encode", method = RequestMethod.PUT)
+	@RequestMapping(value = "/api/image/encode", method = RequestMethod.POST)
 	public void test(@RequestParam("file") MultipartFile file,@RequestParam String instanceName) {
 		
 	}
