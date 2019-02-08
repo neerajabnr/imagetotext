@@ -149,7 +149,7 @@ public class F24Controller {
 	
 	
 	@RequestMapping(value = "/api/simplificato/form/callf24", method = RequestMethod.POST)
-	public String callF24(@RequestBody String f24JSON, String apiKey) {
+	public String callF24(@RequestBody String f24JSON) {
 
 		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
 		System.setProperty("java.net.useSystemProxies", "false");
@@ -159,7 +159,7 @@ public class F24Controller {
 
 		headers.set("Content-Type", "application/json");
 
-		headers.set("apiKey", apiKey);
+//		headers.set("apiKey", apiKey);
 
 		headers.set("Auth-Schema", "S2S");
 		ObjectMapper mapper = new ObjectMapper();
