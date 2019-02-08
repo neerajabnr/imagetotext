@@ -23,9 +23,7 @@ import it.sella.f24.bean.auth.AuthInputPayload;
 import it.sella.f24.bean.auth.AuthParam;
 import it.sella.f24.bean.auth.AuthResponse;
 import it.sella.f24.bean.auth.AuthServiceInput;
-import it.sella.f24.bean.auth.Payload;
 import it.sella.f24.util.LoadPropertiesUtil;
-import it.sella.f24.util.RestUtil;
 
 @Service
 public class Authservice {
@@ -43,7 +41,7 @@ public class Authservice {
 		props = LoadPropertiesUtil.loadPropertiesFile();
 	}
 
-	private ResponseEntity<String> callAuthService(AuthInputPayload payload) {
+	private ResponseEntity<String> callAuthService(AuthInputPayload payload)  {
 		System.setProperty("java.net.useSystemProxies", "false");
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -59,7 +57,7 @@ public class Authservice {
 
 	}
 
-	private AuthResponse authRequestStepOne(String userName, String password) {
+	private ResponseEntity<String> authRequestStepOne(String userName, String password) { 
 
 		ResponseEntity<String> response = this.callAuthService(new AuthInputPayload());
 		
@@ -74,7 +72,7 @@ public class Authservice {
 					if (Objects.nonNull(response.getStatusCode())&&response.getStatusCode().equals(HttpStatus.OK)) {
 					String flowToken = resBody.getPayload().getFlowToken();
 					System.out.println(flowToken);
-					resBody = this.authRequestStepTwo(userName, password, flowToken);
+					response = this.authRequestStepTwo(userName, password, flowToken);
 				}
 				}
 
@@ -83,10 +81,10 @@ public class Authservice {
 				e.printStackTrace();
 			}
 		
-		return resBody;
+		return response;
 	}
 
-	private AuthResponse authRequestStepTwo(String userName, String password, String flowToken) {
+	private ResponseEntity<String> authRequestStepTwo(String userName, String password, String flowToken)  {
 		AuthInputPayload payload = new AuthInputPayload();
 		payload.setFlowToken(flowToken);
 		AuthParam user = new AuthParam();
@@ -104,9 +102,9 @@ public class Authservice {
 		data.add(channelId);
 		payload.setData(data);
 		System.out.println(payload);
-		AuthResponse resBody = null;
+		//AuthResponse resBody = null;
 		ResponseEntity<String> response = this.callAuthService(payload);
-		ObjectMapper mapper = new ObjectMapper();
+		/*ObjectMapper mapper = new ObjectMapper();
 		
 			
 			try {
@@ -115,14 +113,14 @@ public class Authservice {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
 		
-		return resBody;
+		return response;
 
 	}
 
 	
-	public AuthResponse authorise(AuthServiceInput authServiceInput) {
+	public ResponseEntity<String> authorise(AuthServiceInput authServiceInput)  {
 		APIKey = authServiceInput.getApiKey();
 		return this.authRequestStepOne(authServiceInput.getUserName(), authServiceInput.getPassword());
 
