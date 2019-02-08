@@ -149,6 +149,45 @@ public class F24Controller {
 	}
 	
 	
+	@RequestMapping(value = "/api/authcheck", method = RequestMethod.POST)
+	public String authCheck() {
+
+		System.setProperty("java.net.useSystemProxies", "false");
+
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+		headers.set("Auth-Schema", "S2S");
+		ObjectMapper mapper = new ObjectMapper();
+
+		HttpEntity<String> entity = new HttpEntity<>(headers);
+		ResponseEntity<String> response = null;
+		// https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session
+		// https://sandbox.platfr.io/api/gbs/banking/v2/accounts/1234/balance
+
+		try {
+			System.out.println("Calling service");
+			response = restTemplate.exchange("https://sandbox.platfr.io/api/public/auth/v2/s2s/producers/gbs/session",
+					HttpMethod.POST, entity, String.class);
+
+			System.out.println("Response Body:" + response.getBody());
+
+			ResBody resBody = mapper.readValue(response.getBody(), ResBody.class);
+
+			System.out.println(resBody.getPayload().getAccessToken());
+
+			// accessCheck(resBody.getPayload().getAccessToken());
+
+			System.out.println("Response codes:" + response.getStatusCodeValue() + " " + response.getStatusCode());
+
+			return resBody.getPayload().getAccessToken();
+		} catch (Exception exception) {
+			System.out.println("hello");
+			exception.printStackTrace();
+			return "{\"status\":\"KO\"}";
+		}
+	}
+	
 	@RequestMapping(value = "/api/simplificato/form/callf24", method = RequestMethod.POST)
 	public String callF24(@RequestHeader("Auth-Token") String authToken, @RequestHeader("apiKey") String apiKey,@RequestBody String f24JSON) {
 		System.out.println("API Key ---"+apiKey);
