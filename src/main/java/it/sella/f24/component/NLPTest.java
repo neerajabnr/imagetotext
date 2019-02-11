@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import it.sella.f24.bean.Result;
+import opennlp.tools.formats.ResourceAsStreamFactory;
 import opennlp.tools.namefind.BioCodec;
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.NameFinderMETokenFinder;
@@ -21,8 +23,12 @@ import opennlp.tools.namefind.NameSample;
 import opennlp.tools.namefind.NameSampleDataStream;
 import opennlp.tools.namefind.TokenNameFinderFactory;
 import opennlp.tools.namefind.TokenNameFinderModel;
+import opennlp.tools.tokenize.TokenSample;
+import opennlp.tools.tokenize.TokenSampleStream;
+import opennlp.tools.tokenize.TokenizerFactory;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
+import opennlp.tools.util.InputStreamFactory;
 import opennlp.tools.util.MockInputStreamFactory;
 import opennlp.tools.util.ObjectStream;
 import opennlp.tools.util.PlainTextByLineStream;
@@ -39,9 +45,9 @@ public class NLPTest {
 	TokenNameFinderModel nameFinderModel =null;
 	FileInputStream r;
 	try {
-		r = new FileInputStream("src/main/resources/f24_sec2part1model.bin");
+		r = new FileInputStream("src/main/resources/f24_sec1model.bin");
 	
-		nameFinderModel = new TokenNameFinderModel(r);
+		//nameFinderModel = new TokenNameFinderModel(r);
 		if (r != null) {
 			nameFinderModel = new TokenNameFinderModel(r);
 		} 
@@ -82,10 +88,25 @@ public class NLPTest {
 	}
 	
 	 private String[] tokenize(String sentence) throws IOException{
-	        InputStream inputStreamTokenizer = getClass().getResourceAsStream("/en-token.bin");
-	        TokenizerModel tokenModel = new TokenizerModel(inputStreamTokenizer);
+	       // InputStream inputStreamTokenizer = getClass().getResourceAsStream("/en-token.bin");
+	        TokenizerModel tokenModel = createMaxentTokenModel();
 	        TokenizerME tokenizer = new TokenizerME(tokenModel);
 	        return tokenizer.tokenize(sentence);
 	    }
+	 
+	 static TokenizerModel createMaxentTokenModel() throws IOException {
+
+			InputStreamFactory trainDataIn = new ResourceAsStreamFactory(TokenizerModel.class,
+					"/opennlp/tools/tokenize/token.train");
+
+			ObjectStream<TokenSample> samples = new TokenSampleStream(
+					new PlainTextByLineStream(trainDataIn, StandardCharsets.UTF_8));
+
+			TrainingParameters mlParams = new TrainingParameters();
+			mlParams.put(TrainingParameters.ITERATIONS_PARAM, 100);
+			mlParams.put(TrainingParameters.CUTOFF_PARAM, 0);
+
+			return TokenizerME.train(samples, TokenizerFactory.create(null, "eng", null, true, null), mlParams);
+		}
 
 }
