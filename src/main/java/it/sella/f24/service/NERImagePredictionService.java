@@ -1,6 +1,7 @@
 package it.sella.f24.service;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
@@ -21,6 +22,7 @@ import com.google.api.client.util.Base64;
 
 import it.sella.f24.bean.Data;
 import it.sella.f24.bean.F24JSON;
+import it.sella.f24.bean.Result;
 import it.sella.f24.controller.F24Controller;
 import it.sella.f24.util.LoadPropertiesUtil;
 
@@ -40,7 +42,7 @@ public class NERImagePredictionService {
 	
 	
 	
-	public void predict(MultipartFile image,String instanceName) throws Exception {
+	public List<Result> predict(MultipartFile image,String instanceName) throws Exception {
 		
 		System.out.println("Calling Skew Service for image skewing");
 		byte[] decodeBase64 = skewService.skew(image);
@@ -49,7 +51,7 @@ public class NERImagePredictionService {
 		Data data = googleOCRService.readText(decodeBase64, "");
 		
 		System.out.println("Calling Open NLP NER Service");
-		nerService.trainandTest(data, instanceName);
+		return nerService.trainandTest(data, instanceName);
 	}
 
 }
