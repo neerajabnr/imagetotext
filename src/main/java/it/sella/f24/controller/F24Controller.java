@@ -150,13 +150,13 @@ public class F24Controller {
 	
 	
 	@RequestMapping(value = "/api/authcheck", method = RequestMethod.POST)
-	public String authCheck() {
+	public String authCheck(@RequestHeader("apiKey") String apiKey) {
 
 		System.setProperty("java.net.useSystemProxies", "false");
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("apiKey", "GYJ22DBXIII0171G9VA1Y9BN3KUOTOSL0");
+		headers.set("apiKey", apiKey);
 		headers.set("Auth-Schema", "S2S");
 		ObjectMapper mapper = new ObjectMapper();
 
@@ -189,10 +189,13 @@ public class F24Controller {
 	}
 	
 	@RequestMapping(value = "/api/simplificato/form/callf24", method = RequestMethod.POST)
-	public String callF24(@RequestHeader("Auth-Token") String authToken, @RequestHeader("apiKey") String apiKey,@RequestBody String f24JSON) {
+	public String callF24(@RequestHeader("apiKey") String apiKey,@RequestBody String f24JSON) {
 		System.out.println("API Key ---"+apiKey);
 		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
+		String authToken = authCheck(apiKey);
+		String accountID="14537780";
 		System.setProperty("java.net.useSystemProxies", "false");
+		String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -211,7 +214,7 @@ public class F24Controller {
 		try {
 			System.out.println("Calling service");
 			response = restTemplate.exchange(
-					"https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders",
+					URL,
 					HttpMethod.POST, entity, String.class);
 
 			System.out.println("Response Body:" + response.getBody());

@@ -25,8 +25,8 @@ public class TrainandTestController {
 	@Autowired
 	private NERImagePredictionService NERImagePredictionService;
 	
-	@RequestMapping(value = "/api/image/predict", method = RequestMethod.GET)
-	public List<Result> test(@RequestParam("file") MultipartFile file,@RequestParam String instanceName) throws Exception {
+	@RequestMapping(value = "/api/image/predict", method = RequestMethod.POST)
+	public List<Result> test(@RequestParam("image") MultipartFile file,@RequestParam("instanceName") String instanceName) throws Exception {
 		return NERImagePredictionService.predict(file, instanceName);
 	}
 
