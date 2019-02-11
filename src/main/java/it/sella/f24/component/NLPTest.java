@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import it.sella.f24.bean.Result;
 import opennlp.tools.namefind.BioCodec;
 import opennlp.tools.namefind.NameFinderME;
@@ -27,6 +29,8 @@ import opennlp.tools.util.PlainTextByLineStream;
 import opennlp.tools.util.Span;
 import opennlp.tools.util.TrainingParameters;
 
+
+@Component
 public class NLPTest {
 	
 	private static TokenNameFinderModel tokenFinder = null;
@@ -51,7 +55,7 @@ public class NLPTest {
 	return nameFinderModel;
 	}
 	
-	public List<Result> f24_Section1(String sentence) throws Exception {
+	public List<Result> NERRecogniser(String sentence,String instanceName) throws Exception {
 	
 			tokenFinder = tokenFinder("F24");
 		String [] sentenceArray = this.tokenize(sentence);
@@ -77,7 +81,7 @@ public class NLPTest {
 
 	}
 	
-	 public String[] tokenize(String sentence) throws IOException{
+	 private String[] tokenize(String sentence) throws IOException{
 	        InputStream inputStreamTokenizer = getClass().getResourceAsStream("/en-token.bin");
 	        TokenizerModel tokenModel = new TokenizerModel(inputStreamTokenizer);
 	        TokenizerME tokenizer = new TokenizerME(tokenModel);
