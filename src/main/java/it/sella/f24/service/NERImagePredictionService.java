@@ -45,7 +45,8 @@ public class NERImagePredictionService {
 	public List<Result> predict(MultipartFile image,String instanceName) throws Exception {
 		
 		System.out.println("Calling Skew Service for image skewing");
-		byte[] decodeBase64 = skewService.skew(image);
+		//skewService.skew(image)
+		byte[] decodeBase64 = image.getBytes() ;
 
 		System.out.println("Calling Google Service for processing of the Image data");
 		Data data = googleOCRService.readText(decodeBase64, "");

@@ -21,6 +21,7 @@ public class NERService {
 	
 	public List<Result> trainandTest(Data data, String instanceName) throws Exception {
 		String sentence = formatGoogleOCRData.getImageText(data);
+		System.out.println("Google Data : "+sentence);
 		List<Result> result = NLPTest.NERRecogniser(sentence, instanceName);
 		return result;
 	}
