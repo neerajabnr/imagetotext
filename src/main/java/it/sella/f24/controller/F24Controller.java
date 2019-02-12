@@ -50,6 +50,7 @@ import com.google.gson.JsonObject;
 import it.sella.f24.bean.Data;
 import it.sella.f24.bean.F24Form;
 import it.sella.f24.bean.F24JSON;
+import it.sella.f24.bean.F24JSONResponse;
 import it.sella.f24.bean.ResBody;
 import it.sella.f24.bean.error.Error;
 import it.sella.f24.bean.error.ErrorResponse;
@@ -194,27 +195,30 @@ public class F24Controller {
 	@RequestMapping(value = "/api/simplificato/form/callf24", method = RequestMethod.POST)
 	public String callF24(@RequestHeader("apiKey") String apiKey,@RequestBody String f24JSON) {
 		System.out.println("API Key ---"+apiKey);
+		String accountID="14537780";
+		ObjectMapper mapper = new ObjectMapper();
 		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
 //		String authToken = authCheck(apiKey);
-		String accountID="14537780";
 		System.setProperty("java.net.useSystemProxies", "false");
 		String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
-
+		
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-
+		
 		headers.set("Content-Type", "application/json");
-
+		
 		headers.set("apiKey", apiKey);
 		headers.set("Auth-Schema", "S2S");
 //		headers.set("Auth-Schema", "S2S-AUTH");
 //		headers.set("Auth-Token", authToken);
-		ObjectMapper mapper = new ObjectMapper();
 		System.out.println("Input JSON:\n" + f24JSON);
 		HttpEntity<String> entity = new HttpEntity<>(f24JSON, headers);
 		ResponseEntity<String> response = null;
+		
 
 		try {
+			F24JSONResponse f24jsonResponse = mapper.readValue(f24JSON, F24JSONResponse.class);
+			System.out.println(f24jsonResponse.getAccountID());
 			System.out.println("Calling service");
 			response = restTemplate.exchange(URL,HttpMethod.POST, entity, String.class);
             if(response.getStatusCode().equals(HttpStatus.OK)) {
