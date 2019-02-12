@@ -1086,9 +1086,9 @@ public class F24OCRServiceNew {
 		try {
 			date = new SimpleDateFormat("ddMMyyyy").parse(dob);
 			dob = format.format(date);
-		} catch (ParseException e1) {
+		} catch (Exception e1) {
 			e1.printStackTrace();
-			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
+			return dob;
 		}
 		return dob;
 	}
