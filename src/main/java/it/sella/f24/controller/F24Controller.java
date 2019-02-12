@@ -195,7 +195,7 @@ public class F24Controller {
 	public String callF24(@RequestHeader("apiKey") String apiKey,@RequestBody String f24JSON) {
 		System.out.println("API Key ---"+apiKey);
 		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
-		String authToken = authCheck(apiKey);
+//		String authToken = authCheck(apiKey);
 		String accountID="14537780";
 		System.setProperty("java.net.useSystemProxies", "false");
 		String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
@@ -206,9 +206,9 @@ public class F24Controller {
 		headers.set("Content-Type", "application/json");
 
 		headers.set("apiKey", apiKey);
-//		headers.set("Auth-Schema", "S2S");
-		headers.set("Auth-Schema", "S2S-AUTH");
-		headers.set("Auth-Token", authToken);
+		headers.set("Auth-Schema", "S2S");
+//		headers.set("Auth-Schema", "S2S-AUTH");
+//		headers.set("Auth-Token", authToken);
 		ObjectMapper mapper = new ObjectMapper();
 		System.out.println("Input JSON:\n" + f24JSON);
 		HttpEntity<String> entity = new HttpEntity<>(f24JSON, headers);
