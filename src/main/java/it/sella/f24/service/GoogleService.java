@@ -453,8 +453,8 @@ public class GoogleService {
 			                  String wordText = "";
 			              for (Symbol symbol: word.getSymbolsList()) {
 			                    wordText = wordText + symbol.getText();
-			                    if(Objects.nonNull(symbol.getProperty())&&(symbol.getProperty().getDetectedBreak().getType().equals(BreakType.EOL_SURE_SPACE))){
-			                    	
+			                    if(Objects.nonNull(symbol.getProperty())&&Objects.nonNull(symbol.getProperty().getDetectedBreak())&&(symbol.getProperty().getDetectedBreak().getType().equals(BreakType.EOL_SURE_SPACE)||symbol.getProperty().getDetectedBreak().getType().equals(BreakType.LINE_BREAK)||symbol.getProperty().getDetectedBreak().getType().equals(BreakType.SPACE))){
+			                    	wordText = wordText + " ";
 			                    }
 			                   // symbols.add(sy)
 			                   
