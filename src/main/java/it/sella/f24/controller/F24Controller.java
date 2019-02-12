@@ -26,6 +26,7 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestFactory;
@@ -192,7 +193,7 @@ public class F24Controller {
 	public String callF24(@RequestHeader("apiKey") String apiKey,@RequestBody String f24JSON) {
 		System.out.println("API Key ---"+apiKey);
 		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
-		String authToken = authCheck(apiKey);
+//		String authToken = authCheck(apiKey);
 		String accountID="14537780";
 		System.setProperty("java.net.useSystemProxies", "false");
 		String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
@@ -203,9 +204,9 @@ public class F24Controller {
 		headers.set("Content-Type", "application/json");
 
 		headers.set("apiKey", apiKey);
-
-		headers.set("Auth-Schema", "S2S-AUTH");
-		headers.set("Auth-Token", authToken);
+		headers.set("Auth-Schema", "S2S");
+//		headers.set("Auth-Schema", "S2S-AUTH");
+//		headers.set("Auth-Token", authToken);
 		ObjectMapper mapper = new ObjectMapper();
 		System.out.println("Input JSON:\n" + f24JSON);
 		HttpEntity<String> entity = new HttpEntity<>(f24JSON, headers);
@@ -214,13 +215,17 @@ public class F24Controller {
 		try {
 			System.out.println("Calling service");
 			response = restTemplate.exchange(URL,HttpMethod.POST, entity, String.class);
-
-			System.out.println("Response Body:" + response.getBody()+response.getStatusCode()+response.getStatusCodeValue());
+            if(response.getStatusCode().equals(HttpStatus.OK)) {
+            	System.out.println("Response Body:" + response.getBody()+response.getStatusCode());
+            	return response.getBody();
+            }else {
+            	System.out.println("Response Body:" + response.getBody()+response.getStatusCode());
+            	return "{\"status\":\"KO\"}";
+            }
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "{\"status\":\"KO\"}";
 		}
-		return response.getBody();
 	}
 
 	@RequestMapping(value = "/api/simplificato/form/ocrtest", method = RequestMethod.POST)
