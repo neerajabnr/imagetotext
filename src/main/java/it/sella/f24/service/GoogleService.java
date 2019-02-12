@@ -451,15 +451,25 @@ public class GoogleService {
 			                  String wordText = "";
 			              for (Symbol symbol: word.getSymbolsList()) {
 			                    wordText = wordText + symbol.getText();
+			                   // symbols.add(sy)
 			                  }
 			              paraText = paraText + wordText;
+			              words.add(wordText);
 			                }
 			                // Output Example using Paragraph:
 			                blockText = blockText + paraText;
+			                paras.add(paraText);
 			              }
 			              pageText = pageText + blockText;
+			              blocks.add(blockText);
 			            }
+			            pages.add(pageText);
 			          }
+			          
+			          System.out.println("page:" + pages);
+			          System.out.println("blocks:" + blocks);
+			          System.out.println("paras:" + paras);
+			          System.out.println("words:" + words);
 			        //  paraText = annotation.getText();
 			        //  result.setResultText(ParagraphText);
 			        }
