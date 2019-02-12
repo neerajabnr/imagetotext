@@ -16,11 +16,7 @@ import it.sella.f24.bean.Result;
 import it.sella.f24.component.FormatGoogleOCRData;
 import it.sella.f24.service.GoogleService;
 import it.sella.f24.service.NERImagePredictionService;
-import opennlp.tools.namefind.NameFinderME;
-import opennlp.tools.namefind.NameFinderMETokenFinder;
-import opennlp.tools.tokenize.TokenizerME;
-import opennlp.tools.tokenize.TokenizerModel;
-import opennlp.tools.util.Span;
+
 
 @RestController
 @RequestMapping("/OCR")
@@ -50,6 +46,18 @@ public class TrainandTestController {
 		String sentence = formatGoogleOCRData.getImageText(data);
 		System.out.println("Google Data : "+sentence);
 		return sentence;
+	}
+	
+	@RequestMapping(value = "/api/googleOCR/new", method = RequestMethod.POST)
+	public void callGoogleOCRnew(@RequestParam("image") MultipartFile file) throws IOException {
+		//System.out.println("Calling Skew Service for image skewing");
+		byte[] decodeBase64 =file.getBytes();
+
+		System.out.println("Calling Google Service for processing of the Image data");
+		googleOCRService.readText_new(decodeBase64, "");
+		//String sentence = formatGoogleOCRData.getImageText(data);
+		//System.out.println("Google Data : "+sentence);
+		//return sentence;
 	}
 
 }
