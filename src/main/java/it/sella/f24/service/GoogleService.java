@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.cloud.vision.v1.*;
+import com.google.cloud.vision.v1.TextAnnotation.DetectedBreak.BreakType;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -451,7 +453,11 @@ public class GoogleService {
 			                  String wordText = "";
 			              for (Symbol symbol: word.getSymbolsList()) {
 			                    wordText = wordText + symbol.getText();
+			                    if(Objects.nonNull(symbol.getProperty())&&(symbol.getProperty().getDetectedBreak().getType().equals(BreakType.EOL_SURE_SPACE))){
+			                    	
+			                    }
 			                   // symbols.add(sy)
+			                   
 			                  }
 			              paraText = paraText + wordText;
 			              words.add(wordText);

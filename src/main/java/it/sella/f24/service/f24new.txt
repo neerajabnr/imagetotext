@@ -66,25 +66,25 @@
 
             "receiverCode": "x3",
 
-            "isAmendment": "",
+            "isAmendment": "y1",
 
-            "isRealEstateVariation": "",
+            "isRealEstateVariation": "y2",
 
-            "isDeposit": "",
+            "isDeposit": "y3",
 
-            "isFinalPayment": "",
+            "isFinalPayment": "y4",
 
-            "realEstateCount": 1,
+            "realEstateCount": y5,
 
             "referenceMonth": "x4",
 
             "referenceYear": "x5",
 
-            "deductionAmount": "x6",
+            "deductionAmount": x6,
 
             "taxAmount": x7,
 
-            "compensationAmount": "x8"
+            "compensationAmount": x8
 
         }
         
@@ -98,25 +98,25 @@
 
             "receiverCode": "x3",
 
-            "isAmendment": "",
+            "isAmendment": "y1",
 
-            "isRealEstateVariation": "",
+            "isRealEstateVariation": "y2",
 
-            "isDeposit": "",
+            "isDeposit": "y3",
 
-            "isFinalPayment": "",
+            "isFinalPayment": "y4",
 
-            "realEstateCount": 1,
+            "realEstateCount": y5,
 
             "referenceMonth": "x4",
 
             "referenceYear": "x5",
 
-            "deductionAmount": "x6",
+            "deductionAmount": x6,
 
             "taxAmount": x7,
 
-            "compensationAmount": "x8"
+            "compensationAmount": x8
 
         }
         

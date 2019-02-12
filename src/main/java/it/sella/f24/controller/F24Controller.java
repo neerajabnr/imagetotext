@@ -55,6 +55,7 @@ import it.sella.f24.bean.ResBody;
 import it.sella.f24.bean.error.Error;
 import it.sella.f24.bean.error.ErrorResponse;
 import it.sella.f24.service.F24OCRService;
+import it.sella.f24.service.F24OCRServiceNew;
 import it.sella.f24.service.GoogleService;
 import it.sella.f24.util.FileReaderfromFolder;
 import it.sella.f24.util.LoadPropertiesUtil;
@@ -72,6 +73,9 @@ public class F24Controller {
 
 	@Autowired
 	private F24OCRService ocrService;
+	
+	@Autowired
+	private F24OCRServiceNew ocrServiceNew;
 
 	@Autowired
 	private GoogleService googleService;
@@ -152,6 +156,54 @@ public class F24Controller {
 
 	}
 	
+	@RequestMapping(value = "/api/simplificato/form/ocr/new", method = RequestMethod.POST)
+	public String f24ImageToJSON_new(@RequestBody F24Form f24Form) {
+
+		System.out.println("Calling Authentication Service to get the valid Auth Token");
+		// String accessToken = authCheck();
+
+		String accessToken = "123";
+		if (accessToken.isEmpty()) {
+			return "{\"status\":\"Access token is empty, please provide the correct details\"}";
+		} else {
+
+			JSONObject jsonObject = new JSONObject();
+			jsonObject.put("encodedImage", f24Form.getEncodedImage());
+			HttpHeaders headers = new HttpHeaders();
+			headers.setContentType(MediaType.APPLICATION_JSON);
+			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
+
+			try {
+				System.out.println("Calling Service for Template Matching and Skewing");
+				ResponseEntity<String> response = restTemplate.exchange(props.getProperty("ServiceURL"),
+						HttpMethod.POST, entity, String.class);
+
+				ObjectMapper mapper = new ObjectMapper();
+				F24JSON f24json = mapper.readValue(response.getBody(), F24JSON.class);
+				// System.out.println("Response from Skew Service:" +
+				// f24json.getEncodedImage());
+				byte[] decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
+
+				System.out.println("Calling Google Service for processing of the Image data");
+				Data data = googleService.readText(decodeBase64, "");
+
+				System.out.println("Calling OCR Service to preprocess and prepare the JSON");
+				String f24Result = ocrServiceNew.processJson(data);
+
+				System.out.println("Printing F24 JSON:\n" + f24Result);
+				System.out.println("Calling F24 Payment Service to make the Payment");
+				// callF24(f24Result);
+				return f24Result;
+
+			} catch (IOException e) {
+				return "{\"status\":\"KO\"}";
+			} catch (Exception e) {
+				return "{\"status\":\"KO\"}";
+			}
+
+		}
+
+	}
 	
 	@RequestMapping(value = "/api/authcheck", method = RequestMethod.POST)
 	public String authCheck(@RequestHeader("apiKey") String apiKey) {
@@ -351,7 +403,9 @@ public class F24Controller {
 		// String f24ImageToText = f24ImageToJSON(f24Form);
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 
-		String f24ImageToText = f24test(f24Form);
+//		String f24ImageToText = f24test(f24Form);
+		
+		String f24ImageToText=f24ImageToJSON_new(f24Form);
 		return f24ImageToText;
 	}
 
