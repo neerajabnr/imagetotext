@@ -204,8 +204,8 @@ public class F24Controller {
 
 		headers.set("apiKey", apiKey);
 
-		headers.set("Auth-Schema", "S2S-AUTH");
-		headers.set("Auth-Token", authToken);
+		headers.set("Auth-Schema", "S2S");
+//		headers.set("Auth-Token", authToken);
 		ObjectMapper mapper = new ObjectMapper();
 		System.out.println("Input JSON:\n" + f24JSON);
 		HttpEntity<String> entity = new HttpEntity<>(f24JSON, headers);
@@ -213,9 +213,7 @@ public class F24Controller {
 
 		try {
 			System.out.println("Calling service");
-			response = restTemplate.exchange(
-					URL,
-					HttpMethod.POST, entity, String.class);
+			response = restTemplate.exchange(URL,HttpMethod.POST, entity, String.class);
 
 			System.out.println("Response Body:" + response.getBody()+response.getStatusCode()+response.getStatusCodeValue());
 		} catch (Exception e) {
