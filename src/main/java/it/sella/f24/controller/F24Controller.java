@@ -217,7 +217,7 @@ public class F24Controller {
 					URL,
 					HttpMethod.POST, entity, String.class);
 
-			System.out.println("Response Body:" + response.getBody());
+			System.out.println("Response Body:" + response.getBody()+response.getStatusCode()+response.getStatusCodeValue());
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "{\"status\":\"KO\"}";
