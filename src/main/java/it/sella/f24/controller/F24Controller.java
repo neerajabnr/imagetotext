@@ -51,6 +51,8 @@ import it.sella.f24.bean.Data;
 import it.sella.f24.bean.F24Form;
 import it.sella.f24.bean.F24JSON;
 import it.sella.f24.bean.ResBody;
+import it.sella.f24.bean.error.Error;
+import it.sella.f24.bean.error.ErrorResponse;
 import it.sella.f24.service.F24OCRService;
 import it.sella.f24.service.GoogleService;
 import it.sella.f24.util.FileReaderfromFolder;
@@ -220,7 +222,16 @@ public class F24Controller {
             	return response.getBody();
             }else {
             	System.out.println("Response Body:" + response.getBody()+response.getStatusCode());
-            	return "{\"status\":\"KO\"}";
+            	ErrorResponse errorResponse=mapper.readValue(response.getBody(), ErrorResponse.class);
+            	JSONObject jsonObject=new JSONObject();
+            	
+            	List<Error> errors = errorResponse.getErrors();
+            	Error error = errors.get(0);
+            	
+            	jsonObject.put("status", "KO");
+            	jsonObject.put("description",error.getDescription() );
+            	System.out.println(jsonObject.toJSONString());
+            	return jsonObject.toJSONString();
             }
 		} catch (Exception e) {
 			e.printStackTrace();
