@@ -204,8 +204,8 @@ public class F24Controller {
 
 		headers.set("apiKey", apiKey);
 
-		headers.set("Auth-Schema", "S2S");
-//		headers.set("Auth-Token", authToken);
+		headers.set("Auth-Schema", "S2S-AUTH");
+		headers.set("Auth-Token", authToken);
 		ObjectMapper mapper = new ObjectMapper();
 		System.out.println("Input JSON:\n" + f24JSON);
 		HttpEntity<String> entity = new HttpEntity<>(f24JSON, headers);
