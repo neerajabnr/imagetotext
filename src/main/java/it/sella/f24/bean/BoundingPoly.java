@@ -42,9 +42,11 @@ public class BoundingPoly {
         this.additionalProperties.put(name, value);
     }
 
-    @Override
-    public String toString() {
-        return "";
-    }
+	@Override
+	public String toString() {
+		return "BoundingPoly [vertices=" + vertices + ", additionalProperties=" + additionalProperties + "]";
+	}
+
+    
 
 }

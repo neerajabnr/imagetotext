@@ -54,9 +54,10 @@ public class Vertex {
         this.additionalProperties.put(name, value);
     }
 
-    @Override
-    public String toString() {
-        return "";
-    }
+	@Override
+	public String toString() {
+		return "Vertex [x=" + x + ", y=" + y + ", additionalProperties=" + additionalProperties + "]";
+	}
 
+    
 }

@@ -442,10 +442,13 @@ public class GoogleService {
 					List<String> paras = new ArrayList<>();
 					List<String> words = new ArrayList<>();
 					List<String> symbols = new ArrayList<>();
+					int count =0;
 					com.google.cloud.vision.v1.TextAnnotation annotation = res.getFullTextAnnotation();
 			          for (Page page: annotation.getPagesList()) {
 			            String pageText = "";
 			            for (Block block : page.getBlocksList()) {
+			            	it.sella.f24.bean.TextAnnotation annot = new it.sella.f24.bean.TextAnnotation();
+			            	block.getBoundingBox();
 			          String blockText = "";
 			              for (Paragraph para : block.getParagraphsList()) {
 			                String paraText = "";
@@ -467,7 +470,22 @@ public class GoogleService {
 			                paras.add(paraText);
 			              }
 			              pageText = pageText + blockText;
-			              blocks.add(blockText);
+			              count++;
+			              blocks.add(count+". "+ blockText +"\n");
+			              annot.setDescription(blockText);
+			              BoundingPoly BondingPolyF24 = new BoundingPoly();
+							List<it.sella.f24.bean.Vertex> vertexF24List = new ArrayList<>();
+							List<Vertex> verticesList = block.getBoundingBox().getVerticesList();
+							for (Vertex vertex : verticesList) {
+								it.sella.f24.bean.Vertex vertexF24 = new it.sella.f24.bean.Vertex();
+								vertexF24.setX(vertex.getX());
+								vertexF24.setY(vertex.getY());
+								vertexF24List.add(vertexF24);
+							}
+							BondingPolyF24.setVertices(vertexF24List);
+							annot.setBoundingPoly(BondingPolyF24);
+							textAnnotations.add(annot);
+			              //annot.setBoundingPoly(block.getBoundingBox());
 			            }
 			            pages.add(pageText);
 			          }
@@ -476,6 +494,8 @@ public class GoogleService {
 			          System.out.println("blocks:" + blocks);
 			          System.out.println("paras:" + paras);
 			          System.out.println("words:" + words);
+			          System.out.println(textAnnotations);
+			          
 			        //  paraText = annotation.getText();
 			        //  result.setResultText(ParagraphText);
 			        }
