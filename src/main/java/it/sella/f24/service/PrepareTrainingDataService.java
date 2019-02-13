@@ -18,6 +18,7 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.springframework.stereotype.Service;
 
 import io.netty.handler.codec.http.HttpContentEncoder.Result;
 import it.sella.f24.bean.DateFormat;
@@ -28,45 +29,45 @@ import it.sella.f24.util.WritetoExcel;
 import opennlp.tools.namefind.NameFinderMETokenFinder;
 import opennlp.tools.namefind.TokenNameFinderModel;
 import opennlp.tools.util.InvalidFormatException;
-
+@Service
 public class PrepareTrainingDataService {
 
 	private static final Pattern TAG_REGEX = Pattern.compile("<START:(.+?)> (.+?) <END>");
 
-	public static void main(String[] args) {
-		String ts = "  . F24   DELEGA IRREVOCABILE A : MODELLO DI PAGAMENTO UNIFICATO AGENZIA  PROV . PER L ' ACCREDITO ALLA TESORERIA COMPETENTE CONTRIBUENTE CODICE FISCALE   <START:Fiscale> PPL SFN 6 9     A 4 6 D 6 4 3 J <END>  ,       DATI ANAGRAFICI <START:Anagrafici> PIPOLI <END> <START:Name> STEFANIA <END>             POK <START:DOB> 0 60119 6 9 <END> <START:Sex> F  <END> <START:City> FOGGIA <END>  <START:Prov> F G  <END> CODICE FISCALE  ,  ,  ,        MOTIVO DEL PAGAMENTO  VERSAMENTO   .  .      W .   .   .       <START:Sezione> EL <END> <START:tributo> 3918 <END> <START:codice> D 6 1 2 <END>  <START:anno> 2013 <END> <START:dobito> 1 . 967 , 00 <END> 7777777777777777  TICHETTUAL SALDO  EURO : 1 <START:euro> 2 . 231 . 00 <END> FINAL ESTREMI DEL VERSAMENTO ( DA CON LARE A CURA DI BANCA / POSTE AGENTE DELLA RISCOSSIONE CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE DATA       /  AZIENDA CAD / SPORTELO  . 10   /       /    . ABI CAB";
-
-		ts = ts.replaceAll("\\*", "");
-		UserInput input = new UserInput("Fiscale", 11, 16, true, TypeofInput.ALPHANUMERIC, null, 1, 1);
-		UserInput input2 = new UserInput("Anagrafici", 2, 8, true, TypeofInput.ALPHA, null, 1, 4);
-		UserInput input3 = new UserInput("Name", 2, 8, true, TypeofInput.ALPHA, null, 1, 4);
-		UserInput input4 = new UserInput("DOB", 8, 8, true, TypeofInput.DATE, DateFormat.DDMMYYYY, 1, 1);
-		UserInput input5 = new UserInput("Sex", 1, 1, true, TypeofInput.ALPHA, null, 1, 1);
-		UserInput input6 = new UserInput("City", 2, 10, true, TypeofInput.ALPHA, null, 1, 4);
-		UserInput input7 = new UserInput("Prov", 2, 2, true, TypeofInput.ALPHA, null, 1, 1);
-
-		List<UserInput> inputs = new ArrayList<>();
-
-		inputs.add(input);
-		inputs.add(input2);
-		inputs.add(input3);
-		inputs.add(input4);
-		inputs.add(input5);
-		inputs.add(input6);
-		inputs.add(input7);
-
-		WritetoExcel writetoExcel = new WritetoExcel();
-
-		String taggedFilePath = writetoExcel.getColumnData("TaggedFilepath");
-		String inputExcel = writetoExcel.getColumnData("Trainingdatapath");
-
-		PrepareTrainingDataService dataService = new PrepareTrainingDataService();
-		// String
-		// trainingfilepath1=dataService.prepareTrainingwithUserinput(inputs,taggedFilePath);
-
-		String trainingfilepath2 = dataService.prepareTrainingDatawithExcel(inputExcel, taggedFilePath);
-
-	}
+//	public static void main(String[] args) {
+//		String ts = "  . F24   DELEGA IRREVOCABILE A : MODELLO DI PAGAMENTO UNIFICATO AGENZIA  PROV . PER L ' ACCREDITO ALLA TESORERIA COMPETENTE CONTRIBUENTE CODICE FISCALE   <START:Fiscale> PPL SFN 6 9     A 4 6 D 6 4 3 J <END>  ,       DATI ANAGRAFICI <START:Anagrafici> PIPOLI <END> <START:Name> STEFANIA <END>             POK <START:DOB> 0 60119 6 9 <END> <START:Sex> F  <END> <START:City> FOGGIA <END>  <START:Prov> F G  <END> CODICE FISCALE  ,  ,  ,        MOTIVO DEL PAGAMENTO  VERSAMENTO   .  .      W .   .   .       <START:Sezione> EL <END> <START:tributo> 3918 <END> <START:codice> D 6 1 2 <END>  <START:anno> 2013 <END> <START:dobito> 1 . 967 , 00 <END> 7777777777777777  TICHETTUAL SALDO  EURO : 1 <START:euro> 2 . 231 . 00 <END> FINAL ESTREMI DEL VERSAMENTO ( DA CON LARE A CURA DI BANCA / POSTE AGENTE DELLA RISCOSSIONE CODICE BANCA / POSTE / AGENTE DELLA RISCOSSIONE DATA       /  AZIENDA CAD / SPORTELO  . 10   /       /    . ABI CAB";
+//
+//		ts = ts.replaceAll("\\*", "");
+//		UserInput input = new UserInput("Fiscale", 11, 16, true, TypeofInput.ALPHANUMERIC, null, 1, 1);
+//		UserInput input2 = new UserInput("Anagrafici", 2, 8, true, TypeofInput.ALPHA, null, 1, 4);
+//		UserInput input3 = new UserInput("Name", 2, 8, true, TypeofInput.ALPHA, null, 1, 4);
+//		UserInput input4 = new UserInput("DOB", 8, 8, true, TypeofInput.DATE, DateFormat.DDMMYYYY, 1, 1);
+//		UserInput input5 = new UserInput("Sex", 1, 1, true, TypeofInput.ALPHA, null, 1, 1);
+//		UserInput input6 = new UserInput("City", 2, 10, true, TypeofInput.ALPHA, null, 1, 4);
+//		UserInput input7 = new UserInput("Prov", 2, 2, true, TypeofInput.ALPHA, null, 1, 1);
+//
+//		List<UserInput> inputs = new ArrayList<>();
+//
+//		inputs.add(input);
+//		inputs.add(input2);
+//		inputs.add(input3);
+//		inputs.add(input4);
+//		inputs.add(input5);
+//		inputs.add(input6);
+//		inputs.add(input7);
+//
+//		WritetoExcel writetoExcel = new WritetoExcel();
+//
+//		String taggedFilePath = writetoExcel.getColumnData("TaggedFilepath");
+//		String inputExcel = writetoExcel.getColumnData("Trainingdatapath");
+//
+//		PrepareTrainingDataService dataService = new PrepareTrainingDataService();
+//		// String
+//		// trainingfilepath1=dataService.prepareTrainingwithUserinput(inputs,taggedFilePath);
+//
+//		String trainingfilepath2 = dataService.prepareTrainingDatawithExcel(inputExcel, taggedFilePath);
+//
+//	}
 
 	public String prepareTrainingDatawithExcel(String inputExcel, String taggedFilePath) {
 		FileInputStream fis = null;
