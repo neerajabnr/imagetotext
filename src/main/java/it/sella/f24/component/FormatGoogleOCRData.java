@@ -54,7 +54,9 @@ public class FormatGoogleOCRData {
 		int xstart = descriptions.get(0).getxStart();
 		int yend= descriptions.get(0).getyEnd();
 		int curyend;
-		int curxstart;
+		int curxend;
+		int xprevend = 0;
+		//int xprevstart = descriptions.get(0).getxStart();
 		boolean appendstar=false;
 
 		for (DataDescription dataDescription : descriptions) {
@@ -64,10 +66,10 @@ public class FormatGoogleOCRData {
 				appendstar = false;
 			}
 			curyend = dataDescription.getyEnd();
-			curxstart = dataDescription.getxStart();
-
+			curxend = dataDescription.getxEnd();
+			xstart = dataDescription.getxStart();
 			String desc = dataDescription.getDescription();
-			if(curxstart-xstart>790) {
+			if(xprevend-xstart>0) {
 				//double res = curyend-yend;
 				///if(res>-5&&res<5) {
 					appendstar = true;
@@ -76,10 +78,12 @@ public class FormatGoogleOCRData {
 				
 			}
 			if(appendstar) {
-				ocrData = ocrData + desc + " **** ";
+				ocrData = ocrData +" ** "+ desc ;
 			}
 			else
 			ocrData = ocrData + desc + " ";
+			
+			xprevend = dataDescription.getxEnd();
 
 		}
 
