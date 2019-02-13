@@ -49,15 +49,15 @@ public class TrainandTestController {
 	}
 	
 	@RequestMapping(value = "/api/googleOCR/new", method = RequestMethod.POST)
-	public void callGoogleOCRnew(@RequestParam("image") MultipartFile file) throws IOException {
+	public String callGoogleOCRnew(@RequestParam("image") MultipartFile file) throws IOException {
 		//System.out.println("Calling Skew Service for image skewing");
 		byte[] decodeBase64 =file.getBytes();
 
 		System.out.println("Calling Google Service for processing of the Image data");
-		googleOCRService.readText_new(decodeBase64, "");
-		//String sentence = formatGoogleOCRData.getImageText(data);
-		//System.out.println("Google Data : "+sentence);
-		//return sentence;
+		Data data =  googleOCRService.readText_new(decodeBase64, "");
+		String sentence = formatGoogleOCRData.getImageText(data);
+		System.out.println("Google Data : "+sentence);
+		return sentence;
 	}
 
 }

@@ -379,7 +379,7 @@ public class GoogleService {
 		}
 	}
 	
-	public void readText_new(byte[] decodeBase64, String hash) throws IOException {
+	public Data readText_new(byte[] decodeBase64, String hash) throws IOException {
 		synchronized (hash) {
 			if (responseCache.containsKey(hash)) {
 				// return this.responseCache.get(hash);
@@ -544,10 +544,11 @@ public class GoogleService {
 					// System.out.println(responseToCache);
 					// this.responseCache.put(hash, responseToCache);
 					// return responseToCache;
+				returnData.setTextAnnotation(textAnnotations);
+				// System.out.println("Data-=-=-"+returnData);
+				return returnData;
 				}
-			//	returnData.setTextAnnotation(textAnnotations);
-				//System.out.println(returnData);
-				//return returnData;
+			
 			catch (Exception e) {
 				throw new RuntimeException("Error Google OCR: " + e.getMessage(), e);
 			}
