@@ -38,7 +38,7 @@ public class FormatGoogleOCRData {
 			
 			descriptions.sort((d1,d2)->{
 				double res = d1.getyEnd()-d2.getyEnd();
-				if(res>-5&&res<5) {
+				if(res>-10&&res<10) {
 					return d1.getxStart() - d2.getxStart();
 				}
 				else
