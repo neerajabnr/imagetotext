@@ -783,7 +783,7 @@ public class F24OCRServiceNew {
 			}
 		}
 		
-		 dob = convertDOB(dob);
+//		 dob = convertDOB(dob);
 
 		System.out.println("Date" + dob);
 

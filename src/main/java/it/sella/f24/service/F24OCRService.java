@@ -1088,7 +1088,7 @@ public class F24OCRService {
 			dob = format.format(date);
 		} catch (ParseException e1) {
 			e1.printStackTrace();
-			return dob;
+			return "{\"status\":\"Please enter the Date correctly\"}";
 		}
 		return dob;
 	}
