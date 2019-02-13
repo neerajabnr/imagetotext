@@ -114,6 +114,49 @@ public class NameFinderMETokenFinder {
 
 		return TokenizerME.train(samples, TokenizerFactory.create(null, "eng", null, true, null), mlParams);
 	}
+	
+	
+	
+	
+	@SuppressWarnings("unused")
+	public String f24PrepareTrainingFile(String filename) throws IOException, InvalidFormatException {
+
+		String encoding = "ISO-8859-1";
+		
+		String outputfilepath="src/main/resources/f24_training.bin";
+		TokenNameFinderModel nameFinderModel;
+//		FileInputStream r = new FileInputStream("src/main/resources/f24_training.bin");
+//
+//		if (r != null) {
+//			nameFinderModel = new TokenNameFinderModel(r);
+//		} else {
+
+
+			ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
+					new MockInputStreamFactory(new File(filename)), encoding));
+
+			TrainingParameters params = new TrainingParameters();
+			params.put(TrainingParameters.ITERATIONS_PARAM, 100);
+			params.put(TrainingParameters.CUTOFF_PARAM, 1);
+
+			nameFinderModel = NameFinderME.train("eng", null, sampleStream, params,
+					TokenNameFinderFactory.create(null, null, Collections.emptyMap(), new BioCodec()));
+
+			BufferedOutputStream modelOut = null;
+			try {
+				modelOut = new BufferedOutputStream(new FileOutputStream(outputfilepath));
+				nameFinderModel.serialize(modelOut);
+			} finally {
+				if (modelOut != null)
+					modelOut.close();
+			}
+//		}
+//		r.close();
+		return outputfilepath;
+
+	}
+	
+	
 
 	public List<Result> f24SectionSplit(String sentence) throws Exception {
 		if (tokenFinder == null)
@@ -154,6 +197,10 @@ public class NameFinderMETokenFinder {
 		return results;
 
 	}
+	
+	
+	
+	
 	
 	@SuppressWarnings("unused")
 	private TokenNameFinderModel f24SectionSplit() throws IOException, InvalidFormatException {

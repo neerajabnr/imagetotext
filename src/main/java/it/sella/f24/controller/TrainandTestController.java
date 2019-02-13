@@ -16,6 +16,9 @@ import it.sella.f24.bean.Result;
 import it.sella.f24.component.FormatGoogleOCRData;
 import it.sella.f24.service.GoogleService;
 import it.sella.f24.service.NERImagePredictionService;
+import it.sella.f24.service.PrepareTrainingDataService;
+import it.sella.f24.util.WritetoExcel;
+import opennlp.tools.namefind.TokenNameFinderModel;
 
 
 @RestController
@@ -30,6 +33,9 @@ public class TrainandTestController {
 	
 	@Autowired
 	private FormatGoogleOCRData formatGoogleOCRData;
+	
+	@Autowired
+	private PrepareTrainingDataService trainingService;
 	
 	@RequestMapping(value = "/api/predict", method = RequestMethod.POST)
 	public List<Result> test(@RequestParam("image") MultipartFile file,@RequestParam("instanceName") String instanceName) throws Exception {
@@ -58,6 +64,16 @@ public class TrainandTestController {
 		String sentence = formatGoogleOCRData.getImageText(data);
 		System.out.println("Google Data : "+sentence);
 		return sentence;
+	}
+	
+	
+	@RequestMapping(value = "/api/training", method = RequestMethod.POST)
+	public String callTrainingService() throws IOException {
+		WritetoExcel writetoExcel = new WritetoExcel();
+
+		String taggedFilePath = writetoExcel.getColumnData("TaggedFilepath");
+		String inputExcel = writetoExcel.getColumnData("Trainingdatapath");
+		return trainingService.prepareTrainingDatawithExcel(inputExcel, taggedFilePath);
 	}
 
 }
