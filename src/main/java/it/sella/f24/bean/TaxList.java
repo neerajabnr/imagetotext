@@ -197,4 +197,14 @@ public class TaxList {
         this.additionalProperties.put(name, value);
     }
 
+	@Override
+	public String toString() {
+		return "TaxList [section=" + section + ", taxCode=" + taxCode + ", receiverCode=" + receiverCode
+				+ ", isAmendment=" + isAmendment + ", isRealEstateVariation=" + isRealEstateVariation + ", isDeposit="
+				+ isDeposit + ", isFinalPayment=" + isFinalPayment + ", realEstateCount=" + realEstateCount
+				+ ", referenceMonth=" + referenceMonth + ", referenceYear=" + referenceYear + ", deductionAmount="
+				+ deductionAmount + ", taxAmount=" + taxAmount + ", compensationAmount=" + compensationAmount
+				+ ", additionalProperties=" + additionalProperties + "]";
+	}
+    
 }

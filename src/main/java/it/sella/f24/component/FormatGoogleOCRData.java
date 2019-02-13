@@ -1,6 +1,7 @@
 package it.sella.f24.component;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -32,7 +33,16 @@ public class FormatGoogleOCRData {
 			}
 		}
 		try {
-			descriptions.sort(new DescComparator());
+			//Comparator<DataDescription> descComp = (DataDescription d1, DataDescription d2)-> {if(d1.getyStart().equals(d2.getyStart())) else d1.getyStart() - d2.getyStart()}
+				
+			
+			descriptions.sort((d1,d2)->{
+				if(d1.getyStart()==d2.getyStart()) {
+					return d1.getxStart() - d2.getxStart();
+				}
+				else
+				return d1.getyStart() - d2.getyStart();
+			});
 		} catch (Exception e) {
 //			e.printStackTrace();
 

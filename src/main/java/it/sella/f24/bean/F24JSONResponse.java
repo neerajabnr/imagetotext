@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "SuppressWarning",
-    "accountID",
+    "accountNumber",
     "executionDate",
     "documentAmount",
     "currency",
@@ -29,8 +29,8 @@ public class F24JSONResponse {
 
     @JsonProperty("SuppressWarning")
     private String suppressWarning;
-    @JsonProperty("accountID")
-    private String accountID;
+    @JsonProperty("accountNumber")
+    private String accountNumber;
     @JsonProperty("executionDate")
     private String executionDate;
     @JsonProperty("documentAmount")
@@ -62,14 +62,14 @@ public class F24JSONResponse {
         this.suppressWarning = suppressWarning;
     }
 
-    @JsonProperty("accountID")
-    public String getAccountID() {
-        return accountID;
+    @JsonProperty("accountNumber")
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    @JsonProperty("accountID")
-    public void setAccountID(String accountID) {
-        this.accountID = accountID;
+    @JsonProperty("accountNumber")
+    public void setAccountNumber(String accountID) {
+        this.accountNumber = accountID;
     }
 
     @JsonProperty("executionDate")
@@ -171,5 +171,16 @@ public class F24JSONResponse {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
+
+	@Override
+	public String toString() {
+		return "F24JSONResponse [suppressWarning=" + suppressWarning + ", accountNumber=" + accountNumber
+				+ ", executionDate=" + executionDate + ", documentAmount=" + documentAmount + ", currency=" + currency
+				+ ", officeCode=" + officeCode + ", deedCode=" + deedCode + ", operationCode=" + operationCode
+				+ ", payer=" + payer + ", payerAgent=" + payerAgent + ", taxList=" + taxList + ", additionalProperties="
+				+ additionalProperties + "]";
+	}
+    
+    
 
 }

@@ -1079,7 +1079,7 @@ public class F24OCRService {
 		return value;
 	}
 
-	private String convertDOB(String dob) {
+	public String convertDOB(String dob) {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
 		Date date = null;
@@ -1088,7 +1088,7 @@ public class F24OCRService {
 			dob = format.format(date);
 		} catch (ParseException e1) {
 			e1.printStackTrace();
-			return "\"{\"status\":\"Date is formatted incorrectly\"}\"";
+			return dob;
 		}
 		return dob;
 	}

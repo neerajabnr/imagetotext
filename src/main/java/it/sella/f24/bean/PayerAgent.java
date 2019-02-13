@@ -54,4 +54,12 @@ public class PayerAgent {
         this.additionalProperties.put(name, value);
     }
 
+	@Override
+	public String toString() {
+		return "PayerAgent [type=" + type + ", fiscalCode=" + fiscalCode + ", additionalProperties="
+				+ additionalProperties + "]";
+	}
+    
+    
+
 }

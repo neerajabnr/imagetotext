@@ -1079,7 +1079,7 @@ public class F24OCRServiceNew {
 		return value;
 	}
 
-	private String convertDOB(String dob) {
+	public String convertDOB(String dob) {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
 		Date date = null;

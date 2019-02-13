@@ -145,4 +145,14 @@ public class Payer {
         this.additionalProperties.put(name, value);
     }
 
+	@Override
+	public String toString() {
+		return "Payer [name=" + name + ", surname=" + surname + ", businessName=" + businessName + ", fiscalCode="
+				+ fiscalCode + ", birthDate=" + birthDate + ", birthPlace=" + birthPlace + ", birthProvince="
+				+ birthProvince + ", sex=" + sex + ", address=" + address + ", additionalProperties="
+				+ additionalProperties + "]";
+	}
+    
+    
+
 }
