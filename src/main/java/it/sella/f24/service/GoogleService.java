@@ -264,6 +264,56 @@ public class GoogleService {
 			}
 		}
 	}
+	
+	
+	
+	public BatchAnnotateImagesResponse readGoogleText(byte[] decodeBase64, String hash) throws IOException {
+		synchronized (hash) {
+			if (responseCache.containsKey(hash)) {
+				// return this.responseCache.get(hash);
+			}
+
+			System.out.println("Google OCR: processing file");
+			//// logger.info("Google OCR: processing file");
+			PrintStream out = System.out;
+			List<AnnotateImageRequest> requests = new ArrayList<>();
+
+			// ByteString imgBytes = ByteString.readFrom(new FileInputStream(decodeBase64));
+			ByteString imgBytes = ByteString.copyFrom(decodeBase64);
+
+			Image img = Image.newBuilder().setContent(imgBytes).build();
+
+			// Saving the image
+
+			// ByteArrayInputStream input_stream= new ByteArrayInputStream(decodeBase64);
+			// BufferedImage final_buffered_image = ImageIO.read(input_stream);
+			// ImageIO.write(final_buffered_image , "jpg", new File("D:\\Sample.jpg") );
+			// System.out.println("Saved the image");
+			// ImageIO.write(final_buffered_image , "jpg", new File("Sample.jpg") );
+
+			Feature feat = Feature.newBuilder().setType(Feature.Type.DOCUMENT_TEXT_DETECTION).build();
+			AnnotateImageRequest.Builder request = AnnotateImageRequest.newBuilder().addFeatures(feat).setImage(img);
+
+			if (ConfigProperties.getInstance().getLang() == "ENGLISH") {
+				ImageContext imageContext = ImageContext.newBuilder().addLanguageHints("en").build();
+				request.setImageContext(imageContext);
+			} else if (ConfigProperties.getInstance().getLang() == "ITALIAN") {
+				ImageContext imageContext = ImageContext.newBuilder().addLanguageHints("it").build();
+				request.setImageContext(imageContext);
+			}
+
+			requests.add(request.build());
+
+			try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
+				BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
+				return response;
+			}catch (Exception e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+			
+	}
 
 	private String fetchData(String responseToCache, String string1, String string2) {
 		Pattern pattern = Pattern.compile(string1 + "(.*?)" + string2);

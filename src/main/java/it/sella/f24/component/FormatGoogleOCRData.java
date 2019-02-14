@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import it.sella.f24.bean.Data;
@@ -77,8 +78,15 @@ public class FormatGoogleOCRData {
 				//}
 				
 			}
+			
+			//if(StringUtils.isAlpha(desc)) {
+				//desc="";
+			//}
+			//if(xstart-xprevend<3) {
+				//ocrData=ocrData+" # "+desc+" ";
+			//}
 			if(appendstar) {
-				ocrData = ocrData +" ** "+ desc ;
+				ocrData = ocrData +" ** "+ desc + " ";
 			}
 			else
 			ocrData = ocrData + desc + " ";
@@ -86,9 +94,15 @@ public class FormatGoogleOCRData {
 			xprevend = dataDescription.getxEnd();
 
 		}
-
+		ocrData = removeData(ocrData);
 		return ocrData;
 
 	}
-
+	
+	private static String removeData(String data) {
+		//data = data.replaceAll("[A-Z]{1,}|[a-z]{1,}", "");
+		data = data.replaceAll("10 %", "");
+		data = data.replaceAll("21 %", "");
+		return data;
+	}
 }

@@ -293,29 +293,13 @@ public class Sample {
 //			e.printStackTrace();
 //		}
 		
-		
+		String data = "123ACbnnmmm{}";
+		System.out.println(removeData(data));
 		
 //		String accountID="14537780";
 //		String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
 //		System.out.println(URL);
-		String currency="4300";
 		
-		currency=currency.replaceAll("[A-Za-z]", "");
-		int dotcount=0;
-		int dotPos=0;
-		for(int i=0;i<currency.length();i++) {
-			if(currency.charAt(i)=='.') {
-				dotcount++;	
-				dotPos=i;
-			}
-		}
-		
-		if(dotcount>1) {
-			
-			String temp=currency.substring(0, dotPos).replace(".", "")+ currency.substring(dotPos, currency.length());
-			System.out.println(temp);
-		}
-
 	}
 
 	private static String removeSpecialChar(String str) {
@@ -325,5 +309,14 @@ public class Sample {
 		// [^a-zA-Z0-9\\s*,]
 		return op;
 	}
+	
+	private static String removeData(String data) {
+		//StringUtils.isNumeric(data);
+		data = data.replaceAll("[A-Za-z]", "");
+		data = data.replaceAll("10 %", "");
+		data = data.replaceAll("21 %", "");
+		return data;
+	}
+
 
 }

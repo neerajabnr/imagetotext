@@ -44,6 +44,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.client.util.Base64;
+import com.google.cloud.vision.v1.BatchAnnotateImagesResponse;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
@@ -425,6 +426,32 @@ public class F24Controller {
 		
 //		String f24ImageToText=f24ImageToJSON_new(f24Form);
 		return f24ImageToText;
+	}
+	
+	
+	@RequestMapping(value = "/api/image/getgoogledata", method = RequestMethod.PUT)
+	public Data f24getGoogleData(@RequestParam("file") MultipartFile file) {
+		System.out.println("Hello");
+		String encodeBase64String = "";
+		try {
+
+			encodeBase64String = Base64.encodeBase64String(file.getBytes());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		byte[] decodeBase64 = Base64.decodeBase64(encodeBase64String);
+
+		System.out.println("Calling Google Service for processing of the Image data");
+		Data readGoogleText =null;
+		try {
+			 readGoogleText = googleService.readText(decodeBase64, "");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return readGoogleText;
 	}
 
 	@RequestMapping(value = "/api/imageencode", method = RequestMethod.PUT)
