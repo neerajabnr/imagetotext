@@ -421,9 +421,9 @@ public class F24Controller {
 		// String f24ImageToText = f24ImageToJSON(f24Form);
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 
-//		String f24ImageToText = f24test(f24Form);
+		String f24ImageToText = f24test(f24Form);
 		
-		String f24ImageToText=f24ImageToJSON_new(f24Form);
+//		String f24ImageToText=f24ImageToJSON_new(f24Form);
 		return f24ImageToText;
 	}
 

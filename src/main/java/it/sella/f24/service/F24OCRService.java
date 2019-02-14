@@ -139,18 +139,17 @@ public class F24OCRService {
 		}
 		try {
 			descriptions.sort(new DescComparator());
-		}catch (Exception e) {
-//			e.printStackTrace();
+		} catch (Exception e) {
+			// e.printStackTrace();
 			logger.info("Comparision method violates it's general contract");
 			System.out.println("Comparision method violates it's general contract");
 		}
-		
+
 		System.out.println("Data Description");
-		int k=1,ystart=0;
+		int k = 1, ystart = 0;
 		for (DataDescription dataDescription : descriptions) {
-			if(k==1)
-			{
-				ystart=dataDescription.getyStart();
+			if (k == 1) {
+				ystart = dataDescription.getyStart();
 				System.out.println(ystart);
 				System.out.println(dataDescription.getDescription());
 			}
@@ -159,7 +158,7 @@ public class F24OCRService {
 			if ((xstart - xprevEnd) > 300) {
 				ocrData = ocrData + "**" + " ";
 			}
-			if(dataDescription.getyStart()<ystart/3) {
+			if (dataDescription.getyStart() < ystart / 3) {
 				System.out.println(dataDescription.getDescription());
 			}
 
@@ -423,8 +422,8 @@ public class F24OCRService {
 				logger.info("After process row");
 				if (checkCount(row) > 9) {
 					row = processRow(row);
-				}else {
-					row=row.replaceAll("[^a-zA-Z0-9\\s]", "");
+				} else {
+					row = row.replaceAll("[^a-zA-Z0-9\\s]", "");
 				}
 				System.out.println("row" + row);
 				logger.info("Row to NLP:" + row.trim());
@@ -620,35 +619,31 @@ public class F24OCRService {
 				if (StringUtils.isAlphanumeric(result.getValue()))
 					codiceFiscale = codiceFiscale + result.getValue();
 			}
-//			else if (result.getKey().contains("Anagrafici")) {
-//				if (StringUtils.isAlpha(result.getValue()))
-//					cognome = cognome + result.getValue() + " ";
-//			}
+			// else if (result.getKey().contains("Anagrafici")) {
+			// if (StringUtils.isAlpha(result.getValue()))
+			// cognome = cognome + result.getValue() + " ";
+			// }
 
 			else if (result.getKey().contains("Name")) {
 				nome = nome + result.getValue() + " ";
-			}
-			else if (result.getKey().contains("DOB")) {
+			} else if (result.getKey().contains("DOB")) {
 				if (StringUtils.isNumeric(result.getValue()) || StringUtils.isAlpha(result.getValue())) {
 					dob = dob + result.getValue();
-				}else {
-					dob = dob+"";
+				} else {
+					dob = dob + "";
 				}
 			}
 
 			else if (result.getKey().contains("Sex")) {
 				if (StringUtils.isAlpha(result.getValue()))
 					sex = sex + result.getValue();
-			}
-			else if (result.getKey().contains("City")) {
+			} else if (result.getKey().contains("City")) {
 				if (StringUtils.isAlpha(result.getValue()))
 					city = city + result.getValue() + " ";
-			}
-			else if (result.getKey().contains("Prov")) {
+			} else if (result.getKey().contains("Prov")) {
 				if (StringUtils.isAlpha(result.getValue()))
 					prov = prov + result.getValue();
-			}
-			else if (result.getKey().contains("operazione")) {
+			} else if (result.getKey().contains("operazione")) {
 				operazione = operazione + result.getValue() + ";";
 			}
 
@@ -660,8 +655,7 @@ public class F24OCRService {
 				} else {
 					seizone = seizone + ";";
 				}
-			}
-			else if (result.getKey().contains("tributo")) {
+			} else if (result.getKey().contains("tributo")) {
 				System.out.println("tributo" + result.getValue());
 				if (StringUtils.isNumeric(result.getValue())) {
 					if (result.getValue().length() > 4) {
@@ -672,8 +666,7 @@ public class F24OCRService {
 				} else {
 					tributo = tributo + "9999" + ";";
 				}
-			}
-			else if (result.getKey().contains("codice")) {
+			} else if (result.getKey().contains("codice")) {
 				System.out.println("codice" + result.getValue());
 				if (StringUtils.isAlphanumeric(result.getValue())) {
 					if (result.getValue().length() > 4) {
@@ -685,73 +678,62 @@ public class F24OCRService {
 					codice = codice + "A999" + ";";
 				}
 
-			}
-			else if (result.getKey().contains("raw")) {
+			} else if (result.getKey().contains("raw")) {
 				System.out.println("raw" + result.getValue());
 				raw = raw + result.getValue() + ";";
-			}
-			else if (result.getKey().contains("immob")) {
+			} else if (result.getKey().contains("immob")) {
 				System.out.println("immob" + result.getValue());
 				immob = immob + result.getValue() + ";";
-			}
-			else if (result.getKey().contains("acc")) {
+			} else if (result.getKey().contains("acc")) {
 				System.out.println("acc" + result.getValue());
 				acc = acc + result.getValue() + ";";
-			}
-			else if (result.getKey().contains("saldo")) {
+			} else if (result.getKey().contains("saldo")) {
 				saldo = saldo + result.getValue() + ";";
-			}
-			else if (result.getKey().contains("num")) {
+			} else if (result.getKey().contains("num")) {
 				if (StringUtils.isNumeric(result.getValue())) {
 					System.out.println("num" + result.getValue());
 					num = num + result.getValue() + ";";
-				}else {
+				} else {
 					num = num + "0" + ";";
 				}
-			}
-			else if (result.getKey().contains("mese")) {
+			} else if (result.getKey().contains("mese")) {
 				System.out.println("mese" + result.getValue());
 				if (StringUtils.isNumeric(result.getValue())) {
 					mese = mese + result.getValue() + ";";
-				}else {
+				} else {
 					mese = mese + "9999" + ";";
 				}
-			}
-			else if (result.getKey().contains("anno")) {
+			} else if (result.getKey().contains("anno")) {
 				System.out.println("anno" + result.getValue());
 				if (StringUtils.isNumeric(result.getValue())) {
 					anno = anno + result.getValue() + ";";
-				}else {
+				} else {
 					anno = anno + "9999" + ";";
 				}
-			}
-			else if (result.getKey().contains("detrazione")) {
+			} else if (result.getKey().contains("detrazione")) {
 				detrazione = detrazione + result.getValue() + ";";
-			}
-			else if (result.getKey().contains("dobito")) {
+			} else if (result.getKey().contains("dobito")) {
 				System.out.println("dobito" + result.getValue());
 				dobito = dobito + result.getValue() + ";";
-			}
-			else if (result.getKey().contains("credito")) {
+			} else if (result.getKey().contains("credito")) {
 				credito = credito + result.getValue() + ";";
-			}
-			else if (result.getKey().contains("euro")) {
+			} else if (result.getKey().contains("euro")) {
 				euro = euro + result.getValue();
-			}else {
+			} else {
 				System.out.println("Empty List");
-				logger.info("Values are not present"); 
+				logger.info("Values are not present");
 				return "{\"status\":\"KO\"}";
 			}
 		}
 
-//		cognome = cognome.trim();
+		// cognome = cognome.trim();
 		nome = nome.trim();
 		dob = dob.replaceAll("[A-Z]", "");
 		city = city.trim();
 		// Replacing the keywords with empty space in both the section1
 
 		codiceFiscale = searchKeyword(codiceFiscale);
-//		cognome = searchKeyword(cognome);
+		// cognome = searchKeyword(cognome);
 		nome = searchKeyword(nome);
 		dob = searchKeyword(dob);
 		sex = searchKeyword(sex);
@@ -765,14 +747,14 @@ public class F24OCRService {
 			}
 			codiceFiscale = temp;
 		}
-		if(!nome.isEmpty()) {
+		if (!nome.isEmpty()) {
 			System.out.println(nome);
-			nome=nome.replace("**", ";");
-			String[] splitnome=nome.split(";");
-			cognome=splitnome[0];
-			nome=splitnome[1];
+			nome = nome.replace("**", ";");
+			String[] splitnome = nome.split(";");
+			cognome = splitnome[0];
+			nome = splitnome[1];
 		}
-		if(!dob.isEmpty()) {
+		if (!dob.isEmpty()) {
 			dob = dob.replaceAll("O", "0");
 			if (dob.length() > 8) {
 				if (StringUtils.isNumeric(dob.substring(0, 8))) {
@@ -782,7 +764,7 @@ public class F24OCRService {
 				}
 			}
 		}
-		
+
 		// dob = convertDOB(dob);
 
 		System.out.println("Date" + dob);
@@ -812,9 +794,9 @@ public class F24OCRService {
 		// Replacing * with , in the debit values
 		dobito = dobito.replace("*", ".");
 		euro = euro.replace(",", ".");
-		
-		dobito=replaceAlphainCurrency(dobito);
-		euro=replaceAlphainCurrency(euro);
+
+		dobito = replaceAlphaandDotinCurrency(dobito);
+		euro = replaceAlphaandDotinCurrency(euro);
 
 		StringTokenizer sztokenizer = new StringTokenizer(seizone, ";");
 		StringTokenizer ttokenizer = new StringTokenizer(tributo, ";");
@@ -1039,9 +1021,23 @@ public class F24OCRService {
 		return buffer.toString();
 
 	}
-	private String replaceAlphainCurrency(String currency) {
-		
-		currency=currency.replaceAll("[A-Za-z]", "");
+
+	private String replaceAlphaandDotinCurrency(String currency) {
+
+		currency = currency.replaceAll("[A-Za-z]", "");
+		int dotcount = 0;
+		int dotPos = 0;
+		for (int i = 0; i < currency.length(); i++) {
+			if (currency.charAt(i) == '.') {
+				dotcount++;
+				dotPos = i;
+			}
+		}
+
+		if (dotcount > 1) {
+			currency = currency.substring(0, dotPos).replace(".", "") + currency.substring(dotPos, currency.length());
+		}
+
 		return currency;
 	}
 
@@ -1214,12 +1210,12 @@ public class F24OCRService {
 
 		return ocrData;
 	}
-	
+
 	private static String removeSpecialChar(String str) {
 		String op = str.replaceAll("[{}()<>]", "");
 		System.out.println(op);
-		
-		//[^a-zA-Z0-9\\s*,]
+
+		// [^a-zA-Z0-9\\s*,]
 		return op;
 	}
 

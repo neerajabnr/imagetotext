@@ -770,6 +770,7 @@ public class F24OCRServiceNew {
 			nome=nome.replace("**", ";");
 			String[] splitnome=nome.split(";");
 			cognome=splitnome[0];
+			if(splitnome.length>=2)
 			nome=splitnome[1];
 		}
 		if(!dob.isEmpty()) {
@@ -813,8 +814,8 @@ public class F24OCRServiceNew {
 		dobito = dobito.replace("*", ".");
 		euro = euro.replace(",", ".");
 		
-		dobito=replaceAlphainCurrency(dobito);
-		euro=replaceAlphainCurrency(euro);
+		dobito=replaceAlphaandDotinCurrency(dobito);
+		euro=replaceAlphaandDotinCurrency(euro);
 
 		StringTokenizer sztokenizer = new StringTokenizer(seizone, ";");
 		StringTokenizer ttokenizer = new StringTokenizer(tributo, ";");
@@ -1039,9 +1040,22 @@ public class F24OCRServiceNew {
 		return buffer.toString();
 
 	}
-	private String replaceAlphainCurrency(String currency) {
+	private String replaceAlphaandDotinCurrency(String currency) {
 		
 		currency=currency.replaceAll("[A-Za-z]", "");
+		int dotcount=0;
+		int dotPos=0;
+		for(int i=0;i<currency.length();i++) {
+			if(currency.charAt(i)=='.') {
+				dotcount++;	
+				dotPos=i;
+			}
+		}
+		
+		if(dotcount>1) {
+			currency=currency.substring(0, dotPos).replace(".", "")+ currency.substring(dotPos, currency.length());
+		}
+		
 		return currency;
 	}
 

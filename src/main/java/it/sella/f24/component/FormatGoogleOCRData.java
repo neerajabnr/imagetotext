@@ -37,11 +37,12 @@ public class FormatGoogleOCRData {
 				
 			
 			descriptions.sort((d1,d2)->{
-				if(d1.getyStart()==d2.getyStart()) {
+				double res = d1.getyEnd()-d2.getyEnd();
+				if(res>-10&&res<10) {
 					return d1.getxStart() - d2.getxStart();
 				}
 				else
-				return d1.getyStart() - d2.getyStart();
+				return d1.getyEnd() - d2.getyEnd();
 			});
 		} catch (Exception e) {
 //			e.printStackTrace();
@@ -50,11 +51,39 @@ public class FormatGoogleOCRData {
 		}
 
 		System.out.println("Data Description");
+		int xstart = descriptions.get(0).getxStart();
+		int yend= descriptions.get(0).getyEnd();
+		int curyend;
+		int curxend;
+		int xprevend = 0;
+		//int xprevstart = descriptions.get(0).getxStart();
+		boolean appendstar=false;
 
 		for (DataDescription dataDescription : descriptions) {
-
+			if(appendstar) {
+				//yend = dataDescription.getyEnd();
+				//xstart = dataDescription.getxStart();
+				appendstar = false;
+			}
+			curyend = dataDescription.getyEnd();
+			curxend = dataDescription.getxEnd();
+			xstart = dataDescription.getxStart();
 			String desc = dataDescription.getDescription();
+			if(xprevend-xstart>0) {
+				//double res = curyend-yend;
+				///if(res>-5&&res<5) {
+					appendstar = true;
+										
+				//}
+				
+			}
+			if(appendstar) {
+				ocrData = ocrData +" ** "+ desc ;
+			}
+			else
 			ocrData = ocrData + desc + " ";
+			
+			xprevend = dataDescription.getxEnd();
 
 		}
 

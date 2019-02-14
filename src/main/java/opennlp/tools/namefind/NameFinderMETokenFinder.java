@@ -274,7 +274,7 @@ public class NameFinderMETokenFinder {
 	private TokenNameFinderModel f24_Section1_Train() throws IOException, InvalidFormatException {
 		String encoding = "ISO-8859-1";
 		TokenNameFinderModel nameFinderModel;
-	FileInputStream r = new FileInputStream("src/main/resources/f24_sec1model.bin");
+		FileInputStream r = new FileInputStream("src/main/resources/f24_sec1model.bin");
 
 		if (r != null) {
 			nameFinderModel = new TokenNameFinderModel(r);

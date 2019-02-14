@@ -295,9 +295,27 @@ public class Sample {
 		
 		
 		
-		String accountID="14537780";
-		String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
-		System.out.println(URL);
+//		String accountID="14537780";
+//		String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
+//		System.out.println(URL);
+		String currency="4300";
+		
+		currency=currency.replaceAll("[A-Za-z]", "");
+		int dotcount=0;
+		int dotPos=0;
+		for(int i=0;i<currency.length();i++) {
+			if(currency.charAt(i)=='.') {
+				dotcount++;	
+				dotPos=i;
+			}
+		}
+		
+		if(dotcount>1) {
+			
+			String temp=currency.substring(0, dotPos).replace(".", "")+ currency.substring(dotPos, currency.length());
+			System.out.println(temp);
+		}
+
 	}
 
 	private static String removeSpecialChar(String str) {

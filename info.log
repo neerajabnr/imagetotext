@@ -473,3 +473,215 @@
 
 [http-nio-6000-exec-3] INFO  it.sella.f24.service.F24OCRServiceNew  - Euro:	86.00
 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service : **  . F24   DELEGA IRREVOCABILE A : MODELLO DI PAGAMENTO UNIFICATO AGENZIA PROV PER L ' ACCREDITO ALLA TESORERIA COMPETENTE CONTRIBUENTE **     CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     **  DATI ANAGRAFICI BARBIERI ** LORIS      }       30 10 1 947 FLEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO             .     .          EL 77777777777777777777 3944 H 5 3 3 0303 2018 43 , 00 ER 3918 D 6 0 0 2 0202 2018 43 , 00 11 SALDO EURO : ) 86 , 00 FINALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section Result
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B , ** DATI ANAGRAFICI BARBIERI ** LORIS } 30 10 1 947 FLEGNAGO ** VR CODICE FISCALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Constants EL 77777777777777777777 3944 H 5 3 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL 77777777777777777777 3944 H 5 3 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - No match
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Variables 0303 2018 43 , 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Constants ER 3918 D 6 0 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER 3918 D 6 0 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - No match
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Variables 2 0202 2018 43 , 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - euro 86 , 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1:	CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B   ** DATI ANAGRAFICI BARBIERI ** LORIS   30 10 1 947 FLEGNAGO ** VR CODICE FISCALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2Constants:	EL  3944 H 5 3 3 ##ER 3918 D 6 0 0 ##
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2Variables:	0303 2018 43*00 ##2 0202 2018 43*00 ##
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	86,00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Operazione:	
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale: 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome: 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome: 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita: 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso: 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune: 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov: 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Operazione:;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row count:0
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - raw:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - immob:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - acc:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - saldo:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - num:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - detrazione:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service : **  . F24   DELEGA IRREVOCABILE A : MODELLO DI PAGAMENTO UNIFICATO AGENZIA PROV PER L ' ACCREDITO ALLA TESORERIA COMPETENTE CONTRIBUENTE **     CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     **  DATI ANAGRAFICI BARBIERI ** LORIS      }       30 10 1 947 FLEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO             .     .          EL 77777777777777777777 3944 H 5 3 3 0303 2018 43 , 00 ER 3918 D 6 0 0 2 0202 2018 43 , 00 11 SALDO EURO : ) 86 , 00 FINALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section Result
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B , ** DATI ANAGRAFICI BARBIERI ** LORIS } 30 10 1 947 FLEGNAGO ** VR CODICE FISCALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Constants EL 77777777777777777777 3944 H 5 3 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:EL 77777777777777777777 3944 H 5 3 3 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - No match
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Variables 0303 2018 43 , 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Constants ER 3918 D 6 0 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row:ER 3918 D 6 0 0 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - No match
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Variables 2 0202 2018 43 , 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - euro 86 , 00 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1:	CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B   ** DATI ANAGRAFICI BARBIERI ** LORIS   30 10 1 947 FLEGNAGO ** VR CODICE FISCALE 
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2Constants:	EL  3944 H 5 3 3 ##ER 3918 D 6 0 0 ##
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2Variables:	0303 2018 43*00 ##2 0202 2018 43*00 ##
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	86,00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Operazione:	
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - After process row
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row to NLP:EL 3944 H533
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - [Result [key=Sezione, value=EL], Result [key=tributo, value=3944], Result [key=codice, value=H533]]
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - After process row
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row to NLP:ER 3918 D600
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - [Result [key=Sezione, value=ER], Result [key=tributo, value=3918], Result [key=codice, value=D600]]
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row to NLP:0303 2018 43*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - [Result [key=mese, value=0303], Result [key=anno, value=2018], Result [key=dobito, value=43*00], Result [key=raw, value=0], Result [key=immob, value=0], Result [key=acc, value=0], Result [key=saldo, value=0], Result [key=num, value=0], Result [key=detrazione, value=0], Result [key=credito, value=0]]
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row to NLP:2 0202 2018 43*00
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - [Result [key=num, value=2], Result [key=mese, value=0202], Result [key=anno, value=2018], Result [key=dobito, value=43*00], Result [key=raw, value=0], Result [key=immob, value=0], Result [key=acc, value=0], Result [key=saldo, value=0], Result [key=detrazione, value=0], Result [key=credito, value=0]]
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale: BRBLRS47R30E512B
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Cognome: BARBIERI 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Nome:  LORIS
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita: 30101947
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Sesso: 
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Comune: FLEGNAGO
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Prov: VR
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Operazione:;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Row count:2
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Codice:	H533;D600;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - raw:	0;0;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - immob:	0;0;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - acc:	0;0;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - saldo:	0;0;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - num:	0;2;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Mese:	0303;0202;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - detrazione:	0;0;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Dobito:	43.00;43.00;
+
+[http-nio-6000-exec-2] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Data from Google Service : **  . F24   DELEGA IRREVOCABILE A : MODELLO DI PAGAMENTO UNIFICATO AGENZIA PROV PER L ' ACCREDITO ALLA TESORERIA COMPETENTE CONTRIBUENTE **     CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B  ,     **  DATI ANAGRAFICI BARBIERI ** LORIS      }       30 10 1 947 FLEGNAGO ** VR CODICE FISCALE   ,  ,  ,     **   MOTIVO DEL PAGAMENTO             .     .          EL 77777777777777777777 3944 H 5 3 3 0303 2018 43 , 00 ER 3918 D 6 0 0 2 0202 2018 43 , 00 11 SALDO EURO : ) 86 , 00 FINALE 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section Result
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section1 CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B , ** DATI ANAGRAFICI BARBIERI ** LORIS } 30 10 1 947 FLEGNAGO ** VR CODICE FISCALE 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Constants EL 77777777777777777777 3944 H 5 3 3 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:EL 77777777777777777777 3944 H 5 3 3 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - No match
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Variables 0303 2018 43 , 00 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Constants ER 3918 D 6 0 0 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row:ER 3918 D 6 0 0 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - No match
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Variables 2 0202 2018 43 , 00 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - euro 86 , 00 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section1:	CODICE FISCALE BRBLRS 4 7 R 30 E 5 1 2 B   ** DATI ANAGRAFICI BARBIERI ** LORIS   30 10 1 947 FLEGNAGO ** VR CODICE FISCALE 
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section2Constants:	EL  3944 H 5 3 3 ##ER 3918 D 6 0 0 ##
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section2Variables:	0303 2018 43*00 ##2 0202 2018 43*00 ##
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Euro:	86,00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Operazione:	
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - After process row
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row to NLP:EL 3944 H533
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - [Result [key=Sezione, value=EL], Result [key=tributo, value=3944], Result [key=codice, value=H533]]
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - After process row
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row to NLP:ER 3918 D600
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - [Result [key=Sezione, value=ER], Result [key=tributo, value=3918], Result [key=codice, value=D600]]
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row to NLP:0303 2018 43*00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - [Result [key=mese, value=0303], Result [key=anno, value=2018], Result [key=dobito, value=43*00], Result [key=raw, value=0], Result [key=immob, value=0], Result [key=acc, value=0], Result [key=saldo, value=0], Result [key=num, value=0], Result [key=detrazione, value=0], Result [key=credito, value=0]]
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row to NLP:2 0202 2018 43*00
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - [Result [key=num, value=2], Result [key=mese, value=0202], Result [key=anno, value=2018], Result [key=dobito, value=43*00], Result [key=raw, value=0], Result [key=immob, value=0], Result [key=acc, value=0], Result [key=saldo, value=0], Result [key=detrazione, value=0], Result [key=credito, value=0]]
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section1 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - CodiceFiscale: BRBLRS47R30E512B
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Cognome: BARBIERI 
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Nome:  LORIS
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - DataDiNascita: 30101947
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Sesso: 
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Comune: FLEGNAGO
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Prov: VR
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Operazione:;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Row count:2
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Section2 Result data:
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Seizone:	EL;ER;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - tributo:	3944;3918;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Codice:	H533;D600;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - raw:	0;0;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - immob:	0;0;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - acc:	0;0;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - saldo:	0;0;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - num:	0;2;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Mese:	0303;0202;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Anno:	2018;2018;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - detrazione:	0;0;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Dobito:	43.00;43.00;
+
+[http-nio-6000-exec-9] INFO  it.sella.f24.service.F24OCRService  - Euro:	86.00
+
