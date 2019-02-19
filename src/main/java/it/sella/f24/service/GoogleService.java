@@ -16,6 +16,7 @@ import it.sella.f24.bean.BoundingPoly;
 import it.sella.f24.bean.Data;
 import it.sella.f24.bean.TextAnnotation;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.codehaus.jackson.annotate.JsonMethod;
@@ -267,49 +268,114 @@ public class GoogleService {
 	
 	
 	
-	public BatchAnnotateImagesResponse readGoogleText(byte[] decodeBase64, String hash) throws IOException {
+	public Data readGoogleText(byte[] decodeBase64, String hash) throws IOException {
 		synchronized (hash) {
-			if (responseCache.containsKey(hash)) {
-				// return this.responseCache.get(hash);
-			}
+			synchronized (hash) {
+				if (responseCache.containsKey(hash)) {
+					// return this.responseCache.get(hash);
+				}
 
-			System.out.println("Google OCR: processing file");
-			//// logger.info("Google OCR: processing file");
-			PrintStream out = System.out;
-			List<AnnotateImageRequest> requests = new ArrayList<>();
+				System.out.println("Google OCR: processing file");
+				//// logger.info("Google OCR: processing file");
+				PrintStream out = System.out;
+				List<AnnotateImageRequest> requests = new ArrayList<>();
 
-			// ByteString imgBytes = ByteString.readFrom(new FileInputStream(decodeBase64));
-			ByteString imgBytes = ByteString.copyFrom(decodeBase64);
+				// ByteString imgBytes = ByteString.readFrom(new FileInputStream(decodeBase64));
+				ByteString imgBytes = ByteString.copyFrom(decodeBase64);
 
-			Image img = Image.newBuilder().setContent(imgBytes).build();
+				Image img = Image.newBuilder().setContent(imgBytes).build();
 
-			// Saving the image
+				// Saving the image
 
-			// ByteArrayInputStream input_stream= new ByteArrayInputStream(decodeBase64);
-			// BufferedImage final_buffered_image = ImageIO.read(input_stream);
-			// ImageIO.write(final_buffered_image , "jpg", new File("D:\\Sample.jpg") );
-			// System.out.println("Saved the image");
-			// ImageIO.write(final_buffered_image , "jpg", new File("Sample.jpg") );
+				// ByteArrayInputStream input_stream= new ByteArrayInputStream(decodeBase64);
+				// BufferedImage final_buffered_image = ImageIO.read(input_stream);
+				// ImageIO.write(final_buffered_image , "jpg", new File("D:\\Sample.jpg") );
+				// System.out.println("Saved the image");
+				// ImageIO.write(final_buffered_image , "jpg", new File("Sample.jpg") );
 
-			Feature feat = Feature.newBuilder().setType(Feature.Type.DOCUMENT_TEXT_DETECTION).build();
-			AnnotateImageRequest.Builder request = AnnotateImageRequest.newBuilder().addFeatures(feat).setImage(img);
+				Feature feat = Feature.newBuilder().setType(Feature.Type.DOCUMENT_TEXT_DETECTION).build();
+				AnnotateImageRequest.Builder request = AnnotateImageRequest.newBuilder().addFeatures(feat).setImage(img);
 
-			if (ConfigProperties.getInstance().getLang() == "ENGLISH") {
-				ImageContext imageContext = ImageContext.newBuilder().addLanguageHints("en").build();
-				request.setImageContext(imageContext);
-			} else if (ConfigProperties.getInstance().getLang() == "ITALIAN") {
-				ImageContext imageContext = ImageContext.newBuilder().addLanguageHints("it").build();
-				request.setImageContext(imageContext);
-			}
+				if (ConfigProperties.getInstance().getLang() == "ENGLISH") {
+					ImageContext imageContext = ImageContext.newBuilder().addLanguageHints("en").build();
+					request.setImageContext(imageContext);
+				} else if (ConfigProperties.getInstance().getLang() == "ITALIAN") {
+					ImageContext imageContext = ImageContext.newBuilder().addLanguageHints("it").build();
+					request.setImageContext(imageContext);
+				}
 
-			requests.add(request.build());
+				requests.add(request.build());
 
-			try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
-				BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
-				return response;
-			}catch (Exception e) {
-				e.printStackTrace();
-				return null;
+				try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
+					BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
+					// System.out.println(response);
+					List<AnnotateImageResponse> responses = response.getResponsesList();
+					client.close();
+					//logger.info("responsef24"+responses);
+//					System.out.println("responsef24"+responses);
+					//// logger.info("Response data from google vision");
+					//// logger.info(responses);
+
+					Data returnData = new Data();
+
+					List<it.sella.f24.bean.TextAnnotation> textAnnotations = new ArrayList<>();
+
+					for (AnnotateImageResponse res : responses) {
+						if (res.hasError()) {
+							out.printf("Error: %s\n", res.getError().getMessage());
+							//// logger.info("Error: %s\n"+res.getError().getMessage());
+							//// logger.info("Error in Google OCR");
+							throw new RuntimeException("Error Google OCR");
+						}
+
+						for (EntityAnnotation entityAnnotation : res.getTextAnnotationsList()) {
+							it.sella.f24.bean.TextAnnotation textAnn = new it.sella.f24.bean.TextAnnotation();
+							// System.out.println(entityAnnotation);
+							textAnn.setDescription(entityAnnotation.getDescription());
+							textAnn.setLocale(entityAnnotation.getLocale());
+							BoundingPoly BondingPolyF24 = new BoundingPoly();
+							List<it.sella.f24.bean.Vertex> vertexF24List = new ArrayList<>();
+							List<Vertex> verticesList = entityAnnotation.getBoundingPoly().getVerticesList();
+							for (Vertex vertex : verticesList) {
+								it.sella.f24.bean.Vertex vertexF24 = new it.sella.f24.bean.Vertex();
+								vertexF24.setX(vertex.getX());
+								vertexF24.setY(vertex.getY());
+								vertexF24List.add(vertexF24);
+							}
+							BondingPolyF24.setVertices(vertexF24List);
+							textAnn.setBoundingPoly(BondingPolyF24);
+							textAnnotations.add(textAnn);
+						}
+
+						// Map m=res.getAllFields();
+						// System.out.println(m);
+						// For full list of available annotations, see http://g.co/cloud/vision/docs
+						// TextAnnotation annotation = res.getFullTextAnnotation();
+
+						/*
+						 * annotation.
+						 */ // System.out.println("Google OCR: finished");
+							// String responseToCache = gson.toJson(annotation);
+							// System.out.println(res);
+							// String section1 = fetchData(responseToCache,"CONTRIBUENTE","SEZIONE ERARIO");
+							// Map<String, String> elementMap = new HashMap<>();
+							// elementMap.put("FISCALE", fetchData(responseToCache, "FISCALE",
+							// "\\\\ncognome"));
+							// elementMap.put("FISCALE", fetchData(responseToCache, "DATI ANAGRAFICI",
+							// "\\\\n"));
+							// String COD = fetchData(responseToCache, "DATI ANAGRAFICI", "\\\\n");
+
+						// System.out.println(COD);
+						// System.out.println(responseToCache);
+						// this.responseCache.put(hash, responseToCache);
+						// return responseToCache;
+					}
+					returnData.setTextAnnotation(textAnnotations);
+					//System.out.println(returnData);
+					return returnData;
+				} catch (Exception e) {
+					throw new RuntimeException("Error Google OCR: " + e.getMessage(), e);
+				}
 			}
 		}
 			
@@ -453,7 +519,7 @@ public class GoogleService {
 			// System.out.println("Saved the image");
 			// ImageIO.write(final_buffered_image , "jpg", new File("Sample.jpg") );
 
-			Feature feat = Feature.newBuilder().setType(Feature.Type.DOCUMENT_TEXT_DETECTION).build();
+			Feature feat = Feature.newBuilder().setType(Feature.Type.TEXT_DETECTION).build();
 			AnnotateImageRequest.Builder request = AnnotateImageRequest.newBuilder().addFeatures(feat).setImage(img);
 
 			if (ConfigProperties.getInstance().getLang() == "ENGLISH") {
@@ -505,6 +571,7 @@ public class GoogleService {
 			                for (Word word: para.getWordsList()) {
 			                  String wordText = "";
 			              for (Symbol symbol: word.getSymbolsList()) {
+			            	  if(StringUtils.isNumeric(symbol.getText()))
 			                    wordText = wordText + symbol.getText();
 			                    if(Objects.nonNull(symbol.getProperty())&&Objects.nonNull(symbol.getProperty().getDetectedBreak())&&(symbol.getProperty().getDetectedBreak().getType().equals(BreakType.EOL_SURE_SPACE)||symbol.getProperty().getDetectedBreak().getType().equals(BreakType.LINE_BREAK)||symbol.getProperty().getDetectedBreak().getType().equals(BreakType.SPACE))){
 			                    	wordText = wordText + " ";
