@@ -753,6 +753,7 @@ public class F24OCRService {
 			nome = nome.replace("**", ";");
 			String[] splitnome = nome.split(";");
 			cognome = splitnome[0];
+			if(nome.length()>1)
 			nome = splitnome[1];
 		}
 		if (!dob.isEmpty()) {
