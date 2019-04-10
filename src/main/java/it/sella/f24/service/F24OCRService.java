@@ -98,6 +98,7 @@ public class F24OCRService {
 		try {
 			ocrData = getImageText(data);
 
+			//splits the data into sections
 			valuesMap = preprocessData(ocrData);
 
 			System.out.println("Sending to NLP");
