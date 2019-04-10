@@ -75,7 +75,7 @@ public class F24Controller {
 
 	@Autowired
 	private F24OCRService ocrService;
-	
+
 	@Autowired
 	private F24OCRServiceNew ocrServiceNew;
 
@@ -85,17 +85,18 @@ public class F24Controller {
 	@Autowired
 	private RestTemplate restTemplate;
 
-//	@Bean
-//	public RestTemplate restTemplate() {
-//		// Do any additional configuration here
-//
-//		SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
-//
-//		requestFactory.setProxy(Proxy.NO_PROXY);
-//		// // return builder.build();
-//		return new RestTemplate(requestFactory);
-//
-//	}
+	// @Bean
+	// public RestTemplate restTemplate() {
+	// // Do any additional configuration here
+	//
+	// SimpleClientHttpRequestFactory requestFactory = new
+	// SimpleClientHttpRequestFactory();
+	//
+	// requestFactory.setProxy(Proxy.NO_PROXY);
+	// // // return builder.build();
+	// return new RestTemplate(requestFactory);
+	//
+	// }
 
 	/*
 	 * main { imagetoJSO() { //Step1: templateandskew(); // ocr //preprocessing
@@ -112,52 +113,42 @@ public class F24Controller {
 	@RequestMapping(value = "/api/simplificato/form/ocr", method = RequestMethod.POST)
 	public String f24ImageToJSON(@RequestBody F24Form f24Form) {
 
-		System.out.println("Calling Authentication Service to get the valid Auth Token");
-		// String accessToken = authCheck();
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("encodedImage", f24Form.getEncodedImage());
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
 
-		String accessToken = "123";
-		if (accessToken.isEmpty()) {
-			return "{\"status\":\"Access token is empty, please provide the correct details\"}";
-		} else {
+		try {
+			System.out.println("Calling Service for Template Matching and Skewing");
+			ResponseEntity<String> response = restTemplate.exchange(props.getProperty("ServiceURL"), HttpMethod.POST,
+					entity, String.class);
 
-			JSONObject jsonObject = new JSONObject();
-			jsonObject.put("encodedImage", f24Form.getEncodedImage());
-			HttpHeaders headers = new HttpHeaders();
-			headers.setContentType(MediaType.APPLICATION_JSON);
-			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
+			ObjectMapper mapper = new ObjectMapper();
+			F24JSON f24json = mapper.readValue(response.getBody(), F24JSON.class);
+			// System.out.println("Response from Skew Service:" +
+			// f24json.getEncodedImage());
+			byte[] decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
 
-			try {
-				System.out.println("Calling Service for Template Matching and Skewing");
-				ResponseEntity<String> response = restTemplate.exchange(props.getProperty("ServiceURL"),
-						HttpMethod.POST, entity, String.class);
+			System.out.println("Calling Google Service for processing of the Image data");
+			Data data = googleService.readText(decodeBase64, "");
 
-				ObjectMapper mapper = new ObjectMapper();
-				F24JSON f24json = mapper.readValue(response.getBody(), F24JSON.class);
-				// System.out.println("Response from Skew Service:" +
-				// f24json.getEncodedImage());
-				byte[] decodeBase64 = Base64.decodeBase64(f24json.getEncodedImage());
+			System.out.println("Calling OCR Service to preprocess and prepare the JSON");
+			String f24Result = ocrService.processJson(data);
 
-				System.out.println("Calling Google Service for processing of the Image data");
-				Data data = googleService.readText(decodeBase64, "");
+			System.out.println("Printing F24 JSON:\n" + f24Result);
+			System.out.println("Calling F24 Payment Service to make the Payment");
+			// callF24(f24Result);
+			return f24Result;
 
-				System.out.println("Calling OCR Service to preprocess and prepare the JSON");
-				String f24Result = ocrService.processJson(data);
-
-				System.out.println("Printing F24 JSON:\n" + f24Result);
-				System.out.println("Calling F24 Payment Service to make the Payment");
-				// callF24(f24Result);
-				return f24Result;
-
-			} catch (IOException e) {
-				return "{\"status\":\"KO\"}";
-			} catch (Exception e) {
-				return "{\"status\":\"KO\"}";
-			}
-
+		} catch (IOException e) {
+			return "{\"status\":\"KO\"}";
+		} catch (Exception e) {
+			return "{\"status\":\"KO\"}";
 		}
 
 	}
-	
+
 	@RequestMapping(value = "/api/simplificato/form/ocr/new", method = RequestMethod.POST)
 	public String f24ImageToJSON_new(@RequestBody F24Form f24Form) {
 
@@ -206,7 +197,7 @@ public class F24Controller {
 		}
 
 	}
-	
+
 	@RequestMapping(value = "/api/authcheck", method = RequestMethod.POST)
 	public String authCheck(@RequestHeader("apiKey") String apiKey) {
 
@@ -245,69 +236,67 @@ public class F24Controller {
 			return "{\"status\":\"KO\"}";
 		}
 	}
-	
+
 	@RequestMapping(value = "/api/simplificato/form/callf24", method = RequestMethod.POST)
-	public String callF24(@RequestHeader("apiKey") String apiKey,@RequestBody String f24JSON) {
-		System.out.println("API Key ---"+apiKey);
+	public String callF24(@RequestHeader("apiKey") String apiKey, @RequestBody String f24JSON) {
+		System.out.println("API Key ---" + apiKey);
 		ObjectMapper mapper = new ObjectMapper();
 		// https://sandbox.platfor.io/api/gbs/banking/v4.0/accounts/14537780/payments/f24-simple/orders
-//		String authToken = authCheck(apiKey);
+		// String authToken = authCheck(apiKey);
 		System.setProperty("java.net.useSystemProxies", "false");
-		
+
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-		
+
 		headers.set("Content-Type", "application/json");
 		headers.set("apiKey", apiKey);
 		headers.set("Auth-Schema", "S2S");
-//		headers.set("Auth-Schema", "S2S-AUTH");
-//		headers.set("Auth-Token", authToken);
+		// headers.set("Auth-Schema", "S2S-AUTH");
+		// headers.set("Auth-Token", authToken);
 		System.out.println("Input JSON:\n" + f24JSON);
 		HttpEntity<String> entity = null;
 		ResponseEntity<String> response = null;
-		String newf24JSON="";
+		String newf24JSON = "";
 
 		try {
 			F24JSONResponse f24jsonResponse = mapper.readValue(f24JSON, F24JSONResponse.class);
-			//getting the account Number from JSON
+			// getting the account Number from JSON
 			System.out.println(f24jsonResponse.getAccountNumber());
-			//we should get the accountID from the accountNumber
-			
-			
-			String accountID="14537780";
-			String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
-			
-			//formatting the Dateofbirth
-			Payer payer=f24jsonResponse.getPayer();
+			// we should get the accountID from the accountNumber
+
+			String accountID = "14537780";
+			String URL = "https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/" + accountID
+					+ "/payments/f24-simple/orders";
+
+			// formatting the Dateofbirth
+			Payer payer = f24jsonResponse.getPayer();
 			String birthDate = payer.getBirthDate();
-			birthDate=ocrService.convertDOB(birthDate);
+			birthDate = ocrService.convertDOB(birthDate);
 			payer.setBirthDate(birthDate);
 			f24jsonResponse.setPayer(payer);
-			newf24JSON=mapper.writeValueAsString(f24jsonResponse);
+			newf24JSON = mapper.writeValueAsString(f24jsonResponse);
 			System.out.println(newf24JSON);
-			
-			entity=new HttpEntity<>(newf24JSON, headers);
-			
-			
-			
+
+			entity = new HttpEntity<>(newf24JSON, headers);
+
 			System.out.println("Calling service");
-			response = restTemplate.exchange(URL,HttpMethod.POST, entity, String.class);
-            if(response.getStatusCode().equals(HttpStatus.OK)) {
-            	System.out.println("Response Body:" + response.getBody()+response.getStatusCode());
-            	return response.getBody();
-            }else {
-            	System.out.println("Response Body:" + response.getBody()+response.getStatusCode());
-            	ErrorResponse errorResponse=mapper.readValue(response.getBody(), ErrorResponse.class);
-            	JSONObject jsonObject=new JSONObject();
-            	
-            	List<Error> errors = errorResponse.getErrors();
-            	Error error = errors.get(0);
-            	
-            	jsonObject.put("status", "KO");
-            	jsonObject.put("description",error.getDescription() );
-            	System.out.println(jsonObject.toJSONString());
-            	return jsonObject.toJSONString();
-            }
+			response = restTemplate.exchange(URL, HttpMethod.POST, entity, String.class);
+			if (response.getStatusCode().equals(HttpStatus.OK)) {
+				System.out.println("Response Body:" + response.getBody() + response.getStatusCode());
+				return response.getBody();
+			} else {
+				System.out.println("Response Body:" + response.getBody() + response.getStatusCode());
+				ErrorResponse errorResponse = mapper.readValue(response.getBody(), ErrorResponse.class);
+				JSONObject jsonObject = new JSONObject();
+
+				List<Error> errors = errorResponse.getErrors();
+				Error error = errors.get(0);
+
+				jsonObject.put("status", "KO");
+				jsonObject.put("description", error.getDescription());
+				System.out.println(jsonObject.toJSONString());
+				return jsonObject.toJSONString();
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "{\"status\":\"KO\"}";
@@ -387,16 +376,19 @@ public class F24Controller {
 				}
 
 				System.out.println("Calling Google Service");
+			
 				data = googleService.readText(decodeBase64, "");
 				System.out.println("Calling OCR Service");
 				f24Result = ocrService.processJson(data);
 
 				System.out.println("Printing F24 Result");
 			} catch (IOException e) {
+				e.printStackTrace();
 				System.out.println("HI");
 				return "{\"status\":\"KO\"}";
 			} catch (Exception e) {
-				System.out.println("HI");
+				e.printStackTrace();
+				System.out.println("Exception");
 				return "{\"status\":\"KO\"}";
 			}
 
@@ -423,12 +415,11 @@ public class F24Controller {
 		// return "{\"encodedImage\":\"" + encodeBase64String + "\"}";
 
 		String f24ImageToText = f24test(f24Form);
-		
-//		String f24ImageToText=f24ImageToJSON_new(f24Form);
+
+		// String f24ImageToText=f24ImageToJSON_new(f24Form);
 		return f24ImageToText;
 	}
-	
-	
+
 	@RequestMapping(value = "/api/image/getgoogledata", method = RequestMethod.PUT)
 	public Data f24getGoogleData(@RequestParam("file") MultipartFile file) {
 		System.out.println("Hello");
@@ -443,14 +434,14 @@ public class F24Controller {
 		byte[] decodeBase64 = Base64.decodeBase64(encodeBase64String);
 
 		System.out.println("Calling Google Service for processing of the Image data");
-		Data readGoogleText =null;
+		Data readGoogleText = null;
 		try {
-			 readGoogleText = googleService.readText(decodeBase64, "");
+			readGoogleText = googleService.readText(decodeBase64, "");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return readGoogleText;
 	}
 
@@ -536,11 +527,11 @@ public class F24Controller {
 
 		JSONObject jsonObject = new JSONObject();
 		try {
-		jsonObject.put("encodedImage", Base64.encodeBase64String(file.getBytes()));
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
-		HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
-		String imageText = "";
+			jsonObject.put("encodedImage", Base64.encodeBase64String(file.getBytes()));
+			HttpHeaders headers = new HttpHeaders();
+			headers.setContentType(MediaType.APPLICATION_JSON);
+			HttpEntity<String> entity = new HttpEntity<>(jsonObject.toJSONString(), headers);
+			String imageText = "";
 
 			System.out.println("Calling Service for Template Matching and Skewing");
 			ResponseEntity<String> response = restTemplate.exchange(props.getProperty("ServiceURL"), HttpMethod.POST,
@@ -554,9 +545,18 @@ public class F24Controller {
 
 			System.out.println("Calling Google Service for processing of the Image data");
 			Data data = googleService.readText(decodeBase64, "");
-			imageText = ocrService.getImageText(data);
-			return imageText;
+			System.out.println("Calling OCR Service to preprocess and prepare the JSON");
+			String f24Result = ocrService.processJson(data);
+
+			System.out.println("Printing F24 JSON:\n" + f24Result);
+			System.out.println("Calling F24 Payment Service to make the Payment");
+			
+			return f24Result;
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "{\"status\":\"KO\"}";
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return "{\"status\":\"KO\"}";

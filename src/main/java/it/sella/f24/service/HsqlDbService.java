@@ -23,7 +23,7 @@ public class HsqlDbService {
 	    public static void destroy() throws SQLException, ClassNotFoundException, IOException {
 	        try (Connection connection = getConnection(); 
 	        		Statement statement = connection.createStatement();) {
-	            statement.executeUpdate("DROP TABLE employee");
+	            statement.executeUpdate("DROP TABLE positions");
 	            connection.commit();
 	        }
 	    }

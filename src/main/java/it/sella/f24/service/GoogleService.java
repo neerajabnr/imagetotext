@@ -560,6 +560,7 @@ public class GoogleService {
 					List<String> symbols = new ArrayList<>();
 					int count =0;
 					com.google.cloud.vision.v1.TextAnnotation annotation = res.getFullTextAnnotation();
+					//annotation.getPagesList().stream().flatMap(x -> x.getBlocksList().stream()).flatMap(x ->x.getParagraphsList().stream()).
 			          for (Page page: annotation.getPagesList()) {
 			            String pageText = "";
 			            for (Block block : page.getBlocksList()) {

@@ -254,14 +254,14 @@ public class NameFinderMETokenFinder {
 		List<Result> results = new ArrayList<>();
 		Span[] names2 = nameFinder.find(sentence2);
 		for (Span name : names2) {
-			System.out.println(name);
-			System.out.print(name.getType() + " ");
+//			System.out.println(name);
+			System.out.print("\n"+name.getType() + ": ");
 
 			for (int i = name.getStart(); i < name.getEnd(); i++) {
 
 				results.add(new Result(name.getType(), sentence2[i]));
 
-				System.out.print(sentence2[i] + " \n");
+				System.out.print(sentence2[i]+" ");
 //				logger.info(sentence2[i] + " ");
 
 			}
@@ -281,7 +281,7 @@ public class NameFinderMETokenFinder {
 		} else {
 
 		ObjectStream<NameSample> sampleStream = new NameSampleDataStream(new PlainTextByLineStream(
-					new MockInputStreamFactory(new File("section1trainingnewspace_result.txt")), encoding));
+					new MockInputStreamFactory(new File("idimagetraining_result.txt")), encoding));
 
 			TrainingParameters params = new TrainingParameters();
 			params.put(TrainingParameters.ITERATIONS_PARAM, 100);

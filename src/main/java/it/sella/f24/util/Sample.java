@@ -283,18 +283,30 @@ public class Sample {
 		// continue;
 		// }
 
-//		NameFinderMETokenFinder namefinder = new NameFinderMETokenFinder();
-//		String sentence = "CODICE FISCALE GRZLRT23H06A859W   DATI ANAGRAFICI GARIAZZO ** ALBERTO INOISSO F     06 06 1023 BIELLA CODICE FISCALE ";
-//		try {
-//			removeSpecialChar(sentence);
-//			namefinder.f24_Section1(sentence);
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		NameFinderMETokenFinder namefinder = new NameFinderMETokenFinder();
 		
-		String data = "123ACbnnmmm{}";
-		System.out.println(removeData(data));
+		String sentences[]= {"FERRARO SAVERINA 14 - 01 - 1959 ( 345 CUTRO KR ) Citta ITALIANA Residen CUTRO ( KR ) Via FABIO DI BONA N24 Stato de NUBILE Professione INSEGNANTE CONNOTAT E CONTRASSEGNA SEM Statura 1 , 70 BIONDI Capelli OcchiCASTANI m Segni particolar m ",
+
+"MAIOLO Cognome . DANIELE Nome . nato il 06 / 07 / 1979 00272 A00 ( atto n . a GIOIA TAURO ( RC ) ITALIANA Cittadinanza . Residenza ROMA Via VIA SERVILIO PRISCO N . 1 SC . B IN . 2 ELAL Stato civile S Professione . CONNOTATI E CONTRASSEGNI SALIENTI Statura . 1 , 80 Capelli . Neri Occhi . Azzurri Segni particolari . ",
+
+"BORRBOT ERCOIR 11 / 07 / 1989 779 I MASSA DI SOMMA ( NA ) ITALIANA VOIALA ( NA ) VIA ROG N . 114 / 0 STATO LIBERO MILITARE CONNOTAT CONTRASSE SA 1 , 85 Capcastans castani Suges particolare ",
+
+"LILILOSHIRTS Cognome . MASSIMIANI Nome . MARCO nato il 24 / 08 / 1963 nato il . 04266 3 1A 1963 ( atto n . P . a . TORINO . ( TO ) . Cittadinanza ITALIANA TORINO ResideCorso UNIONE SOVIETICA 217 Via . Stato civile . CONIUGATO Professione . * * * * * * * * * * CONNOTATI E CONTRASSEGNI SALIENTI Statura . 1 . 80 GRIGI Capelli . Occhi . AZZURRI Segni particolari . "};
+		String sentence = "LILILOSHIRTS Cognome . MASSIMIANI Nome . MARCO nato il 24 / 08 / 1963 nato il . 04266 3 1A 1963 ( atto n . P . a . TORINO . ( TO ) . Cittadinanza ITALIANA TORINO ResideCorso UNIONE SOVIETICA 217 Via . Stato civile . CONIUGATO Professione . * * * * * * * * * * CONNOTATI E CONTRASSEGNI SALIENTI Statura . 1 . 80 GRIGI Capelli . Occhi . AZZURRI Segni particolari .";
+		
+		for(int i=0;i<sentences.length;i++) {
+			
+			try {
+//			removeSpecialChar(sentence);
+				namefinder.f24_Section1(sentences[i]);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+//		String data = "123ACbnnmmm{}";
+//		System.out.println(removeData(data));
 		
 //		String accountID="14537780";
 //		String URL="https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+accountID+"/payments/f24-simple/orders";
