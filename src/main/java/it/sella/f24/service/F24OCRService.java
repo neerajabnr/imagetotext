@@ -722,7 +722,7 @@ public class F24OCRService {
 			} else {
 				System.out.println("Empty List");
 				logger.info("Values are not present");
-				return "{\"status\":\"KO\"}";
+				//return "{\"status\":\"KO\"}";
 			}
 		}
 
