@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/F24PDFReader.jar
+web: java $JAVA_OPTS -jar target/F24OCR.jar
